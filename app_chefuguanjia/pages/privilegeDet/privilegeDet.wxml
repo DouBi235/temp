@@ -1,0 +1,124 @@
+<!--pages/privilegeDet/privilegeDet.wxml-->
+<import src="../../wxParse/wxParse.wxml" />
+<view class='privilegeDetPage'>
+  <view class='top'>
+    <!-- <swiper class='imgSwiper' indicator-dots="false" indicator-color="#C8E6FF" indicator-active-color="#1EA0FF" autoplay="true" interval="5000" duration="1500">
+      <block wx:for="123" wx:key="k">
+        <swiper-item>
+          <image class="slide-image" src="{{imgUrl}}/tequanxiangqing.png" mode='aspectFill' />
+        </swiper-item>
+      </block>
+    </swiper> -->
+    <image class="proImg" src="{{detail.image}}" mode='aspectFill' />
+    <view class='titleBox'>
+      <image class='titleImg' src='{{imgUrl}}/jiaobiao.png'></image>
+      <view class='titleText'>{{detail.name}}</view>
+    </view>
+    <view class='timeBox {{detail.ubi == 0?"blackTimeBox":""}}'>
+      <block wx:if='{{detail.reservation == 1}}'>
+        <view class='daojishiBox'>
+          <view class='daojishiLabel'>
+            <text class='ttext'>倒</text>
+            <text class='tline'>|</text>
+            <text class='ttext'>计</text>
+            <text class='tline'>|</text>
+            <text class='ttext'>时</text>
+          </view>
+          <view class='dot'>:</view>
+          <view class='daojishiValue'>
+            <text class='tline'>|</text>
+            <text class='tvalue'>{{time.ddd}}</text>
+            <text class='tline'>|</text>
+            <text class='ttext'>天</text>
+            <text class='tline'>|</text>
+            <text class='tvalue'>{{time.hhh}}</text>
+            <text class='tline'>|</text>
+            <text class='ttext'>时</text>
+            <text class='tline'>|</text>
+            <text class='tvalue'>{{time.mmm}}</text>
+            <text class='tline'>|</text>
+            <text class='ttext'>分</text>
+            <text class='tline'>|</text>
+            <text class='tvalue'>{{time.sss}}</text>
+            <text class='tline'>|</text>
+            <text class='ttext'>秒</text>
+            <text class='tline'>|</text>
+          </view>
+        </view>
+      </block>
+      <block wx:else>
+        <view class='zhouqiBox'>
+          <view class='zhouqiLabel'>
+            <text class='ttext'>更</text>
+            <text class='tline'>|</text>
+            <text class='ttext'>换</text>
+            <text class='tline'>|</text>
+            <text class='ttext'>周</text>
+            <text class='tline'>|</text>
+            <text class='ttext'>期</text>
+          </view>
+          <view class='dot'>:</view>
+          <view class='zhouqiValue'>
+            <block wx:for='{{detail.time}}' wx:for-item='i'>
+              <text class='tline'>|</text>
+              <text class='tvalue'>{{i}}</text>
+            </block>
+            <text class='tline'>|</text>
+            <text class='ttext'>天</text>
+            <text class='tline'>|</text>
+          </view>
+        </view>
+      </block>
+      <view class='tipBox'>
+        到更换时间节点后，可享受不同折扣价购买
+      </view>
+    </view>
+  </view>
+  <view class='shop' wx:if='{{detail.reservation != 0&&detail.reservation != 1}}'>
+    <view class='name'>
+      <view class='nameText'>{{detail.shopname}}</view>
+      <view class='juli'>
+        <image class='positionGrey' src='{{imgUrl}}/loc.png'></image>
+        {{detail.distance}}km
+      </view>
+    </view>
+    <view class='addr'>
+      <image class='positionImg' src='{{imgUrl}}/position232.png'></image>
+      <view class='addrText'>{{detail.site}}</view>
+      <image class='addrArrow' src='{{imgUrl}}/rArrow.png'> </image>
+    </view>
+  </view>
+  <view class='bottom'>
+    <view class='optionSwitch'>
+      <view bindtap='change' class='switchOpt' style='color:{{change ==0 ?"red":""}}'>产品描述</view>
+      <view class='switchOpt' bindtap='change2' style='color:{{change ==0 ?"":"red"}}'>规格参数</view>
+    </view>
+    <view class='optionContent' wx:if="{{change==0}}">
+      <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+    </view>
+    <view class='optionContent' wx:else>
+      {{detail.size}}/{{detail.numbers}}
+    </view>
+  </view>
+  <view class='buttonBlock'>
+    <block wx:if='{{detail.ubi == 0}}'>
+      <button disabled='true' class='selectBtn' style='visibility:hidden'>未购买邦保养会员</button>
+    </block>
+    <block wx:else>
+      <block wx:if='{{logo == 0}}'>
+        <button disabled='true' class='selectBtn'>未购买该服务项</button>
+      </block>
+      <block wx:else>
+        <block wx:if='{{detail.reservation == 0}}'>
+          <button bindtap='btn' class='selectBtn'>立即预约</button>
+        </block>
+        <block wx:elif='{{detail.reservation == 1}}'>
+          <button disabled='true' class='selectBtn'>立即预约</button>
+        </block>
+        <block wx:else>
+          <button disabled='true' class='selectBtn'>预约时间：{{detail.reservation}}</button>
+        </block>
+      </block>
+    </block>
+  </view>
+</view>

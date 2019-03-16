@@ -1,0 +1,75 @@
+page {
+  background: #f5f5f5;
+  padding-bottom: 128rpx;
+}
+
+.box {
+  width: 690rpx;
+  background: #fff;
+  border-radius: 10rpx;
+  margin: 30rpx auto;
+  position: relative;
+}
+
+.title {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 30rpx;
+  color: #21c5bd;
+  height: 88rpx;
+  line-height: 88rpx;
+}
+
+.route {
+  display: flex;
+  align-items: center;
+  color: #333;
+  font-size: 26rpx;
+  max-width: 520rpx;
+}
+.route>text{
+  max-width: 460rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.route>image {
+  width: 48rpx;
+  height: 24rpx;
+  margin-left: 24rpx;
+}
+
+.status {
+  margin-top: 16rpx;
+  font-size: 24rpx;
+  color: #999;
+}
+.status.r {
+  color: #e14244;
+}
+.status.y {
+  color: #f69625;
+}
+
+.status.g {
+  color: #21c5bd;
+}
+.date{
+  height: 72rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 22rpx;
+  color: #999;
+}
+.menu{
+  width: 80rpx;
+  height: 40rpx;
+}
+.goto{
+  position: absolute;
+  top: 64rpx;
+  right: 30rpx;
+  width: 11rpx;
+  height: 21rpx;
+}

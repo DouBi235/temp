@@ -1,0 +1,268 @@
+<!--index.wxml-->
+<view class='indexPage {{deviceStatus == 0 ? "unbind" : deviceStatus == 1 ? "running" : deviceStatus == 2 ? "unrun" : "running"}}'>
+  <view class='status0 dfrowsa' style='background-image: url("{{imgUrl}}/bg132.png");'>
+    <view class='ion745 dfcolsb' bindtap='skipyou'>
+      <image class='' src='../../images/fde561.png'></image>
+      <text class='fwv548'>油站</text>
+      <text class='dwv156'>{{promptData.oilSize}}</text>
+    </view>
+    <view class='ion745 dfcolsb' bindtap='navservice'>
+      <image class='' src='../../images/fde562.png'></image>
+      <text class='fwv548'>店面</text>
+      <text class='dwv156'>{{twoNum.shop_num}}</text>
+    </view>
+    <view class='ion745 dfcolsb' bindtap='navserviceList'>
+      <image class='' src='../../images/fde563.png'></image>
+      <text class='fwv548'>车主</text>
+      <text class='dwv156'>{{twoNum.ubi}}</text>
+    </view>
+  </view>
+  <view class='sixContainer'>
+    <view class='itemBox'>
+      <view class='itemImgBox '>
+        <view class='imgBox' bindtap='skipyou'>
+          <image class='itemImg' src='../../images/uhuiduo.png'></image>
+          <text class='itemText'>U惠多</text>
+        </view>
+      </view>
+      <view class='itemImgBox '>
+        <view class='imgBox' bindtap='toi139'>
+          <image class='itemImg' src='../../images/ick837.png'></image>
+          <text class='itemText'>车管家</text>
+        </view>
+      </view>
+      <view class='itemImgBox'>
+        <view class='imgBox' bindtap='skipBBy'>
+          <image class='itemImg' src='{{imgUrl}}/bbyic.png'></image>
+          <text class='itemText'>邦保养</text>
+        </view>
+      </view>
+    </view>
+    <view class='itemBox'>
+      <view class='itemImgBox '>
+        <view class='redTip' wx:if="{{promptData.hintTail}}">{{promptData.hintTail}}</view>
+        <view class='imgBox' bindtap='jumpToOther' data-page='4'>
+          <image class='itemImg' src='{{imgUrl}}/offgasWarningImg.png'></image>
+          <text class='itemText'>尾气预警</text>
+        </view>
+      </view>
+      <view class='itemImgBox '>
+        <view class='redTip' wx:if="{{promptData.hintFault}}">{{promptData.hintFault}}</view>
+        <view class='imgBox' bindtap='jumpToInnerPage' data-page='3'>
+          <image class='itemImg' src='{{imgUrl}}/faultWarningImg.png'></image>
+          <text class='itemText'>故障预警</text>
+        </view>
+      </view>
+      <!-- <view class='itemImgBox '>
+        <view class='redTip' wx:if="{{ifCanSelect&&ifCanSelect.data&&ifCanSelect.data.data&&ifCanSelect.data.data.violationsifCanSelect.data.data.violations.length}}">{{ifCanSelect.data.data.violations.length}}</view>
+        <view class='imgBox' bindtap='skipcx'>
+          <image class='itemImg' src='{{imgUrl}}/weizhang.png'></image>
+          <text class='itemText'>违章提醒</text>
+        </view>
+      </view> -->
+      <view class='itemImgBox'>
+        <!-- <view class='imgBox' bindtap='skipbaobiao'> -->
+        <view class='imgBox' bindtap='skipbaobiao'>
+          <image class='itemImg' src='{{imgUrl}}/baobiao.png'></image>
+          <text class='itemText'>车保镖</text>
+        </view>
+      </view>
+    </view>
+    <!-- <view class='itemBox'>
+      <view class='itemImgBox'>
+        <view class='imgBox' bindtap='skippt'>
+          <image class='itemImg' src='{{imgUrl}}/pintuan.png'></image>
+          <text class='itemText'>保险拼团</text>
+        </view>
+      </view>
+    </view> -->
+    <view class='itemBox' style=''>
+      <view class='itemImgBox '>
+        <view class='redTip' wx:if="{{0}}">0</view>
+        <view class='imgBox' bindtap='skipMileage' data-page='0'>
+          <image class='itemImg' src='{{imgUrl}}/mileage.png'></image>
+          <text class='itemText'>停驶奖励</text>
+        </view>
+      </view>
+      <view class='itemImgBox'>
+        <view class='imgBox' bindtap='jumpToInnerPage' data-page='0'>
+          <image class='itemImg' src='{{imgUrl}}/saveFuelImg.png'></image>
+          <text class='itemText'>节油宝</text>
+        </view>
+      </view>
+      <view class='itemImgBox '>
+        <view class='redTip' wx:if="{{promptData.hintDiagn}}">{{promptData.hintDiagn}}</view>
+        <view class='imgBox' bindtap='jumpToInnerPage' data-page='1'>
+          <image class='itemImg' src='{{imgUrl}}/diagnosticsImg.png'></image>
+          <text class='itemText'>诊断师</text>
+        </view>
+      </view>
+    </view>
+    <view class='itemBox' style=''>
+      <view class='itemImgBox '>
+        <view class='redTip' wx:if="{{promptData.hintCar}}">{{promptData.hintCar}}</view>
+        <view class='imgBox' bindtap='jumpToInnerPage' data-page='2'>
+          <image class='itemImg' src='{{imgUrl}}/protectiveCarImg.png'></image>
+          <text class='itemText'>养护提醒</text>
+        </view>
+      </view>
+      <view class='itemImgBox '>
+        <view class='imgBox' bindtap='skippeng'>
+          <image class='itemImg' src='{{imgUrl}}/pengzhuang.png'></image>
+          <text class='itemText'>碰撞提醒</text>
+        </view>
+      </view>
+      <view class='itemImgBox '>
+        <view class='imgBox' bindtap='skipjiuyuan'>
+          <image class='itemImg' src='{{imgUrl}}/jiuyuan.png'></image>
+          <text class='itemText'>免费救援</text>
+        </view>
+      </view>
+    </view>
+
+    <view class='itemBox'>
+      <!-- <view class='itemImgBox '>
+        <view class='imgBox' bindtap='skippt'>
+          <image class='itemImg' src='{{imgUrl}}/mianf.png'></image>
+          <text class='itemText'>免费服务</text>
+        </view>
+      </view> -->
+      <!-- <view class='itemImgBox'>
+        <view class='imgBox' bindtap='skippt'>
+          <image class='itemImg' src='{{imgUrl}}/chexian.png'></image>
+          <text class='itemText'>智慧车险</text>
+        </view>
+      </view> -->
+      <view class='itemImgBox '>
+        <view class='imgBox' bindtap='skipSf'>
+          <image class='itemImg' src='{{imgUrl}}/sfcxic.png'></image>
+          <text class='itemText'>顺风出行</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='shadowLayer' wx:if="{{hasUserInfo}}" catchtouchmove='showLayer' catchtap='showLayer'>
+  <view class='layerBox' catchtouchmove='layerBoxFn'>
+    <image class='layerImg' src='{{imgUrl}}/loginLayer3.png'></image>
+    <text class='appName'>UBI车服</text>
+    <view class='loginView'>
+      <view class='lv1'>
+        <image class='lvImg' src='{{imgUrl}}/lv1.png'></image>
+        <text class='lvt1'>智慧出行</text>
+        <text class='lvt2'>体验智慧生活</text>
+      </view>
+      <!-- <view class='lv1'>
+        <image class='lvImg' src='{{imgUrl}}/lv2.png'></image>
+        <text class='lvt1'>专属特权</text>
+        <text class='lvt2'>半价维修换件</text>
+      </view>  -->
+      <view class='lv1'>
+        <image class='lvImg' src='{{imgUrl}}/offgasWarningImg.png' style='height: 100rpx;width: 100rpx;margin-top:20rpx;'></image>
+        <text class='lvt1'>尾气预警</text>
+        <text class='lvt2'>尾排实时提醒</text>
+      </view>
+      <view class='lv1'>
+        <image class='lvImg' src='{{imgUrl}}/lv3.png'></image>
+        <text class='lvt1'>停驶奖励</text>
+        <text class='lvt2'>车辆停驶享奖励</text>
+      </view>
+    </view>
+    <button class='loginBtn' open-type="getUserInfo" bindgetuserinfo="getUserInfo">登录</button>
+    <view class='forkBtn' catchtap='hideLayer' style='visibility: hidden'>
+      <image class='forkImg' src='{{imgUrl}}/fork.png'></image>
+    </view>
+  </view>
+</view>
+<!-- 邦保养会员产品介绍 -->
+<!-- <view class='mask' style='z-index:99' wx:if="{{product_introduce}}"> -->
+<view class='mask' style='z-index:99' wx:if="{{0}}">
+  <view class='introduce'>
+    <view class='herder-title'>UBI车服</view>
+    <view class='content'>
+      <view>
+        <!-- <image mode='widthFix' src='{{imgUrl}}/service.png'></image> -->
+        <view class='describe'>
+          <view class='theme' style='text-align:center;color:rgba(30, 160, 255, 1);'>
+            <text>仲达UBI车服 呵护你我她\n缴UBI车服服务费获得价值1080元智能终端</text>
+          </view>
+        </view>
+      </view>
+      <view>
+        <image mode='widthFix' src='{{imgUrl}}/Refund.png'></image>
+        <view class='describe'>
+          <view class='theme'>
+            <text style='padding-left:27.5rpx;'>车辆停驶 获得绿色出行奖励\n</text>
+            <text>停驶获奖励 养车更轻松</text>
+          </view>
+        </view>
+      </view>
+      <view>
+        <image mode='widthFix' src='{{imgUrl}}/half_price.png'></image>
+        <view class='describe'>
+          <view class='theme'>
+            <text>享受车辆维修换件、半价权利</text>
+          </view>
+        </view>
+      </view>
+      <view>
+        <image mode='widthFix' src='{{imgUrl}}/Travel.png'></image>
+        <view class='describe'>
+          <view class='theme'>
+            <text>8.5折参与《邦保养》套餐</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='footer-title' bindtap='CloseIntroduce'>
+      <text>我知道了</text>
+    </view>
+  </view>
+</view>
+<!-- 弹窗遮罩层 -->
+<view class='Mask' wx:if="{{mask}}">
+  <view class='Image'>
+    <image src='{{imgUrl}}/xuanchuan.png' bindtap='skipDetailVip'></image>
+    <view bindtap='close' class='box'></view>
+  </view>
+</view>
+
+
+<!-- 诊断师异常在首页 -->
+<view class='Mask' wx:if="{{isZds}}">
+  <view class='isZdsWhite'>
+    <view class='isZdsHead'>
+      诊断师提醒
+    </view>
+    <view class='isZdsItemBox'>
+      <view class='isZdsItem' wx:for="{{isZds.list}}" wx:key>{{item}}</view>
+    </view>
+    <view style='height: 188rpx;'>
+      <view class='isZdsTip'>{{isZds.title}}</view>
+      <view class='isZdsBtn' bindtap='isZdsBtn'>我知道了</view>
+    </view>
+  </view>
+</view>
+
+
+<!-- 扫码进来后显示他的邀请人， -->
+<view class='infoshow' wx:if="{{recommen.ifPopup}}" catchtouchmove='catchnull'>
+  <cover-view class='infoWhite'>
+    <cover-view class='infomain'>
+      <cover-view class='infotip'>您的邀请人</cover-view>
+      <cover-image class='infoImg' src='{{recommen.detail.head_pic}}'></cover-image>
+      <cover-view class='infoname'>{{recommen.detail.nick_name}}</cover-view>
+      <cover-view class='infoconfirm' bindtap='hideinfoshow'>我知道了</cover-view>
+    </cover-view>
+  </cover-view>
+</view>
+
+
+<!-- 每日达到奖励要求后，显示绿色出行的弹窗，点击后跳转到奖励列表 -->
+<view class='lvseLayer' wx:if="{{lvsechuxing}}" catchtouchmove='catchnull'>
+  <view class='lvseImgBg' style="background-image: url('{{imgUrl}}/lvse.png');background-size: 620rpx 760rpx;">
+    <view class='lvseClose' bindtap='hidelvse' data-c='0'></view>
+    <view class='lvsedate'>{{lvsedate}}</view>
+    <view class='lvseBtn' bindtap='hidelvse' data-c='1'>查看</view>
+  </view>
+</view>

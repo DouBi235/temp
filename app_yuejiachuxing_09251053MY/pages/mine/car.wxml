@@ -1,0 +1,39 @@
+<block wx:for="{{list}}">
+  <view class='box' id='{{item.id}}' data-ct='{{item.type}}' bindtap='selectcar' bindlongpress='delcar'>
+    <view class='title'>车牌：{{item.plate}}</view>
+    <view class='content'>
+      <view class='brand'>
+        <text class='con-title'>品牌：</text>
+        <text class='con-info'>{{item.brand}}</text>
+      </view>
+      <view class='type'>
+        <text class='con-title'>车型：</text>
+        <text class='con-info'>{{item.type}}</text>
+      </view>
+    </view>
+  </view>
+</block>
+
+<form bindsubmit='addcar' wx:if="{{showaddcar}}">
+  <view class='box'>
+    <view class='title'>
+      <text>车牌：</text>
+      <input name='plate' value='{{plate}}' placeholder='请输入车牌号' placeholder-class='tip' maxlength='7'></input>
+      <input name='brand' value='{{bname}}' style='display:none'></input>
+      <input name='type' value='{{tname}}' style='display:none'></input>
+    </view>
+    <picker mode="multiSelector" bindchange="pickerChange" bindcolumnchange="innerChange" value="{{pickerIndex}}" range="{{pickerList}}">
+      <view class='content'>
+        <view class='brand'>
+          <text class='con-title'>品牌：</text>
+          <text class="{{bname?'con-info':'tip'}}">{{bname?bname:'请选择'}}</text>
+        </view>
+        <view class='type'>
+          <text class='con-title'>车型：</text>
+          <text class="{{tname?'con-info':'tip'}}">{{tname?tname:'请选择'}}</text>
+        </view>
+      </view>
+    </picker>
+  </view>
+  <button form-type='submit' class='btn addcar'>添加汽车</button>
+</form>

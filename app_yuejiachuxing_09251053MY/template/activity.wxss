@@ -1,0 +1,172 @@
+.ac-shelter {
+  padding-top: 40rpx;
+}
+.ac-shelter:nth-of-type(1){
+  padding-top: 50rpx;
+}
+.ac-shelter:nth-last-of-type(1) {
+  padding-bottom: 160rpx;
+}
+
+.box {
+  background: #fff;
+  width: 690rpx;
+  border-radius: 10rpx;
+  margin: 0 auto;
+  padding-top: 16rpx;
+  padding-bottom: 20rpx;
+}
+
+.ac-head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ac-head view {
+  display: flex;
+}
+
+.ac-uhead {
+  position: relative;
+}
+
+.ac-uhead>image {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 100rpx;
+  position: absolute;
+  left: -4rpx;
+  bottom: 16rpx;
+  background: #ccc;
+  border: solid 4rpx #fff;
+}
+
+.ac-topinfo {
+  flex-direction: column;
+  width: 534rpx;
+}
+
+.ac-topinfo view {
+  align-items: center;
+}
+
+.ac-top1 {
+  justify-content: space-between;
+}
+
+.ac-top1-l {
+  color: #333;
+  font-size: 26rpx;
+}
+.ac-top1-l>text{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 160rpx;
+}
+.ac-usex {
+  width: 24rpx;
+  height: 24rpx;
+  margin-left: 10rpx;
+}
+
+.ac-top1-r {
+  color: #999;
+  font-size: 22rpx;
+  justify-content: space-between;
+}
+
+.ac-top1-r>view:nth-of-type(1) {
+  margin-right: 40rpx;
+}
+
+.ac-top1-r text {
+  margin-left: 8rpx;
+}
+
+.ac-top2 {
+  color: #999;
+  font-size: 22rpx;
+  margin-top: 6rpx;
+}
+
+.ac-tip {
+  text-indent: 2rpx;
+  margin-top: 16rpx;
+  color: #666;
+  font-size: 24rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ac-route {
+  margin-top: 16rpx;
+  color: #333;
+  font-size: 26rpx;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+.ac-route>text{
+  max-width: 520rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ac-img {
+  background: #eee;
+  width: 690rpx;
+  height: 300rpx;
+  margin-left: -30rpx;
+}
+
+.ac-line {
+  width: 100%;
+  height: 2rpx;
+  background: #eee;
+}
+
+.ac-foot {
+  margin-top: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ac-f-con {
+  width: 30%;
+  text-align: center;
+}
+
+.ac-f-line {
+  width: 2rpx;
+  height: 30rpx;
+  background: #eee;
+}
+
+.ac-f-tip {
+  color: #666;
+  font-size: 22rpx;
+}
+
+.ac-f-info {
+  margin-top: 16rpx;
+  color: #333;
+  font-size: 26rpx;
+}
+
+.widlimit {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ac-foot-l {
+  font-size: 22rpx;
+  color: #999;
+}
+
+.ac-foot>.ac-top1-r, .ac-foot>.ac-top1-r>view {
+  display: flex;
+  align-items: center;
+}

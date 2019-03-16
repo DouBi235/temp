@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "输入驳回理由",
+  "usingComponents": {
+    "i-button": "../../../static/dist/button/index"
+  }
+}

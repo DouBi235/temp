@@ -1,0 +1,37 @@
+<view class="container">
+  <image src="{{imgUrl}}/362911.png"></image>
+  <view class="title">填写发票信息</view>
+  <view class="star">
+    "
+    <text class="star-cr X"> * </text>"号为必填项
+  </view>
+  <input class="ipt" bindinput='getTax' placeholder='请输入税号' placeholder-style='color:#c0c0c0'>
+  <text class="star-cr">*</text>
+  </input>
+  <input class="ipt" bindinput='getCompany' placeholder='请输入公司名称' placeholder-style='color:#c0c0c0'>
+  <text class="star-cr">*</text>
+  </input>
+  <input class="ipt" bindinput='getUs' placeholder='请输入联系人' placeholder-style='color:#c0c0c0'>
+  <text class="star-cr">*</text>
+  </input>
+  <input class="ipt" bindinput='getPhone' maxlength='11' type='number' placeholder='请输入联系电话' placeholder-style='color:#c0c0c0'>
+  <text class="star-cr">*</text>
+  </input>
+  <picker mode="region" bindchange='getAdd'>
+    <view style="position:relative" class="ipt" style="color:{{dizhi=='请输入送票地址'? '#c0c0c0':''}}">{{dizhi}}
+      <text class="star-cr">*</text>
+    </view>
+  </picker>
+  <input class="ipt" bindinput='getAddInfo' placeholder='请输入详细地址' placeholder-style='color:#c0c0c0'>{{addInfo}}
+  <text class="star-cr">*</text>
+  </input>
+  <view style="color:#c0c0c0">
+    <view class="flt-r">票务送达费：
+      <text class="star-cr">¥{{fee}}</text>
+    </view>
+  </view>
+</view>
+<view class="pay">
+  <view bindtap='thatCancel' style="border-top:1px solid #E1E1E1" class="cr-666">取消</view>
+  <view class="bgc-00B4FF cr-fff" bindtap='thatConfirm'>确认</view>
+</view>

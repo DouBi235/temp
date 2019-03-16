@@ -1,0 +1,8 @@
+{
+  "enablePullDownRefresh": true,
+  "navigationBarBackgroundColor": "#1EA0FF",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "详情",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light"
+}

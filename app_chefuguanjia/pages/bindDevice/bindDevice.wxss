@@ -1,0 +1,126 @@
+/* pages/bindDevice/bindDevice.wxss */
+
+.bindDevicePage {
+  min-height: 100vh;
+  background-color: #fff;
+  width: 100%;
+}
+
+.deviceImgBox {
+  height: 370rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 55rpx;
+  padding-bottom: 30rpx;
+}
+
+.deviceImg {
+  height: 224rpx;
+  width: 400rpx;
+}
+
+.deviceText {
+  display: block;
+  color: #c8c8d2;
+  font-size: 24rpx;
+}
+
+.formBox {
+  width: 100%;
+  padding: 0 30rpx;
+}
+
+.formItem {
+  padding: 0rpx 0rpx 50rpx 0rpx;
+  border-bottom: 1rpx solid RGBA(200, 200, 210, 1);
+}
+
+.formLabel {
+  display: block;
+  font-size: 28rpx;
+  color: rgba(115, 115, 125, 1);
+  margin-bottom: 45rpx;
+  font-weight: 300;
+}
+.formtext{
+  font-size: 30rpx;
+  line-height: 60rpx;
+  /* border-bottom: 1rpx solid RGBA(200, 200, 210, 1); */
+}
+.color{
+  color:  RGBA(195, 195, 210, 1);
+}
+.formInput {
+  height: 68rpx;
+  
+}
+
+.input-placeholder {
+  color: #c8c8d2;
+  font-size: 32rpx;
+}
+
+.formBtn {
+  height: 88rpx;
+  width: 572rpx;
+  border-radius: 0;
+  outline: 0;
+  border: 0;
+  background-color: RGBA(30, 160, 255, 1);
+  color: #fff;
+  font-size: 32rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button::after {
+  border: none;
+}
+
+.inp {
+  /* border-bottom: 1rpx solid RGBA(200, 200, 210, 1);  */
+  padding: 0;
+  height: 150rpx;
+}
+
+.bysever {
+  width: 100%;
+  height: 400rpx;
+  padding: 50rpx 0rpx 0;
+  /* background: red; */
+}
+
+.fc {
+  width: 100%;
+  color: RGBA(30, 160, 255, 1);
+  letter-spacing: 2rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  text-align: center;
+}
+.fc text{
+  text-decoration: underline;
+}
+.box {
+  width: 90%;
+  float: left;
+}
+
+.scan {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.fc2 {
+  width: 100%;
+  color: RGBA(115, 115, 125, 1);
+  text-align: center;
+  font-size: 25rpx;
+}
+
+

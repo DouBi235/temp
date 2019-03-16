@@ -1,0 +1,47 @@
+.container {
+  padding: 30rpx 30rpx 0;
+  font-size: 24rpx;
+  border-top: 1px solid #e9e9e9;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 36rpx;
+  text-align: center;
+  padding: 10rpx 0 30rpx;
+}
+
+.time {
+  margin-bottom: 20rpx;
+  color: #999;
+}
+
+.time>view {
+  width: 200rpx;
+  height: 1px;
+  background-color: #ebebeb;
+  margin-top: 14rpx;
+}
+
+rich-text   .rich-img {
+  width: 100%;
+  text-align: left;
+  float: left;
+  height: auto;
+}
+
+.hjniv {
+  width: 100%;
+  height: 20rpx;
+  margin-bottom: 20rpx;
+  border-bottom: 2rpx solid #ccc;
+}
+
+.nooon {
+  display: block;
+  height: 24rpx;
+  width: 280rpx;
+  text-align: center;
+  background: #fff;
+  margin: 0 auto;
+}

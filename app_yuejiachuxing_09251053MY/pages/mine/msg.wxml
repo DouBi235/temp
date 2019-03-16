@@ -1,0 +1,35 @@
+<view class='topTabSwiper'>
+  <view class='tab {{currentData==0?"tabBorer":""}}' data-current="0" bindtap='checkCurrent'>活动通知</view>
+  <view class='tab {{currentData==1?"tabBorer":""}}' data-current="1" bindtap='checkCurrent'>系统通知</view>
+</view>
+
+<swiper current="{{currentData}}" duration="300" bindchange="bindchange" style="height:{{winHeight - 102}}rpx;margin-top:20rpx">
+  <swiper-item>
+    <scroll-view scroll-y="true" class="scoll-h" bindscrolltolower='islower'>
+      <view wx:for="{{act}}" class='box' bindtap='toinfo' id="act_{{item.id}}">
+        <view class='title'>
+          <text>{{item.title}}</text>
+          <text wx:if="{{item.static==0}}" class='rpoint'></text>
+        </view>
+        <view class='date'>{{item.time}}</view>
+        <view class='menu' catchtap='delmsg' data-id="{{item.id}}">
+          <view>.</view>
+          <view>.</view>
+          <view>.</view>
+        </view>
+      </view>
+    </scroll-view>
+  </swiper-item>
+
+  <swiper-item>
+    <scroll-view scroll-y="true" class="scoll-h" bindscrolltolower='islower'>
+      <view wx:for="{{sys}}" class='box' bindtap='toinfo' id="sys_{{item.mid}}">
+        <view class='title'>
+          <text>{{item.title}}</text>
+          <text wx:if="{{item.static==0}}" class='rpoint'></text>
+        </view>
+        <view class='date'>{{item.time}}</view>
+      </view>
+    </scroll-view>
+  </swiper-item>
+</swiper>

@@ -1,0 +1,54 @@
+<import src="/template/activity.wxml" />
+<view hidden="{{hasUserInfo}}" class='fixbody float'>
+  <view class='fltext'>
+    <text>约驾出行欢迎您</text>
+    <button class='btn flb' open-type="getUserInfo" bindgetuserinfo="getUserInfo">点击登录</button>
+  </view>
+  <image class='floatborder' mode='aspectFit' src='/img/login.png'></image>
+</view>
+<view bindtouchstart="touchStart" bindtouchmove="touchMove">
+  <view class='topouter' bindtap='relogin' style="top:{{headTop}}rpx">
+    <swiper class="banner" indicator-dots="true" autoplay="true" interval="3000" duration="400">
+      <block wx:for="{{movies}}">
+        <swiper-item id="{{item.id}}" catchtap='bannerInfo'>
+          <image src="{{item.pic}}" class="slide-image" mode="aspectFill" />
+        </swiper-item>
+      </block>
+    </swiper>
+    <linkbar hasmask="{{hasmask}}"></linkbar>
+    <view class="tab-h">
+      <view class="tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="swichNav">活动列表</view>
+      <view class="tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="swichNav">往期风采</view>
+    </view>
+  </view>
+  <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{winHeight}}rpx;top:{{bodyTop}}rpx" bindtap='relogin'>
+    <swiper-item>
+      <scroll-view scroll-y="{{bodycanmove}}" class="scoll-h" bindscrolltolower='islower' bindscrolltoupper='isupper' upper-threshold='8'>
+        <block wx:for="{{actnow}}">
+          <template is="activity" data="{{...item}}"></template>
+        </block>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item>
+      <scroll-view scroll-y="{{bodycanmove}}" class="scoll-h" bindscrolltolower='islower' bindscrolltoupper='isupper' upper-threshold='8'>
+        <block wx:for="{{actago}}">
+          <template is="actago" data="{{...item}}"></template>
+        </block>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+</view>
+
+<view class='cannot fixbody' hidden="{{hidecannot}}">
+  <view>非常抱歉，当前区域暂未开放此小程序，敬请等待。</view>
+</view>
+
+<view class='reposition fixbody' hidden="{{hidereposition}}">
+  <view>
+    <view class='retitle'>定位失败</view>
+    <view>您拒绝了定位，请重新授权。若总失败，请检查手机设置</view>
+    <button open-type="openSetting" bindopensetting="bos">重新授权</button>
+  </view>
+</view>
+
+<tabbar curtab="home"></tabbar>

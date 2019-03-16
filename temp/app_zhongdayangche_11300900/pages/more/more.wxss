@@ -1,0 +1,120 @@
+/* pages/more/more.wxss */
+.content{
+  background: #f5f5f5;
+  padding:31rpx 31rpx 46rpx 29rpx;
+  box-sizing: border-box;
+  min-height:100vh;
+  
+}
+/* 产品专区列表 */
+.cpzq-list{
+  width: 690rpx;
+  height: 260rpx;
+  /* border: 1px solid ; */
+  margin: 0 auto;
+  background: #ffffff;
+  color: #020814;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 31rpx;
+  border-radius: 10rpx;
+  position: relative;
+}
+.cpzq-list>image{
+  width: 222rpx;
+  height: 193rpx;
+  margin-left:22rpx;
+}
+button{
+  padding: 0;
+}
+.cpzq-list-btn{
+  /* display: inline-block; */
+  width:60rpx;
+  height:30rpx;
+  line-height: 26rpx;
+  font-size: 18rpx;
+  color: #1F2532;
+  border-radius:20rpx;
+  border: 1px solid rgba(31,37,50,1);
+  position: absolute;
+  right:30rpx;
+  bottom: 30rpx;
+}
+.cpzq-right-tou{
+  height: 24rpx;
+  color: #2E323D;
+  line-height: 24rpx;
+  display: flex;
+  font-size:24rpx;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15rpx;
+}
+.cpzq-right-tou image{
+  width:21rpx;
+  height: 24rpx;
+  align-self: center;
+  margin: 0 5rpx;
+}
+right-tou-box{
+  display: flex;
+}
+.right-tou-txt{
+  display: block;
+  font-size:20rpx;
+  color: #666666;
+}
+.cpzq-list-right{
+  width:450rpx;
+  height: 240rpx;
+  /* border: 1px solid red; */
+  padding: 10rpx;
+  box-sizing: border-box;
+  background: #ffffff;
+  margin-left: 46rpx;
+}
+.cpzq-right-ys{
+  display: flex;
+  color: #5D667A;
+  /* justify-content: space-between; */
+  align-items: center;
+  margin-top: 10rpx;
+  position: relative;
+}
+
+.cpzq-right-title{
+  height: 61rpx;
+  font-size:26rpx;
+  font-weight: 800;
+  margin-top: 21rpx;
+}
+.cpzq-right-yhj{
+  color: #FF3144;
+  display: flex;
+  align-items: center;
+  font-size: 18rpx;
+  margin-top: 36rpx;
+}
+.right-yhj-yj{
+  margin-left:10rpx;
+  color: #5D667A;
+  text-decoration: line-through;
+  font-size: 18rpx;
+}
+.right-yhj-xj{
+  font-size: 30rpx;
+  margin-left: 10rpx;
+}
+
+.right-tou-box{
+  display: flex;
+  justify-content: space-around;
+}
+.cpzq-con-ys{
+  font-size: 18rpx;
+  color: #5D667A;
+  height: 17rpx;
+  line-height: 17rpx;
+}

@@ -1,0 +1,29 @@
+<form bindsubmit="formSubmit">
+  <view class='box'>
+    <view class='title'>
+      <image mode='aspectFit' src='/img/person.png' style='width:24rpx;height:24rpx'></image>
+      <text>请输入您的姓名</text>
+    </view>
+    <input name="uname" value='{{uname}}' class='input' placeholder='姓名' placeholder-class='intip'></input>
+  </view>
+  <view class='box'>
+    <view class='title'>
+      <image mode='aspectFit' src='/img/phone.png' style='width:18rpx;height:24rpx'></image>
+      <text>请输入您的电话</text>
+    </view>
+    <input name="uphone" maxlength='11' value='{{uphone}}' class='input' placeholder='电话' placeholder-class='intip' bindinput='phoneput' bindblur='phoneEnd'></input>
+    <view class='phonetip'>{{phonetip}}</view>
+  </view>
+  <view class='box'>
+    <view class='title'>
+      <image mode='aspectFit' src='/img/wx.png' style='width:30rpx;height:24rpx'></image>
+      <text>请输入您微信号</text>
+    </view>
+    <input name="uwx" value='{{uwx}}' class='input' placeholder='非微信昵称' placeholder-class='intip'></input>
+  </view>
+  <view class='box relief'>
+      <image mode='aspectFit' bindtap='checkboxChange' src="/img/chbox-{{uread?'on':'off'}}.png"></image>
+    <text bindtap='todoc'>免责声明</text>
+  </view>
+  <button form-type='submit' class='btn save'>保存</button>
+</form>

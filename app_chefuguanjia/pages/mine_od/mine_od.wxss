@@ -1,0 +1,168 @@
+/* mine_od.wxss */
+/* 背景颜色样式 */
+.mine_od_total{
+  width: 750rpx;
+  height: auto;
+  background-color: #f4f5f8;
+}
+/* 背景颜色样式 */
+
+/* tab切换样式 */
+.swiper_total{
+  width: 100%;
+  /* height: 100vh; */
+  /* border:1rpx solid blue; */
+}
+.scoll-h{
+  height: 100%;
+}
+.swiper-tab{ 
+  width: 100%; 
+  border-bottom: 2rpx solid #eeeeee; 
+  text-align: center; 
+  line-height: 80rpx; 
+  background-color: #fff;
+} 
+.swiper-tab-item{ 
+  font-size: 30rpx; 
+  display: inline-block; 
+  width: 33.3%; 
+  color: #666666; 
+} 
+.on{
+  color: #1EA0FF; 
+  border-bottom: 5rpx solid #1EA0FF;
+} 
+.swiper-box{ 
+  display: block; 
+  height: 100%; 
+  width: 100%; 
+  overflow: hidden; 
+} 
+.swiper-box view{ 
+  text-align: center; 
+}
+/* tab切换样式 */
+
+/* 已预约样式 */
+.mo_left{
+  width: 750rpx;
+  height: 440rpx;
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+.name{
+  width: 750rpx;
+  height: 88rpx;
+  /* border: 1rpx solid black; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.detail{
+  width: 750rpx;
+  height: 259rpx;
+  /* border: 1rpx solid red; */
+  border-top: 1rpx solid #ECEDF1;
+  border-bottom: 1rpx solid #ECEDF1;
+  display: flex;
+}
+.detail_1{
+  display: block;
+  width:480rpx;
+  height:100rpx;
+  font-size:24rpx;
+  font-weight:400;
+  color:rgba(30,35,40,1);
+  /* border: 1rpx solid black; */
+  margin-top: 30rpx;
+  text-align: left;
+}
+.detail_2{
+  display: flex;
+  align-self: flex-start;
+  margin-top: 20rpx;
+  width:480rpx;
+  height:40rpx;
+  font-size:24rpx;
+  font-weight:400;
+  color:#73737D;
+  /* border: 1rpx solid black; */
+}
+.time{
+  width: 750rpx;
+  height: 88rpx;
+  /* border: 1rpx solid black; */
+  display: flex;
+}
+.time_ymd{
+  width: 365rpx;
+  height: 20rpx;
+  /* border: 1rpx solid #1EA0FF; */
+  display: flex;
+  margin-top: 30rpx; 
+  margin-left: 13rpx;
+  text-align: center;
+}
+.time_dt{
+  width:112rpx;
+  height:40rpx;
+  font-size:28rpx;
+  font-weight:400;
+  color:rgba(115,115,125,1);
+  line-height: 80rpx;
+  margin-left: 230rpx;
+}
+.bd1{
+  width: 95rpx;
+  height: 20rpx;
+  border-left: 1rpx solid #D2D7E1;
+}
+.time_bd{
+  width: 51rpx;
+  height: 20rpx;
+  /* border: 1rpx solid #D2D7E1; */
+  border-left: 1rpx solid #D2D7E1;
+  border-right: 1rpx solid #D2D7E1;
+}
+.bd1,.bd3,.bd5{
+  display: block;
+  font-size:28rpx;
+  font-weight:900;
+  color:rgba(115,115,125,1);
+}
+.bd2,.bd4,.bd6{
+  font-size:28rpx;
+  font-weight:400;
+  color:rgba(115,115,125,1);
+}
+.bd6,.bd5,.bd4,.bd3{
+  border-left: 0;
+}
+/* 已预约样式 */
+
+/* 已确认样式 */
+.center_name{
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+.center_detail{
+  background-color: #fff;
+}
+.center_time{
+  background-color: #fff;
+}
+/* 已确认样式 */
+
+/* 已超时样式 */
+.right_name{
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+.right_detail{
+  background-color: #fff;
+}
+.right_time{
+  background-color: #fff;
+}
+/* 已超时样式 */

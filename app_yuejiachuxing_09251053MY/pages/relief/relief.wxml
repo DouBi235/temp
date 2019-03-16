@@ -1,0 +1,11 @@
+<import src="/wxParse/wxParse.wxml" />
+
+<view class='box'>
+  <view class='title'>
+    <view class='gl'></view>
+    <text>车友会自驾游活动免责声明书</text>
+  </view>
+  <view class='text'>
+    <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+  </view>
+</view>

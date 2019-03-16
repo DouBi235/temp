@@ -1,0 +1,154 @@
+.service{ 
+  padding:0 30rpx;
+  font-size:32rpx;
+}
+.title{
+  width: 100%;
+  height: 88rpx;
+  background: rgba(245, 245, 250, 1);
+  display: flex;
+  justify-content: space-around;
+}
+.box{
+  width: 33%;
+  height: 88rpx;
+  line-height: 88rpx;
+  font-size:28rpx; 
+  text-align: center;
+  color: rgba(115, 115, 125, 1);
+}
+.selected{
+  border-bottom:4rpx solid rgba(30, 160, 255, 1); 
+  color: rgba(30, 35, 40, 1);
+}
+
+.service>.service_text{
+  width:100%;
+   padding:30rpx 0;
+   border-bottom:1rpx solid #E6E6E6;
+}
+.service>.service_text>view>text{
+  border-left:4rpx solid #0099FE;padding-left:20rpx;
+  border-radius: 2rpx;
+}
+.service_item{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #E6E6E6;
+}
+.service_item>view{
+   padding: 30rpx 0
+}
+.service_item>view:first-child{
+  display: flex;
+}
+.service_item>view:first-child>view:first-child{
+  width: 200rpx;
+  height: 170rpx; 
+  margin-right: 30rpx;
+}
+.service_item>view:last-child{
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between
+}
+.service_item-content{
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between
+}
+
+.frequency{
+  display: flex;
+  color: #666666;
+    font-size: 20rpx;
+}
+.color{
+  color:#E03247;
+  padding-left: 10rpx;
+  border-left:1rpx solid #CCCCCC; 
+  margin-left:10rpx; 
+}
+
+
+.Stars{
+  font-size: 25rpx;
+}
+.Stars view image{
+  margin-left:5rpx; 
+}
+
+.maintenance_shop{
+   font-weight: Medium;
+   width: 300rpx;
+  color:#333333;
+  font-size: 26rpx;
+  text-overflow: ellipsis;
+    white-space: nowrap;
+   overflow: hidden; 
+}
+
+.option{
+  font-size: 18rpx;
+  color: #666666;
+}
+
+.option>text{
+  margin-right: 10rpx;
+  border: 1rpx solid #CCCCCC;
+  border-radius: 4rpx;
+  display: inline-block;
+  height: 30rpx;
+  line-height: 30rpx;
+  padding: 0 10rpx
+}
+.frequency>view:first-child{
+  padding-right: 10rpx;
+}
+.frequency>view:last-child{
+  padding-left: 10rpx
+}
+.coordinate{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.coordinate>image{
+    width: 22rpx;
+    height: 26rpx;
+    margin-right: 10rpx;
+}
+.coordinate>text{
+    font-size: 20rpx;
+    color: #666666;
+    display: inline-block
+}
+.about_btn{ 
+  color: #0099FE;
+  font-size: 28rpx;
+  background: none;
+  border:0.5rpx solid #0099FE;
+  text-align: center;
+  height: 56rpx;
+  width: 160rpx;
+  line-height: 56rpx;
+  padding: 0;
+  box-sizing: content-box;
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.login{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 11;
+  background:rgba(0,0,0,0.5)
+}
+.container{
+  position: relative;
+  
+}

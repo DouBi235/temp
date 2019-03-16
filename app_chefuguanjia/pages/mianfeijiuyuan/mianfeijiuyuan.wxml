@@ -1,0 +1,18 @@
+<!--index.wxml-->
+<view class='indexPage'>
+  <block wx:if='{{listy1.length!=0}}'>
+    <view class='itemb' wx:for="{{listy1}}" wx:key>
+      <image class='itemImg' src='{{item.photo[0]}}'></image>
+      <view class='itemt'>
+        <view class='maint'>{{item.company}}{{item.company}}</view>
+        <view class='subt'>
+          <image class='position' src='{{imgUrl}}/weizhi.png'></image> 距您{{item.distance}}公里</view>
+      </view>
+      <view class='absltBtn' bindtap='callTo' data-tel='{{item.serphone}}'>拨打电话</view>
+    </view>
+  </block>
+  <view class='emptyBox' wx:else> 
+    <image src='{{imgUrl}}/Thereisno.png' style='height: 280rpx;width: 280rpx;'></image>
+    <view class='wufap'>当前无免费救援店</view>
+  </view>
+</view>

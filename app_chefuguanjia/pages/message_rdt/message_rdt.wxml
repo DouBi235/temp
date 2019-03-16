@@ -1,0 +1,7 @@
+<view class="container cr-333">
+  <view class="title">{{title}}</view>
+  <view class='hjniv'>
+    <text class='nooon'>{{time}}</text>
+  </view>
+  <rich-text nodes="{{node}}" type='text'></rich-text>
+</view>

@@ -1,0 +1,74 @@
+.fixbody {
+  position: fixed;
+  z-index: -7531;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+view {
+  box-sizing: border-box;
+}
+
+image {
+  display: block;
+}
+
+button::before {
+  border: none;
+}
+
+button::after {
+  border: none;
+}
+
+.clearbox::after {
+  content: '';
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+}
+
+.box {
+  padding: 0 30rpx;
+}
+
+.btn {
+  display: block;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0 auto;
+  width: 690rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 32rpx;
+  background: #21c5bd;
+  border-radius: 0;
+}
+
+.jiao {
+  position: absolute;
+  width: 16rpx;
+  height: 16rpx;
+  border-top: 4rpx solid #ccc;
+  border-right: 4rpx solid #ccc;
+  transform: rotate(45deg);
+}
+
+text.r {
+  color: #e14244;
+}
+
+text.g {
+  color: #21c5bd;
+}
+
+text.org {
+  font-size: 24rpx;
+  color: #f69625;
+  margin-left: 6rpx;
+}

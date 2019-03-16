@@ -1,0 +1,58 @@
+page {
+  background: #f5f5f5;
+  padding: 30rpx 30rpx 128rpx;
+}
+
+.addcar {
+  position: fixed;
+  width: 750rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  margin: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 33;
+}
+
+.box {
+  width: 690rpx;
+  background: #fff;
+  border-radius: 10rpx;
+  margin-bottom: 30rpx;
+}
+
+.title {
+  height: 88rpx;
+  display: flex;
+  align-items: center;
+  color: #21c5bd;
+  font-size: 30rpx;
+}
+.title>input{
+  width: 176px;
+}
+.content {
+  border-top: 2rpx solid #eee;
+  height: 88rpx;
+  display: flex;
+  align-items: center;
+  font-size: 28rpx;
+}
+.content>view {
+  width: 50%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.con-title {
+  color: #999;
+}
+
+.con-info {
+  color: #666;
+}
+
+.tip {
+  color: #ccc;
+}

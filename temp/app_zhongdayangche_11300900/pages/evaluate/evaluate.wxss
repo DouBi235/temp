@@ -1,0 +1,11 @@
+/* pages/evaluate/evaluate.wxss */
+.evaluatePage{border-top: 1rpx solid rgba(0,0,0,0.2)}
+.submitBtn{ height: 88rpx;width: 750rpx;background-color: rgba(31,37,50,1);color: #fff;
+      position: absolute;bottom: 0; border-radius: 0;font-size: 32rpx; }
+.star{  margin: 0 5rpx;  height: 30rpx;  width: 33rpx;  display: inline-block;}
+.evaluateBox{height: 330rpx;width: 690rpx;padding: 0 30rpx;margin-top: 30rpx; }
+.labelBar{display: flex;align-items: center;}
+.evaluateLabel{font-size: 32rpx;color: #333;margin-top: -5rpx;}
+.starBox{margin-left: 14rpx;}
+.evaluateContent{height: 270rpx;width: 690rpx; margin-top: 30rpx;border: 1rpx solid #ccc;border-radius: 10rpx;padding: 24rpx 30rpx;box-sizing: border-box; font-size: 26rpx;}
+.textarea-placeholder{font-size: 26rpx;color: #5D667A;}

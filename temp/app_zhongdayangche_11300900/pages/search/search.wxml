@@ -1,0 +1,88 @@
+<view class='search-box'>
+    <view class='search-ipt'>
+        <image src='../image/search1.png' bindtap='research'></image>
+        <input type='text' class='input' placeholder='{{keywords}}' placeholder-class="placeholder" value='{{keywords}}' bindinput='changekeywords' bindconfirm='research'></input>
+    </view>
+</view>
+<view class='content'>
+    <view class='search-pot'>
+        <scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}">
+            <view class="tab-item {{currentTab==0?'active':''}}" 
+                data-current="0" bindtap="swichNav">
+              距离
+            </view>
+            <view class="tab-item {{currentTab==1?'active':''}}" 
+                data-current="1" bindtap="swichNav">
+              价格
+            </view>
+        </scroll-view>
+        <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:100%;">
+            <swiper-item>  
+                <scroll-view scroll-y="true" class="scoll-h">
+                    <block wx:for="{{distanceList}}" wx:key="key" wx:for-index="idx" wx:for-item="item">
+                        <view class='cpzq-list' data-id="{{item.id}}" bindtap="resultdetail">
+                            <image src='{{item.pic}}'></image>
+                            <view class='cpzq-list-right'>
+                                <view class='cpzq-right-tou'>
+                                    <view>{{item.shop.company}}</view>
+                                    <view class='right-tou-box'>
+                                        <image src='../image/position2.png'></image>
+                                        <text class='right-tou-txt'>9.9km</text>
+                                    </view>
+                                </view>
+                                <view class='cpzq-right-title'>
+                                {{item.name}}     
+                                </view>
+                                <view class='cpzq-right-yhj'>
+                                    <text >优惠价:</text>
+                                    <text class='right-yhj-xj'>{{item.activity_price}}</text>
+                                    <text class='right-yhj-yj'>{{item.market_price}}</text>
+                                </view>
+                                <view class='cpzq-right-ys'>
+                                    <view class='cpzq-con-ys'>
+                                        <text>已售 :</text>
+                                        <text>{{item.virtualnum}}</text>
+                                    </view>
+                                </view>
+                                <button class='cpzq-list-btn' bindtap='resultdetail'>详情</button>
+                            </view>
+                        </view>
+                    </block>
+                </scroll-view>
+            </swiper-item>
+            <swiper-item>
+                <scroll-view scroll-y="true" class="scoll-h">
+                    <block wx:for="{{moneyList}}" wx:key="key" wx:for-index="idx" wx:for-item="item">
+                        <view class='cpzq-list'  data-id="{{item.id}}" bindtap="resultdetail">
+                            <image src='{{item.pic}}'></image>
+                            <view class='cpzq-list-right'>
+                                <view class='cpzq-right-tou'>
+                                    <view>{{item.shop.company}}</view>
+                                    <view class='right-tou-box'>
+                                        <image src='../image/position2.png'></image>
+                                        <text class='right-tou-txt'>9.9km</text>
+                                    </view>
+                                </view>
+                                <view class='cpzq-right-title'>
+                                {{item.name}}     
+                                </view>
+                                <view class='cpzq-right-yhj'>
+                                    <text >优惠价:</text>
+                                    <text class='right-yhj-xj'>{{item.activity_price}}</text>
+                                    <text class='right-yhj-yj'>{{item.market_price}}</text>
+                                </view>
+                                <view class='cpzq-right-ys'>
+                                    <view class='cpzq-con-ys'>
+                                        <text>已售 :</text>
+                                        <text>{{item.virtualnum}}</text>
+                                    </view>
+                                </view>
+                                <button class='cpzq-list-btn' bindtap='resultdetail'>详情</button>
+                            </view>
+                        </view>
+                    </block>
+                </scroll-view>
+            </swiper-item>
+        </swiper>
+    </view>
+</view>

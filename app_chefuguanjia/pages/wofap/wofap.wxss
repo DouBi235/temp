@@ -1,0 +1,15 @@
+/* pages/wofap/wofap.wxss */
+.wofapPage{min-height: 100vh;background: #f5f5fa;padding-top: 30rpx;}
+  .liBox{padding: 0 30rpx;box-sizing: border-box;}
+    .perli{margin-bottom: 30rpx;position: relative;background-size: 690rpx 300rpx;}
+      .rt{height: 122rpx;width: 122rpx;position: absolute;right: 0;top: 0;}
+      .topi{height: 80rpx;width: 600rpx;margin: auto;font-size:28rpx;font-weight:600;color:rgba(30,35,40,1);line-height:80rpx;padding-left: 30rpx;}
+      .bottomi{height: 214rpx;width: 600rpx;margin: auto;padding-top: 30rpx;}
+
+.bar{width: 600rpx;display: flex;justify-content: space-between;padding: 0 20rpx;}
+.lab{font-size:24rpx; font-weight:400;color:rgba(115,115,125,1);line-height:56rpx;}
+.val{font-size:24rpx; font-weight:400;color:rgba(30,35,40,1);line-height:56rpx;}
+
+
+.kongBox{min-height: 100vh;display: flex;flex-direction: column;justify-content: center;align-items: center;padding-bottom: 50rpx}
+.wufap{font-size:28rpx;width: 300rpx;text-align: center;font-weight:400;color:rgba(115,115,125,1);line-height:40rpx;margin-top: 20rpx;}

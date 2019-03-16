@@ -1,0 +1,82 @@
+<view class='okBuyVipPage'>
+  <!-- 没有邀请人 分未获取硬件和邦保养已获取硬件两种情况 -->
+  <view class='serveIntro' style="background-image: url('{{imgUrl}}/vipdetailbg.png');background-size: 750rpx 680rpx;">
+    <view class='textBoxs' wx:if="{{status != 2 }}">恭喜您获得智能终端设备</view>
+    <view class='textBoxs' wx:if="{{status == 2}}">您已获得智能终端</view> 
+    <view class='serveItems'>
+      <view class='item1'>
+        <image class='i1mg' src='{{imgUrl}}/new/zhekou.png'></image>
+        <view class='i1t1'>智能终端</view>
+        <view class='i1t2'>智能终端设备</view>
+      </view>
+      <view class='item1'>
+        <image class='i1mg' src='{{imgUrl}}/new/tuifei.png'></image>
+        <view class='i1t1'>停驶奖励</view>
+        <view class='i1t2'>上传保单享停驶奖励</view>
+      </view>
+      <view class='item1'>
+        <image class='i1mg' src='{{imgUrl}}/new/tequan.png'></image>
+        <view class='i1t1'>养护提醒</view>
+        <view class='i1t2'>智能养护提醒</view>
+      </view>
+      <view class='item1'>
+        <image class='i1mg' src='{{imgUrl}}/new/chuxing.png'></image>
+        <view class='i1t1'>故障预警</view>
+        <view class='i1t2'>智能故障预警</view>
+      </view>
+    </view>
+  </view>
+  <view class='hardwareInfo' wx:if="{{status !=2}}">
+    <view class='fhead'>
+      <text class='ftitle'>输入收货地址</text>
+      <view class='fline'></view>
+      <text class='fsubtitle'>请认真填写收货地址，我们将在7天内安排发货</text>
+    </view>
+    <view class='fitembar'>
+      <view class='flabal'>收件人：</view>
+      <input class='finpot' cursor-spacing='20' value='{{name}}' bindinput='name' placeholder='输入收件人姓名'></input>
+    </view>
+    <view class='fitembar'>
+      <view class='flabal'>手机号：</view>
+      <input class='finpot' cursor-spacing='20' maxlength='11' value='{{phone}}' bindinput='phone' placeholder='输入收件人电话'></input>
+    </view>
+    <view class='fitembar'>
+      <view class='flabal'>省份：</view>
+      <picker bindchange="changePro" range="{{province}}">
+        <view class='pview'>
+          <view style='color:{{proName=="请选择省份"? "":"black"}}'>{{proName}}</view>
+          <image class='arroww' src="{{imgUrl}}/new/arrow.png"></image>
+        </view>
+      </picker>
+    </view>
+    <view class='fitembar'>
+      <view class='flabal'>城市：</view>
+      <picker bindchange="changeCity" range="{{city}}">
+        <view class='pview'>
+          <view style='color:{{cityName=="请选择城市"? "":"black"}}'>{{cityName}}</view>
+          <image class='arroww' src="{{imgUrl}}/new/arrow.png"></image>
+        </view>
+      </picker>
+    </view>
+    <view class='fitembar'>
+      <view class='flabal'>地区：</view>
+      <picker bindchange="changeArea" range="{{area}}" range-key="name">
+        <view class='pview'>
+          <view style='color:{{areaName=="请选择地区"? "":"black"}}'>{{areaName=="请选择地区"? areaName :areaName.name }}</view>
+          <image class='arroww' src="{{imgUrl}}/new/arrow.png"></image>
+        </view>
+      </picker>
+    </view>
+    <view class='fitembar' style='height:auto'>
+      <view class='flabal' style='align-self: flex-start;margin-top: 26rpx;'>详细地址：</view>
+      <textarea class='ftextarea' cursor-spacing="60" adjust-position='true' bindinput="inputName" placeholder="请输入详细地址" value='{{adDetail}}' maxlength="-1"></textarea>
+    </view>
+  </view>
+  <!-- 已有硬件 -->
+  <view class='hardwareInfo' style='height: 440rpx;' wx:if="{{status == 2}}">
+    <image class='hardimg' src='{{imgUrl}}/hardd.png'></image>
+    <text class='teterr'>{{hadcontent}}</text>
+  </view>
+  <!-- 提交按钮 -->
+  <view class='nextBtn' bindtap='pay'>确定</view>
+</view>

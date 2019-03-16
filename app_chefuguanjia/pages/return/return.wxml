@@ -1,0 +1,103 @@
+<view class="container">
+  <view class='title'>
+    <image src="{{imgUrl}}/mybgimg.png"></image>
+    <view class='company'>
+      <view class='companyNmae'>
+        {{notUpload==1?"未上传保单":CarownerData.company}}
+      </view>
+      <view class='date'>
+        {{notUpload==1?"无保单号":CarownerData.start_time +' ~ '+CarownerData.end_time }}
+      </view>
+    </view>
+  </view>
+  <view class='mfdetail' wx:if="{{CarownerData.status == 1||CarownerData.status==2}}">
+    <view class='money'>
+      <view class='left'>
+        <view class='icon'>
+          <image src='{{imgUrl}}/baoicon.png'></image>
+        </view>
+        <view class='txt'>
+          保单金额(元)
+        </view>
+        <view class='moneyNum'>
+          {{CarownerData.total}}
+        </view>
+      </view>
+      <view class='right'>
+        <view class='icon'>
+          <image src='{{imgUrl}}/tuiicon.png'></image>
+        </view>
+        <view class='txt'>
+          累计奖励(元)
+        </view>
+        <view class='moneyNum'>
+          {{CarownerData.refund_total}}
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='none' wx:if="{{notUpload==1}}">
+    <view class='biaoqian'>
+      <image src='{{imgUrl}}/baoicon.png'></image>
+    </view>
+    <view class='za'>
+      请上传保单信息
+    </view>
+    <view class='zb'>
+      上传保单,享停驶奖励服务
+    </view>
+    <button class='btn' bindtap='skipUpload'>
+      保单上传
+    </button>
+  </view>
+  <view class='Refund_state' wx:if='{{CarownerData.mem_status==0}}'>
+    <navigator class='navigator' target="miniProgram" url="../index/index" app-id="wx5e18e3308b2c6e9f" open-type='navigate' style='visibility:hidden'>
+      <view class='maintain'>您不是邦保养会员，无法获得奖励></view>
+    </navigator>
+  </view>
+  <view class='Refund_state' wx:if='{{CarownerData.obd_status==0||CarownerData.obd_status==2}}'>
+    <view class='maintain' bindtap='JumpIndex'>您未激活智能终端或设备离线，无法获得奖励></view>
+  </view>
+  <view class='Refund_state' wx:if='{{CarownerData.status==2}}'>
+    <view class='maintain' bindtap='JumpPolicy'>您的保单已过期，无法获得奖励></view>
+  </view>
+  <view class='kongBox' wx:if="{{(CarownerData.status==1||CarownerData.status==2)&&CarownerData.refund.length == 0}}">
+    <image src='{{imgUrl}}/Thereisno.png' style='height: 280rpx;width: 280rpx;'></image>
+    <view class='wufap'>暂无奖励记录</view>
+  </view>
+  <view wx:if="{{(CarownerData.status==1||CarownerData.status==2)&&CarownerData.refund.length !== 0}}">
+    <!-- 调整后的列表 -->
+    <view class='detail1' wx:for="{{CarownerData.refund}}" wx:key>
+      <view class='dLeft'>
+        <!-- 公里数，当公里数大于1km的时候为红色，当为未结算状态时为灰色 -->
+        <view class='km1' style='color:{{item.refund_status==4?"#ff5f5f":item.refund_status==0?"#ff5f5f":item.refund_status==3?"#888":""}}'>{{item.km}}km</view>
+        <view class='date1'>
+          {{item.create_time}}
+        </view>
+      </view>
+      <view class='dRight'>
+        <!-- 成功奖励  默认-->
+        <view class='box-r' wx:if="{{item.refund_status == 1}}"><text>{{item.refund_price}}</text>元</view>
+        <!-- 未达到奖励要求 红-->
+        <view class='status0' wx:elif="{{item.refund_status == 0}}">未达到奖励要求</view>
+        <!-- 系统核算 灰-->
+        <view class='status0' wx:elif="{{item.refund_status == 3}}" style='color: #888; '>系统核算中</view>
+        <!-- 通讯异常 红-->
+        <view class='status0' wx:elif="{{item.refund_status == 4}}" style='color: #ff5f5f; '>通讯异常</view>
+      </view>
+    </view>
+  </view>
+  <view class='Audit' wx:if="{{CarownerData.status==0}}">
+    <image mode='widthFix' src='{{imgUrl}}/shenhe.png'></image>
+    <view>您的保单信息正在审核中</view>
+  </view>
+  <view class='Audit' wx:if='{{CarownerData.status==3}}'>
+    <image mode='widthFix' src='{{imgUrl}}/notPass.png'></image>
+    <view>您的保单审核未通过，
+      <text bindtap='SeeDetails'>查看详情</text>
+    </view>
+    <view>
+      <button bindtap='againSubmit'>重新提交审核</button>
+    </view>
+  </view>
+</view>

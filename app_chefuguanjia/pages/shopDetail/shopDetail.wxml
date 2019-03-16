@@ -1,0 +1,144 @@
+<!-- service_dt.wxml -->
+<view class='service_dt_total'>
+
+  <!-- 轮播图部分 -->
+  <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">
+    <block wx:for="{{photo}}" wx:for-index="index">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" mode="aspectFill" />
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <!-- 维修厂名称部分 -->
+  <view class='name'>
+    <view class='name_total'>
+      <view class='name_left'>
+        <text class='text_1'>{{company}}</text>
+      </view>
+      <view class='name_right'>
+        <image src='{{loc}}' style='width: 32rpx; height: 32rpx;'></image>
+        <text class='text_2'>{{distance}}km</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 公司位置部分 -->
+  <view class='location'>
+    <view class='loc_part'>
+      <view class='loc_left'>
+        <image src='{{location}}' style='width: 40rpx; height: 40rpx;'></image>
+      </view>
+      <view class='loc_center'>
+        <text class='loc_text'>{{address}}</text>
+      </view>
+      <view class='loc_right'>
+        <image src='{{arrow}}' style='width: 40rpx; height: 40rpx;'></image>
+      </view>
+    </view>
+  </view>
+
+  <!-- 电话部分 -->
+  <view class='phone' bindtap='tel' data-phone='{{serphone}}'>
+    <view class='phone_part'>
+      <view class='phone_left'>
+        <image src='{{phone}}' style='width: 40rpx; height: 40rpx;'></image>
+      </view>
+      <view class='phone_center'>
+        <text class='phone_text'>{{serphone}}</text>
+      </view>
+      <view class='phone_right'>
+        <image src='{{arrow}}' style='width: 40rpx; height: 40rpx;'></image>
+      </view>
+    </view>
+  </view>
+
+  <!-- 厂家介绍部分 -->
+  <view class='introduce'>
+    <view class='int_top'>
+      <view style='width:200rpx; border:1rpx solid #ECEDF1;'></view>
+      <text class='int_text1'>厂家介绍</text>
+      <view style='width:200rpx; border:1rpx solid #ECEDF1;'></view>
+    </view>
+    <view class='int_bottom'>
+      <text class='int_text2'>
+        <!-- 采用特有核心技术，具有“双重耐磨、超强清洁、高低温保护”三大核心功能，能够驾驭困难路况下的润滑难题 -->
+        {{about}}
+      </text>
+    </view>
+  </view>
+
+  <!-- 维修厂技师部分 -->
+  <view class='skill'>
+    <view class='skill_title'>
+      <text style='line-height:100rpx; font-size:28rpx; color:#73737D; padding-left: 40rpx;'>维修厂技师（{{entotal}}人）</text>
+    </view>
+    <!-- 滚动导航部分 -->
+    <scroll-view class="scroll" scroll-x="true">
+      <view class='scroll_total'>
+        <view class='scroll_icon icon1' wx:for='{{engineer}}' wx:key="key">
+          <navigator target="miniProgram" app-id="">
+            <image src='{{item.wx_head}}' style='width: 120rpx; height: 120rpx; border-radius: 50%;'></image>
+            <view class='scroll_text'>{{item.name}}</view>
+            <view style='width:60rpx; border:1rpx solid #73737D; margin:8rpx auto;'></view>
+            <view class='scroll_time'>{{item.server}}</view>
+          </navigator>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+
+  <!-- 车主评价部分 -->
+  <view class='owner'>
+    <view class='owner_title'>
+      <text style='line-height:100rpx; font-size:28rpx; color:#73737D; padding-left: 40rpx;'>车主评价</text>
+    </view>
+
+    <view class='owner_num'>
+      <view class='num_left'>
+        <text style='font-size:80rpx; font-weight:bold; color:rgba(250,100,75,1); line-height:112rpx; padding-right:20rpx;'>{{comment}}</text>
+        <text style='font-size:28rpx font-weight:400; color:rgba(250,100,75,1); line-height:40rpx;'>分</text>
+        <text style='font-size:24rpx; font-weight:400; color:rgba(150,155,165,1); line-height:25rpx;'>
+          总体点评
+        </text>
+      </view>
+      <view class='num_right'>
+        <view class='nr_top'>
+          <text style='display:block; font-size:24rpx; font-weight:400; color:rgba(150,155,165,1); line-height:34rpx;'>服务态度</text>
+          <view class='star'>
+            <image src='{{star_1}}' wx:for='{{tn_star}}' style='width: 32rpx; height: 32rpx; margin-right:10rpx;'></image>
+            <image src='{{star_2}}' wx:for='{{5 - tn_star}}' style='width: 32rpx; height: 32rpx; margin-right:10rpx;'></image>
+          </view>
+        </view>
+        <view class='nr_bottom'>
+          <text style='display:block; font-size:24rpx; font-weight:400; color:rgba(150,155,165,1); line-height:34rpx;'>维修效率</text>
+          <view class='star'>
+            <image src='{{star_1}}' wx:for='{{shop_star}}' style='width: 32rpx; height: 32rpx; margin-right:10rpx;'></image>
+            <image src='{{star_2}}' wx:for='{{5 - shop_star}}' style='width: 32rpx; height: 32rpx; margin-right:10rpx;'></image>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class='owner_dt' wx:for='{{commentList}}' wx:key='key'>
+
+      <view class='dt_part'>
+        <view class='dt_num'>
+          <image src='{{item.head_pic}}' style='width: 80rpx; height: 80rpx; border-radius: 50%;'></image>
+          <view class='detail'>
+            <text style='display:block; font-size:28rpx; font-weight:400; color:rgba(30,35,40,1); line-height:40rpx;'>{{item.phone}}</text>
+            <view style='width:136rpx; height:24rpx; display: flex; margin-left:5rpx; margin-top:8rpx;'>
+              <image src='{{star_4}}' wx:for='{{item.shop_star}}' style='width: 24rpx; height: 24rpx;'></image>
+              <image src='{{star_3}}' wx:for='{{5 - item.shop_star}}' style='width: 24rpx; height: 24rpx;'></image>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class='dt_text'>
+        <text style='display:block; font-size:24rpx; font-weight:400; color:rgba(115,115,125,1); line-height:40rpx;'>{{item.content}}</text>
+      </view>
+      <text style='display:block;  width: 200rpx; margin-left:480rpx; margin-top:30rpx; margin-bottom:20rpx; font-size:20rpx; font-weight:400; color:rgba(115,115,125,1); line-height:28rpx;'>{{item.create_time}}</text>
+    </view>
+  </view>
+
+</view>

@@ -1,0 +1,13 @@
+<import src="/wxParse/wxParse.wxml" />
+
+<view class='box'>
+  <view class="dawenzi">{{msg.title}}</view>
+  <view class='time'>
+    <view class='line'></view>
+    <view>{{msg.time}}</view>
+    <view class='line'></view>
+  </view>
+  <view class="wenzi">
+    <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+  </view>
+</view>

@@ -1,0 +1,210 @@
+page {
+  background: #f5f5f5;
+  padding-bottom: 100rpx;
+}
+
+.form-box {
+  background: #fff;
+  margin-bottom: 70rpx;
+  padding-top: 40rpx;
+  padding-bottom: 20rpx;
+}
+
+.formlist {
+  margin-bottom: 40rpx;
+  margin-left: 82rpx;
+  width: 628rpx;
+}
+
+.formlist:nth-last-of-type(1) {
+  margin-bottom: 0;
+}
+
+.formlist::after {
+  content: '';
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+}
+
+.li-icon {
+  position: absolute;
+  left: -50rpx;
+  bottom: 24rpx;
+  width: 28rpx;
+  height: 24rpx;
+}
+
+.li-title {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.li-content {
+  position: relative;
+}
+
+.conput {
+  color: #333;
+  font-size: 26rpx;
+  height: 2rem;
+  line-height: 2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.contip {
+  font-size: 26rpx;
+  color: #ccc;
+  height: 2rem;
+  line-height: 2rem;
+}
+
+.half-width {
+  width: 314rpx;
+  float: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.li-line {
+  background: #e6e6e6;
+  width: 100%;
+  height: 2rpx;
+}
+
+.half-l {
+  width: 240rpx;
+  float: left;
+}
+
+.half-r {
+  width: 240rpx;
+  float: right;
+}
+
+.fixbody {
+  z-index: 500;
+  background: rgba(51, 51, 51, 0.5);
+}
+
+.date-alert {
+  position: absolute;
+  left: calc(50% - 300rpx);
+  top: 240rpx;
+  width: 600rpx;
+  height: 486rpx;
+  border-radius: 20rpx;
+  overflow: hidden;
+  background: #fff;
+}
+
+.date-title {
+  height: 128rpx;
+  line-height: 128rpx;
+  background: #21c5bd;
+  color: #fff;
+  font-size: 32rpx;
+  text-align: center;
+}
+
+.date-pick {
+  width: 520rpx;
+  height: 256rpx;
+  line-height: 76rpx;
+  margin-left: 40rpx;
+  font-size: 28rpx;
+  color: #333;
+  text-align: center;
+}
+
+.date-pick.time {
+  width: 560rpx;
+  margin-left: 20rpx;
+}
+
+.date-picol::after, .date-picol::before {
+  border: none;
+}
+
+.date-picol {
+  height: 76rpx;
+}
+
+.date-curbg {
+  position: absolute;
+  width: 500rpx;
+  left: 50rpx;
+  top: 224rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.date-curbg.time {
+  width: 540rpx;
+  left: 30rpx;
+}
+
+.date-curbg>view {
+  width: 160rpx;
+  height: 64rpx;
+  background: rgba(33, 197, 189, 0.2);
+  border-top: solid 2rpx rgba(33, 197, 189, 0.5);
+  border-bottom: solid 2rpx #21c5bd;
+}
+
+.date-curbg.time>view {
+  width: 120rpx;
+}
+
+.date-btn {
+  border-top: solid 2rpx #eee;
+  box-sizing: content-box;
+  height: 100rpx;
+  position: relative;
+}
+
+.date-coline {
+  position: absolute;
+  left: calc(50% - 2rpx);
+  top: 0;
+  width: 4rpx;
+  height: 100%;
+  background: #eee;
+}
+
+.date-btn>.btn {
+  float: left;
+  width: 50%;
+  height: 100rpx;
+  line-height: 100rpx;
+  color: #21c5bd;
+  font-size: 36rpx;
+  background: #fff;
+}
+
+.date-btn>.btn.l {
+  border-radius: 0 0 0 20rpx;
+}
+
+.date-btn>.btn.r {
+  border-radius: 0 0 20rpx 0;
+}
+
+.jiao {
+  width: 20rpx;
+  height: 20rpx;
+  right: 8rpx;
+  bottom: 28rpx;
+}
+
+.pen {
+  width: 24rpx;
+  height: 24rpx;
+  position: absolute;
+  right: 8rpx;
+  top: 26rpx;
+}

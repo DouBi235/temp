@@ -1,0 +1,12 @@
+/* pages/personalInfo/personalInfo.wxss */ 
+.input-placeholder{font-size: 27rpx;line-height: 27rpx;}
+.personalInfoPage{min-height: calc(100vh - 200rpx);background-color: #fff;border-top: 1rpx solid rgba(0, 0, 0, 0.2) }
+  .inputBox{padding: 80rpx 30rpx 0;}
+    .labelBox{display: flex;align-items: center;}
+      .nameImg,.phoneImg{height: 24rpx; width: 18rpx;}
+      .nameImg{height:28rpx;width:28rpx;}
+      .nameLabel,.phoneLabel{font-size: 26rpx;color: #333;margin-left: 20rpx;}
+    .nameInput,.phoneInput{width: 690rpx; height: 80rpx;background-color: #f4f4f4;margin-top: 44rpx;padding:0 31rpx;box-sizing: border-box;font-size: 27rpx;}
+    .phoneImg{margin:0 3rpx;}
+    .submitBtn{ height: 88rpx;width: 750rpx;background-color: rgba(31,37,50,1);color: #fff;
+      position: absolute;bottom: 0; border-radius: 0;font-size: 32rpx; }

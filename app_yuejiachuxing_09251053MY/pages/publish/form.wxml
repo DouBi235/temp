@@ -1,0 +1,162 @@
+<form bindsubmit='tempSubmit'>
+  <view class='form-box'>
+    <view class='formlist'>
+      <view class='li-title'>活动标题</view>
+      <view class='li-content'>
+        <image mode='aspectFit' src='/img/pen.png' class='pen'></image>
+        <image mode='aspectFit' class='li-icon' src='/img/f-title.png'></image>
+        <input class='conput' placeholder-class='contip' placeholder='请输入标题' name='active_name'></input>
+      </view>
+      <view class='li-line'></view>
+    </view>
+    <view class='formlist'>
+      <view class='li-title'>路线规划</view>
+      <view class='li-content'>
+        <image mode='aspectFit' class='li-icon' src='/img/f-route.png'></image>
+        <input class='conput' placeholder-class='contip' placeholder='请输入路线' name='active_route'></input>
+      </view>
+      <view class='li-line'></view>
+    </view>
+    <view class='formlist'>
+      <view class='li-title'>始发地</view>
+      <view class='li-content clearbox'>
+        <image mode='aspectFit' class='li-icon' src='/img/f-setpoint.png'></image>
+        <picker class='half-width' mode="region" bindchange="bindRegionChange" value="{{region}}">
+          <view wx:if="{{hasregion}}" class="conput">{{region[0]}}/{{region[1]}}/{{region[2]}}</view>
+          <view wx:else class="contip half-width">请选择省/市/区</view>
+        </picker>
+        <input class='conput half-width' placeholder-class='contip' placeholder='请输入集合地点' name='begin_place'></input>
+      </view>
+      <view class='li-line'></view>
+    </view>
+    <view class='formlist'>
+      <view class='li-title'>报名截止时间</view>
+      <view class='li-content'>
+        <image mode='aspectFit' class='li-icon' src='/img/f-date.png'></image>
+        <view class="conput{{bmtime?'':' contip'}}" catchtap='alertbmt'>{{bmtime?bmtime:'请选择'}}</view>
+      </view>
+      <view class='li-line'></view>
+    </view>
+    <view class='formlist'>
+      <view class='half-l'>
+        <view class='li-title'>出发时间</view>
+        <view class='li-content'>
+          <image mode='aspectFit' class='li-icon' src='/img/f-startime.png'></image>
+          <view class="conput{{optime?'':' contip'}}" catchtap='alertopt'>{{optime?optime:'请选择'}}</view>
+        </view>
+        <view class='li-line'></view>
+      </view>
+      <view class='half-r'>
+        <view class='li-title'>回来时间</view>
+        <view class='li-content'>
+          <image mode='aspectFit' class='li-icon' src='/img/f-backtime.png'></image>
+          <view class="conput{{edtime?'':' contip'}}" catchtap='alertedt'>{{edtime?edtime:'请选择'}}</view>
+        </view>
+        <view class='li-line'></view>
+      </view>
+    </view>
+    <view class='formlist'>
+      <view class='li-title'>可约人数</view>
+      <view class='li-content'>
+        <image mode='aspectFit' class='li-icon' src='/img/f-peoplenum.png'></image>
+        <input class='conput' placeholder-class='contip' placeholder='请输入可约人数' name='people_num'></input>
+      </view>
+      <view class='li-line'></view>
+    </view>
+    <view class='formlist'>
+      <view class='li-title'>车型</view>
+      <view class='li-content'>
+        <image mode='aspectFit' class='li-icon' src='/img/f-car.png'></image>
+        <view class="conput{{cartype?'':' contip'}}" catchtap='tomycar'>{{cartype?cartype:'请选择车型'}}</view>
+        <view class='jiao'></view>
+      </view>
+    </view>
+  </view>
+  <button class='btn' form-type='submit'>下一步</button>
+</form>
+
+<view class='fixbody' style="{{hidop?'left:4000rpx':''}}" catchtouchmove='true'>
+  <!-- 不要用hidden或display:none，数据更新不及时，会出BUG -->
+  <view class='date-alert'>
+    <view class='date-title'>出发时间</view>
+    <picker-view catchtouchmove='disbtn' indicator-class='date-picol' class='date-pick' value="{{value}}" bindchange="bindChange">
+      <picker-view-column>
+        <view wx:for="{{years}}">{{item}}年</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{months}}">{{item}}月</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{days}}">{{item}}日</view>
+      </picker-view-column>
+    </picker-view>
+    <view class='date-curbg'>
+      <view></view>
+      <view></view>
+      <view></view>
+    </view>
+    <view class='date-btn'>
+      <button class='btn l' bindtap='hidate' disabled="{{disbtn}}">取消</button>
+      <button class='btn r' bindtap='setopt' disabled="{{disbtn}}">确定</button>
+      <view class='date-coline'></view>
+    </view>
+  </view>
+</view>
+<view class='fixbody' style="{{hided?'left:4000rpx':''}}" catchtouchmove='true'>
+  <view class='date-alert'>
+    <view class='date-title'>回来时间</view>
+    <picker-view catchtouchmove='disbtn' indicator-class='date-picol' class='date-pick' value="{{value}}" bindchange="bindChange">
+      <picker-view-column>
+        <view wx:for="{{years}}">{{item}}年</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{months}}">{{item}}月</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{days}}">{{item}}日</view>
+      </picker-view-column>
+    </picker-view>
+    <view class='date-curbg'>
+      <view></view>
+      <view></view>
+      <view></view>
+    </view>
+    <view class='date-btn'>
+      <button class='btn l' bindtap='hidate' disabled="{{disbtn}}">取消</button>
+      <button class='btn r' bindtap='setedt' disabled="{{disbtn}}">确定</button>
+      <view class='date-coline'></view>
+    </view>
+  </view>
+</view>
+<view class='fixbody' style="{{hidbm?'left:4000rpx':''}}" catchtouchmove='true'>
+  <view class='date-alert'>
+    <view class='date-title'>报名截止时间</view>
+    <picker-view catchtouchmove='disbtn' indicator-class='date-picol' class='date-pick time' value="{{bmvalue}}" bindchange="timeChange">
+      <picker-view-column>
+        <view wx:for="{{years}}">{{item}}年</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{months}}">{{item}}月</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{days}}">{{item}}日</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{hours}}">{{item}}点</view>
+      </picker-view-column>
+    </picker-view>
+    <view class='date-curbg time'>
+      <view></view>
+      <view></view>
+      <view></view>
+      <view></view>
+    </view>
+    <view class='date-btn'>
+      <button class='btn l' bindtap='hidate' disabled="{{disbtn}}">取消</button>
+      <button class='btn r' bindtap='setbmt' disabled="{{disbtn}}">确定</button>
+      <view class='date-coline'></view>
+    </view>
+  </view>
+</view>
+
+<tabbar curtab="publish"></tabbar>

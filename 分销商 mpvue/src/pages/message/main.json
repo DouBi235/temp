@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "消息",
+  "usingComponents": {
+    "i-tabs": "../../static/dist/tabs/index",
+    "i-tab": "../../static/dist/tab/index"
+  }
+}

@@ -1,0 +1,58 @@
+<!-- 预约 -->
+<view class='box'>
+  <view class='box-con'>
+    <image src='../image/people.png'></image>
+    <input placeholder='预约人' placeholder-style='font-sizr:26rpx;' focus bindinput='inputname' value='{{appointor}}'></input>
+  </view>
+  <view class='box-con'>
+    <image src='../image/phone1.png'></image>
+    <input placeholder='手机号码' placeholder-style='font-sizr:26rpx;' bindinput='inputtel' value='{{phonenum}}' type='number'></input>
+  </view>
+  <view class='box-con'>
+    <image src='../image/car-system.png'></image>
+    <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+      <input placeholder='车系' placeholder-style='font-sizr:26rpx;' value='{{defaultOne}}' disabled></input>
+    </picker>
+  </view>
+  <view class='box-con'>
+    <image src='../image/car-model.png'></image>
+    <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+      <input placeholder='车型' placeholder-style='font-sizr:26rpx;' value='{{defaultTwo}}' disabled></input>
+    </picker>
+  </view>
+  <!-- 车牌号 picker -->
+  <view class='box-con carPicker'>
+    <picker class="carCity" bindchange="changeCity" data-target="city" value="{{carCityIndex}}" range="{{carCity}}">
+      {{ carCity[carCityIndex] }}
+      <image src='../image/select_down.png' style="margin-left: 16rpx;"></image>
+    </picker>
+    <picker class="carZimu" bindchange="changeCity" data-target="zimu" value="{{carZimuIndex}}" range="{{carZimu}}">
+      {{ carZimu[carZimuIndex] }}
+      <image src='../image/select_down.png' style="margin-left: 16rpx;"></image>
+    </picker>
+    <input class="carInput" placeholder="车牌" value="{{carStr}}" bindinput='inputcar' maxlength='5'></input>
+    <text class="errorText">{{errorText}}</text>
+  </view>
+  <text class='box-yysj'> 预约时间  </text>
+  <view class="time_screens">
+    <picker-view indicator-class='time-check' indicator-css="pick-box" mask-style="font-size:28rpx;color:#5D667A;" style="width:100%; height: 320rpx;" value="{{value}}" bindchange="bindChange">
+
+      <picker-view-column class="picker-text">
+        <view wx:for="{{months}}" wx:for-index="idx" style="line-height:104rpx" class='time-sty'>{{item}}月</view>
+      </picker-view-column>
+
+      <picker-view-column class="picker-text">
+        <view wx:for="{{days}}" wx:for-index="idx" style="line-height:104rpx" class='time-sty'>{{item}}日</view>
+      </picker-view-column>
+
+      <picker-view-column class="picker-text">
+        <view wx:for="{{hours}}" wx:for-index="idx" style="line-height:104rpx;" class='time-sty'>{{item}}时</view>
+      </picker-view-column>
+
+      <picker-view-column class="picker-text">
+        <view wx:for="{{minutes}}" wx:for-index="idx" style="line-height:104rpx" class='time-sty'>{{item}}分</view>
+      </picker-view-column>
+    </picker-view>
+  </view>
+  <button type='button' class='box-btn' bindtap='submitAppointment'>预约</button>
+</view>

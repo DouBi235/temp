@@ -1,0 +1,123 @@
+<!--pages/register/register.wxml-->
+<view class='container'>
+   <view class='header'>
+       <image src='{{imgUrl}}/register_bg.png'></image>
+       <view class='content'>
+           <view class='title'>注册《UBI车管家》服务店</view>
+           <view class='border'></view>
+           <view class='introduce'>获得价值1080元车管家智能终端并享受车辆停驶奖励。</view>
+           <view class='Tips'>
+               注册码
+           </view>
+           <view class='input'>
+               <block wx:for="{{Inputlength}}" wx:key='{{index}}'>
+                   <input placeholder-class='placeholder'  placeholder='{{placeholder[index]}}' type='Number' disabled catchtap='Tap' value='{{promo_code.length>=index+1 ? promo_code[index] : ""}}' />
+               </block>
+           </view>
+            <input name="password"  class='ipt' maxlength="{{Inputlength}}" focus="{{isFocus}}" bindinput="Focus"></input>
+            <view class='TipsUser'>请向推荐人获取注册码</view> 
+       </view>
+   </view>
+   <view class='main'>
+       <view class='address'>收货地址</view>
+        <form bindsubmit="formSubmit" class='Receiving_goods' bindreset="formReset">
+           <view class='item'>
+               <view>
+                 <view>收件人：</view>
+                 <view><input bindinput='getAddressee' value='{{name}}' /></view>
+               </view> 
+          </view>
+          <view class='item'>
+               <view>
+                 <view>手机号：</view>
+                 <view><input bindinput='getPhone' value='{{phone}}' /></view>
+               </view> 
+          </view>
+          <view class='item'>
+               <view class='province'>
+                 <view>省份：</view>
+                 <view class='province_picker'>
+                    <picker bindchange="changePro" value='{{index}}' data-id='{{currentPro}}' range="{{province}}" range-key="name">
+                        <view class='flex'>
+                            <view style='color:{{currentPro=="请选择省份"? "":"black"}}' class='brandText2'>{{ currentPro}}</view>
+                           <image src="{{imgUrl}}/arrow.png"></image>
+                        </view>
+                     </picker>
+                 </view> 
+               </view> 
+          </view>
+          <view class='item'>
+               <view class='province'>
+                 <view>城市：</view>
+                 <view class='province_picker'>
+                    <picker bindchange="changeCity" value='{{index}}'  range="{{city}}" range-key="name">
+                        <view class='flex'>
+                            <view style='color:{{currentCity=="请选择市"? "":"black"}}' class='brandText2'>{{ currentCity}}</view>
+                           <image src="{{imgUrl}}/arrow.png"></image>
+                        </view>
+                     </picker>
+                 </view> 
+               </view> 
+          </view>
+          <view class='item'>
+               <view class='province'>
+                 <view>地区：</view>
+                 <view class='province_picker'>
+                    <picker bindchange="changeCounty" value='{{index}}'  range="{{county}}" range-key="name">
+                        <view class='flex'>
+                            <view style='color:{{currentCounty=="请选择区/县"? "":"black"}}' class='brandText2'>{{ currentCounty}}</view>
+                           <image src="{{imgUrl}}/arrow.png"></image>
+                        </view>
+                     </picker>
+                 </view> 
+               </view> 
+          </view>
+          <view class='item'>
+               <view>
+                 <view>详细地址：</view>
+                 <view><input bindinput='get_address' value='{{address}}' /></view>
+               </view> 
+          </view>
+        </form>
+   </view>
+   <view class='footer'>
+      <view>{{Receiving_goodsData.money}} <text>元</text></view>
+      <view class='pay' bindtap='pay' >
+        确认支付
+      </view>
+   </view>
+
+   <view class='shadowLayer' wx:if="{{hasUserInfo}}" catchtouchmove='showLayer' catchtap='showLayer'>
+  <view class='layerBox' catchtouchmove='layerBoxFn'>
+    <image class='layerImg' src='{{imgUrl}}/loginLayer3.png'></image>
+    <text class='appName'>UBI车管家</text>
+    <view class='loginView'>
+      <view class='lv1'>
+        <image class='lvImg' src='{{imgUrl}}/lv1.png'></image>
+        <text class='lvt1'>智慧出行</text>
+        <text class='lvt2'>体验智慧生活</text>
+      </view>
+      <!-- <view class='lv1'>
+        <image class='lvImg' src='{{imgUrl}}/lv2.png'></image>
+        <text class='lvt1'>专属特权</text>
+        <text class='lvt2'>半价维修换件</text>
+      </view>  -->
+      <view class='lv1'>
+        <image class='lvImg' src='{{imgUrl}}/offgasWarningImg.png' style='height: 100rpx;width: 100rpx;margin-top:20rpx;'></image>
+        <text class='lvt1'>尾气预警</text>
+        <text class='lvt2'>尾排实时提醒</text>
+      </view>
+      <view class='lv1'>
+        <image class='lvImg' src='{{imgUrl}}/lv3.png'></image>
+        <text class='lvt1'>停驶奖励</text>
+        <text class='lvt2'>车辆停驶享绿色出行奖励</text>
+      </view>
+    </view>
+    <button class='loginBtn' open-type="getUserInfo" bindgetuserinfo="getUserInfo">登录</button>
+    <view class='forkBtn' catchtap='hideLayer' style='visibility: hidden'>
+      <image class='forkImg' src='{{imgUrl}}/fork.png'></image>
+    </view>
+  </view>
+</view>
+</view>
+

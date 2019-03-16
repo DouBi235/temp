@@ -1,0 +1,135 @@
+<!-- mine_od.wxml -->
+<view class='mine_od_total'>
+  <view class="swiper-tab">
+    <view class="swiper-tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">已预约</view>
+    <view class="swiper-tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">已确认</view>
+    <view class="swiper-tab-item {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">已超时</view>
+  </view>
+
+  <!-- class="swiper-box" height:{{winHeight + 1000}}px; -->
+  <swiper class='swiper_total' current="{{currentTab}}" style="height:{{winHeight}}px" duration="300" bindchange="bindChange">
+    <swiper-item style="height:100%;">
+      <scroll-view scroll-y="true" class="scoll-h">
+        <view class='mo_left' wx:for="{{list1}}" wx:key="key">
+          <view class='name'>
+            <text style='display: block; margin-left: 20rpx; font-size:28rpx; font-weight:400; color:rgba(30,35,40,1);'>{{item.company}}</text>
+            <text wx:if='{{item.pay_status == 0}}' style='display: block; margin-right: 20rpx; font-size:28rpx; font-weight:400; color:#1EA0FF;'>已预约</text>
+          </view>
+
+          <view class='detail'>
+            <image src='{{item.pro_pic}}' style='display:block; margin:30rpx 20rpx 30rpx 20rpx; width:200rpx; height:200rpx;'></image>
+            <text class='detail_1'>{{item.pro_ame}}<text class='detail_2'>规格：{{item.number}}/{{item.spec}}</text></text>
+          </view>
+          <view class='time'>
+            <text class='time_dt'>预约时间</text>
+            <view class='time_ymd'>
+              <view class='bd1'>
+                <text style='display:block; margin-top: -10rpx;'>{{item.time[0]}}</text>
+              </view>
+              <view class='time_bd bd2'>
+                <text style='display:block; margin-top: -10rpx;'>年</text>
+              </view>
+              <view class='time_bd bd3'>
+                <text style='display:block; margin-top: -10rpx;'>{{item.time[1]}}</text>
+              </view>
+              <view class='time_bd bd4'>
+                <text style='display:block; margin-top: -10rpx;'>月</text>
+              </view>
+              <view class='time_bd bd5'>
+                <text style='display:block; margin-top: -10rpx;'>{{item.time[2]}}</text>
+              </view>
+              <view class='time_bd bd6'>
+                <text style='display:block; margin-top: -10rpx;'>日</text>
+              </view>
+            </view>
+          </view>
+
+        </view>
+      </scroll-view>
+    </swiper-item>
+
+    <swiper-item style="height:100%;">
+      <scroll-view scroll-y="true" class="scoll-h">
+        <view class='mo_center' wx:for="{{list2}}" wx:key="key">
+
+          <view class='center_name name'>
+            <text style='display: block; margin-left: 20rpx; font-size:28rpx; font-weight:400; color:rgba(30,35,40,1);'>{{item.company}}</text>
+            <text wx:if='{{item.pay_status == 1}}' style='display: block; margin-right: 20rpx; font-size:28rpx; font-weight:400; color:#73737D;'>已支付</text>
+            <text wx:if='{{item.pay_status == 2}}' style='display: block; margin-right: 20rpx; font-size:28rpx; font-weight:400; color:#73737D;'>已确认待支付</text>
+          </view>
+
+          <view class='center_detail detail'>
+            <image src='{{item.pro_pic}}' style='display:block; margin:30rpx 20rpx 30rpx 20rpx; width:200rpx; height:200rpx;'></image>
+            <text class='detail_1'>{{item.pro_ame}}<text class='detail_2'>规格：{{item.number}}/{{item.spec}}</text></text>
+          </view>
+          <view class='center_time time'>
+            <text class='time_dt'>预约时间</text>
+            <view class='time_ymd'>
+              <view class='bd1'>
+                <text style='display:block; margin-top: -10rpx;'>{{item.time[0]}}</text>
+              </view>
+              <view class='time_bd bd2'>
+                <text style='display:block; margin-top: -10rpx;'>年</text>
+              </view>
+              <view class='time_bd bd3'>
+                <text style='display:block; margin-top: -10rpx;'>{{item.time[1]}}</text>
+              </view>
+              <view class='time_bd bd4'>
+                <text style='display:block; margin-top: -10rpx;'>月</text>
+              </view>
+              <view class='time_bd bd5'>
+                <text style='display:block; margin-top: -10rpx;'>{{item.time[2]}}</text>
+              </view>
+              <view class='time_bd bd6'>
+                <text style='display:block; margin-top: -10rpx;'>日</text>
+              </view>
+            </view>
+          </view>
+
+        </view>
+      </scroll-view>
+    </swiper-item>
+
+    <swiper-item style="height:100%;">
+      <scroll-view scroll-y="true" class="scoll-h">
+        <view class='mo_right' wx:for="{{list3}}" wx:key="key">
+
+          <view class='right_name name'>
+            <text style='display: block; margin-left: 20rpx; font-size:28rpx; font-weight:400; color:rgba(30,35,40,1);'>{{item.company}}</text>
+            <text wx:if='{{item.pay_status == 4}}' style='display: block; margin-right: 20rpx; font-size:28rpx; font-weight:400; color:#FA644B;'>异常订单</text>
+            <text wx:if='{{item.pay_status == 3}}' style='display: block; margin-right: 20rpx; font-size:28rpx; font-weight:400; color:#FA644B;'>已超时</text>
+          </view>
+
+          <view class='right_detail detail'>
+            <image src='{{item.pro_pic}}' style='display:block; margin:30rpx 20rpx 30rpx 20rpx; width:200rpx; height:200rpx;'></image>
+            <text class='detail_1'>{{item.pro_ame}}<text class='detail_2'>规格：{{item.number}}/{{item.spec}}</text></text>
+          </view>
+          <view class='right_time time'>
+            <text class='time_dt'>预约时间</text>
+            <view class='time_ymd'>
+              <view class='bd1'>
+                <text style='display:block; margin-top: -10rpx; color:#FA644B;'>{{item.time[0]}}</text>
+              </view>
+              <view class='time_bd bd2'>
+                <text style='display:block; margin-top: -10rpx;'>年</text>
+              </view>
+              <view class='time_bd bd3'>
+                <text style='display:block; margin-top: -10rpx; color:#FA644B;'>{{item.time[1]}}</text>
+              </view>
+              <view class='time_bd bd4'>
+                <text style='display:block; margin-top: -10rpx;'>月</text>
+              </view>
+              <view class='time_bd bd5'>
+                <text style='display:block; margin-top: -10rpx; color:#FA644B;'>{{item.time[2]}}</text>
+              </view>
+              <view class='time_bd bd6'>
+                <text style='display:block; margin-top: -10rpx;'>日</text>
+              </view>
+            </view>
+          </view>
+
+        </view>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+</view>

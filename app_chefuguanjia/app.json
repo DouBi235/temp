@@ -1,0 +1,128 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index1/index1",
+    "pages/register/register",
+    "pages/okBuyVip/okBuyVip",
+    "pages/leaflet/leaflet",
+    "pages/leafletB/leafletB",
+    "pages/extension/extension",
+    "pages/directDet/directDet",
+    "pages/bindDevice/bindDevice",
+    "pages/changeDevice/changeDevice",
+    "pages/changeDet/changeDet",
+    "pages/shopDetail/shopDetail",
+    "pages/order/order",
+    "pages/subscribe/subscribe",
+    "pages/privilegeDet/privilegeDet",
+    "pages/privilege/privilege",
+    "pages/brand/brand",
+    "pages/diagnostics/diagnostics",
+    "pages/faultWarning/faultWarning",
+    "pages/message/message",
+    "pages/message_dt/message_dt",
+    "pages/message_rdt/message_rdt",
+    "pages/mileage/mileage",
+    "pages/mine_od/mine_od",
+    "pages/Mypersonal/Mypersonal",
+    "pages/myPolicy/myPolicy",
+    "pages/MyService/MyService",
+    "pages/offgasWarning/offgasWarning",
+    "pages/personal/personal",
+    "pages/productDetails/productDetails",
+    "pages/protectiveCar/protectiveCar",
+    "pages/RejectDetails/RejectDetails",
+    "pages/repairShop/repairShop",
+    "pages/return/return",
+    "pages/saveFuel/saveFuel",
+    "pages/submit/submit",
+    "pages/upload/upload",
+    "pages/DetailVip/DetailVip",
+    "pages/share/share",
+    "pages/searchw/searchw",
+    "pages/breachRecord/breachRecord",
+    "pages/mapPage/mapPage",
+    "pages/pengzhuang/pengzhuang",
+    "pages/sharee/sharee",
+    "pages/registerState/registerState",
+    "pages/mianfeijiuyuan/mianfeijiuyuan",
+    "pages/fapiao/fapiao",
+    "pages/tixian/tixian",
+    "pages/serviceList/serviceList",
+    "pages/service/service",
+    "pages/shopInfo/shopInfo",
+    "pages/storeDet/storeDet",
+    "pages/wofap/wofap",
+    "pages/collisionWarn/collisionWarn",
+    "pages/tailWarn/tailWarn",
+    "pages/spread/spread",
+    "pages/template/spreadList/spreadList",
+    "pages/cultiDetails/cultiDetails",
+    "pages/spreadDetails/spreadDetails",
+    "pages/youzhanList/youzhanList",
+    "pages/uqianbao/uqianbao",
+    "pages/xiaofeipage/xiaofeipage",
+    "pages/chongzhipage/chongzhipage",
+    "pages/mimapage/mimapage",
+    "pages/pingjia/pingjia",
+    "pages/wangji/wangji",
+    "pages/tousu/tousu",
+    "pages/youshopDet/youshopDet",
+    "pages/template/pingjia/pingjia",
+    "pages/template/kong/kong",
+    "pages/maiyou/maiyou"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "\"UBI车服\"需要获取你的地理位置"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "backgroundColor": "#333",
+    "navigationBarBackgroundColor": "#1EA0FF",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "selectedColor": "#333",
+    "borderStyle": "white",
+    "backgroundColor": "#FFFFFF",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "img/footerIndex1.png",
+        "selectedIconPath": "img/footerIndex2.png"
+      },
+      {
+        "pagePath": "pages/return/return",
+        "iconPath": "img/footerBind1.png",
+        "selectedIconPath": "img/footerBind2.png",
+        "text": "奖励"
+      },
+      {
+        "pagePath": "pages/sharee/sharee",
+        "iconPath": "img/share.png",
+        "selectedIconPath": "img/shareSelect.png",
+        "text": "分享"
+      },
+      {
+        "pagePath": "pages/spread/spread",
+        "iconPath": "img/footerVip1.png",
+        "selectedIconPath": "img/footerVip2.png",
+        "text": "推广"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "iconPath": "img/footerMy1.png",
+        "selectedIconPath": "img/footerMy2.png",
+        "text": "我的"
+      }
+    ],
+    "position": "bottom"
+  },
+  "navigateToMiniProgramAppIdList": [
+    "wx5e18e3308b2c6e9f",
+    "wxb42b701ddbd6cbd9"
+  ]
+}

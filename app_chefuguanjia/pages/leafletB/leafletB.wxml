@@ -1,0 +1,34 @@
+<!--pages/leaflet/leaflet.wxml-->
+<image class='bgImg' src='{{imgUrl}}/leafletPageB.png'></image>
+
+<view class='white2'>
+    <block wx:for="{{loopData}}" wx:key>
+        <view class='tr'>
+            <text style='width:65%'>恭喜{{item.name}}获得{{item.reward}}元分享奖励</text>
+            <text>{{item.create_time}}</text>
+        </view>
+    </block>
+</view>
+<view class='white3'>
+    <view class='barBox'>
+        <block wx:for="{{activityInfo}}" wx:key>
+            <view class='bar'>{{item}}</view>
+        </block>
+    </view>
+</view>
+
+<view class='bottom'>
+    <view class='buildImgBtn' bindtap='buildImg'>生成图片并推广</view>
+</view>
+
+<view class='dialogLayer' hidden='{{codeHide}}' catchtouchmove='showLayer' catchtap='showLayer'>
+    <view class='dialog'>
+        <canvas canvas-id='qrcode' class='bigCanvas' style='height: 920rpx;width: 650rpx;'>
+            <cover-view class='closeCover' bindtap='codeHide'>关闭</cover-view>
+        </canvas> 
+        <view class='btnBox'>
+            <view class='saveCodeBtn' bindtap='saveImageToPhotos' data-id="1">二维码推广</view>
+            <view class='saveBtn' bindtap='saveImageToPhotos' data-id="0">图片推广</view>
+        </view> 
+    </view>
+</view>

@@ -1,0 +1,21 @@
+<view class='bindDevicePage' style='margin-top:30px'>
+  <view class='formBox'>
+    <view class='formItem inp'>
+      <text class='formLabel'>原车辆管家</text>
+      <view class='box'>
+        <input class='formInput' bindtap='mapBlock' disabled='true'  value='{{company=="null"?"您没有选择店铺":company}}' style='color: #888;'></input>
+      </view>
+      <image bindtap='code' class='scan' src='{{imgUrl}}/loc.png'  bindtap='mapBlock'></image>
+    </view>
+    <view class='bysever'>
+      <text class='formLabel'>新车辆管家</text>
+      <view class='box' bindtap="skipRepairShop">
+        <input class='formInput' disabled='true'  type='number' maxlength='12' placeholder='请选择车辆管家' value='{{shopInfo.company}}'></input>
+      </view> 
+      <image bindtap='skipRepairShop' class='scan' src='{{imgUrl}}/arrow.png'></image>
+    </view>
+    <view class='formItem' style='border:0rpx;'>
+      <button class='formBtn' disabled='{{disabled}}' bindtap='changeBtn'>确认更换</button>
+    </view>
+  </view>
+</view>

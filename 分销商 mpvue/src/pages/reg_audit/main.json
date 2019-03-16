@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "输入服务信息",
+  "usingComponents": { 
+    "i-button": "../../../static/dist/button/index",
+    "i-panel": "../../../static/dist/panel/index",
+    "i-input": "../../../static/dist/input/index",
+    "i-divider": "../../../static/dist/divider/index"
+  }
+}

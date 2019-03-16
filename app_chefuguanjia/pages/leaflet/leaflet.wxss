@@ -1,0 +1,49 @@
+/* pages/leaflet/leaflet.wxss */
+.bgImg{position: absolute;top: 0;left: 0;z-index: -1;height: 2477rpx;width: 750rpx;display: block;margin-bottom: 120rpx;}
+.bgImg1{position: absolute;top: 0;left: 0;z-index: -1;height: 2618rpx;width: 750rpx;display: block;margin-bottom: 120rpx;}
+ 
+.white0,.white00,.white1,.white11,.white2,.white22,.white3,.white33{position: absolute;left: 55rpx;width: 640rpx;}
+.white0{top: 209rpx;height: 186rpx;left: 30rpx;width: 690rpx;}
+.white00{top: 312rpx;height: 200rpx;left: 30rpx;width: 690rpx;}
+.white1{top: 522rpx;height: 310rpx;}
+.white11{top: 668rpx;height: 310rpx;}
+.white2{top: 1040rpx;height: 530rpx;}
+.white22{top: 1188rpx;height: 530rpx;}
+.white3{top: 1736rpx;height: 430rpx;}
+.white33{top: 1882rpx;height: 430rpx;}
+
+/* white0 */
+.whit0{display: flex;justify-content: space-around;align-items: center;font-size:24rpx;
+font-family:PingFangSC-Regular;font-weight:400;line-height:30rpx;}
+.whit0>view{display: flex;flex-direction: column;align-items: center;justify-content: space-between;color: #fff;height: 70rpx;}
+.whit0 image{height: 108rpx;width: 108rpx;border-radius: 50%;border: 6rpx solid #fff;}
+
+
+/* white1 */
+.threeBox{height: 70rpx;width: 100%;margin-top: 60rpx;margin-bottom: 60rpx;display: flex;justify-content: space-around;color: #1E2328;padding: 0 50rpx;box-sizing: border-box;}
+  .numBox{display: flex;flex-direction: column;justify-content: space-around;align-items: center;font-size:20rpx; font-weight:400; line-height:30rpx;}
+    .num{ font-size:36rpx; font-weight:400; line-height:30rpx;}
+  .line{width:2rpx;height:70rpx;background:#E6E6EB;}
+.detBtn{width:560rpx;height:88rpx;background:#FFD71E;border-radius:44rpx;font-size:32rpx; font-weight:500;color:#695500;line-height:88rpx;margin: 0 auto;text-align: center;}
+/* white2 */
+.tr{height: 70rpx;width: 580rpx;border-bottom: 1rpx solid #E6E6EB;font-size:22rpx;font-weight:400;color:#1E2328;line-height:70rpx;
+display: flex;justify-content: space-between;margin: 0 auto;}
+/* white3 */
+.barBox{width: 640rpx;height: 430rpx;display: flex;flex-direction: column;justify-content: space-around;align-items: center;}
+.bar{font-size:24rpx; font-weight:400;color:#1E2328;line-height:40rpx;width: 560rpx;}
+
+/* bottom */
+.bottom{width:750rpx;height:120rpx;background:#543CE2;box-shadow:0px 1px 7px 0px #AA77FF;position: fixed;bottom: 0;display: flex;justify-content: center;align-items: center;}
+.buildImgBtn{width:700rpx;height:88rpx;background:linear-gradient(180deg,#FFD71E,#D29B00);box-shadow:0px 5px 10px 0px rgba(70, 194, 49, 0.35);border-radius:44rpx; font-size:32rpx; font-weight:600;color:#695401;line-height:88rpx;text-align: center;}
+.buildImgBtn:active{opacity: 0.7;}
+
+/* dialog */
+.dialogLayer{height: 100vh;width: 100vw;background-color: rgba(20, 20, 50, 0.35);display: flex;justify-content: center;align-items: center;position: fixed;}
+.dialog{width: 680rpx;height: 1300rpx;display: flex;flex-direction: column; justify-content: center;align-items: center;}
+.bigCanvas{height: 1020rpx;width: 680rpx;z-index: 500;position: relative;} 
+.closeCover{font-size:28rpx;font-family:PingFangSC-Regular;font-weight:400;color:rgba(254,255,255,1);line-height:30rpx;position: absolute;right: 0;top: 0;padding: 8rpx 10rpx;}
+.btnBox{display: flex;align-items: center;justify-content: space-between;width: 680rpx;padding: 14rpx;}
+.saveBtn,.saveCodeBtn{width:320rpx;height:88rpx;background:#eAcD94;margin-top: 20rpx; font-size:32rpx; font-weight:500;color:#7B5D19;line-height:88rpx;text-align: center;}
+.saveCodeBtn{background: #83AFFF;}
+.saveBtn:active{background:#DABD84;}
+.saveCodeBtn:active{background: #93bFFF;}

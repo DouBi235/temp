@@ -1,0 +1,233 @@
+page {
+    height: 100%;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    background: RGBA(245, 245, 250, 1);
+}
+
+.content {
+    height: 250rpx;
+    width: 100%;
+    position: relative;
+    background: RGBA(245, 245, 250, 1);
+}
+
+.title {
+    z-index: 10;
+    width: 100%;
+    height: 220rpx;
+    position: relative;
+}
+
+.title image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.titleText {
+    width: 50%;
+    /* background: red; */
+    height: 100%;
+    padding: 20rpx 0rpx;
+    float: left;
+}
+
+.st {
+    width: 100%;
+    height: 80rpx;
+    text-align: center;
+    line-height: 80rpx;
+    margin: auto;
+    color: white;
+}
+
+.titleNum {
+    width: 100%;
+    border-top: 1rpx solid RGBA(75, 180, 255, 1);
+    text-align: center;
+    height: 80rpx;
+    line-height: 80rpx;
+    color: white;
+    font-size: 50rpx;
+    font-weight: bold;
+    margin: auto;
+}
+
+.today {
+    width: 95%;
+    height: 268rpx;
+    background: white;
+    border-radius: 10rpx;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 20rpx;
+    top: -30rpx;
+    z-index: 11;
+}
+
+.todayTxt {
+    width: 100%;
+    text-align: center;
+    color: RGBA(115, 115, 125, 1);
+    height: 70rpx;
+    font-size: 35rpx;
+    line-height: 70rpx;
+}
+
+.todayicon {
+    width: 100%;
+    height: 55rpx;
+    padding: 0rpx 50rpx;
+}
+
+.todayicon image {
+    width: 100%;
+    height: 100%;
+}
+
+.todayNum {
+    width: 100%;
+    height: 80rpx;
+    line-height: 80rpx;
+    color: RGBA(30, 160, 255, 1);
+    font-size: 50rpx;
+    font-weight: bold;
+    text-align: center;
+}
+
+.todayTxt2 {
+    width: 100%;
+    text-align: center;
+    color: RGBA(180, 180, 190, 1);
+    font-size: 25rpx;
+}
+
+.partition {
+    width: 100%;
+    padding: 0rpx 20rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    color: RGBA(115, 115, 125, 1);
+    text-align: center;
+}
+
+.line {
+    width: 200rpx;
+    /* border:1rpx solid RGBA(170, 170, 180, 1); */
+    height: 2rpx;
+    margin-top: 38rpx;
+    float: left;
+    background: linear-gradient(to right, RGBA(245, 245, 250, 1), RGBA(170, 170, 180, 1));
+}
+
+.line2 {
+    width: 200rpx;
+    /* border:1rpx solid RGBA(170, 170, 180, 1); */
+    height: 2rpx;
+    margin-top: 38rpx;
+    float: right;
+    background: linear-gradient(to left, RGBA(245, 245, 250, 1), RGBA(170, 170, 180, 1));
+}
+
+.detail {
+    width: 100%;
+    height: 160rpx;
+    background: white;
+    border-bottom: 1rpx solid RGBA(230, 230, 235, 1);
+    padding: 10rpx 20rpx;
+}
+
+.mileage {
+    height: 140rpx;
+    float: left;
+    font-size: 30rpx;
+    line-height: 140rpx;
+    color: RGBA(115, 115, 125, 1);
+}
+
+.mileage text {
+    color: RGBA(0, 185, 90, 1);
+    font-size: 45rpx;
+    font-weight: bold;
+    margin-right: 5rpx;
+    letter-spacing: 2rpx;
+}
+
+.type {
+    width: 200rpx;
+    height: 100%;
+    /* background: red; */
+    float: right;
+}
+
+.tui {
+    width: 100%;
+    text-align: right;
+    color: RGBA(180, 180, 190, 1);
+    font-size: 30rpx;
+}
+
+.money {
+    width: 100%;
+    font-size: 30rpx;
+    color: RGBA(115, 115, 125, 1);
+    text-align: right;
+}
+
+.money text {
+    color: RGBA(30, 160, 255, 1);
+    font-size: 50rpx;
+    font-weight: bold;
+    margin-right: 10rpx;
+    letter-spacing: 2rpx;
+}
+
+.date {
+    width: 100%;
+    color: RGBA(180, 180, 190, 1);
+    font-size: 25rpx;
+    text-align: right;
+}
+
+/* 调整后的列表样式*/
+
+.detail1 {
+    width: 100%;
+    height: 160rpx;
+    background: white;
+    border-bottom: 1rpx dashed RGBA(230, 230, 235, 1);
+    padding: 10rpx 20rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.km1 {
+    font-size: 36rpx;
+    font-family: Arial-BoldMT;
+    font-weight: 600;
+    color: #1e2328;
+    line-height: 42rpx;
+}
+
+.date1 {
+    font-size: 20rpx;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: rgba(115, 115, 125, 1);
+    line-height: 28rpx;
+}
+
+.status0 {
+    font-size: 28rpx;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: rgba(255, 95, 95, 1);
+    line-height: 40rpx;
+}

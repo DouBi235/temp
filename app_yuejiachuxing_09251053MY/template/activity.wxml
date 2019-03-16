@@ -1,0 +1,103 @@
+<template name="activity">
+  <view class='ac-shelter'>
+    <view class="box" id="{{id}}" data-where="actinfo" bindtap='goinfo'>
+      <view class='ac-head'>
+        <view class='ac-uhead'>
+          <image mode='aspectFill' src="{{head_image}}"></image>
+        </view>
+        <view class='ac-topinfo'>
+          <view class='ac-top1'>
+            <view class='ac-top1-l'>
+              <text>{{nikename}}</text>
+              <image class='ac-usex' mode='aspectFit' src="{{sex==1?'/img/boy.png':sex==2?'/img/girl.png':''}}"></image>
+            </view>
+            <view class='ac-top1-r'>
+              <view>
+                <image mode='aspectFit' src='/img/pageview.png' style='width:34rpx;height:20rpx'></image>
+                <text>{{pv}}</text>
+              </view>
+              <view>
+                <image mode='aspectFit' src='/img/f-setpoint.png' style='width:20rpx;height:24rpx'></image>
+                <text>{{distance}}km</text>
+              </view>
+            </view>
+          </view>
+          <view class='ac-top2'>
+            <text>报名倒计时</text>
+            <text class='org'>{{countTime}}</text>
+          </view>
+        </view>
+      </view>
+      <view class='ac-tip'>{{title}}</view>
+      <view class='ac-route'>
+        <text>{{path}}</text>
+        <image mode='aspectFit' src='/img/car.png' style='margin-left:20rpx;width:48rpx;height:24rpx'></image>
+      </view>
+      <image wx:if="{{pic[0]}}" mode='aspectFill' class='ac-img' src="{{pic[0]}}"></image>
+      <view wx:else class='ac-line'></view>
+      <view class='ac-foot'>
+        <view class='ac-f-con'>
+          <view class='ac-f-tip'>出发时间</view>
+          <view class='ac-f-info'>{{start_time}}</view>
+        </view>
+        <view class='ac-f-line'></view>
+        <view class='ac-f-con'>
+          <view class='ac-f-tip'>可约人数</view>
+          <view class='ac-f-info'>
+            <text class='r'>{{red_number}}</text>
+            <text>人</text>
+          </view>
+        </view>
+        <view class='ac-f-line'></view>
+        <view class='ac-f-con'>
+          <view class='ac-f-tip'>车型</view>
+          <view class='ac-f-info widlimit'>{{motorcycle}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>
+
+<template name="actago">
+  <view class='ac-shelter'>
+    <view class="box" id="{{id}}" data-where="actago" bindtap='goinfo'>
+      <view class='ac-head'>
+        <view class='ac-uhead'>
+          <image mode='aspectFill' src="{{head_image}}"></image>
+        </view>
+        <view class='ac-topinfo'>
+          <view class='ac-top1'>
+            <view class='ac-top1-l'>
+              <text style='max-width:300rpx'>{{nikename}}</text>
+              <image class='ac-usex' mode='aspectFit' src="{{sex==1?'/img/boy.png':sex==2?'/img/girl.png':''}}"></image>
+            </view>
+          </view>
+          <view class='ac-top2'>
+            <text>报名倒计时</text>
+            <text class='org'>结束</text>
+          </view>
+        </view>
+      </view>
+      <view class='ac-tip'>{{title}}</view>
+      <view class='ac-route'>
+        <text>{{path}}</text>
+        <image mode='aspectFit' src='/img/car.png' style='margin-left:20rpx;width:48rpx;height:24rpx'></image>
+      </view>
+      <image wx:if="{{pic[0]}}" mode='aspectFill' class='ac-img' src="{{pic[0]}}"></image>
+      <view wx:else class='ac-line'></view>
+      <view class='ac-foot'>
+        <view class='ac-foot-l'>{{start_time}}</view>
+        <view class='ac-top1-r'>
+          <view>
+            <image mode='aspectFit' src='/img/pageview.png' style='width:34rpx;height:20rpx'></image>
+            <text>{{pv}}</text>
+          </view>
+          <view>
+            <image mode='aspectFit' src='/img/pinglun.png' style='width:24rpx;height:24rpx'></image>
+            <text>{{count}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

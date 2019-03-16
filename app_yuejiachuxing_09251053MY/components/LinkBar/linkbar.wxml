@@ -1,0 +1,41 @@
+<view class='lb-out'>
+  <view class='lb-float lbf-l'></view>
+  <view class='lb-float lbf-r'></view>
+  <view wx:if="{{hasmask}}" class='lb-mask'></view>
+  <scroll-view scroll-x class="linkbar">
+    <navigator target="miniProgram" app-id="wx5e18e3308b2c6e9f" hover-class="none" class='lb-first'>
+      <view class="lb-item">
+        <image mode='aspectFill' src='/img/z114.png'></image>
+        <text>邦保养</text>
+      </view>
+    </navigator>
+    <!-- <navigator target="miniProgram" app-id="wx801162df874d7ffd" hover-class="none">
+      <view class="lb-item">
+        <image mode='aspectFill' src='/img/z115.png'></image>
+        <text>技师应用</text>
+      </view>
+    </navigator>
+    <navigator target="miniProgram" app-id="wx11799a7ebbed327f" hover-class="none">
+      <view class="lb-item">
+        <image mode='aspectFill' src='/img/z116.png'></image>
+        <text>仲达养车</text>
+      </view>
+    </navigator>
+    <navigator target="miniProgram" app-id="wx5860353a53d0a912" hover-class="none">
+      <view class="lb-item">
+        <image mode='aspectFill' src='/img/z117.png'></image>
+        <text>会员专属</text>
+      </view>
+    </navigator> -->
+    <navigator target="miniProgram" app-id="wx795d1f9e2284a75e" hover-class="none">
+      <view class="lb-item">
+        <image mode='aspectFill' src='/img/z120.png'></image>
+        <text>车管家</text>
+      </view>
+    </navigator>
+    <!-- <view class="lb-item lb-last" bindtap='nolink'>
+      <image mode='aspectFill' src='/img/z119.png'></image>
+      <text>无息购</text>
+    </view> -->
+  </scroll-view>
+</view>

@@ -1,0 +1,80 @@
+page {
+  background: #f5f5f5;
+}
+
+.tab {
+  float: left;
+  width: 50%;
+  text-align: center;
+  position: relative;
+}
+
+.topTabSwiper {
+  color: #999;
+  font-size: 30rpx;
+  height: 82rpx;
+  line-height: 82rpx;
+  background: #fff;
+  box-shadow: 0 0 6rpx rgba(0, 0, 0, 0.3);
+}
+
+.topTabSwiper:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.tabBorer:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 80rpx;
+  height: 4rpx;
+  border-radius: 8rpx;
+  background: #21c5bd;
+  bottom: 0;
+  left: calc(50% - 40rpx);
+}
+
+.scoll-h {
+  height: 100%;
+  background: #f5f5f5;
+}
+
+.box {
+  position: relative;
+  background: #fff;
+  margin-bottom: 20rpx;
+  padding: 26rpx 50rpx;
+  color: #999;
+  font-size: 24rpx;
+}
+
+.title {
+  display: flex;
+  color: #333;
+  font-size: 32rpx;
+  margin-bottom: 20rpx;
+}
+
+.rpoint {
+  background: #f82d29;
+  width: 14rpx;
+  height: 14rpx;
+  border-radius: 20rpx;
+  margin-top: 10rpx;
+  margin-left: 12rpx;
+}
+
+.menu {
+  padding-top: 5%;
+  position: absolute;
+  font-size: 48rpx;
+  line-height: 14rpx;
+  height: 100%;
+  top: 0;
+  width: 20%;
+  right: 0;
+  text-align: center;
+  overflow: hidden;
+}

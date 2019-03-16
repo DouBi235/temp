@@ -1,0 +1,33 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/publish/reset",
+    "pages/publish/reset2",
+    "pages/publish/form",
+    "pages/publish/form2",
+    "pages/actinfo/actinfo",
+    "pages/actago/actago",
+    "pages/person/mine",
+    "pages/mine/car",
+    "pages/mine/msg",
+    "pages/mine/join",
+    "pages/mine/drive",
+    "pages/myact/myact",
+    "pages/person/info",
+    "pages/relief/relief",
+    "pages/msginfo/msginfo",
+    "pages/bannerInfo/bannerInfo",
+    "pages/nolink/nolink",
+    "pages/test/test"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#21C5BD",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "white"
+  },
+  "navigateToMiniProgramAppIdList": [
+    "wx5e18e3308b2c6e9f",
+    "wx795d1f9e2284a75e"
+  ]
+}

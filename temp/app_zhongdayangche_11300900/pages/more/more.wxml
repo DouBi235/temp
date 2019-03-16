@@ -1,0 +1,28 @@
+<!--pages/more/more.wxml-->
+<view class='content'>
+    <view class='cpzq-list' wx:for='{{signLi}}' wx:for-item="i" bindtap='toProductDet' data-id='{{i.id}}'>
+        <image src='{{i.pic}}'></image>
+        <view class='cpzq-list-right'>
+            <view class='cpzq-right-tou'>
+                <view>{{i.company}}</view>
+                <view class='right-tou-box'>
+                    <image src='../image/position2.png'></image>
+                    <text class='right-tou-txt'>{{i.distance}}km</text>
+                </view>
+            </view>
+            <view class='cpzq-right-title'>{{i.name}}</view>
+            <view class='cpzq-right-yhj'>
+                <text >优惠价:</text>
+                <text class='right-yhj-xj'>{{i.activity_price}}</text>
+                <text class='right-yhj-yj'>{{i.market_price}}</text>
+            </view>
+            <view class='cpzq-right-ys'>
+                <view class='cpzq-con-ys'>
+                    <text>已售 :</text>
+                    <text>{{i.virtualnum}}</text>
+                </view>
+            </view>
+            <button class='cpzq-list-btn' bindtap=''>详情</button>
+        </view>
+    </view> 
+</view>

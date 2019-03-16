@@ -1,0 +1,49 @@
+/* pages/MyService/MyService.wxss */
+page{
+  width: 100%;
+  height: 100%;
+}
+.container{
+  width: 100%;
+  height: 100%;
+  background-color: #F5F5FA;
+}
+.container>view{
+   background-color: #fff;
+   padding: 30rpx 30rpx 30rpx 20rpx;
+   display: flex;
+}
+.container>view>.img{
+  width: 200rpx;
+  height: 200rpx;
+  margin-right: 20rpx;
+  border:1rpx solid #E6E6EB;
+}
+.content{
+  flex: 1;
+  font-size: 28rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.time>image{
+  width: 32rpx;
+  height: 32rpx;
+}
+.time{
+  color: #1EA0FF;
+  display: flex;
+  align-items: center
+}
+.time>image{
+  margin-right: 18rpx;
+ 
+}
+.time text{
+  padding: 0 16rpx;
+  border-left: 1rpx solid #D2D7E1;
+  line-height: 20rpx;
+}
+.time text:last-child{
+  border-right: 1rpx solid #D2D7E1;
+}

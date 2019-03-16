@@ -1,0 +1,170 @@
+<view class='wwww'></view>
+<view class='back'>
+    <view class='greybackcolor'></view>
+    <view class='tou '>
+        <!-- 头部的搜索框 -->
+        <view class='tou-sous'>
+            <view class='sous-name'>
+                <image src='../image/position.png' class='Location'></image>
+                <text>{{ city || '定位中...' }}</text>
+                <image src='../image/right.png' class='right-img'></image>
+            </view>
+            <view class='tou-ipt'>
+                <image src='../image/search.png' class='sous-image' bindtap='toSearchPage'></image>
+                <input type='text' placeholder='查询更多的产品' placeholder-style='color:#ffffff;font-size:20rpx;' class='tou-input' bindinput='inputKeywords' bindconfirm='toSearchPage' disabled bindtap='toSearchPage'></input>
+            </view>
+        </view>
+    </view>
+    <!-- 头部的列表 -->
+    <!-- <view class='needhide '>
+      <view class='blackback'></view>
+      <view class='tou-list ' >
+        <view class='list-box' bindtap='navigateToOther'                                          data-appid='wx5e18e3308b2c6e9f'>
+            <image src='../image/car.png'></image>
+            <view>邦保养</view>
+        </view>
+        <view class='list-box' bindtap='navigateToOther'                                   data-appid='wx801162df874d7ffd'>
+            <image src='../image/assistant.png' style=""></image>
+            <view>技师应用</view>
+        </view>
+        <view class='list-box' bindtap='navigateToOther'                                   data-appid='wxb42b701ddbd6cbd9'>
+            <image src='../image/wheel.png'></image>
+            <view>顺风出行</view>
+        </view>
+        <view class='list-box' bindtap='navigateToOther' data-appid='wx5860353a53d0a912'>
+            <image src='../image/VIP.png'></image>
+            <view>会员专属</view>
+        </view>
+        <view class='list-box' bindtap='navigateToOther' data-appid='wx795d1f9e2284a75e'>
+            <image src='../image/housekeeper.png'></image>
+            <view>车服管家</view>
+        </view>
+        <view class='list-box' bindtap='navigateToOther' data-appid=''>
+            <image src='../image/package.png'></image>
+            <view>服务经理</view>
+        </view>
+      </view>
+    </view> -->
+    <!-- 仲达精选 -->
+    <!-- <view class='overhidden'></view> -->
+    <view>
+    <view class='zdjx'>
+        <text class='zdjx-title'>仲达精选</text>
+        <image src='../image/xian.png' class='zdjx-image' mode='aspectFill'></image> 
+        <navigator class='zdjx-text' url='../more/more' hover-class='none'>
+            <text class='zdjx-gd'>更多</text>
+            <image src='../image/more.png' class='zdjx-text-image'></image>
+        </navigator> 
+    </view>
+    <!-- 无数据展示 -->
+    <view wx:if="{{handpickList.length === 0}}" class="noData">抱歉!暂无数据</view>
+    <!-- 仲达精选列表 -->
+    <scroll-view style='color:black' scroll-x="true" class='scroll' lower-threshold="100" scroll-left="" bindscrolltoupper="scrolltoupper" bindscrolltolower="scrolltolower" upper-threshold='100'> 
+        <view class='scroll-hua'>
+            <view class='scroll-list' wx:for='{{handpickList}}' wx:for-index="idx" wx:for-item="item" wx:for-index="idx" wx:key='' bindtap='toProductDet' data-id='{{item.id}}' >
+                <view class='scroll-list-img'>
+                    <image src='{{item.pic}}' mode='aspectFill'></image>
+                </view>
+                <view class='scroll-list-title'>
+                  {{item.name}}
+                </view>
+                <view class='scroll-price'>
+                    <!-- <view class='scroll-list-yhj'>
+                        <text>优惠价：</text>
+                        <text>{{item.activity_price}}</text>
+                    </view>
+                    <text class='scroll-list-yj'>￥{{item.activity_price}}</text> -->
+                    <view class='sNowPrice'>
+                      <text class='sPriceLabel'>优惠价：</text>
+                      <text class='sPriceNum'>{{item.activity}}</text>
+                    </view>
+                    <text class='sOldPrice'>￥{{item.market}}</text>
+                </view>
+                <view class='scroll-list-fk'>
+                  {{item.virtualnum}}人付款
+                </view>
+            </view> 
+        </view> 
+    </scroll-view>
+    </view>
+    <!-- 产品专区 -->
+    <view class='cpzq'>
+        <image src='../image/xian.png'></image>
+        <text class='cpzq-title'>产品专区</text>
+    </view>
+    <!-- 产品专区列表 -->
+    <!-- 无数据展示 -->
+    <view wx:if="{{prefectureList.length === 0}}" class="noData">抱歉!暂无数据</view>
+    <navigator class='cpzq-list' wx:for='{{prefectureList}}' wx:for-index="idx" wx:for-item="i" open-type='navigate' hover-class='none' wx:key='' url='../productDet/productDet?id={{i.id}}'>
+        <image src='{{i.pic}}' mode='aspectFill'></image>
+        <view class='cpzq-list-right'>
+            <view class='cpzq-right-tou'>
+                <view>{{i.company}}</view>
+                <view class='right-tou-box'>
+                    <image src='../image/position2.png'></image>
+                    <text class='right-tou-txt'>{{i.distance}}km</text>
+                </view>
+            </view>
+            <view class='cpzq-right-title'>
+             {{i.name}}   
+               </view>
+            <view class='cpzq-right-yhj'>
+                <text >优惠价:</text>
+                <text class='right-yhj-xj'>{{i.activity}}</text>
+                <text class='right-yhj-yj'>￥{{i.market}}</text>
+            </view>
+            <view class='cpzq-right-ys'>
+                <view class='cpzq-con-ys'>
+                    <text>已售 :</text>
+                    <text>{{i.virtualnum}}</text>
+                </view>
+            </view>
+            <button class='cpzq-list-btn'  bindtap=''>详情</button>
+        </view>
+    </navigator>
+    <!-- 列表与页面底部的距离 -->
+    <view class='backcolor'></view>
+</view>
+
+<!-- 底部导航 -->
+<view class='footerNav'>
+    <view class='fnav'>
+        <image class='navImg' src='../image/index_black.png'></image>
+        <text class='navText'>首页</text>
+    </view>
+    <navigator class='fnav' url='../orderAll/orderAll' open-type="redirect" hover-class='false'>
+        <image class='navImg' src='../image/order.png'></image>
+        <text class='navText'>预约订单</text>
+    </navigator>
+    <navigator class='fnav' url='../personalCentre/personalCentre' open-type="redirect" hover-class='false'>
+        <image class='navImg' src='../image/my.png'></image>
+        <text class='navText'>我的</text>
+    </navigator>
+</view>
+<view class='invisibleLayer' wx:if='{{transparentlayer}}' catchtouchstart='showLoginLayer'>
+</view>
+
+<view class='positionBox' wx:if='{{positionlayer}}'>
+<button class='positionBtn' open-type="openSetting" bindopensetting="reopenpage" >开启位置授权</button>
+</view>
+
+<!-- 授权弹窗 -->
+<view class='loginLayer' wx:if="{{loginlayer}}" catchtouchmove='layerbackFn'>
+    <view class='layerBlock'>
+        <view class='layerHeader'>
+          <text class='headerText'>微信授权</text>
+        </view>
+        <view class='layerBody'>
+          <image class='logoImg' src='../image/logo.png'></image>
+          <view class='applyText'>惠养车申请获得以下权限：</view>
+          <view class='applyContentBox'>
+            <text class='applyContent'>· 获得你的公开信息（昵称、头像等）</text>
+          </view> 
+        </view>
+        <view class='layerFooter'>
+          <button class='layerbtn disagree' hover-class='none' style="border: 0;outline-width: 0;border-radius: 0;" bindtap='hideLoginLayer'>拒绝</button>
+          <!-- <view class='middleLine'></view> -->
+          <button class='agree layerbtn' open-type="getUserInfo" bindgetuserinfo="getUserInfo" hover-class='none' style="border: 0;outline-width: 0;border-radius: 0;">允许</button>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,209 @@
+<view class='tou'>
+<!-- 头部的搜索框 -->
+  <view class='tou-sous'>
+    <view class='sous-name'>
+      <image src='../image/position.png' class='Location'></image>
+      <text>石家庄</text>
+      <image src='../image/right.png' class='right-img'></image>
+    </view>
+    <view class='tou-ipt'>
+      <image src='../image/search.png' class='sous-image'></image>
+      <input type='text' placeholder='查询更多的产品' placeholder-style='color:#ffffff;' class='tou-input'></input>
+    </view>
+  </view>
+
+    <!-- 头部的列表 -->
+  <view class='tou-list'>
+    <view class='list-box'>
+      <image src='../image/car.png'></image>
+      <view>邦保养</view>
+    </view>
+    <view class='list-box'>
+      <image src='../image/assistant.png' style=""></image>
+      <view>技师助手</view>
+    </view>
+    <view class='list-box'>
+      <image src='../image/wheel.png'></image>
+      <view>约驾出行</view>
+    </view>
+    <view class='list-box'>
+      <image src='../image/VIP.png'></image>
+      <view>VIP特权</view>
+    </view>
+    <view class='list-box'>
+      <image src='../image/housekeeper.png'></image>
+      <view>车服管家</view>
+    </view>
+    <view class='list-box'>
+      <image src='../image/package.png'></image>
+      <view>无息购</view>
+    </view>
+  </view>
+  <!-- 仲达精选 -->
+  <view class='zdjx'>
+    <text class='zdjx-title'>仲达精选</text>
+    <image src='../image/xian.png' class='zdjx-image'></image>
+    <view class='zdjx-text' bindtap='more'>
+    <navigator url='../more/more'>
+         <text>更多</text>
+      <image src='../image/right1.png' class='zdjx-text-image'></image>
+    </navigator>
+ 
+    </view>
+  </view>
+        <!-- 仲达精选列表 -->
+  <scroll-view style='color:black' scroll-x="true" class='scroll' lower-threshold="5">
+    <view class='scroll-hua'>
+     <view class='scroll-list'>
+       <view class='scroll-list-img'>
+        <image src='../image/demo.jpg'></image>
+      </view>
+      <view class='scroll-list-title'>
+        车载手机支架
+      </view>
+      <view class='scroll-price'>
+        <view class='scroll-list-yhj'>
+          <text>优惠价：</text>
+          <text>37.00</text>
+        </view>
+        <text class='scroll-list-yj'>￥39.00</text>
+      </view>
+      <view class='scroll-list-fk'>
+        362人付款
+      </view>
+    </view>
+    <view class='scroll-list'>
+       <view class='scroll-list-img'>
+        <image src='../image/demo.jpg'></image>
+      </view>
+      <view class='scroll-list-title'>
+        车载手机支架
+      </view>
+      <view class='scroll-price'>
+        <view class='scroll-list-yhj'>
+          <text>优惠价：</text>
+          <text>37.00</text>
+        </view>
+        <text class='scroll-list-yj'>￥39.00</text>
+      </view>
+      <view class='scroll-list-fk'>
+        362人付款
+      </view>
+    </view>
+    <view class='scroll-list'>
+       <view class='scroll-list-img'>
+        <image src='../image/demo.jpg'></image>
+      </view>
+      <view class='scroll-list-title'>
+        车载手机支架
+      </view>
+      <view class='scroll-price'>
+        <view class='scroll-list-yhj'>
+          <text>优惠价：</text>
+          <text>37.00</text>
+        </view>
+        <text class='scroll-list-yj'>￥39.00</text>
+      </view>
+      <view class='scroll-list-fk'>
+        362人付款
+      </view>
+    </view>
+
+    </view>
+  </scroll-view>
+  <!-- 产品专区 -->
+   <view class='cpzq'>
+         <image src='../image/xian.png'></image>
+         <text class='cpzq-title'>产品专区</text>
+   </view>
+      <!-- 产品专区列表 -->
+     <view class='cpzq-list'>
+          <image src='../image/demo.jpg'></image>  
+          <view class='cpzq-list-right'>
+               <view class='cpzq-right-tou'>
+                  <view>友谊汽修厂</view>
+                  <view >
+                      <image src='../image/position2.png'></image>
+                      <text class='right-tou-txt'>9.9km</text>
+                  </view>
+               </view>
+               <view class='cpzq-right-title'>
+                   飞利浦空气净化器 
+               </view>
+               <view class='cpzq-right-yhj'>
+                     <text >优惠价:</text>
+                     <text class='right-yhj-xj'>2999.00</text>
+                     <text class='right-yhj-yj'>￥2999.00</text>
+
+               </view>
+               <view class='cpzq-right-ys'>
+                       <view>
+                         <text>已售</text>
+                         <text>362</text>
+                       </view>
+                       <button class='cpzq-list-btn' bindtap=''>详情</button>
+
+               </view>
+          </view> 
+     </view>
+     <view class='cpzq-list'>
+          <image src='../image/demo.jpg'></image>  
+          <view class='cpzq-list-right'>
+               <view class='cpzq-right-tou'>
+                  <view>友谊汽修厂</view>
+                  <view >
+                      <image src='../image/position2.png'></image>
+                      <text>9.9km</text>
+                  </view>
+               </view>
+               <view class='cpzq-right-title'>
+                   飞利浦空气净化器 飞利浦空气进化器
+               </view>
+               <view class='cpzq-right-yhj'>
+                     <text >优惠价:</text>
+                     <text class='right-yhj-xj'>2999.00</text>
+                     <text class='right-yhj-yj'>￥2999.00</text>
+
+               </view>
+               <view class='cpzq-right-ys'>
+                       <view>
+                         <text>已售</text>
+                         <text>362</text>
+                       </view>
+                       <button class='cpzq-list-btn'>详情</button>
+
+               </view>
+          </view> 
+     </view>
+     <view class='cpzq-list'>
+          <image src='../image/demo.jpg'></image>  
+          <view class='cpzq-list-right'>
+               <view class='cpzq-right-tou'>
+                  <view>友谊汽修厂</view>
+                  <view >
+                      <image src='../image/position2.png'></image>
+                      <text>9.9km</text>
+                  </view>
+               </view>
+               <view class='cpzq-right-title'>
+                   飞利浦空气净化器 飞利浦空气进化器
+               </view>
+               <view class='cpzq-right-yhj'>
+                     <text >优惠价:</text>
+                     <text class='right-yhj-xj'>2999.00</text>
+                     <text class='right-yhj-yj'>￥2999.00</text>
+
+               </view>
+               <view class='cpzq-right-ys'>
+                       <view>
+                         <text>已售</text>
+                         <text>362</text>
+                       </view>
+                       <button class='cpzq-list-btn'>详情</button>
+
+               </view>
+          </view> 
+     </view>
+</view>
+<view class='back'>
+</view>

@@ -1,0 +1,24 @@
+<!--pages/protectiveCar.wxml-->
+<view class='protectiveCarPage'>
+  <view class='listBox' wx:if='{{proList.length != 0}}'>
+    <view class='listItem' wx:for="{{proList}}" wx:key>
+      <view class='itemHeader'>
+        <text class='itemTitle'>{{item.Exception}}</text>
+      </view>
+      <view class='itemBody'>
+        <!-- <text class='tipTitle'>该车辆已达到里程15000km[每5000公里常规保养]</text> -->
+        <text class='tipContent'>{{item.refer}}</text>
+      </view>
+      <view class='itemFooter'>
+        <view class='footerBox'>
+          <view class='tipTime'>{{item.time}}</view> 
+          <!-- <view class='ignoreBtn'>忽略</view> -->
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='emptyBox' wx:else> 
+    <image src='{{imgUrl}}/Thereisno.png' style='height: 280rpx;width: 280rpx;'></image>
+    <view class='wufap'>当前无养护提醒</view>
+  </view>
+</view>

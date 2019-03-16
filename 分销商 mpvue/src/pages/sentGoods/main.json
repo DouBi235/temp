@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "已发货订单",
+  "usingComponents": {
+    "i-button": "../../../static/dist/button/index"
+  }
+}

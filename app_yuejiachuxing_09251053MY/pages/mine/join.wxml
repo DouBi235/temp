@@ -1,0 +1,13 @@
+<block wx:for="{{list}}">
+<view class='box' id='{{item.id}}' data-status="{{item.static}}" bindtap='toinfo'>
+  <view class='title'>{{item.title}}</view>
+  <view class='route'>
+    <text>{{item.path}}</text>
+    <image mode='aspectFill' src='/img/car.png'></image>
+  </view>
+  <view class='null'></view>
+  <view class='date'>
+    <text>{{item.start_time}}</text>
+    <view class='menu' data-id='{{item.id}}' data-status="{{item.static}}" catchtap='alertmode'>取消</view>
+  </view>
+</view></block>

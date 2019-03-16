@@ -1,0 +1,209 @@
+<!--pages/productDet/productDet.wxml--> 
+<import src="../../utils/wxParse/wxParse.wxml" />
+<view class='productDetPage'>
+  <!-- 图片 -->
+  <view class='productInfo'>
+    <image class='productImg' src='{{productData.product.pic}}'></image>
+    <view class='titleAndPrice'>
+      <text class='productName'>{{productData.product.name}}
+      </text>
+      <view class='priceBar'>
+        <view class='priceBox'>
+          <text class='priceLabel'>优惠价<text class='priceNow'>{{productData.proDet[0].discount}}</text></text>          
+          <text class='priceOld'>￥{{productData.proDet[0].price}}</text>
+        </view>
+        <view class='stockBox'>
+          <text class='salesNum'>已售数量：{{productData.proDet[0].sold}}</text>
+          <text class='stockNum'>库存数量：{{productData.proDet[0].stock}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 用户选择产品展示 -->
+  <view class='selected' bindtap='moveUpFn'>
+    <block wx:if='{{buyInfo.id === "" ? fasle : true}}'>
+      <text class='have'>已选</text>
+      <text class='havaTitle'>{{buyInfo.spec1}}:{{buyInfo.spec2}}  {{buyInfo.sum}}件</text>
+    </block>
+    <block wx:else><text class='nohave'>未选择</text></block> 
+  </view>
+
+  <!-- swiper 产品详情  评价 -->
+  <view class="tabTitleWrap">
+    <view class="details-tab-title">
+      <view class="tab-item tabProduct {{currentTab == 0?'active-wrap':''}}">
+        <text class="active" data-current="0" bindtap="swichNav">详情</text>
+      </view>
+      <view class="tab-item {{currentTab == 1?'active-wrap':''}}">
+        <text class="active" data-current="1" bindtap="swichNav">评价</text>
+      </view>
+    </view>
+    <!-- swiper -->
+    <view class="tabBlockShow">
+      <!-- 产品详情 -->
+      <view class="background" wx:if="{{currentTab == 0}}">
+        <template is="wxParse" data="{{wxParseData: details.nodes}}"></template>
+      </view>
+      <!-- 评价 -->
+      <view wx:if="{{currentTab == 1}}" class='evaluate'>
+        <text class='evaluateTitle'>评价<text class='evaluateNum'>({{evaluate.count ? evaluate.count : 0}})</text> </text>
+        <view class='aStrip' wx:if='{{evaluate.evaluate[0].nick_name }}'>
+          <view class='imgBar'>
+            <view class='imgAndTel'>
+              <image class='evaluatorImg' src='{{evaluate.evaluate[0].head_pic}}'></image>
+              <text class='telNum'>{{evaluate.evaluate[0].nick_name}}</text>
+            </view>
+            <view class='starBox'>
+              <block wx:for="{{evaluate.evaluate[0].class}}" wx:key=''>
+                <image class='star' src='../image/star_red.png'></image>
+              </block>
+              <block wx:for="{{5 - evaluate.evaluate[0].class}}" wx:key=''>
+                <image class='star' src='../image/star.png'></image>
+              </block>
+            </view>
+          </view>
+                <text class='evaluateContent'>{{evaluate.evaluate[0].content}}</text>
+        </view>
+        <view class='aStrip' wx:if='{{evaluate.evaluate[1].nick_name }}'>
+          <view class='imgBar'>
+            <view class='imgAndTel'>
+              <image class='evaluatorImg' src='{{evaluate.evaluate[1].head_pic}}'></image>
+              <text class='telNum'>{{evaluate.evaluate[1].nick_name}}</text>
+            </view>
+            <view class='starBox'>
+              <block wx:for="{{evaluate.evaluate[1].class}}" wx:key=''>
+                <image class='star' src='../image/star_red.png'></image>
+              </block>
+              <block wx:for="{{5 - evaluate.evaluate[1].class}}" wx:key=''>
+                <image class='star' src='../image/star.png'></image>
+              </block>
+            </view>
+          </view>
+          <text class='evaluateContent'>{{evaluate.evaluate[1].content}}</text>
+        </view>
+        <navigator class='moreBox' open-type='navigate' 
+            url='../evaluate-det/evaluate-det?id={{productData.product.id}}'  wx:if='{{evaluate.evaluate[0].nick_name}}'>
+          <text class='more'>查看全部评价</text>
+          <image class='moreImg' src='../image/more.png'></image>
+        </navigator>
+      </view>
+    </view>
+  </view>
+  <!-- 评价信息 -->
+  <!-- <view class='evaluate'>
+    <text class='evaluateTitle'>评价<text class='evaluateNum'>({{evaluate.count ? evaluate.count : 0}})</text> </text>
+    <view class='aStrip' wx:if='{{evaluate.evaluate[0].nick_name }}'>
+      <view class='imgBar'>
+        <view class='imgAndTel'>
+          <image class='evaluatorImg' src='{{evaluate.evaluate[0].head_pic}}'></image>
+          <text class='telNum'>{{evaluate.evaluate[0].nick_name}}</text>
+        </view>
+        <view class='starBox'>
+          <block wx:for="{{evaluate.evaluate[0].class}}" wx:key=''>
+            <image class='star' src='../image/star_red.png'></image>
+          </block>
+          <block wx:for="{{5 - evaluate.evaluate[0].class}}" wx:key=''>
+            <image class='star' src='../image/star.png'></image>
+          </block>
+        </view>
+      </view>
+            <text class='evaluateContent'>{{evaluate.evaluate[0].content}}</text>
+    </view>
+    <view class='aStrip' wx:if='{{evaluate.evaluate[1].nick_name }}'>
+      <view class='imgBar'>
+        <view class='imgAndTel'>
+          <image class='evaluatorImg' src='{{evaluate.evaluate[1].head_pic}}'></image>
+          <text class='telNum'>{{evaluate.evaluate[1].nick_name}}</text>
+        </view>
+        <view class='starBox'>
+          <block wx:for="{{evaluate.evaluate[1].class}}" wx:key=''>
+            <image class='star' src='../image/star_red.png'></image>
+          </block>
+          <block wx:for="{{5 - evaluate.evaluate[1].class}}" wx:key=''>
+            <image class='star' src='../image/star.png'></image>
+          </block>
+        </view>
+      </view>
+      <text class='evaluateContent'>{{evaluate.evaluate[1].content}}</text>
+    </view>
+    <navigator class='moreBox' open-type='navigate' 
+        url='../evaluate-det/evaluate-det?id={{productData.product.id}}'  wx:if='{{evaluate.evaluate[0].nick_name}}'>
+      <text class='more'>查看全部评价</text>
+      <image class='moreImg' src='../image/more.png'></image>
+    </navigator>
+  </view> -->
+
+  <!-- 店铺信息 -->
+  <view class='storeInfo'>
+    <text class='storeInfoTitle'>店铺信息</text>
+    <navigator class='sroreInfoDet'  open-type='navigate' url='../storeDet/storeDet?id={{productShop.pro.id}}' hover-class="none">
+      <view class='leftBox'>
+        <image class='storeImg' src='{{productShop.photo[0]}}'></image>
+        <view class='titleAndAddr'>
+          <text class='storeTitle'>{{productShop.company}}</text>
+          <view class='addrBox'>
+            <image class='positionImg' src='../image/position3.png'></image>
+            <text class='distanceText'>{{productShop.distance}}km</text>
+            <text class='addrDet'>{{productShop.province}}{{productShop.city}}{{productShop.county}}{{productShop.address}}</text>
+          </view>
+        </view>
+      </view>
+      <view class='line' catchtap="prevent">
+        <image class='callTo' src='../image/telephone.png' bindtap='callToShop'></image>
+      </view>      
+    </navigator>
+  </view>
+  <!-- 预约按钮 -->
+  <button class='btn' bindtap="{{buyInfo.id !== '' ? 'toBuyPage' : 'moveUpFn'}}">预约</button>
+  
+  <!-- 模态弹出框, 展示价格 -->
+  <view class='formLayer' wx:if="{{layerVisible}}" bindtap="moveDownFn">
+    <form class='formElement' catchtap="prevent">
+      <view class='formContent'>
+        <view class='formimgBar'>
+          <image class='informImg' src='{{productData.product.pic}}'></image>
+          <view class='formPriceBox'>
+            <text class='priceLabel' style='display:block;'>￥<text class='priceNow'>{{productData.proDet[0].discount}}</text></text>
+            <text class='priceOld' style='display:block;'>￥{{productData.proDet[0].price}}</text>
+          </view>
+        </view>
+        <!-- spec1: 规格view --- 如果商品位服务类 mold === 1不显示商品规格 -->
+        <view wx:if="{{productData.product.mold === 0}}">
+          <view class='typeBox'>
+            <text class='typeTitle'>{{productData.specId[0]}}</text>
+            <view class='typeContent'>
+              <view class='typeOpt selectOpt {{selectthis === index ? "active" : ""}}' bindtap='selectpro' data-id="{{item.spec_id}}" data-value="{{item}}" data-index="{{index}}" wx:for="{{ productData.spec1 }}" wx:key="{{index}}" data-obj="{{item}}">{{item}}</view>
+            </view>
+          </view>
+          <!-- spec2: 规格值 -->
+          <view class='typeBox' wx:if="{{ productData.specId[1] != null }}">
+            <text class='typeTitle'>{{productData.specId[1]}}</text>
+            <view class='typeContent'>
+              <view class='typeOpt selectOpt {{selectthis1 === index ? "active" : ""}}' bindtap='selectpro1' data-id="{{item.spec_id}}" data-index="{{index}}" data-target="spec2" data-obj="{{item}}" wx:for="{{ productData.spec2 }}" wx:key="{{index}}">{{item.spec2}}</view>
+            </view>
+          </view>
+          <!-- 选择商品数量 -->
+          <view class='styleBox'>
+            <text class='styleTitle'>请选择</text>
+            <view class='styleContent'>
+              <view class='styleOpt {{selectthis == i ? "selectOpt" : "" }}' wx:for='{{productData.goodsDetail}}' wx:for-index="i" wx:for-item="item" bindtap='selectpro' data-index='{{i}}'>{{item.standard_detail}}</view>
+            </view>
+          </view>
+        </view>
+
+        <!-- 选择数量 -->
+        <view class='numBox'>
+          <view class='numTitle'>数量<view class='micro'>
+            <image class='microBtn' src='{{proNum == 1 ? "../image/reduce.png" : "../image/reduce_black.png"}}' bindtap='reduceNum'></image>
+            <text class='proNum'>{{proNum}}</text>
+            <image class='microBtn'src='../image/add_black.png' bindtap='addNum'></image>
+          </view>
+        </view>
+
+        </view>
+      </view>
+      <button class='submitBtn' animation="{{animation}}"  bindtap="toBuyPage">确定</button>  
+    </form>
+  </view>
+</view>

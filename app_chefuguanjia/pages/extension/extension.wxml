@@ -1,0 +1,68 @@
+<!--index.wxml-->
+<view class='indexPage'>
+  <view class='idx'>
+    <image class='idx1' src='{{imgUrl}}/indexTopBg.png'></image>
+    <view class='idx2'>
+      <view class='idx4'>
+        <view class='idx7'>
+          <text class='idx8'>直推奖励</text>
+          <text class='idx9'>{{three.driect_money}}</text>
+        </view>
+        <view class='idx7'>
+          <text class='idx8'>间推奖励</text>
+          <text class='idx9'>{{three.indirect_money}}</text>
+        </view>
+        <view class='idx7'>
+          <text class='idx8'>中心奖励</text>
+          <text class='idx9'>{{three.center_money}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='switchList'>
+    <scroll-view scroll-x="true" class="tab-h" >
+      <view class="tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="swichNav">推荐奖励</view>
+      <view class="tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="swichNav">中心奖励</view>
+    </scroll-view>
+    <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab" style='height: calc(100vh - 280rpx)'>
+      <swiper-item>
+        <scroll-view scroll-y="true" class="scoll-h" bindscrolltoupper="uppery1" bindscrolltolower="lowery1">
+          <block wx:for="{{listy1}}" wx:key>
+            <view style='margin-bottom: 20rpx;' bindtap='navToDet'data-item="{{item}}">
+              <view class='subPeople'>
+                <view class='itemLeft'>
+                  <image src='{{item.head_pic}}'></image>
+                  <view class='leftInfo'>
+                    <text class='name'>{{item.name}}</text>
+                    <text class='subInfo'>已转介绍：{{item.indirect.indirect_number}}人</text>
+                  </view>
+                </view>
+                <view class='itemRight'>
+                  <text class='money'>{{item.indirect.indirect_money}}<text class='subInfo'>元</text></text>
+                </view>
+              </view>
+            </view>
+          </block>
+        </scroll-view>
+      </swiper-item>
+      <swiper-item>
+        <scroll-view scroll-y="true" class="scoll-h" bindscrolltoupper="uppery2" bindscrolltolower="lowery2">
+          <block wx:for="{{listy2}}" wx:key>
+            <view class='subPeople'>
+              <view class='itemLeft'>
+                <image src='{{item.head_pic}}'></image>
+                <view class='leftInfo'>
+                  <text class='name'>{{item.name}}</text>
+                  <text class='subInfo'>{{item.create_time}}</text>
+                </view>
+              </view>
+              <view class='itemRight'>
+                <text class='money'>{{item.money}}<text class='subInfo'>元</text></text>
+              </view>
+            </view>
+          </block>
+        </scroll-view>
+      </swiper-item>
+    </swiper>
+  </view>
+</view>

@@ -1,0 +1,167 @@
+<!--pages/orderAll/orderAll.wxml-->
+<view class='orderAllPage'>
+    <scroll-view scroll-x="true" class='menubar'>
+        <view class='amenu tab-item' bindtap='clickTab'  data-current="0">
+            <text class='menutext {{currentTab == 0? "theone" : ""}}'>全部</text>
+        </view>
+        <view class='amenu tab-item' bindtap='clickTab'  data-current="1">
+            <text class='menutext {{currentTab == 1? "theone" : ""}}'>进行中</text>
+        </view>
+        <view class='amenu tab-item' bindtap='clickTab'  data-current="2">
+            <text class='menutext {{currentTab == 2? "theone" : ""}}'>待评价</text>
+        </view>
+    </scroll-view>
+    <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab" style="">
+        <!-- 全部订单 -->
+        <swiper-item class='swiperItem' style='overflow: visible;'>
+            <scroll-view scroll-y="true" class='scrollY'  bindscrolltolower="scrolltolower" bindscrolltoupper="scrolltoupper" upper-threshold='10' lower-threshold='10'>
+                <view class='listBox'>
+                    <view class='orderOne' wx:for="{{orderList}}" wx:for-item="order" bindtap='' data-index="{{index}}">
+                        <view class='inOrderTop'>
+                            <view class='orderTime'>
+                                <image class='timeImg' src='../image/date.png'></image>
+                                <text class='timeText'>{{order.create_time}}</text>
+                            </view>
+                            <view class='orderStatus'>{{order.status == 0 ? "进行中" : order.status == 1 ? "已完成（未评论）" : order.status == 2 ? "预约超时（已失效）" : order.status == 3 ? "已完成（已评论）" : "" }}</view>
+                        </view>
+                        <view class='inOrderCentre'>
+                            <view class='orderDet'>
+                                <image class='goodsImg' src='{{order.pic}}'></image>
+                                <view class='titleAndNum'>
+                                    <text class='goodsTitle'>{{order.name}}</text>
+                                    <text class='goodsNum'>数量：{{order.number}}</text>
+                                </view>
+                            </view>
+                            <view class='totle'>总价：￥{{order.number*order.activity_price}}</view>
+                            <navigator class='evaluate' open-type='navigate' url='../evaluate/evaluate?cid={{order.cid}}&oid={{order.oid}}&ifsigning={{order.ifsigning}}' wx-if='{{order.status == 1}}'>去评价</navigator>
+                        </view>
+                        <view class='inOrderBottom'>
+                            <view class='storeDet'>
+                                <view class='titleBox'>
+                                    <image class='storeImg' src='../image/dianpu.png'></image>
+                                    <text class='storeTitle'>{{order.shop.company}}</text>
+                                </view>
+                                <view class='addrBox'>
+                                    <image class='addrImg' src='../image/local.png'></image>
+                                    <text class='storeAddr'>{{order.shop.address}}</text>
+                                </view>
+                            </view>
+                            <view class='telAndAddr'>
+                                <image class='telImg' src='../image/telephone.png' bindtap='callTo' data-phone='{{order.shop.phone}}'></image>
+                                <view class='colLine'>
+                                    <image class='positionImg' src='../image/navigation.png' bindtap='mapTo' data-lat='{{order.shop.lat}}' data-lng='{{order.shop.lng}}' data-company='{{order.shop.company}}' data-city='{{order.shop.city}}' data-county='{{order.shop.county}}' data-address='{{order.shop.address}}'></image>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </scroll-view>
+        </swiper-item>
+        <!-- 进行中的订单 -->
+        <swiper-item  class='swiperItem'>
+            <scroll-view scroll-y="true" class='scrollY'   bindscrolltolower="scrolltolowering" bindscrolltoupper="scrolltouppering" upper-threshold='10' lower-threshold='10'>
+                <!-- <view style='height:1rpx;width:750rpx;background-color:rgba(255,255,255,0);'></view> -->
+                <view class='listBox'>
+                    <view class='orderOne' wx:for="{{orderListing}}" wx:for-item="order" bindtap='' data-index="{{index}}"  wx:if='{{order.status == 0}}'>
+                        <view class='inOrderTop'>
+                            <view class='orderTime'>
+                                <image class='timeImg' src='../image/date.png'></image>
+                                <text class='timeText'>{{order.create_time}}</text>
+                            </view>
+                            <view class='orderStatus'>{{order.status == 0 ? "进行中" : ""}}</view>
+                        </view>
+                        <view class='inOrderCentre'>
+                            <view class='orderDet'>
+                                <image class='goodsImg' src='{{order.pic}}'></image>
+                                <view class='titleAndNum'>
+                                    <text class='goodsTitle'>{{order.name}}</text>
+                                    <text class='goodsNum'>数量：{{order.number}}</text>
+                                </view>
+                            </view>
+                            <view class='totle'>总价：￥260</view>
+                            <navigator class='evaluate' open-type='navigate' url='../evaluate/evaluate' wx-if='{{order.status == 1}}'>去评价</navigator>
+                        </view>
+                        <view class='inOrderBottom'>
+                            <view class='storeDet'>
+                                <view class='titleBox'>
+                                    <image class='storeImg' src='../image/dianpu.png'></image>
+                                    <text class='storeTitle'>{{order.shop.company}}</text>
+                                </view>
+                                <view class='addrBox'>
+                                    <image class='addrImg' src='../image/local.png'></image>
+                                    <text class='storeAddr'>{{order.shop.address}}</text>
+                                </view>
+                            </view> 
+                            <view class='telAndAddr'>
+                                <image class='telImg' src='../image/telephone.png' bindtap='callTo' data-phone='{{order.shop.phone}}'></image>
+                                <view class='colLine'>
+                                    <image class='positionImg' src='../image/navigation.png' bindtap='mapTo' data-lat='{{order.shop.lat}}' data-lng='{{order.shop.lng}}' data-company='{{order.shop.company}}' data-city='{{order.shop.city}}' data-county='{{order.shop.county}}' data-address='{{order.shop.address}}'></image>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </scroll-view>
+        </swiper-item>
+        <!-- 待评价 -->
+        <swiper-item  class='swiperItem'>
+            <scroll-view scroll-y="true" class='scrollY' bindscrolltolower="scrolltolowered" bindscrolltoupper="scrolltouppered" upper-threshold='10' lower-threshold='10'>
+                <view class='listBox'>
+                    <view class='orderOne' wx:for="{{orderListed}}" wx:for-item="order" bindtap='' data-index="{{index}}"  wx:if='{{order.status == 1}}'>
+                        <view class='inOrderTop'>
+                            <view class='orderTime'>
+                                <image class='timeImg' src='../image/date.png'></image>
+                                <text class='timeText'>{{order.create_time}}</text>
+                            </view>
+                            <view class='orderStatus'>{{order.status == 1 ? "已完成(未评论)" : ""}}</view>
+                        </view>
+                        <view class='inOrderCentre'>
+                            <view class='orderDet'>
+                                <image class='goodsImg' src='{{order.pic}}'></image>
+                                <view class='titleAndNum'>
+                                    <text class='goodsTitle'>{{order.name}}</text>
+                                    <text class='goodsNum'>数量：{{order.number}}</text>
+                                </view>
+                            </view>
+                            <view class='totle'>总价：￥260</view>
+                            <navigator class='evaluate' open-type='navigate' url='../evaluate/evaluate?cid={{order.cid}}&oid={{order.oid}}&ifsigning={{order.ifsigning}}' wx-if='{{order.status == 1}}'>去评价</navigator>
+                        </view>
+                        <view class='inOrderBottom'>
+                            <view class='storeDet'>
+                                <view class='titleBox'>
+                                    <image class='storeImg' src='../image/dianpu.png'></image>
+                                    <text class='storeTitle'>{{order.shop.company}}</text>
+                                </view>
+                                <view class='addrBox'>
+                                    <image class='addrImg' src='../image/local.png'></image>
+                                    <text class='storeAddr'>{{order.shop.address}}</text>
+                                </view>
+                            </view>
+                            <view class='telAndAddr'> 
+                                <image class='telImg' src='../image/telephone.png' bindtap='callTo' data-phone='{{order.shop.phone}}'></image>
+                                <view class='colLine'>
+                                    <image class='positionImg' src='../image/navigation.png' bindtap='mapTo' data-lat='{{order.shop.lat}}' data-lng='{{order.shop.lng}}' data-company='{{order.shop.company}}' data-city='{{order.shop.city}}' data-county='{{order.shop.county}}' data-address='{{order.shop.address}}'></image>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </scroll-view>
+        </swiper-item>
+    </swiper>
+</view>
+<!-- 导航 -->
+<view class='footerNav'>
+    <navigator class='fnav' url='../index/index' open-type="redirect" hover-class='false'>
+        <image class='navImg' src='../image/index.png'></image>
+        <text class='navText'>首页</text>
+    </navigator>
+    <view class='fnav'>
+        <image class='navImg' src='../image/order_black.png'></image>
+        <text class='navText'>预约订单</text>
+    </view>
+    <navigator class='fnav' url='../personalCentre/personalCentre' open-type="redirect" hover-class='false'>
+        <image class='navImg' src='../image/my.png'></image>
+        <text class='navText'>我的</text>
+    </navigator>
+</view>

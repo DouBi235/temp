@@ -1,0 +1,42 @@
+/* pages/collisionWarn/collisionWarn.wxss */
+page,
+.wrap { position: relative; width: 100%; height: 100%; overflow: hidden; }
+.bg-img { width: 100%; height: 100%; }
+.opacity { opacity: .5 }
+.page-loading { background: transparent }
+.page-loading::after { border: 0; }
+.pageLoading { position: fixed; top: 0; left: 0; z-index: 99999; background: #fff; width: 100%; height: 100%; }
+.collision-warn { position: absolute; top: 280rpx; left: 30rpx; width: 440rpx; min-height: 300rpx; padding: 32rpx 0 0; background: white; border-radius: 20rpx;}
+.collision-warn .nodata { margin-top: 80rpx; font-size: 28rpx; color: #73737D; text-align: center; }
+.collision-content { position: relative }
+.collision-content::after {
+  position: absolute;
+  top: 0;
+  right: -20rpx;
+  content: "";
+  display: block;
+  width:0;
+  border-width: 0 0 40rpx 40rpx;
+  border-style: solid;
+  border-color: transparent transparent transparent #fff;
+}
+.collision-title { position: absolute; top: 86rpx; width: 100%; padding: 0 54rpx; height: 88rpx; }
+.collision-title .inner { width: 100%; height: 100%; }
+.collision-title .inner image { width: 100%; height: 100%; }
+
+.collision-content { font-size: 28rpx; padding: 0 30rpx; }
+.collision-content .date { margin: 10rpx 0; font-size: 24rpx; color: #73737D; }
+.collision-content .content { line-height: 54rpx; margin-bottom: 40rpx; }
+
+.collision-page { display: flex; height: 88rpx; line-height: 88rpx; border-top: 1rpx solid #E6E6EB; }
+.collision-page .page { flex-grow: 1; width: 50%; text-align: center; font-size: 28rpx; color: #C8C8D2; border-right: 1rpx solid #E6E6EB; }
+.collision-page_wrap { position: relative }
+.collision-page_wrap .btn { position: absolute; top: 0; left: 0; width: 100%; height: 100% }
+.collision-page .page:last-child { border: 0; }
+.collision-page .page.hasnews { color: #1EA0FF }
+.collision-page .bgactive { opacity: .5 }
+
+.ignore-btn { position: absolute; bottom: 76rpx; width: 100%; }
+.ignore-btn button { width: 492rpx; height: 88rpx; line-height: 88rpx; margin: 0 auto; background: rgba(255, 255, 255, .5); color: #1EA0FF; font-size: 32rpx; border-radius: 0;  }
+.ignore-btn button::after{ border: 0; }
+.ignore-btn .ignore-click { background: #fff; }

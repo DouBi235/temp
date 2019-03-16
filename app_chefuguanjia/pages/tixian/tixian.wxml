@@ -1,0 +1,27 @@
+<!--pages/tixian/tixian.wxml-->
+<view class='tixianPage'>
+  <view class='tform'>
+    <view class='formItem'>
+      <text>开户名</text>
+      <input placeholder='请输入开户名' bindinput='kaihum' bindblur='' value='{{item1}}'></input>
+    </view>
+    <view class='formItem'>
+      <text>开户行</text>
+      <picker bindchange="kaihuh" value="{{idx}}" range="{{bankList}}" range-key="name">
+        <view class='picker'>
+          <text style='color: {{item2.code == 0?"#C8C8D2":"#1E2328"}}'>{{item2.name}}</text>
+          <image src='{{imgUrl}}/arrow.png'></image>
+        </view>
+      </picker>
+    </view>
+    <view class='formItem'>
+      <text>分行</text>
+      <input placeholder='请输入所属分行' bindinput='fenh' bindblur='' value='{{item3}}'></input>
+    </view>
+    <view class='formItem'>
+      <text>卡号</text>
+      <input placeholder='请输入银行卡号' bindinput='kah' bindblur='' type='number' value='{{item4}}'></input>
+    </view>
+  </view>
+  <view class='tsubbtn' bindtap='subData'>{{updata ? "提交更改":"确认"}}</view>
+</view>

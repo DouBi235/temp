@@ -1,0 +1,33 @@
+<view class='head'>
+  <view class='bigcir'></view>
+  <view class='head-info'>
+    <view class='head-imgbor' bindtap='tomine' id="info">
+      <image mode='aspectFill' src='{{uhead}}'></image>
+    </view>
+    <view class='head-uname'>{{uname}}</view>
+  </view>
+</view>
+<view class='body'>
+  <view class='row clearbox'>
+    <view class='grid l' bindtap='tomine' id="drive">
+      <image mode='aspectFit' src='/img/my-drive.png'></image>
+      <view class='title'>我的约驾</view>
+    </view>
+    <view class='grid r' bindtap='tomine' id="car">
+      <image mode='aspectFit' src='/img/my-car.png'></image>
+      <view class='title'>我的汽车</view>
+    </view>
+  </view>
+  <view class='row clearbox'>
+    <view class='grid l' bindtap='tomine' id="join">
+      <image mode='aspectFit' src='/img/my-join.png'></image>
+      <view class='title'>我的参与</view>
+    </view>
+    <view class='grid r' bindtap='tomine' id="msg">
+      <image mode='aspectFit' src='/img/my-msg.png'></image>
+      <view class='title'>消息通知</view>
+    </view>
+  </view>
+</view>
+
+<tabbar curtab="mine"></tabbar>

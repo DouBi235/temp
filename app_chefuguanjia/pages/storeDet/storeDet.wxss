@@ -1,0 +1,25 @@
+/* pages/storeDet/storeDet.wxss */
+.storeDetPage{min-height: 100vh;width: 750rpx; background-color: #f5f5f5; padding-bottom: 50rpx;}
+.imageBox{min-height: 471rpx;width: 750rpx;background-color: #fff;}
+.topimg{height: 300rpx;width: 750rpx;display: block;}
+.storeimg{height: 26rpx;width:26rpx;}
+.infoBox{min-height: 171rpx;width: 750rpx; padding: 0 30rpx;box-sizing: border-box;}
+.introBox{width: 750rpx;background-color: #fff;margin-top: 21rpx; padding: 0 27rpx 28rpx;box-sizing: border-box;}
+.positionBox{ width: 750rpx;background-color: #fff;margin-top: 21rpx; padding: 0 27rpx;box-sizing: border-box;padding-bottom: 30rpx; }
+.positionimage{height: 24rpx;width: 24rpx;}
+.infocontent{display: flex;align-items: center;min-height: 82rpx;}
+.titlebox{height: 70rpx;width: 690rpx;border-bottom:1px solid #ccc;display: flex;justify-content: space-between; align-items: center;}
+.infotitle{min-height: 88rpx; line-height: 88rpx;display: flex;align-items: center;justify-content: flex-start;}
+.infoname{margin-left: 13rpx;}
+.addrBox{width: 496rpx;display: flex;justify-content: flex-start;align-items: center;}
+.infotext{margin-left: 14rpx;display: block;width: 496rpx;font-size: 24rpx;word-wrap:break-word;
+/* height: 82rpx;line-height: 82rpx; overflow: hidden;text-overflow:ellipsis;white-space: nowrap; */
+color: #2E323D;}
+.verticalline{margin-left: 56rpx; border-left: 1px solid #ccc;height: 40rpx;}
+.callimg{display: block;margin-left: 46rpx;height: 40rpx;width: 36rpx;}
+.title{line-height: 70rpx;font-size: 32rpx;}
+.positionImg{height:40rpx;	width:40rpx;}
+.contect{font-size: 24rpx;color: #2E323D;display: block;margin-top:29rpx;line-height: 40rpx;}
+.myMap{width:690rpx;height:550rpx;display: block;box-sizing: border-box;margin-top: 29rpx; }
+  .maptip{height: 44rpx;background-color: #fff;border-radius: 5rpx;  padding: 0 16rpx; box-shadow: 0 0 3px #999;display: flex;align-items: center; margin: 0 auto; width: 156rpx; margin-top: 13rpx;z-index: 10;}
+    .maptext{font-size: 22rpx; color: #333;margin: 0 auto; line-height: 44rpx;white-space: nowrap;}

@@ -1,0 +1,20 @@
+<!--pages/personalInfo/personalInfo.wxml-->
+<view class='personalInfoPage'>
+  <form class=''>
+    <view class='inputBox'>
+      <view class='labelBox'>
+        <image class='nameImg' src='../image/people.png'></image>
+        <text class='nameLabel'>请输入您的姓名</text>
+      </view>
+      <input class='nameInput' confirm-type='next' placeholder='姓名' bindinput='inputname' value='{{name}}'></input>
+    </view>
+    <view class='inputBox'>
+      <view class='labelBox'>
+        <image class='phoneImg' src='../image/phone.png'></image>
+        <text class='phoneLabel'>请输入您的电话</text>
+      </view>
+      <input class='phoneInput' confirm-type='done' type='number' placeholder='电话' cursor='-5' bindinput='inputphone' value='{{phone}}'></input>
+    </view>
+    <button class='submitBtn' bindtap='submitinfo'>保存</button>
+  </form>
+</view> 

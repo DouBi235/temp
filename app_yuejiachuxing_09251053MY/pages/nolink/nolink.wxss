@@ -1,0 +1,6 @@
+.onlybox{
+  padding-top: 35vh;
+  text-align: center;
+  font-size: 60rpx;
+  color: #666;
+}

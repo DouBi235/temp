@@ -1,0 +1,76 @@
+<!-- 我的约驾-详情页-无效活动(审核未通过) / 待审核 -->
+<view class="bigcir"></view>
+<view class='box top'>
+  <view class='top-msg'>
+    <view class='uname'>
+      <text>{{evt.nikename}}</text>
+      <image mode='aspectFit' src="{{evt.sex==1?'/img/boy.png':evt.sex==2?'/img/girl.png':''}}"></image>
+    </view>
+    <image class='uhead' mode='aspectFill' src='{{evt.head_image}}'></image>
+    <view class='limitime'>
+      <text class='r'>{{stlist[evt.static]}}</text>
+    </view>
+  </view>
+  <view class='top-info'>{{evt.title}}</view>
+  <view class='top-route'>
+    <text>{{evt.path}}</text>
+    <image mode='aspectFit' src='/img/car.png'></image>
+  </view>
+</view>
+<view class='banout' wx:if="{{piclen}}">
+  <view class='bantip'>
+    <image mode='aspectFit' src='/img/camera.png'></image>
+    <text>{{piclen}}</text>
+  </view>
+  <swiper class="banner" indicator-dots="true" autoplay="true" interval="3000" duration="400">
+    <swiper-item wx:for="{{evt.pic}}">
+      <image src="{{item}}" class="slide-image" mode="aspectFill" />
+    </swiper-item>
+  </swiper>
+</view>
+<view class='box list'>
+  <view>
+    <view class='list-title'>
+      <image mode='aspectFit' src='/img/f-startime.png'></image>
+      <text>出发时间</text>
+    </view>
+    <view class='list-info'>{{evt.start_time}}</view>
+  </view>
+  <view>
+    <view class='list-title'>
+      <image mode='aspectFit' src='/img/f-backtime.png'></image>
+      <text>回来时间</text>
+    </view>
+    <view class='list-info'>{{evt.end_time}}</view>
+  </view>
+  <view>
+    <view class='list-title'>
+      <image mode='aspectFit' src='/img/f-setpoint.png'></image>
+      <text>始发地</text>
+    </view>
+    <view class='list-info' style='max-width:460rpx'>{{evt.thronheim}}</view>
+  </view>
+  <view>
+    <view class='list-title'>
+      <image mode='aspectFit' src='/img/f-peoplenum.png'></image>
+      <text>可约人数</text>
+    </view>
+    <view class='list-info'>
+      <text class='g'>{{evt.red_number}}</text>
+      <text>人</text>
+    </view>
+  </view>
+  <view>
+    <view class='list-title'>
+      <image mode='aspectFit' src='/img/f-car.png'></image>
+      <text>车型</text>
+    </view>
+    <view class='list-info' style='color:#333;max-width:460rpx'>{{evt.motorcycle}}</view>
+  </view>
+  <view class='last'>
+    <view class='list-title last'>
+      <image mode='aspectFit' src='/img/f-write.png'></image>
+      <text>{{evt.content}}</text>
+    </view>
+  </view>
+</view>

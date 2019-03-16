@@ -1,0 +1,10 @@
+/* pages/template/pingjia/pingjia.wxss */
+
+.item{background: #fff;padding: 20rpx 40rpx 20rpx 20rpx;border-top: 1rpx solid #ECEDF1;}
+.item .ihead{display: flex;}
+  .ihead .headbar{display: flex;flex-direction: column;}
+  .ihead .userhead{width:80rpx;height:80rpx;border-radius: 50%;margin: 0 20rpx;}
+  .title{font-size:28rpx;font-weight:400;color:rgba(30,35,40,1);line-height:40rpx;}
+  .star{width:24rpx;height:24rpx;margin-right: 4rpx;}
+.item .ibody{margin-left: 120rpx; width:570rpx;font-size:24rpx;font-weight:400;color:rgba(115,115,125,1);line-height:40rpx;}
+.item .ifoot{margin-left: 120rpx; width:570rpx;font-size:20rpx;font-weight:400;color:rgba(115,115,125,1);line-height:28rpx;text-align: right;}

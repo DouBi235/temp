@@ -1,0 +1,64 @@
+/* pages/bindDevice/bindDevice.wxss */
+.bindDevicePage{min-height: 100vh;background-color: #fff;width: 100%;}
+  .deviceImgBox{height: 370rpx;width: 100%;display: flex;flex-direction: column;align-items: center;justify-content: space-around;padding-top: 55rpx;padding-bottom: 30rpx;}
+    .deviceImg{height: 224rpx;width: 400rpx;}
+    .deviceText{display: block;color: #C8C8D2;font-size: 24rpx;}
+  .formBox{width: 100%;padding: 0 30rpx;}
+    .formItem{padding: 50rpx 0;border-bottom: 1rpx solid RGBA(200, 200, 210, 1);}
+      .formLabel{display: block;width: 50vw; font-size: 28rpx;color: #73737d;margin-bottom: 50rpx;font-weight: 300;}
+      .formInput{height: 68rpx;}
+      .input-placeholder{color: #C8C8D2;font-size: 32rpx;}
+      .formBtn{height: 88rpx;width: 572rpx;border-radius: 0;outline: 0;border: 0;background-color: 
+RGBA(30, 160, 255, 1);color: #fff;font-size: 32rpx;display: flex;align-items: center;justify-content: center;}
+      button::after{ border: none; }
+      .inp{
+        /* border-bottom: 1rpx solid RGBA(200, 200, 210, 1);  */
+        padding: 0;
+        height: 150rpx;
+      }
+      .bysever{
+        width: 100%; 
+        padding:50rpx 0rpx 0; 
+        /* background: red; */
+      }
+      .fc{
+        width: 100%;
+        color: RGBA(30, 160, 255, 1);
+        letter-spacing: 2rpx;
+        height: 80rpx;
+        line-height: 80rpx;
+        font-size: 35rpx;
+        text-align: center;
+      }
+    .box{
+      width: 90%;
+    float: left;
+    }
+    .scan{
+      width: 60rpx;
+      height: 60rpx;
+      
+    }
+      .fc2{
+        width: 100%;
+        color: RGBA(115, 115, 125, 1);
+        text-align: center;
+        font-size: 25rpx;
+      }
+      .box {
+  width: 90%;
+  float: left;
+}
+.bysever{
+  border-bottom: 1rpx solid RGBA(200, 200, 210, 1);
+}
+.formtext{
+  font-size: 30rpx;
+  line-height: 60rpx;
+  border-bottom: 1rpx solid RGBA(200, 200, 210, 1);
+}
+.color{
+  color:  RGBA(195, 195, 210, 1);
+}
+     
+     

@@ -1,0 +1,13 @@
+.evaluateListPage{min-height: 100vh;width: 750rpx; background-color: #F5F5F5;           padding-bottom: 100rpx; position: absolute;top: 0;box-sizing:border-box;} 
+  .aEvaluate{width: 750rpx; padding: 20rpx 30rpx;background-color: #fff;                  margin-top: 21rpx;box-sizing: border-box;}
+    .topBox{height: 70rpx; width: 690rpx;display: flex;                                     justify-content: space-between;}
+      .topLeft{display: flex; height: 70rpx;align-items: center;}
+        .evaluatorImg{display: block;width: 70rpx;height: 70rpx; border-radius: 50%;}
+        .telAndStar{margin-left: 20rpx;height:70rpx;display: flex;                              flex-direction: column;}
+          .evaluatorTel{display: block; font-size: 30rpx;color: #020814;                        line-height: 30rpx; height: 15rpx;margin-top: 10rpx;}
+          .starBox{display: block;height: 20rpx}
+            .star{ margin-right: 5rpx;width: 17rpx;height: 18rpx;}
+      .topRight{height: 70rpx;}
+        .date{color: #5D667A;font-size: 22rpx;}
+    .evaluateContent{margin-left: 94rpx;width: 575rpx;margin-top: 10rpx;                    padding-top: 0;}
+      .evaluateText{font-size: 24rpx;color: #2E323D;display: block;}

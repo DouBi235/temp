@@ -1,0 +1,169 @@
+page {
+  background: #f5f5f5;
+  padding-top: 100rpx;
+  padding-bottom: 96rpx;
+}
+
+.bigcir {
+  position: fixed;
+  z-index: -1;
+  width: 1050rpx;
+  left: -150rpx;
+  height: 360rpx;
+  top: -120rpx;
+  border-radius: 70%;
+  background: #21c5bd;
+}
+
+.box {
+  width: 690rpx;
+  margin: 0 auto;
+  border-radius: 10rpx;
+}
+
+.top {
+  background: #fff;
+  padding: 30rpx;
+  margin-bottom: 20rpx;
+}
+
+.top-msg {
+  position: relative;
+}
+
+.top-msg, .uname {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.uname {
+  color: #333;
+  font-size: 26rpx;
+}
+
+.uname>image {
+  margin-left: 12rpx;
+  width: 24rpx;
+  height: 24rpx;
+}
+
+.limitime {
+  font-size: 24rpx;
+}
+
+.uhead {
+  width: 120rpx;
+  height: 120rpx;
+  border: solid 5rpx #fff;
+  border-radius: 200rpx;
+  background: #eee;
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 65rpx);
+}
+
+.top-info {
+  color: #666;
+  font-size: 24rpx;
+  margin-top: 20rpx;
+}
+
+.top-route {
+  margin-top: 16rpx;
+  display: flex;
+  align-items: center;
+  font-size: 26rpx;
+  color: #333;
+}
+
+.top-route>image {
+  width: 48rpx;
+  height: 24rpx;
+  margin-left: 16rpx;
+}
+
+.banout {
+  position: relative;
+  border-radius: 10rpx;
+  width: 690rpx;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.banner, .slide-image {
+  width: 690rpx;
+  height: 300rpx;
+  background: #eee;
+}
+
+.bantip {
+  position: absolute;
+  z-index: 5;
+  top: 22rpx;
+  left: 18rpx;
+  width: 84rpx;
+  height: 40rpx;
+  background: rgba(51, 51, 51, 0.5);
+  border-radius: 10rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 24rpx;
+}
+
+.bantip>image {
+  width: 28rpx;
+  height: 24rpx;
+  margin-right: 8rpx;
+}
+
+.list {
+  background: #fff;
+  margin-top: 20rpx;
+}
+
+.list>view {
+  padding: 32rpx 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid 2rpx #e6e6e6;
+}
+
+.list>.last {
+  border: none;
+}
+
+.list-title {
+  display: flex;
+  align-items: center;
+  color: #999;
+  font-size: 24rpx;
+}
+
+.list-title.last {
+  align-items: flex-start;
+  color: #666;
+  font-size: 26rpx;
+}
+
+.list-title>image {
+  width: 28rpx;
+  height: 24rpx;
+  margin-right: 20rpx;
+}
+
+.list-title.last>image {
+  margin-top: 6rpx;
+}
+
+.list-title.last>text {
+  width: 560rpx;
+}
+
+.list-info {
+  font-size: 26rpx;
+  color: #666;
+}

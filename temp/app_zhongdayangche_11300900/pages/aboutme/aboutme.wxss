@@ -1,0 +1,2 @@
+/* pages/aboutme/aboutme.wxss */
+.pageimg{height: 100vh;width: 750rpx;position: absolute;top: 0;left: 0;}

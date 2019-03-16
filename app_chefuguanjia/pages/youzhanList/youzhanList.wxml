@@ -1,0 +1,58 @@
+<!--pages/youzhanList/youzhanList.wxml-->
+<import src="../template/kong/kong.wxml" />
+<view class='youzhanpage'>
+  <view class='xiaofeipage' wx:if="{{li.length == 0}}">
+    <template is="kong" data="{{imgUrl,text,height}}"></template>
+  </view>
+  <view class='listlist' wx:else>
+    <block wx:for='{{li}}' wx:key>
+      <view class='thisitem' bindtap='navdet' data-sid='{{item.id}}'>
+        <view class='jibenxinxi'>
+          <image class='shopimg' src='{{item.shop_image}}' mode='aspectFill'></image>
+          <view class='infobox'>
+            <view class='title'>{{item.oil_shop_name}}</view>
+            <view class='xiao'>
+              <block>
+                <image class='wh24' src='../../images/liangx.png' wx:for="{{item.xing}}" wx:key></image>
+                <image class='wh24' src='../../images/anxin.png' wx:for="{{5-item.xing}}" wx:key></image>
+              </block>
+              <text>销量：{{item.business_count}}</text>
+            </view>
+            <view class='dizhi'>
+              <image class='wh24' src='../../images/weiz.png'></image>
+              <text>{{item.address}}</text>
+            </view>
+          </view>
+          <view class='posibox' catchtap='mapTo'>
+            <image class='wh24' src='../../images/daoha.png' data-lat='{{item.lat}}' data-lng='{{item.lng}}' data-shop='{{item.oil_shop_name}}' data-address='{{item.address}}'></image>
+            <text class='juli'>{{item.distance}}km</text>
+          </view>
+        </view>
+        <view class='jiage'>
+          <view class='jiagebox {{iscanyu == 1? "keyong":""}}'>
+            <text class='j1'>会员价</text>
+            <text class='v1'>￥{{item.oils.member_price}}</text>
+          </view>
+          <view class='jiageline'></view>
+          <view class='jiagebox {{iscanyu == 0? "keyong":""}}'>
+            <text class='j1'>折扣价</text>
+            <text class='v1'>￥{{item.oils.discount_price}}</text>
+          </view>
+          <view class='jiageline'></view>
+          <view class='jiagebox'>
+            <text class='j1'>油站价</text>
+            <text class='v1'>￥{{item.oils.station_price}}</text>
+          </view>
+        </view>
+        <view class='jiangli' wx:if="{{item.list.length !== 0}}">
+          <block wx:for="{{item.list}}" wx:key wx:for-item="i">
+            <view class='jiangjj'>
+              <image src='../../images/fan32.png'></image>
+              <text>加满{{i.money}}元{{i.content}}</text>
+            </view>
+          </block>
+        </view>
+      </view>
+    </block>
+  </view> 
+</view>

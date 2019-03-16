@@ -1,0 +1,90 @@
+<!-- 首页-往期风采-详情 / 我的约驾-详情页-已结束 -->
+<view class="bigcir"></view>
+<view class='box top'>
+  <view class='top-msg'>
+    <view class='uname'>
+      <text>{{evt.nikename}}</text>
+      <image mode='aspectFit' src="{{evt.sex==1?'/img/boy.png':evt.sex==2?'/img/girl.png':''}}"></image>
+    </view>
+    <image class='uhead' mode='aspectFill' src='{{evt.head_image}}'></image>
+    <view class='limitime'>{{evt.start_time}}</view>
+  </view>
+  <view class='top-info'>{{evt.title}}</view>
+  <view class='top-route'>
+    <text>{{evt.path}}</text>
+    <image mode='aspectFit' src='/img/car.png'></image>
+  </view>
+</view>
+<view class='banout' wx:if="{{piclen}}">
+  <view class='bantip'>
+    <image mode='aspectFit' src='/img/camera.png'></image>
+    <text>{{piclen}}</text>
+  </view>
+  <swiper class="banner" indicator-dots="true" autoplay="true" interval="3000" duration="400">
+    <swiper-item wx:for="{{evt.pic}}">
+      <image src="{{item}}" class="slide-image" mode="aspectFill" />
+    </swiper-item>
+  </swiper>
+</view>
+<view class='box list'>
+  <view>
+    <view class='list-title'>
+      <image mode='aspectFit' src='/img/f-date.png'></image>
+      <text>活动时间</text>
+    </view>
+    <view class='list-info'>
+      <text>{{evt.start_time}}</text>
+      <text style='color:#999;margin:0 20rpx;'>至</text>
+      <text>{{evt.end_time}}</text>
+    </view>
+  </view>
+  <view>
+    <view class='list-title'>
+      <image mode='aspectFit' src='/img/f-setpoint.png'></image>
+      <text>始发地</text>
+    </view>
+    <view class='list-info' style='max-width:460rpx'>{{evt.thronheim}}</view>
+  </view>
+  <view>
+    <view class='list-title'>
+      <image mode='aspectFit' src='/img/f-peoplenum.png'></image>
+      <text>出发人数</text>
+    </view>
+    <view class='list-info'>
+      <text class='r'>{{evt.number}}</text>
+      <text>人</text>
+    </view>
+  </view>
+  <view class='last'>
+    <view class='list-title last'>
+      <image mode='aspectFit' src='/img/f-write.png'></image>
+      <text>{{evt.content}}</text>
+    </view>
+  </view>
+</view>
+<view wx:if="{{pllen}}">
+  <view class='box pinglun'>
+    <view class='pl-title'>
+      <image mode='aspectFit' src='/img/pinglun.png'></image>
+      <text>({{pllen}}条评论)</text>
+    </view>
+    <view wx:for="{{showlist}}" class='pl-list'>
+      <image class='pl-uhead' mode='aspectFill' src="{{item.head_image}}"></image>
+      <view class='pl-text'>
+        <view class='pl-info'>
+          <text class='pl-uname'>{{item.nikename}}</text>
+          <text class='pl-time'>{{item.time}}</text>
+        </view>
+        <view class='pl-con'>{{item.comment}}</view>
+      </view>
+    </view>
+  </view>
+  <view class='pl-tip'>{{plnomore?'没有更多了':'继续上滑查看更多'}}</view>
+</view>
+<view class='plinput'>
+  <input placeholder='说点什么吧' placeholder-style='color:#fff' name='plput' value="{{plput}}" bindinput='plput'></input>
+  <view class='putdown'></view>
+  <button bindtap='putpl' class='btn'>
+    <image mode='aspectFit' src='/img/send.png'></image>
+  </button>
+</view>

@@ -1,0 +1,4 @@
+<!--pages/wait/wait.wxml-->
+<view class='waitPage'>
+  <text class='msgtip'>系统对接中...</text>
+</view>

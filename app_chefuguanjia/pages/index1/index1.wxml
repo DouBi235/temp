@@ -1,0 +1,85 @@
+<!--index.wxml-->
+<view class='indexPage {{deviceStatus == 0 ? "unbind" : deviceStatus == 1 ? "running" : deviceStatus == 2 ? "unrun" : "sleep"}}'>
+  <view class='status0' bindtap='skipDetailVip' wx:if="{{status==0}}" style='background-image: url("{{imgUrl}}/status0.png");'>
+    <view>参与UBI车服</view>
+    <view>停驶享低碳出行奖励</view>
+  </view>
+  <view class='deviceStatus' wx:if="{{status!=0}}">
+    <image class='bgCarImg' src='{{imgUrl}}/bgCarImg2.png'></image>
+    <image class='bgDeviceImg' bindtap='skipBind' src='{{deviceStatus == 0 ? imgUrl+"/statusUnbindImg.png" : deviceStatus == 1 ? imgUrl+"/statusRunningImg.gif" : deviceStatus == 2 ? imgUrl+"/statusUnrunImg.png" : imgUrl+"/tingshi.png"}}'></image>
+    <view class='deviceStatusTextBox' bindtap='skipBind'>
+      <view class='statusBox' animation="{{dong}}">
+        <!-- <text class='statusText'>{{deviceStatus == 0 ? "设备未绑定..." : deviceStatus == 1 ? "设备已连接" : deviceStatus == 2 ? "通讯异常" : "设备已连接"}}</text> -->
+        <text class='statusText'>{{deviceStatus == 0 ? "设备未绑定..." : deviceStatus == 1 ? "车辆启动" : deviceStatus == 2 ? "通讯异常" : deviceStatus == 3 ? "车辆停驶" : "获取失败..."}}</text>
+      </view>
+    </view>
+  </view>
+  <view class='sixContainer'>
+    <view class='itemBox'>
+      <view class='itemImgBox leftItem'>
+        <view class='imgBox' bindtap='skipMileage' data-page='0'>
+          <image class='itemImg' src='{{imgUrl}}/mileage.png'></image>
+          <text class='itemText'>停驶奖励</text>
+        </view>
+      </view>
+      <view class='itemImgBox'>
+        <view class='imgBox' bindtap='jumpToInnerPage' data-page='0'>
+          <image class='itemImg' src='{{imgUrl}}/saveFuelImg.png'></image>
+          <text class='itemText'>节油宝</text>
+        </view>
+      </view>
+      <view class='itemImgBox rightItem'>
+        <view class='redTip' wx:if="{{promptData.hintDiagn}}">{{promptData.hintDiagn}}</view>
+        <view class='imgBox' bindtap='jumpToInnerPage' data-page='1'>
+          <image class='itemImg' src='{{imgUrl}}/diagnosticsImg.png'></image>
+          <text class='itemText'>诊断师</text>
+        </view>
+      </view>
+    </view>
+    <view class='itemBox'>
+      <view class='itemImgBox leftItem'>
+        <view class='redTip' wx:if="{{promptData.hintCar}}">{{promptData.hintCar}}</view>
+        <view class='imgBox' bindtap='jumpToInnerPage' data-page='2'>
+          <image class='itemImg' src='{{imgUrl}}/protectiveCarImg.png'></image>
+          <text class='itemText'>养护提醒</text>
+        </view>
+      </view>
+      <view class='itemImgBox '>
+        <view class='imgBox' bindtap='skippeng'>
+          <image class='itemImg' src='{{imgUrl}}/pengzhuang.png'></image>
+          <text class='itemText'>碰撞提醒</text>
+        </view>
+      </view>
+      <view class='itemImgBox rightItem'>
+        <view class='imgBox' bindtap='skipjiuyuan'>
+          <image class='itemImg' src='{{imgUrl}}/jiuyuan.png'></image>
+          <text class='itemText'>免费救援</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 弹窗遮罩层 -->
+<view class='Mask' wx:if="{{mask}}">
+  <view class='Image'>
+    <image src='{{imgUrl}}/xuanchuan.png' bindtap='skipDetailVip'></image>
+    <view bindtap='close' class='box'></view>
+  </view>
+</view>
+
+
+<!-- 诊断师异常在首页 -->
+<view class='Mask' wx:if="{{isZds}}">
+  <view class='isZdsWhite'>
+    <view class='isZdsHead'>
+      诊断师提醒
+    </view>
+    <view class='isZdsItemBox'>
+      <view class='isZdsItem' wx:for="{{isZds.list}}" wx:key>{{item}}</view>
+    </view>
+    <view style='height: 188rpx;'>
+      <view class='isZdsTip'>{{isZds.title}}</view>
+      <view class='isZdsBtn' bindtap='isZdsBtn'>我知道了</view>
+    </view>
+  </view>
+</view>

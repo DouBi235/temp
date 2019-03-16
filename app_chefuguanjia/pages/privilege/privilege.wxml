@@ -1,0 +1,64 @@
+<!--pages/privilege/privilege.wxml-->
+<view class='privilegePage' wx:if="{{!product_introduce}}">
+  <view class='top' bindtap='skipBuyUBI' wx:if="{{bang === 0}}" style='visibility:hidden'>购买邦保养套餐，享半价特权></view>
+  <view class='listBox'>
+    <view class='listItem' wx:for='{{list}}' wx:key bindtap='navDetail' data-id='{{item.id}}' data-logo='{{item.logo}}'>
+      <image class='zhuanshuImg' mode='aspectFill' src='{{item.image}}'></image>
+      <view class='rightInfo'>
+        <view class='titleBox'>
+          <image class='jiaobiaoImg' wx:if='{{item.logo != 0}}' src='{{imgUrl}}/jiaobiao.png'></image>
+          <text class='titleText text2Row' style='{{item.logo != 0?"":"text-indent:0;"}}'>{{item.name}}</text>
+        </view>
+        <view class='subTitleBox text2Row'>{{item.content}}</view>
+        <view class='timeBox'>
+          <image class='clockImg' src='{{imgUrl}}/clock.png'></image>
+          <block wx:for='{{item.times}}' wx:for-item='i' wx:key>
+            <text class='line'>|</text>
+            <text class='numText'>{{i}}</text>
+          </block>
+          <text class='line'>|</text>
+          <text class='numUnit'>天</text>
+          <text class='line'>|</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='mask' wx:if="{{product_introduce}}">
+  <view class='introduce'>
+    <view class='herder-title'>{{product_content.title}}</view>
+    <view class='content'>
+      <view>
+        <view class='describe'>
+          <view class='theme' style='color: #888'>
+            <view>{{product_content.con1}}</view>
+          </view>
+        </view>
+      </view> 
+      <view>
+        <view class='describe'>
+          <view class='theme'>
+            <view>{{product_content.con2}}</view>
+          </view>
+        </view>
+      </view> 
+      <view>
+        <view class='describe'>
+          <view class='theme'>
+            <view>{{product_content.con3}}</view>
+          </view>
+        </view>
+      </view> 
+      <view>
+        <view class='describe'>
+          <view class='theme'>
+            <view>{{product_content.con4}}</view>
+          </view>
+        </view>
+      </view> 
+    </view>
+    <view class='footer-title' bindtap='CloseIntroduce'>
+      <text>我知道了</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,38 @@
+<import src="/template/actinfo.wxml" />
+<!-- 首页-活动列表-详情 -->
+<view class="bigcir"></view>
+<view class='box top'>
+  <view class='top-msg'>
+    <view class='uname'>
+      <text>{{evt.nikename}}</text>
+      <image mode='aspectFit' src="{{evt.sex==1?'/img/boy.png':evt.sex==2?'/img/girl.png':''}}"></image>
+    </view>
+    <image class='uhead' mode='aspectFill' src='{{evt.head_image}}'></image>
+    <view class='limitime'>
+      <text>报名倒计时</text>
+      <text class='org'>{{evt.countTime}}</text>
+    </view>
+  </view>
+  <view class='top-info'>{{evt.title}}</view>
+  <view class='top-route'>
+    <text>{{evt.path}}</text>
+    <image mode='aspectFit' src='/img/car.png'></image>
+  </view>
+</view>
+<view class='banout' wx:if="{{piclen}}">
+  <view class='bantip'>
+    <image mode='aspectFit' src='/img/camera.png'></image>
+    <text>{{piclen}}</text>
+  </view>
+  <swiper class="banner" indicator-dots="true" autoplay="true" interval="3000" duration="400">
+    <swiper-item wx:for="{{evt.pic}}">
+      <image src="{{item}}" class="slide-image" mode="aspectFill" />
+    </swiper-item>
+  </swiper>
+</view>
+<block wx:if="{{evt.user==1}}">
+  <template is="actuper" data="{{evt}}"></template>
+</block>
+<block wx:else>
+  <template is="actuser" data="{{evt}}"></template>
+</block>

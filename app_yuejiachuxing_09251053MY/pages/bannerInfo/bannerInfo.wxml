@@ -1,0 +1,2 @@
+<image mode='aspectFill' src="{{content.pic}}"></image>
+<view class="wenzi">{{content.content}}</view>

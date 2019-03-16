@@ -1,0 +1,68 @@
+.lb-out {
+  position: relative;
+}
+
+.lb-float {
+  position: absolute;
+  z-index: 21;
+  height: 100%;
+  width: 32rpx;
+  top: 0;
+}
+
+.lb-float.lbf-l {
+  left: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+.lb-float.lbf-r {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+}
+
+.lb-mask {
+  position: absolute;
+  z-index: 26;
+  width: 750rpx;
+  height: 154rpx;
+  left: 0;
+  top: 0;
+  background: rgba(255, 255, 255, 0);
+}
+
+.linkbar {
+  box-sizing: border-box;
+  font-size: 24rpx;
+  color: #333;
+  text-align: center;
+  white-space: nowrap;
+  width: 750rpx;
+  height: 154rpx;
+  overflow: hidden;
+  border-bottom: 2rpx solid #f5f5f5;
+}
+
+navigator, .lb-item {
+  display: inline-block;
+  width: 134rpx;
+  height: 154rpx;
+  overflow: hidden;
+}
+.lb-first{
+  margin-left: 16rpx;
+}
+.lb-last{
+  margin-right: 16rpx;
+}
+.lb-item {
+  padding-top: 20rpx;
+  text-overflow: ellipsis;
+  line-height: 32rpx;
+}
+
+.lb-item>image {
+  margin: 0 auto 6rpx;
+  width: 74rpx;
+  height: 74rpx;
+  border-radius: 80rpx;
+}

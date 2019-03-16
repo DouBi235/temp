@@ -1,0 +1,7 @@
+{ 
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "white",
+  "navigationBarTitleText": "仲达精选",
+  "enablePullDownRefresh": true,
+  "navigationBarTextStyle": "black"
+}

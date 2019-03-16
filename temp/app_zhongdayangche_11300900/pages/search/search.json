@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {},
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTitleText": "惠养车",  
+  "navigationBarTextStyle": "black",
+  "onReachBottomDistance": 5
+}

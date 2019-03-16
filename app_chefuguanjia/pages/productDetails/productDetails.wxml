@@ -1,0 +1,76 @@
+<!--pages/privilegeDet/privilegeDet.wxml-->
+<view class='privilegeDetPage'>
+  <view class='itemBox'>
+    <swiper class='imgSwiper' indicator-dots="false" indicator-color="#C8E6FF" indicator-active-color="#1EA0FF" autoplay="true" interval="5000" duration="1500">
+      <block wx:if="{{personalList.pro_pic=='Array'}}" wx:for="{{personalList.pro_pic}}" wx:key="{{personalList.fid}}">
+        <swiper-item>
+          <image class="slide-image" src="{{personalList.pro_pic}}" mode='aspectFill' />
+        </swiper-item>
+      </block>
+      <swiper-item>
+        <image class="slide-image" src="{{personalList.pro_pic}}" mode='aspectFill' />
+      </swiper-item>
+    </swiper>
+    <view class='infoBox'>
+      <view>
+        <image src='{{imgUrl}}/jiaobiao.png'></image>
+        <text>{{personalList.pro_ame}}</text>
+      </view>
+    </view>
+    <view class='countdownBox'>
+      <!--更换周期-->
+      <view>
+        <view class='cycle'>
+          <text>更</text>
+          <text>换</text>
+          <text>周</text>
+          <text>期</text>
+        </view>
+        <view style='margin:10rpx;color:#fff'>:</view>
+        <view class='time'>
+            <text wx:for="{{personalList.day}}" wx:key='{{personalList.fid}}'>{{item}}</text>
+              <text class='timeLabel fc3'>天</text>
+        </view>
+      </view>
+      <!-- <view class='cycle' >
+          <text>更</text>
+          <text>换</text>
+          <text>周</text>
+          <text>期</text>
+        </view>
+        <text style='color:#fff'>:</text>
+        <view class='time'>
+              <text wx:for="{{personalList.day}}" wx:key='{{personalList.fid}}'>{{item}}</text>
+              <text class='timeLabel fc3'>天</text>
+        </view> -->
+    </view>
+  </view>
+  <view class='fc4'>您已预约服务，请按时间准时到店服务</view>
+  <view class='ss'></view>
+  <view class='address'>
+    <view class='companyName'>
+      <view class='name'>{{personalList.company}}</view>
+      <view class='distance'>{{personalList.distance}}km</view>
+    </view>
+    <view class='openMap' bindtap='openMap'>
+      <image src=''></image>
+      <view class='adTxt'>{{personalList.site}}</view>
+      <view class='right'>
+        <image mode='widthFix' src='{{imgUrl}}/arrow.png'></image>
+      </view>
+    </view>
+  </view>
+  <view class='ss'></view>
+  <view class='itemBox'>
+    <view class='optionSwitch'>
+      <view bindtap='change' class='switchOpt' style='color:{{change ==0 ?"red":""}}'>产品描述</view>
+      <view class='switchOpt' bindtap='change2' style='color:{{change ==0 ?"":"red"}}'>规格参数</view>
+    </view>
+    <view class='optionContent'>
+      {{change==0?personalList.desc:personalList.number+'/'+personalList.spec}}
+    </view>
+    <view class='button'>
+      <button bindtap='btn' disabled='{{true}}'  class='btn'>{{'预约时间：'+personalList.makeTime}}</button>
+    </view>
+  </view>
+</view>

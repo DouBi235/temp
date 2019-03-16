@@ -1,0 +1,18 @@
+/* pages/offgasWarning/offgasWarning.wxss */
+.offgasWarningPage{position: relative;height: 100vh;width: 100vw;}
+  .bgImg{height: 100vh;width: 100vw;position: absolute;bottom: 0;left: 0;}
+  .ignore{position: absolute;bottom: 86rpx;left: 326rpx;color: #FFE5D6;font-size: 32rpx;border-top: 2rpx solid #979797;height: 60rpx;width: 100rpx;display: flex;justify-content: center;align-items: center;}
+  .contentBox{position: absolute;top: 0;left: 0;height: 50vh;width: 100%; display: flex;flex-direction: column;justify-content: space-around;align-items: center;padding: 120rpx 0;}
+    .offgasTitle{height: 120rpx;width: 500rpx;border: 1rpx solid;font-weight: 700;font-size: 72rpx;display: flex;justify-content: center;align-items: center;}
+    .offgasContent{font-size: 28rpx;}
+
+
+    
+.normalPage .abnormalImg{display: none;}
+.normalPage .ignore{display: none;}
+.normalPage .offgasTitle{color: #1FFF00;border-color: #1FFF00;}
+.normalPage .offgasContent{color: #1FFF00;}
+.abnormalPage .normalImg{display: none;}
+.abnormalPage .offgasTitle{color: #FF2B07;border-color: #FF2B07;}
+.abnormalPage .offgasContent{color: #FF2B07;}
+

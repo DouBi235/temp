@@ -1,0 +1,15 @@
+<!--pages/chongzhipage/chongzhipage.wxml-->
+<view class='xiaofeipage'>
+  <view class='filterbox'>
+    <picker mode="date" value="{{date}}" start="2016-1" end="{{endtime}}" fields="month" bindchange="bindDateChange">
+      <view class="picker">{{date}}</view>
+    </picker>
+    <text>充值￥{{sum}}</text>
+  </view>
+  <view class='listBox'>
+    <view class='listi' wx:for="{{list}}" wx:key>
+      <text class='listvalie'>{{item.recharge_money}}</text>
+      <text class='listtime'>{{item.pay_time}}</text>
+    </view>
+  </view>
+</view>

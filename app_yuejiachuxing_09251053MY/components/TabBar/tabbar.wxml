@@ -1,0 +1,24 @@
+<view class='tabbar'>
+  <view class='tb-item{{curtab=="home"?" cur":""}}' data-to="home" catchtap='tabtap'>
+    <view class='tb-home'>
+      <image wx:if='{{curtab=="home"}}' mode='aspectFit' src="/img/home73.png" style='margin-bottom:4rpx;width:44rpx;height:40rpx'></image>
+      <image wx:else mode='aspectFit' src="/img/home79.png" style='margin-bottom:4rpx;width:44rpx;height:40rpx'></image>
+      <view>首页</view>
+    </view>
+  </view>
+  <view class='tb-item{{curtab=="publish"?" cur":""}}' data-to="publish" catchtap='tabtap'>
+    <view class='tb-cirbor'></view>
+    <view class='tb-publish'>
+      <image mode='aspectFit' src="/img/publish.png" style='position:absolute;left:calc(50% - 33rpx);bottom:44rpx;width:66rpx;height:66rpx'></image>
+      <image style='margin-bottom:4rpx;width:0;height:40rpx'></image>
+      <view>发布</view>
+    </view>
+  </view>
+  <view class='tb-item{{curtab=="mine"?" cur":""}}' data-to="mine" catchtap='tabtap'>
+    <view class='tb-mine'>
+      <image wx:if='{{curtab=="mine"}}' mode='aspectFit' src="/img/mine73.png" style='margin-bottom:4rpx;width:38rpx;height:40rpx'></image>
+      <image wx:else mode='aspectFit' src="/img/mine79.png" style='margin-bottom:4rpx;width:38rpx;height:40rpx'></image>
+      <view>我的</view>
+    </view>
+  </view>
+</view>

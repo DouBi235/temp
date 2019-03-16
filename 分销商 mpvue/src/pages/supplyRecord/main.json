@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "物料补充记录",
+  "usingComponents": {
+    "i-tabs": "../../static/dist/tabs/index",
+    "i-tab": "../../static/dist/tab/index",
+    "i-button": "../../static/dist/button/index"
+  }
+}

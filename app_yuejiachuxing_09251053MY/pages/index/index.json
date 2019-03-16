@@ -1,0 +1,8 @@
+{
+  "enablePullDownRefresh": true,
+  "navigationBarTitleText": "首页",
+  "usingComponents": {
+    "tabbar": "/components/TabBar/tabbar",
+    "linkbar": "/components/LinkBar/linkbar"
+  }
+}

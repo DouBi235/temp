@@ -1,0 +1,3 @@
+<!--pages/aboutme/aboutme.wxml-->
+{{company}}-{{detail}}-{{leader}}
+<image class='pageimg' src='../image/aboutmepage.png'></image>

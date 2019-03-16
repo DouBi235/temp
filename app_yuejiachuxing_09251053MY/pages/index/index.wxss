@@ -1,0 +1,168 @@
+@import "/template/activity.wxss";
+
+/* 页面上半部分 */
+
+.topouter {
+  background: #fff;
+  position: fixed;
+  width: 750rpx;
+  left: 0;
+  transition: top 0.5s;
+}
+
+/* 顶部轮播图 */
+
+.banner, .slide-image {
+  width: 750rpx;
+  height: 300rpx;
+  background: #eee;
+}
+
+/* 标签 */
+
+.tab-h {
+  height: 82rpx;
+  overflow: hidden;
+  line-height: 82rpx;
+  font-size: 30rpx;
+  white-space: nowrap;
+  color: #999;
+}
+
+.tab-item {
+  text-align: center;
+  width: 50%;
+  display: inline-block;
+  position: relative;
+}
+
+.tab-item.active {
+  color: #21c5bd;
+}
+
+.tab-item.active:after {
+  content: "";
+  display: block;
+  height: 4rpx;
+  width: 80rpx;
+  background: #21c5bd;
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 43rpx);
+  border-radius: 20rpx;
+}
+
+/* 滑动视图区 */
+.tab-content{
+  position: fixed;
+  left: 0;
+  width: 750rpx;
+  transition: top 0.5s;
+}
+.scoll-h {
+  height: 100%;
+  background: #f5f5f5;
+}
+
+/* 登录悬浮窗 */
+
+.float {
+  z-index: 500;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.floatborder {
+  width: 508rpx;
+  height: 414rpx;
+  position: absolute;
+  left: calc(50% - 254rpx);
+  top: calc(40% - 207rpx);
+  z-index: 510;
+}
+
+.fltext {
+  width: 400rpx;
+  height: 300rpx;
+  position: absolute;
+  z-index: 520;
+  left: 178rpx;
+  top: calc(40% - 146rpx);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: #333;
+  font-size: 30rpx;
+  padding: 100rpx 0 30rpx;
+  letter-spacing: 2rpx;
+}
+
+.flb {
+  font-size: 48rpx;
+  font-weight: bold;
+  letter-spacing: 4rpx;
+  color: #333;
+  width: 360rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  background: transparent;
+}
+
+.cannot {
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 550;
+}
+
+.cannot>view {
+  background: #fff;
+  border-radius: 32rpx;
+  width: 400rpx;
+  height: 300rpx;
+  position: absolute;
+  left: 178rpx;
+  top: 30%;
+  color: #333;
+  font-size: 32rpx;
+  display: flex;
+  align-items: center;
+  padding: 0 30rpx;
+}
+
+.reposition {
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 560;
+}
+
+.reposition>view {
+  background: #fff;
+  border-radius: 32rpx;
+  width: 500rpx;
+  height: 300rpx;
+  position: absolute;
+  left: 128rpx;
+  top: 30%;
+  color: #777;
+  font-size: 28rpx;
+  padding: 50rpx;
+}
+
+.retitle {
+  color: #222;
+  font-size: 36rpx;
+  margin-bottom: 20rpx;
+}
+
+.reposition button {
+  position: absolute;
+  padding: 0;
+  bottom: 30rpx;
+  right: 50rpx;
+  color: #21c5bd;
+  font-size: 28rpx;
+  letter-spacing: 2rpx;
+  border-radius: 0;
+  width: 180rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  background: #fff;
+}

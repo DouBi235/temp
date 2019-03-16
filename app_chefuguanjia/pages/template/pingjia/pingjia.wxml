@@ -1,0 +1,23 @@
+<!--pages/template/pingjia/pingjia.wxml-->
+<template name="pingjia">
+  <block wx:for='{{list}}'>
+    <view class='item'>
+      <view class='ihead'>
+        <image class='userhead' src='{{item.head_pic}}'></image>
+        <view class='headbar'>
+          <text class='title'>{{item.name}}</text>
+          <view>
+            <image class='star' src='../../images/liangx.png' wx:for="{{item.xing}}"></image>
+            <image class='star' src='../../images/anxin.png' wx:for="{{5-item.xing}}"></image>
+          </view>
+        </view>
+      </view>
+      <view class='ibody'>
+        {{item.content}}
+      </view>
+      <view class='ifoot'>
+        {{item.create_time}}
+      </view>
+    </view>
+  </block>
+</template>

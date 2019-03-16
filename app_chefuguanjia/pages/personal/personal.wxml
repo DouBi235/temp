@@ -1,0 +1,68 @@
+<!--pages/personal/personal.wxml-->
+<view class='personalPage'>
+  <view class='headBox'>
+    <view class='inHeadBox' style='background-image: url("{{imgUrl}}/mybgimg.png");'>
+      <image class='headImg' src='{{userInfo.avatarUrl}}' ></image>
+      <!-- <image class='headImg' src='{{userInfo.avatarUrl}}' style='border-color: {{Tips.per_rank ==1 ?"#394756":Tips.per_rank == 2? "#E9BF51":""}}'></image>
+      <image class='itag' src='{{Tips.per_rank ==1 ?imgUrl + "/zhongx.png":Tips.per_rank == 2? imgUrl + "/v99.png":""}}' wx:if="{{Tips.per_rank!=0}}"></image> -->
+      <view class='username'>{{userInfo.nickName}}</view>
+    </view>
+  </view>
+  <view class='itemBar'>
+    <view class='itemBox rowLine' bindtap='skipqianbao'>
+      <image class='itemImg' src='../../images/ucard.png'></image>
+      <text class='itemLabel'>U惠多余额</text>
+      <text class='itemText'>{{balance}}</text>
+    </view>
+    <view class='itemBox rowLine'>
+      <image class='itemImg' src='{{imgUrl}}/plateNumber.png'></image>
+      <text class='itemLabel'>车牌号</text>
+      <text class='itemText'>{{Tips.plate?Tips.plate:'--'}}</text>
+    </view>
+  </view>
+  <view class='noptBox'>
+    <view class='nopt' bindtap='skipMy'>
+      <image src='{{imgUrl}}/wwans.png'></image>
+      <text>完善信息</text>
+    </view>
+    <view class='nopt' bindtap='skipMyPolicy'>
+      <image src='{{imgUrl}}/wbaod.png'></image>
+      <text>我的保单</text>
+    </view>
+    <view class='nopt' bindtap='skiptixian'>
+      <image src='{{imgUrl}}/wtix.png'></image>
+      <text>提现账户</text>
+    </view>
+    <view class='nopt' bindtap='skipfagl'>
+      <image src='{{imgUrl}}/wfap.png'></image>
+      <text>发票管理</text>
+    </view>
+  </view>
+  <view class='noptBox'>
+    <view class='nopt' bindtap='skipshebei'>
+      <image src='{{imgUrl}}/shebei1.png'></image>
+      <text>设备</text>
+    </view>
+    <view class='nopt' bindtap='skipMessage'>
+      <view class='msgNum' wx-if="{{Tips.unread}}">{{Tips.unread}}</view>
+      <image src='{{imgUrl}}/wxit.png'></image>
+      <text>系统消息</text>
+    </view>
+    <view class='nopt' bindtap='skipqianbao'>
+      <image src='{{imgUrl}}/uqianbao.png'></image>
+      <text>U惠多钱包</text>
+    </view>
+    <view class='nopt' style='visibility: hidden'>
+      <image src='{{imgUrl}}/wyuy.png'></image>
+      <text>我的预约</text>
+    </view>
+    <view class='nopt' style='display: none;'>
+      <image src='{{imgUrl}}/wdingd.png'></image>
+      <text>我的订单</text>
+    </view>
+    <view class='nopt' style='display: none;'>
+      <image src='{{imgUrl}}/whez.png'></image>
+      <text>合作协议</text>
+    </view>
+  </view>
+</view>

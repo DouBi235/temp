@@ -1,0 +1,68 @@
+<!--pages/leaflet/leaflet.wxml--> 
+<image class='bgImg' src='{{imgUrl}}/leafletPage.png' wx:if='{{threeData.recommen.code == 0}}'></image>
+<image class='bgImg1' src='{{imgUrl}}/tuijianBg.png' wx:if='{{threeData.recommen.code == 1}}'></image>
+<view class='whit0 {{threeData.recommen.code == 1?"white00":"white0"}}'>
+  <view wx:if='{{threeData.recommen.code == 1}}'>
+    <view>直推奖励</view>
+    <view style='font-size:36rpx;font-weight:700;'>{{threeData.recommen.driect_money}}</view>
+  </view>
+  <view style='height: 150rpx;'>
+    <image src='{{threeData.info.head_pic}}'></image>
+    <text>{{threeData.info.nick_name}}</text>
+  </view>
+  <view wx:if='{{threeData.recommen.code == 1}}'>
+    <view>间推奖励</view>
+    <view style='font-size:36rpx;font-weight:700;'>{{threeData.recommen.indirect_money}}</view>
+  </view>
+</view>
+<view class='{{threeData.recommen.code == 1?"white11":"white1"}}'>
+  <view class='threeBox'>
+    <view class='numBox'>
+      <text class='num'>{{threeData.driect_number}}</text>
+      <text>直接推荐(人)</text>
+    </view>
+    <view class='line'></view>
+    <view class='numBox'>
+      <text class='num'>{{threeData.indirect_number}}</text>
+      <text>间接推荐(人)</text>
+    </view>
+    <view class='line'></view>
+    <view class='numBox'>
+      <text class='num'>{{threeData.total_money}}</text>
+      <text>获得奖励(元)</text>
+    </view>
+  </view>
+  <view class='detBtn' bindtap='switchtab'>查看详情</view>
+</view>
+<view class='{{threeData.recommen.code == 1?"white22":"white2"}}'>
+  <block wx:for="{{loopData}}" wx:key>
+    <view class='tr'>
+      <text style='width:70%'>恭喜{{item.name}}获得{{item.money}}元{{item.type == 1?'直接推荐':item.type == 2?'间接推荐':item.type == 3?'中心奖励':''}}奖励</text>
+      <text style='width:30%;white-space: nowrap;  text-overflow: ellipsis;  overflow: hidden;'>{{item.pro}}{{item.city}}</text>
+    </view>
+  </block>
+</view>
+<view class='{{threeData.recommen.code == 1?"white33":"white3"}}'>
+  <view class='barBox'>
+    <block wx:for="{{activityInfo}}" wx:key>
+      <view class='bar'>{{item}}</view>
+    </block>
+  </view>
+</view>
+
+<view class='bottom'>
+  <view class='buildImgBtn' bindtap='buildImg'>生成图片并推广</view>
+</view>
+
+
+<view class='dialogLayer' hidden='{{codeHide}}' catchtouchmove='showLayer' catchtap='showLayer'>
+  <view class='dialog'>
+    <canvas canvas-id='qrcode' class='bigCanvas' style='height: 920rpx;width: 650rpx;'>
+      <cover-view class='closeCover' bindtap='codeHide'>关闭</cover-view>
+    </canvas>
+    <view class='btnBox'>
+      <view class='saveCodeBtn' bindtap='saveImageToPhotos' data-type='1'>二维码推广</view>
+      <view class='saveBtn' bindtap='saveImageToPhotos' data-type='0'>图片推广</view>
+    </view>
+  </view>
+</view>

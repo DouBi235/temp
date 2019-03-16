@@ -1,0 +1,14 @@
+<!--pages/MyService/MyService.wxml-->
+<view class='container'>
+    <view wx:for="{{serverList}}" wx:key="{{item.id}}" data-id='{{item.fid}}' bindtap='skipDetails'>
+       <image class='img' src='{{item.pro_pic}}'></image>
+       <view class='content'>
+          <view>{{item.pro_ame}}</view>
+          <view class='time'>
+              <image src='{{imgUrl}}/clock.png'></image>
+              <text wx:for="{{item.day}}" wx:for-item="it" wx:key='{{index}}'>{{it}}</text>
+              <text>天</text>
+          </view>
+       </view>
+    </view>
+</view>

@@ -1,0 +1,27 @@
+/* pages/saveFuel/saveFuel.wxss */
+.saveFuelPage{background-color: #F5F5FA;min-height: 100vh;width: 100%;}
+  .saveBgImgBox{height: 200rpx;width: 100%;background-color: #1EA0FF;position: relative;display: flex;}
+    .saveBgImg{height: 160rpx;width: 100%;position: absolute;bottom: 0;left: 0;} 
+    .avatarBar{height: 120rpx;width: 100%;position: absolute;top: 40rpx;display: flex;}
+      .userAvatarImg{margin-left: 46rpx;height: 120rpx;width: 120rpx;border-radius: 50%;border: 4rpx solid #fff;}
+      .infoBox{height: 120rpx;margin-left: 20rpx;color: #fff;font-size: 28rpx;display: flex;flex-direction: column;align-items: flex-start;justify-content: space-around;}   
+  .timeIntervalBox{height: 88rpx;width: 100%;}
+    .titleBar{height: 88rpx;padding: 20rpx 30rpx;display: flex;align-items: center;background-color: #fff;color: #1E2328;border-bottom: 1rpx solid #E6E6EB;font-size: 24rpx;justify-content: space-around;}
+    .pickergroup{height: 44rpx;width: 200rpx;display: flex;align-items: center;justify-content: space-around;}
+    .timeText{height: 44rpx;line-height: 44rpx}
+    .nPickerGroup{width: 150rpx;height: 40rpx;border-left:1rpx solid #D8D8D8;border-right: 1rpx solid #D8D8D8; display: flex;justify-content: center;align-items: center;}
+    .bottomArrowImg,.refresh{display: block;height: 44rpx; width: 44rpx;margin-left: 8rpx;}
+  .carCount,.drivingBehavior{display: flex;flex-wrap: wrap;background-color: #fff;margin-bottom: 20rpx;}
+    .littleBlock{height: 250rpx;width: 250rpx;border-bottom: 1rpx solid #E6E6EB;display: flex;flex-direction: column;align-items: center;}
+      .countUrl{height: 100rpx;width: 120rpx;margin-top: 22rpx;}
+      .behaviorUrl{height: 80rpx;width: 80rpx;margin-top: 34rpx;}
+      .countTitle,.behaviorTitle{color: #73737D;font-size: 24rpx;}
+      .behaviorTitle{margin-top: 4rpx;}
+      .countValue,.behaviorValue{color: #1E2328;font-size: 40rpx;font-weight: 700;}
+      .behaviorValue{margin-top: 10rpx;}
+      .countUnit{color: #969BA5;font-size: 20rpx; margin-top: 4rpx; width: 230rpx;text-align: right;}
+
+.centerBlock{border-left: 1rpx solid #E6E6EB;border-right: 1rpx solid #E6E6EB;}
+.centerBlock .behaviorValue{color: #1FFF00;}
+.titleBlock{border-color: #D8D8D8;font-size: 28rpx;}
+  

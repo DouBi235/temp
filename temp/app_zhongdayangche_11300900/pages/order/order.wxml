@@ -1,0 +1,41 @@
+<!--pages/order/order.wxml-->
+<template name="order">
+  <view class='orderOne' wx:for="{{orderList}}" wx:for-item="order" bindtap='' data-index="{{index}}">
+    <view class='inOrderTop'>
+      <view class='orderTime'>
+        <image class='timeImg' src='../image/vip.png'></image>
+        <text class='timeText'>{{order.create_time}}</text>
+      </view>
+      <view class='orderStatus'>进行中</view>
+    </view>
+    <view class='inOrderCentre'>
+      <view class='orderDet'>
+        <image class='goodsImg' src='../image/vip.png'></image>
+        <view class='titleAndNum'>
+          <text class='goodsTitle'>飞利浦空气净化器 飞利浦空气净化器</text>
+          <text class='goodsNum'>数量：{{order.number}}</text>
+        </view>
+      </view>
+      <view class='totle'>总价：￥260</view>
+      <navigator class='evaluate' open-type='navigate' url='../evaluate/evaluate' wx-if='{{order.status == 1}}'>去评价</navigator>
+    </view>
+    <view class='inOrderBottom'>
+      <view class='storeDet'>
+        <view class='titleBox'>
+          <image class='storeImg' src='../image/store.png'></image>
+          <text class='storeTitle'>{{order.shop.company}}</text>
+        </view>
+        <view class='addrBox'>
+          <image class='addrImg' src='../image/position3.png'></image>
+          <text class='storeAddr'>{{order.shop.address}}</text>
+        </view>
+      </view>
+      <view class='telAndAddr'>
+        <image class='telImg' src='../image/telephone.png' bindtap='callTo'></image>
+        <view class='colLine'>
+          <image class='positionImg' src='../image/navigation.png' bindtap='mapTo'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

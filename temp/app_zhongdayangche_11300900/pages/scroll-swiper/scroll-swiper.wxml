@@ -1,0 +1,36 @@
+<!--pages/scroll-swiper/scroll-swiper.wxml--> 
+<view class='swiper-container-free-mode'>
+<swiper class='swiper-wrapper' indicator-dots="{{false}}" display-multiple-items='2.5'
+   interval="0" duration="500" bindanimationfinish='jiazai'  circular="true" freeMode="true" autoplay>
+  <block wx:for="{{imgUrls}}">
+  <view id="green" class=" bc_green">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" />
+    </swiper-item>
+  </view> 
+  </block>
+</swiper> 
+</view>
+<scroll-view class="scroll-view_H marquee" scroll-x style="width: 100%"  bindscrolltoupper="upper" bindscrolltolower="lower" scroll-top="{{scrollTop}}">
+  <block class='content'>
+    <view id="green" class="scroll-view-item_H bc_green"></view>
+    <view id="red"  class="scroll-view-item_H bc_red"></view>
+    <view id="yellow" class="scroll-view-item_H bc_yellow"></view>
+    <view id="blue" class="scroll-view-item_H bc_blue"></view>
+  </block>
+</scroll-view>   
+
+<view class="marquee">
+  <view class="content">
+    <block wx:for="{{imgUrl}}"> 
+      <image src="{{item}}" class="image2" />  
+    </block>
+  </view>
+</view>
+
+
+<swiper class='sx_swiper page_row' autoplay interval="1000" duration="3000" bindchange="newsId" data-newsId='{{item.id}}' circular> 
+  <swiper-item wx:for="{{imgUrls}}" wx:key=""> 
+    <image src='{{item}}'></image>
+  </swiper-item> 
+</swiper> 

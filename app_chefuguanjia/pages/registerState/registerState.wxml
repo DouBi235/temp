@@ -1,0 +1,16 @@
+<!--pages/registerState/registerState.wxml-->
+<view class='container'>
+   <view class='header'>
+     <view class='inco_container'>
+         <view class='inco_bottom'> </view>
+         <view class='inco_wxIcon'>
+             <view><image src='{{imgUrl}}/success.png'></image></view>
+          </view>
+     </view>
+     <view class='state'>注册完成</view>
+     <view class=''>请在电脑端刷新页面完成注册</view>
+   </view>
+   <view class='main'>
+      <view bindtap='home'>返回首页</view>
+   </view>
+</view>

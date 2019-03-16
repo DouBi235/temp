@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "发布约驾",
+  "usingComponents": {
+    "tabbar": "/components/TabBar/tabbar"
+  }
+}

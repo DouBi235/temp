@@ -1,0 +1,42 @@
+<!--pages/storeDet/storeDet.wxml-->
+<view class='storeDetPage'>
+  <view class='imageBox'>
+    <swiper indicator-dots="false" class='topimg'
+  autoplay="true" interval="5000" duration="1000">
+  <block wx:for="{{storeDet.photo}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" class='topimg' mode='aspectFill'/>
+    </swiper-item>
+  </block>
+</swiper>
+    <view class='infoBox'>
+      <view class='titlebox infotitle'>
+        <image class='storeimg' src='../image/dianpu.png'></image><text class='title infoname'>{{storeDet.company}}</text>
+      </view>
+      <view class='infocontent'>
+        <image src='../image/local.png' class='positionimage'></image>
+        <view class='addrBox'>
+          <text class='infotext'>{{storeDet.province}}{{storeDet.city}}{{storeDet.county}}{{storeDet.address}}{{storeDet.company}}</text>
+        </view> 
+        <view class='verticalline'><image class='callimg' src='../image/telephone.png' bindtap='callToStore'></image></view>
+      </view>
+    </view>
+  </view>
+  <view class='introBox'>
+    <view class='titlebox'>
+      <text class='title'>店铺介绍</text> 
+    </view>
+      <text class='contect'>{{storeDet.detail}}</text>
+  </view>
+  <view class='positionBox'>
+    <view class='titlebox'>
+      <text class='title'>地理位置 <text class='maptext'>距您约{{storeDet.distance}}km</text> </text> 
+      <image class='positionImg' src='../image/navigation.png' bindtap='mapTo'></image>
+    </view>
+    <map class="myMap" show-location markers="{{markers}}" latitude="{{storeDet.lat}}" longitude="{{storeDet.lng}}" > 
+      <!-- <view class='maptip' >
+        <text class='maptext'>距您约{{storeDet.distance}}km</text>
+      </view>  -->
+    </map>
+  </view>
+</view>

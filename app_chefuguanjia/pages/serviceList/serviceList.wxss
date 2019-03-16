@@ -1,0 +1,33 @@
+.List{
+  width: 100%;
+  height: 160rpx;
+  padding: 30rpx 0rpx 0rpx 30rpx;
+}
+.headerImg{
+  height: 100rpx;
+  width: 100rpx;
+  overflow: hidden;
+  margin-right:30rpx; 
+  border-radius: 50rpx;
+  float: left;
+}
+.headerImg image{
+  width: 100%;
+  height: 100%;
+}
+.topText{
+  width: 80%;
+  float: left;
+  font-size: 25rpx;
+  line-height: 60rpx;
+  height: 60rpx;
+  overflow: hidden;
+}
+.btoText{
+  width: 80%; 
+  height: 40rpx;
+  line-height: 40rpx;
+  float: left;
+  font-size: 24rpx;
+  color: rgba(115, 115, 125, 1);
+}

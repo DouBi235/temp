@@ -1,0 +1,72 @@
+<view class="banner">
+  <image class='bg' src='{{imgUrl}}/new/vipdetailbg.png'></image> 
+  <view class='Title'>UBI车服</view>
+  <view class='item' style='background-image: url("{{imgUrl}}/new/sdtq.png");'>
+    <view class='fcc'>专属权利</view>
+    <view class='items'>
+      <view class='itemsImg'>
+        <image src='{{imgUrl}}/new/zhekou.png'></image>
+        <view class='itemsFc'>智能终端</view>
+        <view class='itemsFc2'>送智能终端设备</view>
+      </view>
+    </view>
+    <view class='items'>
+      <view class='itemsImg'>
+        <image src='{{imgUrl}}/new/tuifei.png'></image>
+        <view class='itemsFc'>停驶奖励</view>
+        <view class='itemsFc2'>上传保单享停驶奖励</view>
+      </view>
+    </view>
+    <view class='items'>
+      <view class='itemsImg'>
+        <image src='{{imgUrl}}/new/tequan.png'></image>
+        <view class='itemsFc'>养护提醒</view>
+        <view class='itemsFc2'>智能养护提醒</view>
+      </view>
+    </view>
+    <view class='items'>
+      <view class='itemsImg'>
+        <image src='{{imgUrl}}/new/chuxing.png'></image>
+        <view class='itemsFc'>故障预警</view>
+        <view class='itemsFc2'>智能故障预警</view>
+      </view>
+    </view>
+  </view>
+  <view class='inviteBox' wx:if="{{recommen.code == 1}}">
+    <text class='incode'>输入邀请码</text>
+    <input class='inviteCodeInput' maxlength="{{Inputlength}}" bindinput='Focus' value='{{promo_code}}'></input>
+  </view>
+  <view class='price' style='height:auto;padding-bottom: 30rpx; '>
+    <view class='priceText'>
+      智能终端
+    </view>
+    <view class='line'></view>
+    <view class='num'>868
+      <text class='fc'>元</text> </view>
+    <view bindtap='okBuy' wx:if="{{!index}}" class='ConfirmBuy'>确认支付</view> 
+  </view>
+</view>
+
+<!-- 介绍 -->
+<view class='vrnjk'>
+  <view class='vr3rt' wx:for="{{nji8f}}">
+    <view class='hio09'>{{item.bfw9f}}</view>
+    <image class='d020r' mode='scaleToFill' src='{{imgUrl}}/san0.png' style='height: 10rpx;width: 30rpx;margin-top: 8rpx;'></image>
+    <text class='tov32'>{{item.f93hf}}</text>
+  </view>
+</view>
+
+<!-- 邀请人弹窗 -->
+<view class='infoshow' wx:if="{{infoShow}}" catchtouchmove='catchnull'>
+  <cover-view class='infoWhite'>
+    <cover-view class='infomain'>
+      <cover-image class='infoImg' src='{{recommenImg}}'></cover-image>
+      <cover-view class='infoname'>{{recommenName}}</cover-view>
+      <cover-view class='infotip'>确认{{recommenName}}是您的邀请人吗？</cover-view>
+    </cover-view>
+    <cover-view class='infobtnbox'>
+      <cover-view class='infoconfirm' bindtap='hideinfoshow'>确认</cover-view>
+      <cover-view class='infocancel' bindtap='hideinfoshow1'>更改</cover-view>
+    </cover-view>
+  </cover-view>
+</view>

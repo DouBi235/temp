@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "合作协议",
+  "usingComponents": {
+    "i-button": "../../../static/dist/button/index",
+    "i-radio-group": "../../../static/dist/radio-group/index",
+    "i-radio": "../../../static/dist/radio/index",
+    "i-load-more": "../../../static/dist/load-more/index"
+  }
+}

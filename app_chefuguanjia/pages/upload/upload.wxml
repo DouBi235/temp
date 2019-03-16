@@ -1,0 +1,184 @@
+<view class="Car">
+  <view class='carNum'>
+    <image src="{{imgUrl}}/saveBg.png"></image>
+    <text class='Number'>{{CarownerData.plate}}</text>
+  </view>
+  <view class='owner'>
+    <view class='fc'>车主：{{CarownerData.name}}</view>
+    <view class='fc'>电话：{{CarownerData.phone}}</view>
+    <view class='fc'>品牌：{{CarownerData.car_name}}</view>
+    <view class='fc'>车型：{{CarownerData.type}}</view>
+    <view class='fc'>排量：{{CarownerData.series}}</view>
+  </view>
+</view>
+<view class='carVIN'>
+  车辆VIN码
+</view>
+<view class='VINnumber'>
+  <view class='txt'>
+    <text class='xing'>*</text>VIN码
+  </view>
+  <input class='VINinput' bindinput="VINinput" maxlength="17" placeholder='请输入VIN码' type='time' value="{{vin}}">
+  </input>
+</view>
+<view class='carVIN'>
+  保单信息
+</view>
+<view class='VINnumber'>
+  <view class='txt'>
+    <text class='xing'>*</text>保险公司
+  </view>
+  <view class='rg'>
+    <image src="{{imgUrl}}/arrow.png"></image>
+  </view>
+  <picker bindchange="changeCompany" value="{{companyIndex}}" range="{{InsuranceData}}" bindtap='InsuranceType' range-key="company">
+    <view class="tui-picker-detail">{{companyIndex==0?InsuranceData[0].company:InsuranceData[companyIndex].company}}</view>
+  </picker>
+</view>
+<view class='uu'>
+  <view class='VINnumber bb'>
+    <view class='txt'>
+      <text class='xing'>*</text>保单号
+    </view>
+    <!-- <input class='VINinput ' bindinput="PolicyChange" placeholder='输入交强险保单号' value="{{policy_num}}" type='time'></input> -->
+    <input class='VINinput ' bindinput="PolicyChange" placeholder='输入保单号' value="{{policy_num}}" type='time'></input>
+  </view>
+</view>
+<view class='gap'></view>
+<view class='select' style='height:{{unfold?"1000rpx":"100rpx"}}'>
+  <view class='xuanze' bindtap='unfold'>
+    <text class='xing'>*</text>选择险种
+    <view class='arrows'>
+      <image src="{{imgUrl}}/arrow.png" wx:if="{{!unfold}}"></image>
+      <image src="{{imgUrl}}/bottomArrow.png" wx:if="{{unfold}}"></image>
+    </view>
+  </view>
+  <checkbox-group bindchange="checkChange" wx:for="{{types}}" wx:key="" wx:if="{{unfold}}" wx:for-index="index" data-id="{{index}}">
+    <view class='items'>
+      <label>
+        <checkbox checked="{{item.isShow}}" value="{{item.type}}" class='checkbox' disabled="{{item.disable}}" />{{item.type}}
+      </label>
+      <input class='ipMoney' bindinput='moneyIput' min='0' value="{{item.value?item.value:''}}" data-id="{{index}}" placeholder="{{item.disable?'暂不支持':'输入金额/元'}}" type='number' disabled="{{item.disable}}" placeholder-style='color :{{item.disable?"red":""}}'
+        hidden="{{!item.isShow}}">元</input>
+    </view>
+  </checkbox-group>
+  <view class='xuanze Total' wx:if="{{unfold}}">
+    <text>合计：</text>
+    <text>{{sum}}元</text>
+  </view>
+</view>
+<view class='gap'></view>
+<view class='tiem' wx:if="{{unfold}}">
+  <view>
+    <view>投保时间</view>
+    <view>
+      <picker mode="date" value="{{dateStart}}" start="2015-09-01" end="{{nowDate}}" bindchange="bindstartChange">
+        <view class="picker">
+          <text>{{dateStart}}</text>
+          <image src="{{imgUrl}}/arrow.png"></image>
+        </view>
+      </picker>
+    </view>
+  </view>
+</view>
+<view class='tiem' wx:if="{{unfold}}">
+  <view>
+    <view>截止时间</view>
+    <view>
+      <picker mode="date" value="{{dateEnd}}" start="{{dateStart}}" end="2050-09-01" bindchange="bindendChange">
+        <view class="picker">
+          <text>{{dateEnd}}</text>
+          <image src="{{imgUrl}}/arrow.png"></image>
+        </view>
+      </picker>
+    </view>
+  </view>
+</view>
+<view wx:if="{{unfold}}" class='Tips'></view>
+<view class='carVIN'>
+  上传图片
+</view>
+<view class='upload'>
+  <view class='uploadPhoto'>
+    <view class='fcz' style='width:350rpx;'>
+      <text class='xing'>*</text>上传保单信息及车牌信息</view>
+    <view class='upImg1'>
+      <view class='imgBox'>
+        <view class='img' data-img='0' bindtap='uoloadImg'>
+          <text wx:if="{{imagesList1==''}}">＋</text>
+          <image src="{{imagesList1}}" v-else></image>
+        </view>
+        <view class='imgTxt'>
+          车牌照
+        </view>
+      </view>
+    </view>
+    <view class='upImg1'>
+      <view class='imgBox'>
+        <view class='img' data-img='1' bindtap='uoloadImg'>
+          <text wx:if="{{imagesList2==''}}">＋</text>
+          <image src="{{imagesList2}}" v-else></image>
+        </view>
+        <view class='imgTxt'>
+          行驶证
+        </view>
+      </view>
+    </view>
+    <view class='upImg1'>
+      <view class='imgBox'>
+        <view class='img' data-img='2' bindtap='uoloadImg'>
+          <text wx:if="{{imagesList3==''}}">＋</text>
+          <image src="{{imagesList3}}" v-else></image>
+        </view>
+        <view class='imgTxt'>
+          保单首页
+        </view>
+      </view>
+    </view>
+    <!-- <view class='upImg1'>
+            <view class='imgBox'>
+                <view class='img' data-img='3' bindtap='uoloadImg'>
+                    <text wx:if="{{imagesList4==''}}">＋</text>
+                    <image src="{{imagesList4}}"></image>
+                </view>
+                <view class='imgTxt'> 
+                    商业险
+                </view>
+            </view>
+        </view>
+        <view class='upImg1'>
+            <view class='imgBox'>
+                <view class='img' data-img='4' bindtap='uoloadImg'>
+                    <text wx:if="{{imagesList5==''}}">＋</text>
+                    <image src="{{imagesList5}}"></image>
+                </view>
+                <view class='imgTxt'>
+                    强制险
+                </view> 
+            </view>
+        </view> -->
+  </view>
+  <view class='example'>
+    <view class='fcz'>拍照示例</view>
+    <view class='Photo'>
+      <view wx:for="{{Photograph}}" wx:key="index">
+        <view class='Photo_img' bindtap='Originalmap' data-list="{{Photograph}}" data-src="{{item.img}}">
+          <image src="{{item.img}}"></image>
+        </view>
+        <view>{{item.name}}</view>
+      </view>
+    </view>
+    <view class='Tips_img'>请务请按照格式上传并保持图片的清晰度</view>
+  </view>
+  <view class='Submit'>
+    <button class='btn' bindtap='skipSubmit'>
+      提交保单
+    </button>
+  </view>
+
+</view>
+<!-- <view class='primary_img' wx:if="{{imgState}}">
+     <view>
+         <image mode='widthFix' src="{{primaryImg}}"></image>
+     </view>
+  </view> -->

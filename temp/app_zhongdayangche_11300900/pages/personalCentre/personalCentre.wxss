@@ -1,0 +1,24 @@
+/* pages/personalCentre.wxss */
+.personalCenterpage{min-height: 100vh;width: 750rpx;background-color: #F5F5F5;}
+.topbox{height: 291rpx;width: 1000rpx;box-sizing: border-box;background-color: #1F2532;
+border-bottom-right-radius: 50% 120rpx;
+margin-left:-125rpx;
+border-bottom-left-radius: 50% 120rpx; display: flex; flex-direction: column;justify-content: space-between;  align-items: center;padding-top: 50rpx;padding-bottom: 30rpx} 
+.userhead{height: 150rpx ; width: 150rpx; border-radius: 50%;box-shadow:0 0 10px #ccc;}
+.username{color: #fff;font-size: 36rpx;}
+
+
+
+.bottombox{display: flex;justify-content: space-around;margin-top: 111rpx;padding: 0 20rpx; }
+.leftbox,.rightbox{ height: 400rpx;width: 300rpx;  background-color: #fff;border-radius: 10rpx;}
+.imagebox{height: 200rpx;width: 300rpx;text-align: center;position: relative;}
+.bottomtext{text-align: center; height: 200rpx;display: flex;align-items: center;justify-content: space-around;}
+.leftimg,.rightimg{height: 118rpx; width: 171rpx;margin-top: 88rpx;}
+.myact{font-size: 26rpx;}
+
+
+.footerNav{display: flex;height: 98rpx;width: 750rpx;border-top: 1rpx solid #ccc; position: fixed;bottom: 0;background-color: #fff;}
+  .fnav{display: flex;width: 33.3%;flex-direction: column; align-content: center;align-items: center;height: 98rpx;}
+    .navImg{height: 40rpx; width: 40rpx;margin-top: 15rpx;}
+    .navText{color: #020814; font-size: 20rpx;margin-top: 5rpx;}
+

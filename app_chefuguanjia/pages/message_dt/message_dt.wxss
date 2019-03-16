@@ -1,0 +1,25 @@
+/* @import "../../wxParse/wxParse.wxss"; */
+.container {
+  padding: 30rpx 30rpx 30rpx;
+  font-size: 24rpx;
+  border-top: 1px solid #e9e9e9; 
+  overflow: scroll;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 36rpx;
+  text-align: center;
+  padding: 10rpx 0 30rpx;
+}
+
+.time{
+  margin-bottom: 20rpx;
+  color:#999;
+}
+.time>view {
+  width: 200rpx;
+  height: 1px;
+  background-color: #ebebeb;
+  margin-top: 14rpx;
+}

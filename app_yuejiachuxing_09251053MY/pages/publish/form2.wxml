@@ -1,0 +1,23 @@
+<form bindsubmit='formSubmit'>
+  <view class='form-box'>
+    <view class='formlist'>
+      <view class='li-title'>行程简介</view>
+      <view class='li-content'>
+        <image mode='aspectFit' class='li-icon' src='/img/f-write.png'></image>
+        <textarea maxlength='-1' class='conput' placeholder-class='contip' placeholder='告诉约的朋友出发行程信息，以及你对同伴的需求等' name='other' value='{{evt.content}}' bindinput='otherinput'></textarea>
+      </view>
+    </view>
+    <view bindtap='selectphoto'>
+      <view wx:if="{{photonum}}" class='photolist'>
+        <block wx:for="{{photolist}}">
+          <image mode='aspectFill' class='li-photo' src="{{item}}" style='width:{{phitemwid}}rpx'></image>
+        </block>
+      </view>
+      <view wx:else>
+        <view class='photoselector'>+</view>
+      </view>
+      <view class='li-tip'>{{photonum}}/6</view>
+    </view>
+  </view>
+  <button class='btn' form-type='submit'>发布</button>
+</form>

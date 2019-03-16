@@ -1,0 +1,23 @@
+<!--pages/wangji/wangji.wxml-->
+<view class='wangjiPage'>
+  <view class='inputbox'>
+    <view class='formitem' wx:if="{{act == 'reset'}}">
+      <view class='beien'>手机号码</view>
+      <input class='bveuw' placeholder='' disabled='true' value='{{phone1}}'></input>
+    </view>
+    <view class='formitem' wx:if="{{act == 'reset'}}">
+      <view class='beien'>验证码</view>
+      <input class='bveuw' placeholder='输入验证码' style='width: 480rpx;' bindinput='inputcode' value='{{code}}' type='number'></input>
+      <view class='fasogn {{text != "发送验证码"?"sending":""}}' bindtap='{{text == "发送验证码"?"clickSend":""}}'>{{text}}</view>
+    </view>
+    <view class='formitem'>
+      <view class='beien'>新支付密码</view>
+      <input class='bveuw' placeholder='输入新密码' bindinput='inputmima' value='{{mima}}' type='password'></input>
+    </view>
+    <view class='formitem'>
+      <view class='beien'>确认新支付密码</view>
+      <input class='bveuw' placeholder='请再输入一次新密码' bindinput='inputmima1' value='{{mima1}}' type='password'></input>
+    </view>
+  </view>
+  <view class='frwsa' bindtap='clicksubmit'>提交</view>
+</view>

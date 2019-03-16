@@ -1,0 +1,143 @@
+<template name="actuser">
+  <view class='box list'>
+    <view>
+      <view class='list-title'>
+        <image mode='aspectFit' src='/img/f-startime.png'></image>
+        <text>出发时间</text>
+      </view>
+      <view class='list-info'>{{evt.start_time}}</view>
+    </view>
+    <view>
+      <view class='list-title'>
+        <image mode='aspectFit' src='/img/f-backtime.png'></image>
+        <text>回来时间</text>
+      </view>
+      <view class='list-info'>{{evt.end_time}}</view>
+    </view>
+    <view>
+      <view class='list-title'>
+        <image mode='aspectFit' src='/img/f-setpoint.png'></image>
+        <text>始发地</text>
+      </view>
+      <view class='list-info' style='max-width:460rpx'>{{evt.thronheim}}</view>
+    </view>
+    <view>
+      <view class='list-title'>
+        <image mode='aspectFit' src='/img/f-peoplenum.png'></image>
+        <text>可约人数</text>
+      </view>
+      <view class='list-info'>
+        <text class='r'>{{evt.red_number}}</text>
+        <text>人</text>
+      </view>
+    </view>
+    <view>
+      <view class='list-title'>
+        <image mode='aspectFit' src='/img/f-car.png'></image>
+        <text>车型</text>
+      </view>
+      <view class='list-info' style='color:#333;max-width:460rpx'>{{evt.motorcycle}}</view>
+    </view>
+    <view style='position:relative'>
+      <view class='list-title'>
+        <image mode='aspectFit' src='/img/f-baoming.png'></image>
+        <text>TA已报名</text>
+      </view>
+      <view class='list-info headbox'>
+        <view wx:for="{{evt.head_image1}}">
+          <image mode='aspectFill' src='{{item}}'></image>
+        </view>
+      </view>
+    </view>
+    <view bindtap='copywx' data-wx="{{evt.wx_number}}">
+      <view class='list-title'>
+        <image mode='aspectFit' src='/img/wx.png'></image>
+        <text>微信联系</text>
+      </view>
+      <view wx:if="{{evt.tp}}" class='list-info' style='color:#333'>{{evt.wx_number}}</view>
+      <view wx:else class='list-info' class='list-info' style='font-size:24rpx;color:#999'>报名成功可显示</view>
+    </view>
+    <view bindtap='phonecall' data-ph="{{evt.is_phone}}">
+      <view class='list-title'>
+        <image mode='aspectFit' src='/img/phone.png'></image>
+        <text>电话联系</text>
+      </view>
+      <view wx:if="{{evt.tp}}" class='list-info' style='color:#333'>{{evt.is_phone}}</view>
+      <view wx:else class='list-info' class='list-info' style='font-size:24rpx;color:#999'>报名成功可显示</view>
+    </view>
+    <view class='last'>
+      <view class='list-title last'>
+        <image mode='aspectFit' src='/img/f-write.png'></image>
+        <text>{{evt.content}}</text>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{evt.tp}}" class='btn fixbtn taped'>已报名</view>
+  <view wx:else class='btn fixbtn' bindtap='bmtap'>报名</view>
+</template>
+
+
+<template name="actuper">
+  <view class='box list'>
+    <view>
+      <view class='list-title'>
+        <image mode='aspectFit' src='/img/f-startime.png'></image>
+        <text>出发时间</text>
+      </view>
+      <view class='list-info'>{{evt.start_time}}</view>
+    </view>
+    <view>
+      <view class='list-title'>
+        <image mode='aspectFit' src='/img/f-backtime.png'></image>
+        <text>回来时间</text>
+      </view>
+      <view class='list-info'>{{evt.end_time}}</view>
+    </view>
+    <view>
+      <view class='list-title'>
+        <image mode='aspectFit' src='/img/f-setpoint.png'></image>
+        <text>始发地</text>
+      </view>
+      <view class='list-info' style='max-width:460rpx'>{{evt.thronheim}}</view>
+    </view>
+    <view>
+      <view class='list-title'>
+        <image mode='aspectFit' src='/img/f-peoplenum.png'></image>
+        <text>可约人数</text>
+      </view>
+      <view class='list-info'>
+        <text class='g'>{{evt.red_number}}</text>
+        <text>人</text>
+      </view>
+    </view>
+    <view>
+      <view class='list-title'>
+        <image mode='aspectFit' src='/img/f-car.png'></image>
+        <text>车型</text>
+      </view>
+      <view class='list-info' style='color:#333;max-width:460rpx'>{{evt.motorcycle}}</view>
+    </view>
+    <view class='last'>
+      <view class='list-title last'>
+        <image mode='aspectFit' src='/img/f-write.png'></image>
+        <text>{{evt.content}}</text>
+      </view>
+    </view>
+  </view>
+  <view class='box hasbm'>
+    <view class='hb-title'>
+      <view class='hb-gl'></view>
+      <text>TA已报名</text>
+    </view>
+    <view wx:if="{{evt.hasUserBm}}" class="hb-box">
+      <view wx:for="{{evt.head_image1}}" class="hb-item">
+        <view class='hb-item-l'>
+          <image mode='aspectFill' src='{{item}}'></image>
+          <text bindtap='copywx' data-wx="{{evt.wx_number1[index]}}">{{evt.wx_number1[index]}}</text>
+        </view>
+        <text class='hb-item-r' bindtap='phonecall' data-ph="{{evt.phone1[index]}}">{{evt.phone1[index]}}</text>
+      </view>
+    </view>
+    <view wx:else class='nouserbm'>暂时还没有人报名哦</view>
+  </view>
+</template>

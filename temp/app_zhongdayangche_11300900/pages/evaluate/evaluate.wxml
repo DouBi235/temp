@@ -1,0 +1,31 @@
+<!--pages/evaluate/evaluate.wxml-->
+<view class='evaluatePage'>
+<form>
+<!-- <view>
+  <view>一:显示后台给的评分</view>
+  <block wx:for="{{one_1}}">
+    <image class='star' src='../image/star_red.png'></image>
+  </block>
+  <block wx:for="{{two_1}}">
+    <image class='star' src='../image/star.png'></image>
+  </block>
+</view> -->
+  <view class='evaluateBox'>
+    <view class='labelBar'>
+      <text class='evaluateLabel'>描述相符</text>
+      <view class='starBox'>
+        <block wx:for="{{one_2}}" wx:key="index">
+          <image class='star' catchtap='in_xin' id='{{index+1}}' data-in='use_sc2' src='../image/star_red.png'></image>
+        </block>
+        <block wx:for="{{two_2}}" wx:key="index">
+          <image class='star' catchtap='in_xin' id='{{index+1}}' data-in='use_sc' src='../image/star.png'></image>
+        </block> 
+      </view>
+    </view>
+    <textarea class='evaluateContent' bindinput='textareaChange' placeholder='商品满足你的期待吗？说说你的心得，分享想买的他们吧 （写够15字，才是好同志）' ></textarea>    
+  </view>
+ 
+
+<button class='submitBtn' bindtap='submitEvaluate'>保存</button>
+</form>
+</view>

@@ -1,0 +1,53 @@
+<!--pages/saveFuel/saveFuel.wxml--> 
+<view class='saveFuelPage'>
+  <view class='saveBgImgBox'>
+    <image class='saveBgImg' src='{{imgUrl}}/saveBg.png'></image>  
+    <view class='avatarBar' wx:if='{{user.head_pic}}'>
+      <image class='userAvatarImg' src='{{user.head_pic}}'></image>
+      <view class='infoBox'>
+        <text class='username'>{{user.nick_name}}</text>
+        <text class='plateNum'>{{user.plate}}</text>
+      </view>
+    </view>
+  </view>
+  <view class='timeIntervalBox'> 
+    <view class='titleBar timeBar'>
+      <picker class='timePicker' mode="date" value="{{date1}}" start="{{beforeData}}" end="{{date2}}" bindchange="bindDateChange">
+        <view class='pickergroup'>
+          <view class="timeText">{{date1}}</view>
+          <image class='bottomArrowImg' src='{{imgUrl}}/bottomArrow.png'></image> 
+        </view>
+      </picker>
+      <text style='color:#73737D;font-size:24rpx;'>至</text>
+      <picker class='timePicker' mode="date" value="{{date2}}" start="{{date1}}" end="{{nowData}}" bindchange="bindDateChangeTwo">
+        <view class='pickergroup'>
+          <view class="timeText">{{date2}}</view>
+          <image class='bottomArrowImg' src='{{imgUrl}}/bottomArrow.png'></image> 
+        </view>
+      </picker>
+      <picker class='nDayPicker' value="{{idx}}"  range='{{dayRange}}' bindchange="dayPickerChange" style=''> 
+        <view class='nPickerGroup'>
+          <text>{{dayRange[idx]}}</text>
+          <image class='bottomArrowImg' src='{{imgUrl}}/bottomArrow.png'></image>
+        </view>
+      </picker> 
+      <image class='refresh' src='{{imgUrl}}/refresh.png' bindtap='getTreasureBtn'></image>
+    </view>
+  </view>
+  <view class='carCount'>
+    <view class='littleBlock {{idx == 1||idx == 4 ? "centerBlock" : ""}}' wx:for='{{carCountData}}' wx:for-index="idx" wx:key='1' bindtap='{{idx == 4 ? "navto" : ""}}'>
+      <image class='countUrl' src='{{item.url}}'></image>
+      <view class='countTitle'>{{item.title}}</view>
+      <view class='countValue'>{{item.value}}</view>
+      <view class='countUnit'>{{item.unit}}</view>
+    </view>
+  </view>
+  <view class='titleBar titleBlock'>驾驶行为</view>
+  <view class='drivingBehavior' style='justify-content:center;'>
+    <view class='littleBlock {{idx == 1 ? "centerBlock" : ""}}' wx:for='{{drivingBehavior}}' wx:for-index="idx" wx:key='1'>
+      <image class='behaviorUrl' src='{{item.url}}'></image>
+      <view class='behaviorTitle'>{{item.title}}</view>
+      <view class='behaviorValue'>{{item.value}}</view>
+    </view>
+  </view>
+</view>

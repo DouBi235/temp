@@ -1,0 +1,113 @@
+<view class="container">
+  <view class='portrait'>
+    头像
+    <view class='photo'>
+      <image class='photoimage' src='{{userInfo.avatarUrl}}'></image>
+    </view>
+  </view>
+  <view class='fc'>
+    车辆信息
+  </view>
+  <view class='name'>
+    <view class='box'>
+      车主姓名
+      <view class='input'>
+        <input class='inputName' disabled='{{userData.car_name}}' bindinput="nameChange" value='{{nickName==""?"":nickName}}' placeholder='请输入姓名' bindblur="valueclear"></input>
+      </view>
+    </view>
+  </view>
+  <view class='name'>
+    <view class='box'>
+      <view class='select'>
+        <picker disabled='{{userData.car_name}}' bindchange="provinceChange" value="{{index}}" range="{{provinces}}">
+          <view class='picker'>
+            <text>{{provinceIndex?provinces[provinceIndex]:provinces[0]}}</text>
+            <image wx:if="{{!userData.car_name}}" mode='widthFix' src='{{imgUrl}}/bottomArrow.png'></image>
+          </view>
+        </picker>
+      </view>
+      <view class='select'>
+        <picker disabled='{{userData.car_name}}' bindchange="cityChange" value="{{index}}" range="{{az}}">
+          <view class='picker'>
+            <text>{{cityIndex?az[cityIndex]:az[0]}}</text>
+            <image mode='widthFix' src='{{imgUrl}}/bottomArrow.png'></image>
+          </view>
+        </picker>
+      </view>
+      <view class='input'>
+        <input class='inputName' disabled='{{userData.car_name}}' maxlength="5" bindinput="carbrandChange" value='{{car_brand}}' placeholder='请输入车牌号'></input>
+      </view>
+    </view>
+  </view>
+  <view class='name'>
+    <view class='box'>
+      品牌
+      <image wx:if="{{!userData.car_name}}" src='{{imgUrl}}/bottomArrow.png'></image>
+      <view class='input'>
+        <input class='inputName' disabled='{{userData.car_name}}' value='{{brand_name}}' bindtap="Choicebrand" placeholder='请选择品牌'></input>
+      </view>
+    </view>
+  </view>
+  <view class='name'>
+    <view class='box'>
+      车型
+      <image wx:if="{{!userData.car_name}}" src='{{imgUrl}}/bottomArrow.png'></image>
+      <view class='input'>
+
+        <picker disabled='{{userData.car_name}}' bindchange="Carmodelchange" value='{{index}}' mode="selector" range="{{Carmodel}}">
+          <view class='ct' bindtap='clickL' style='color:{{!CarmodelIndex&&!userData.type?"RGBA(130, 130, 130, 1);":""}}'>{{CarmodelIndex?Carmodel[CarmodelIndex]:userData.type?userData.type:"请选择车型"}}</view>
+          <!-- <input class='inputName' value='{{CarmodelIndex?Carmodel[CarmodelIndex]:""}}' bindinput="clickL" placeholder='请选择车型'></input> -->
+        </picker>
+      </view>
+    </view>
+  </view>
+  <view class='name'>
+    <view class='box'>
+      排量
+      <image wx:if="{{!userData.car_name}}" src='{{imgUrl}}/bottomArrow.png'></image>
+      <view class='input'>
+        <picker disabled='{{userData.car_name}}' bindchange="Rowchange" disabled='{{RowiShow}}' value="{{index}}" range="{{displacementData}}" range-key='series'>
+          <view bindtap='bindDisplacement' class='ct' style='color:{{!RowIndex&&!userData.series?"RGBA(130, 130, 130, 1);":""}}'>{{RowIndex?displacementData[RowIndex].series:userData.type?userData.series:"请选择排量"}}</view>
+        </picker>
+      </view>
+    </view>
+  </view>
+  <view class='imgBar' wx:if="{{hasCheInfo}}">
+    <view class='imgBox'>
+      <view class='addImg' wx:if="{{!upImg0}}" bindtap='uoloadImg' data-index='0'>+</view>
+      <image class='imgImg' mode='aspectFill' src='{{upImg0}}' wx:if="{{upImg0}}">
+        <view class='removeImg' bindtap='removeImg' data-index='0'>×</view>
+      </image>
+      <text class='imgText'>行驶证</text>
+    </view>
+    <view class='imgBox'>
+      <view class='addImg' wx:if="{{!upImg1}}" bindtap='uoloadImg' data-index='1'>+</view>
+      <image class='imgImg' mode='aspectFill' src='{{upImg1}}' wx:if="{{upImg1}}">
+        <view class='removeImg' bindtap='removeImg' data-index='1'>×</view>
+      </image>
+      <text class='imgText'>车牌照片</text>
+    </view>
+  </view>
+  <view class='fc'>
+    手机号码
+  </view>
+  <view class='name'>
+    <view class='box telInput'>
+      <view class='input' style="float:left;text-align:left;">
+        <input class=' telInput' bindinput="phoneChange" maxlength='11' value='{{phone}}' placeholder='请输入手机号' type='number'></input>
+      </view>
+    </view>
+  </view>
+  <view class='fc'>
+    紧急联系人
+  </view>
+  <view class='name'>
+    <view class='box telInput'>
+      <view class='input' style="float:left;text-align:left;">
+        <input class='telInput' bindinput="jinjiChange" maxlength='11' value='{{jinji}}' placeholder='请输入紧急联系人手机号' type='number'></input>
+      </view>
+    </view>
+  </view>
+  <button wx:if="{{!userData.car_name}}" class='btn' bindtap='confirm'>确认</button>
+  <button wx:if="{{userData.car_name}}" class='btn' bindtap='upDateConfirm'>修改信息</button>
+</view>

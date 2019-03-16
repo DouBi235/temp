@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "设备状态",
+  "usingComponents": {
+    "i-tabs": "../../static/dist/tabs/index",
+    "i-tab": "../../static/dist/tab/index"
+  }
+}

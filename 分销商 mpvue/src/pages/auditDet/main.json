@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "查看详情",
+  "usingComponents": { 
+    "i-button": "../../static/dist/button/index"
+  }
+}

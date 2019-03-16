@@ -1,0 +1,33 @@
+/* pages/youzhanList/youzhanList.wxss */
+.wh24{width:24rpx;height:24rpx;}
+.youzhanpage{min-height: 100vh;background: #F5F5FA;}
+.listlist{}
+.xiaofeipage{min-height: 100vh;background: #F5F5FA;}
+
+.thisitem{padding-left: 30rpx;background: #fff;margin-bottom: 20rpx;}
+.thisitem .jibenxinxi{display: flex;align-items: center;padding: 30rpx 0;}
+.thisitem .jibenxinxi .shopimg{width:140rpx;height:140rpx;margin-right: 20rpx;}
+.thisitem .jibenxinxi .infobox{width: 400rpx;}
+.thisitem .jibenxinxi .infobox image{margin-right: 8rpx;}
+.thisitem .jibenxinxi .infobox .title{font-size:32rpx;font-weight:400;color:rgba(30,35,40,1);line-height:40rpx;}
+.thisitem .jibenxinxi .infobox .xiao{display: flex;align-items: center;}  
+.thisitem .jibenxinxi .infobox .xiao text{font-size:24rpx;font-weight:400;color:#969BA5;line-height:40rpx;margin-left: 10rpx;}
+.thisitem .jibenxinxi .infobox .dizhi{display: flex;width: 100%;align-items: center;} 
+.thisitem .jibenxinxi .infobox .dizhi image{} 
+.thisitem .jibenxinxi .infobox .dizhi text{font-size:24rpx;font-weight:400;color:#969BA5;line-height:40rpx;white-space: nowrap;  text-overflow: ellipsis;  overflow: hidden;display: block;width: 350rpx;} 
+.thisitem .jibenxinxi .posibox{width: 150rpx;height: 130rpx;border-left: 1rpx solid #ddd;display: flex;align-items: center;justify-content: center;position: relative;}
+.thisitem .jibenxinxi .posibox image{width:56rpx;height:56rpx;}
+.thisitem .jibenxinxi .posibox .juli{font-size:24rpx;font-weight:400;color:#969BA5;line-height:34rpx;position: absolute; bottom: 0rpx;}
+
+.thisitem .jiage{height: 120rpx;display: flex;justify-content: space-around;align-items: center;border-top: 2rpx solid #C8C8D2;} 
+.thisitem .jiage .jiagebox{height: 110rpx; width: 110rpx;display: flex;flex-direction: column;justify-content: space-around;align-items: center;box-sizing: border-box;padding: 20rpx 0; color: #969BA5;}
+.thisitem .jiage .jiageline{height: 58rpx;width: 1rpx;background: #ddd;}
+.thisitem .jiage .jiagebox .j1{font-size:24rpx; font-weight:400;line-height:40rpx;}
+.thisitem .jiage .jiagebox .v1{font-size:28rpx;text-decoration: line-through;}
+.thisitem .jiage .keyong{color: #FF5F5F;} 
+.thisitem .jiage .keyong .v1{font-size:36rpx;font-weight:600;text-decoration: none;} 
+
+.thisitem .jiangli{padding: 10rpx 0;border-top: 2rpx solid #C8C8D2;}
+.thisitem .jiangli .jiangjj{display: flex;justify-content: flex-start;align-items: center;height: 50rpx;}
+.thisitem .jiangli .jiangjj image{height: 32rpx;width: 32rpx;margin-right: 10rpx;}
+.thisitem .jiangli .jiangjj text{font-size:20rpx;font-weight:400;color:#969BA5;line-height:50rpx;}

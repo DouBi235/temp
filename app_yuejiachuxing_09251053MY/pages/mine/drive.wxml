@@ -1,0 +1,22 @@
+<block wx:for="{{list}}">
+  <view class='box' id="{{item.id}}" data-status="{{item.static}}" bindtap='toinfo'>
+    <view class='title'>{{item.title}}</view>
+    <view class='route'>
+      <text>{{item.path}}</text>
+      <image mode='aspectFill' src='/img/car.png'></image>
+    </view>
+    <view class='status {{stlist[item.static]}}'>{{item.static_name}}</view>
+    <view class='date'>
+      <text>{{item.time}}</text>
+      <image class='menu' catchtap='alertmenu' data-id="{{item.id}}" data-status="{{item.static}}" src='/img/menu.png'></image>
+    </view>
+    <image class='goto' src='/img/jiao.png'></image>
+  </view>
+</block>
+
+
+<action-sheet hidden="{{menuHide}}" bindchange="menuChange">
+  <action-sheet-item bindtap='setitem'>修改</action-sheet-item>
+  <action-sheet-item bindtap='delitem'>删除</action-sheet-item>
+  <action-sheet-cancel>取消</action-sheet-cancel>
+</action-sheet>

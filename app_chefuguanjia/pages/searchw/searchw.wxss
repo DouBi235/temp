@@ -1,0 +1,19 @@
+/* pages/searchw/searchw.wxss */
+
+.searchwPage {min-height: 100vh;}
+.tipInfo {height: 88rpx;width: 100%;font-size: 24rpx;font-family: PingFangSC-Regular;font-weight: 400;    color: #73737d;line-height: 88rpx;background-color: #F5F5FA;text-align: center;} 
+.formItem{height:110rpx;width: 690rpx;font-size:32rpx;font-family:PingFangSC-Regular;font-weight:400;color:rgba(30,35,40,1);margin: 0 30rpx;display: flex;justify-content: space-between;align-items: center;border-bottom: 1rpx solid #E1E1E1;} 
+.label{width: 160rpx; height: 60rpx;border-right: 1rpx solid #ECEDF1;line-height: 60rpx;text-align: center;}
+.searchBtn{width:670rpx;height:100rpx;background:#1EA0FF;font-size:32rpx;font-family:PingFangSC-Regular;font-weight:400;color:rgba(255,255,255,1);line-height:100rpx;margin: 250rpx auto 0;text-align: center;}
+.searchBtn:active{background:#3EC0FF;}
+
+.picker{width: 120rpx;border-right: 1rpx solid #ECEDF1;}
+.inputf{width: 350rpx;text-align: right;}
+.inputBox{display: flex; align-items: center;text-align: right;}
+.picker{display: flex; align-items: center;padding: 0 20rpx; text-align: right; justify-content: space-around;box-sizing: border-box;font-size:32rpx;font-family:PingFangSC-Regular;font-weight:400;
+color:rgba(30,160,255,1);
+line-height:44rpx;}
+
+
+.layerBox{position:fixed; top: 0;height: 100vh;width: 100vw;display: flex;justify-content: center;align-items: center;background-color:rgba(100,100,100,0.5)}
+.layerBox image{height: 420rpx;width: 740rpx;z-index: 1000;}

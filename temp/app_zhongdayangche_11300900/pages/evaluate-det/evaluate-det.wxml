@@ -1,0 +1,31 @@
+<!--pages/evaluate/evaluate.wxml-->
+<view class='evaluateListPage'>
+  <view class='listContent'>
+    <view class='aEvaluate' wx:for='{{eC}}' >
+      <view class='topBox'>
+        <view class='topLeft'>
+          <image class='evaluatorImg' src='{{item.head_pic}}'></image>
+          <view class='telAndStar'>
+            <text class='evaluatorTel'>{{item.nick_name}}</text>
+            <view class='starBox'>
+              <block wx:for="{{item.class}}">
+                <image class='star' src='../image/star-active.png'></image> 
+              </block>
+              <block wx:for="{{5 - item.class}}">
+                <image class='star' src='../image/star.png'></image>
+              </block>
+            </view>
+          </view>
+        </view>
+        <view class='topRight'>
+          <text class='date'>{{item.create_time}}</text>
+        </view>
+      </view>
+      <view class='evaluateContent'>
+        <text class='evaluateText'>{{item.content}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+ 

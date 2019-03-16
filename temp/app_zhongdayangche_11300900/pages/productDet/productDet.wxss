@@ -1,0 +1,109 @@
+/* pages/productDet/productDet.wxss */
+.productDetPage{min-height: 100vh;width: 750rpx; background-color: #f5f5f5;}
+  .productInfo,.selected,.evaluate,.storeInfo{background-color: #fff;margin-bottom: 20rpx;}
+  .titleAndPrice,.selected,.evaluate,.storeInfo{width: 750rpx;padding: 0 30rpx;box-sizing: border-box;}
+  .evaluateTitle,.storeInfoTitle {display: block;line-height: 70rpx;color: #020814;  height: 70rpx;width: 690rpx;font-size: 32rpx;border-bottom: 1rpx solid #ccc;}
+  .productInfo{max-height: 787rpx;width: 750rpx; }
+    .productImg{height: 620rpx;width: 750rpx;}
+    .titleAndPrice{max-height: 167rpx;width: 750rpx;padding-top: 14rpx;padding-bottom: 14rpx;}
+      .productName{overflow:hidden; text-overflow:ellipsis;display:-webkit-box; -webkit-box-orient:vertical;-webkit-line-clamp:2; font-size: 26rpx;color: #020814;line-height: 38rpx;} 
+      .priceBar{display: flex; justify-content: space-between;}
+        .priceBox{}
+          .priceLabel{font-size: 14rpx;color: #FF3144;}
+            .priceNow{font-size: 28rpx;font-weight: 600;}
+          .priceOld{font-size: 20rpx;color: #5D667A;text-decoration: line-through;margin-left: 10rpx;line-height: 20rpx;}
+        .stockBox{}
+          .salesNum{font-size: 18rpx;color: #5D667A;margin-right: 30rpx;}
+          .stockNum{font-size: 18rpx;color: #5D667A;}
+  .selected{display: flex;align-items: center;height: 62rpx;}
+    .have{line-height: 62rpx;font-size: 20rpx;color: #5D667A;margin-left: 1rpx;}
+    .nohave{line-height: 62rpx;font-size: 32rpx;color: #5D667A;margin-left: 1rpx;}
+    .havaTitle{line-height: 62rpx;font-size: 24rpx;color: #2E323D;margin-left: 30rpx;}
+  .evaluate{}
+    .evaluateNum{font-size: 20rpx;color: #5D667A;margin-left: 10rpx;}
+    .aStrip{max-height: 152rpx;width: 690rpx;border-bottom: 1rpx solid rgba(222,222,222,0.2);   margin-bottom: 1rpx;padding-top: 20rpx;box-sizing: border-box;}
+      .imgBar{display: flex; justify-content: space-between;align-items: center;}
+        .imgAndTel{display: flex;align-items: center;}
+          .evaluatorImg{height: 50rpx;width: 50rpx;border-radius: 50%;}
+          .telNum{font-size: 30rpx;color: #333;margin-left: 30rpx;}
+        .starBox{}
+          .star{  margin: 0 5rpx;  height: 17rpx;  width: 18rpx;  display: inline-block;}
+      .evaluateContent{ color:#2E323D;    margin:0 35rpx 0 80rpx;max-height: 69rpx;line-height: 35rpx;
+        overflow:hidden; text-overflow:ellipsis;display:-webkit-box; -webkit-box-orient:vertical;-webkit-line-clamp:2; font-size: 24rpx;margin-bottom: 13rpx;}
+    .moreBox{ height: 79rpx;text-align: center;display: flex;justify-content: center;align-items: center;}
+      .more{font-size: 24rpx;line-height: 79rpx;color: #020814;}
+      .moreImg{height: 19rpx;width: 20rpx;display: inline-block;margin-left: 5rpx;}
+  .storeInfo{margin-bottom: 100rpx;}  
+  .sroreInfoDet{height: 180rpx;width: 690rpx;display: flex;align-items: center; justify-content: space-between;  padding: 30rpx 0 ;box-sizing: border-box;}
+    .leftBox{display: flex;}
+      .storeImg{height: 120rpx;width: 120rpx; }
+      .titleAndAddr{ height: 120rpx; padding-left: 20rpx;}
+        .storeTitle{display: block;  line-height: 30rpx; width: 450rpx;  font-size: 30rpx;color: #020814;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;}
+        .addrBox{display: flex; align-items: center;margin-top: 12rpx; height: 74rpx;}
+          .positionImg{height: 24rpx;width: 21rpx;}
+          .distanceText{margin-left: 10rpx;font-size: 20rpx;color: #65676E;}
+          .addrDet{margin-left: 23rpx;width: 310rpx;  overflow: hidden;text-overflow:ellipsis;white-space: nowrap;font-size: 20rpx;color: #65676E;}
+    .line{height: 46rpx;width:99rpx;border-left: 1rpx solid #ccc; padding: 0 17rpx 0 46rpx; box-sizing: border-box;}
+      .callTo{height: 40rpx;width: 36rpx;justify-self: flex-end;}
+  .btn,.submitBtn{height: 88rpx;width: 750rpx;background-color: #1F2532;font-size: 32rpx;color: #fff;border-radius: 0; }
+  .btn,.submitBtn{position: fixed;bottom: 0;}
+
+
+.formLayer{height: 100vh; width: 750rpx;background-color: rgba(20, 20, 20, 0.6);position: fixed;top: 0;}
+  .formElement{position: absolute;bottom: 0;height: 900rpx;background-color: #fff;}
+  .formContent{width: 750rpx; padding: 29rpx 30rpx 0 30rpx; box-sizing: border-box;}
+    .formimgBar{display: flex;}
+      .informImg{height: 176rpx;width: 202rpx;}
+      .formPriceBox{height: 176rpx;display: flex; flex-direction: column;justify-content: flex-end;margin-left: 18rpx;}
+    .typeBox,.styleBox,.numBox{margin-top: 20rpx;}
+    .typeTitle,.styleTitle,.numTitle{font-size: 24rpx;color: #5D667A;height: 24rpx;line-height: 24rpx;}
+    .typeContent,.styleContent{display: flex;flex-wrap: wrap;margin-top: 9rpx;width: 690rpx;}
+      .typeOpt,.styleOpt{ height: 46rpx; background-color: #F5F5F5;font-size: 24rpx;color: #020814;border: 1rpx solid rgba(1, 1, 1, 0);border-radius: 23rpx;line-height: 46rpx;padding: 0 15rpx;margin: 10rpx 30rpx 10rpx 0;}
+      .styleOpt{padding: 0 30rpx;}
+      .selectOpt{border: 1rpx solid #1F2532; background-color: #EAEEF5; }
+      .selectOpt.active { color: red; }
+    .typeBox{}
+      .typeContent{}
+    .styleBox{}
+      .styleContent{}
+    .numBox{margin-top: 15rpx;}
+      .numTitle{display: flex;justify-content: space-between;}
+    .micro{display: inline-block;min-width: 150rpx;display: flex;justify-content: space-between;align-items: center;}
+      .proNum{font-size: 20rpx;}
+      .microBtn{height: 36rpx;width: 36rpx}
+
+/* 新添加样式,产品详情和评价tab切换 */
+.tabBlockShow .background {
+  padding: 20rpx 0 0 10rpx;
+  margin-bottom: 20rpx;
+  background: #fff;
+  font-size: 24rpx;
+}
+.details-tab-title {
+  display: flex;
+  border-bottom: 1px solid #E6E6EB;
+  background: #fff;
+  /* margin-top: -20rpx; */
+}
+.details-tab-title .tab-item {
+  flex-grow: 1;
+  text-align: center;
+}
+.details-tab-title .tab-item {
+  font-size: 24rpx;
+  color: #73737D;
+  border-right: 1pxs solid #E6E6EB;
+}
+.details-tab-title .tab-item text {
+  display: inline-block;
+  width: 130rpx;
+  padding: 30rpx 0;
+  box-sizing: border-box;
+}
+.details-tab-title .tabProduct {
+  border-right: 1px solid #E6E6EB;
+}
+.details-tab-title .active-wrap .active {
+  color: #020814;
+  border-bottom: 4rpx solid red;
+}
