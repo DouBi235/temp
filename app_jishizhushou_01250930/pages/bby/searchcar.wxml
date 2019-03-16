@@ -1,0 +1,28 @@
+<view class='box top'>
+    <text class='title'>车牌：{{carinfo.plate}}</text>
+    <text>车型：{{carinfo.type}}</text>
+    <text>建议保养周期：{{carinfo.month}}个月</text>
+    <text>机油：{{carinfo.oil}}</text>
+    <text>使用量：{{carinfo.litre}}L</text>
+</view>
+<view class='box add'>
+    <text>此卡还可使用<text class='r'>{{carinfo.remain_times}}</text>次</text>
+    <text hidden="{{carinfo.remain_times>1}}">，请提醒客户再次购买，方便下一次使用</text>
+    <view class='circle l'></view>
+    <view class='circle r'></view>
+</view>
+<view class='box center' bindtap='toddatacar'>
+    <text class='title'>车型数据</text>
+    <text>点击查看详情</text>
+    <view class='jiao'></view>
+</view>
+<view class='box bottom'>
+    <text class='title'>验证码</text>
+    <view class='yzmbox'>
+        <input wx:for="{{4}}" wx:key class='iptbox' value="{{Value.length>index?Value[index]:''}}" disabled catchtap='Tap'></input>
+        <input name="password" password="{{true}}" class='ipt' maxlength="4" focus="{{isFocus}}" bindinput="Focus"></input>
+        <view catchtap='getyzm' class="btn get{{hadyzm?' has':''}}">{{getyzmbtn}}</view>
+    </view>
+    <view class='btn bg-blue' bindtap='submit'>确认完成</view>
+    <text hidden='{{!hadyzm}}' class='yzmtip'>已向尾号{{utel}}的手机发送验证码 </text>
+</view>

@@ -1,0 +1,74 @@
+page {
+  background: #f5f5f5;
+}
+
+.tab {
+  float: left;
+  width: 50%;
+  text-align: center;
+  position: relative;
+}
+
+.topTabSwiper {
+  color: #999;
+  font-size: 30rpx;
+  border-top: 2rpx solid #ccc;
+  border-bottom: 2rpx solid #ccc;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #fff;
+}
+
+.topTabSwiper:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.tabBorer:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 180rpx;
+  height: 6rpx;
+  border-radius: 8rpx;
+  background: #0e6fff;
+  bottom: 0;
+  left: 50%;
+  margin-left: -90rpx;
+}
+.scoll-h {
+  height: 100%;
+  background: #f5f5f5;
+}
+.box-y {
+  margin: 20rpx 0;
+  padding: 20rpx 30rpx;
+  box-sizing: border-box;
+  height: 124rpx;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ziti-co {
+  font-size: 26rpx;
+  color: #0e6fff;
+}
+
+.ziti-co1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.ziti-co2 {
+  font-size: 24rpx;
+  color: #333;
+}
+
+.ziti-co3 {
+  font-size: 22rpx;
+  color: #999;
+}

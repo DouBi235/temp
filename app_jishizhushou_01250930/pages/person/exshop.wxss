@@ -1,0 +1,95 @@
+page {
+  font-size: 24rpx;
+  color: #aaa;
+}
+
+view {
+  box-sizing: border-box;
+}
+
+.line {
+  height: 2rpx;
+  background: #ccc;
+  margin-top: 14rpx;
+}
+
+.v1, .v2 {
+  padding-top: 50rpx;
+}
+
+.v3 {
+  padding-top: 90rpx;
+}
+
+.v1>view {
+  color: #00b4ff;
+  font-size: 28rpx;
+}
+
+.v2 {
+  position: relative;
+}
+
+.tip {
+  position: absolute;
+  bottom: 16rpx;
+  right: 48rpx;
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 460rpx;
+}
+
+.v3>textarea {
+  color: #333;
+  width: 690rpx;
+  height: 250rpx;
+  box-sizing: border-box;
+  padding: 20rpx 30rpx;
+  border: solid 2rpx #ccc;
+  border-radius: 10rpx;
+}
+
+.btn {
+  margin-top: 100rpx;
+}
+
+.reposition {
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 560;
+}
+
+.reposition>view {
+  background: #fff;
+  border-radius: 32rpx;
+  width: 500rpx;
+  height: 300rpx;
+  position: absolute;
+  left: 128rpx;
+  top: 30%;
+  color: #777;
+  font-size: 28rpx;
+  padding: 50rpx;
+}
+
+.retitle {
+  color: #222;
+  font-size: 36rpx;
+  margin-bottom: 20rpx;
+}
+
+.reposition button {
+  position: absolute;
+  padding: 0;
+  bottom: 30rpx;
+  right: 50rpx;
+  color: #0e6fff;
+  font-size: 28rpx;
+  letter-spacing: 2rpx;
+  border-radius: 0;
+  width: 180rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  background: #fff;
+}

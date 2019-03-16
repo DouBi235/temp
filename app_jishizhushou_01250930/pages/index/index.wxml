@@ -1,0 +1,24 @@
+<view hidden="{{hasUserInfo}}" class='float'>
+  <view class='fltext'>
+    <text>技师助手欢迎您</text>
+    <button class='flb' open-type="getUserInfo" bindgetuserinfo="getUserInfo">点击登录</button>
+  </view>
+  <image class='floaticon' mode='aspectFit' src='/img/wx.png'></image>
+  <image class='floatborder' mode='aspectFit' src='/img/login.png'></image>
+</view>
+<block wx:if="{{isauth == 1 }}">
+  <view class='box'>
+    <view class='imgborder' bindtap='loadimg'>
+      <image mode='aspectFill' class="{{hasload?'':'camera'}}" src="{{hasload?imgload:imgstatic}}"></image>
+    </view>
+    <text class='imgtip'>点击拍照识别车牌</text>
+    <text class='puttip'>或手动输入车牌号</text>
+    <input value="{{text}}" bindinput='input' placeholder='输入车牌号' placeholder-style='color:#aaa;font-size:24rpx;'></input>
+  </view>
+  <view class='btn bg-blue' bindtap='getinfo'>确认</view>
+  <view class='search' bindtap='todatacar_new'>查看车型数据</view>
+</block>
+<view class='boxr' wx:else>
+  <image mode='aspectFit' src='../../img/rzh.png'></image>
+  <text>请联系您所在汽修厂进行认证</text>
+</view>

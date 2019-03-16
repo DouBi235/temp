@@ -1,0 +1,136 @@
+page {
+  font-size: 26rpx;
+}
+
+view {
+  box-sizing: border-box;
+}
+
+.fixbody {
+  background: #0e6fff;
+}
+
+image {
+  display: block;
+}
+
+.top {
+  background: #fff;
+  position: absolute;
+  width: 1050rpx;
+  left: -150rpx;
+  height: 55%;
+  top: 7%;
+  padding: 0 30rpx;
+  border-radius: 70%;
+}
+
+.userimg {
+  position: absolute;
+  width: 150rpx;
+  left: 454rpx;
+  height: 150rpx;
+  top: -60rpx;
+  border-radius: 150rpx;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.imgborder {
+  position: absolute;
+  top: 12rpx;
+  left: 12rpx;
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 130rpx;
+  background: #fff;
+}
+
+.imgborder>.image {
+  position: absolute;
+  left: 5rpx;
+  top: 5rpx;
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 120rpx;
+}
+
+.realbody {
+  background: #fff;
+  position: absolute;
+  height: 80%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.username {
+  position: absolute;
+  width: 690rpx;
+  left: 30rpx;
+  height: 150rpx;
+  top: -54rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.name1 {
+  font-size: 30rpx;
+}
+
+.name1, .name2 {
+  max-width: 640rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.name2.no {
+  color: #999;
+}
+
+.line {
+  width: 690rpx;
+  height: 2rpx;
+  background: #ccc;
+}
+
+.list {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: calc(100% - 100rpx);
+  bottom: 0;
+}
+
+.list-row {
+  width: 750rpx;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+}
+
+.list-grid {
+  width: 330rpx;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.list-grid>image {
+  width: 36%;
+  height: 40%;
+  margin-bottom: 30rpx;
+}
+
+.userstatus {
+  position: absolute;
+  bottom: 0;
+  width: 137rpx;
+  height: 41rpx;
+  left: 0;
+  z-index: 9;
+}

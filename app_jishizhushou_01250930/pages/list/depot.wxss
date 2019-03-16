@@ -1,0 +1,87 @@
+page {
+  background: #f5f5f5;
+  padding-bottom: 34rpx;
+}
+
+.box>image {
+  display: block;
+  width: 200rpx;
+  border: none;
+  height: 172rpx;
+  border-radius: 10rpx;
+}
+
+view {
+  box-sizing: border-box;
+}
+
+.box {
+  padding: 20rpx 32rpx;
+  margin-top: 20rpx;
+  font-size: 24rpx;
+  color: #666;
+  position: relative;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 30rpx;
+  color: #333;
+  margin-bottom: 20rpx;
+  width: 454rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.textow {
+  line-height: 36rpx;
+  display: -webkit-box;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 454rpx;
+}
+
+.bottom {
+  margin-top: 26rpx;
+  font-size: 20rpx;
+  color: #999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.distance {
+  display: flex;
+  align-items: center;
+}
+
+.distance>image {
+  margin-right: 10rpx;
+  width: 26rpx;
+  height: 26rpx;
+}
+
+.btn {
+  font-size: 22rpx;
+  color: #555;
+  border: solid 2rpx #0e6fff;
+  border-radius: 8rpx;
+  width: 72rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  background: #fff;
+  margin: 0;
+}

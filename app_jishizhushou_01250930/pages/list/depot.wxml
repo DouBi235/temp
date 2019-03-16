@@ -1,0 +1,14 @@
+<view class='box' wx:for="{{depotlist}}" wx:key>
+  <image mode='aspectFill' src="{{item.photo[0]}}"></image>
+  <view class='text'>
+    <text class='title'>{{item.company}}</text>
+    <text class='textow'>{{item.about}}</text>
+    <view class='bottom'>
+      <view class='distance'>
+        <image mode='aspectFit' src='/img/point.png'></image>
+        <text>距你{{item.distance}}公里</text>
+      </view>
+      <view class='btn' data-name="{{item.company}}" data-sid="{{item.sid}}" bindtap='selected'>预约</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,52 @@
+<view class="picker-box">
+  <picker id='brr' class='picker' bindchange="piChange" value="{{bindex}}" range="{{brr}}">
+    <view class="picker-title">{{curbrand?curbrand:'请选择汽车品牌'}}</view>
+    <view class='line'></view>
+  </picker>
+  <picker id='srr' class='picker' bindchange="piChange" value="{{sindex}}" range="{{srr}}">
+    <view class="picker-title">{{curseries?curseries:'请选择车型'}}</view>
+    <view class='line'></view>
+  </picker>
+  <picker id='trr' class='picker' bindchange="piChange" value="{{tindex}}" range="{{trr}}">
+    <view class="picker-title">{{curtype?curtype:'请选择排量以及年限'}}</view>
+    <view class='line'></view>
+  </picker>
+</view>
+<view class="list">
+  <text>国别：{{carinfo.nationality}}</text>
+  <text>国产合资进口类型：{{carinfo.import}}</text>
+  <text>生产状态：{{carinfo.production_status}}</text>
+  <text>车辆类型：{{carinfo.car_type}}</text>
+  <text>轴距（mm）：{{carinfo.wheel_base}}</text>
+  <text>发动机位置：{{carinfo.engine_position}}</text>
+  <text>驱动方式：{{carinfo.drive_way}}</text>
+  <text>燃油类型：{{carinfo.fuel_type}}</text>
+  <text>燃油标号：{{carinfo.fuel_label}}</text>
+  <text>座位个数：{{carinfo.seating}}</text>
+  <text>电动天窗：{{carinfo.power_sunroof}}</text>
+  <text>后雨刷：{{carinfo.latter_wiper}}</text>
+  <text>前制动器类型：{{carinfo.front_brake_type}}</text>
+  <text>后制动器类型：{{carinfo.rear_brake_type}}</text>
+  <text>助力类型：{{carinfo.power_type}}</text>
+  <text>前轮胎规格：{{carinfo.front_tire_specification}}</text>
+  <text>后轮胎规格：{{carinfo.rear_tire_specification}}</text>
+  <text>前轮毂规格：{{carinfo.front_wheel_hub_specification}}</text>
+  <text>后轮毂规格：{{carinfo.rear_wheel_hub_specification}}</text>
+  <text>发动机型号：{{carinfo.engine_model}}</text>
+  <text>进气形式：{{carinfo.air_intake_form}}</text>
+  <text>最大马力(ps)：{{carinfo.max_hp}}</text>
+  <text>最大功率(kw)：{{carinfo.max_power}}</text>
+  <text>气缸数(个)：{{carinfo.cylinders_number}}</text>
+  <text>每缸气门数(个)：{{carinfo.per_cylinder_number}}</text>
+  <text>气缸容积：{{carinfo.cylinder_volume}}</text>
+  <text>机油：{{carinfo.oil}}</text>
+  <text>粘度：{{carinfo.viscosity}}</text>
+  <text>变速器描述：{{carinfo.transmission}}</text>
+  <text>档位数：{{carinfo.gear_number}}</text>
+  <text>自变箱保养加注量：{{carinfo.automatic_bang}}</text>
+  <text>自变箱大修加注量：{{carinfo.automatic_dx}}</text>
+  <text>自变箱用油规格：{{carinfo.oil_specification}}</text>
+  <text>手动变速箱保养加注量：{{carinfo.manual_bang}}</text>
+  <text>手动变速箱大修加注量：{{carinfo.manual_dx}}</text>
+  <text>手动变速箱用油规格：{{carinfo.oil_specification_manual}}</text>
+</view>

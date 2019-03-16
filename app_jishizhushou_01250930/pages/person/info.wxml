@@ -1,0 +1,61 @@
+<form bindsubmit='putinfo'>
+  <view class='body'>
+    <view class='userhead' bindtap='uploadhead'>
+      <text>头像</text>
+      <image mode='aspectFill' src="{{userhead}}"></image>
+      <view class='jiao'></view>
+    </view>
+    <view class='line'></view>
+    <view class='cartype'>
+      <text>车型</text>
+      <radio-group class='rg' bindchange="radioChange">
+        <label>乘用车
+          <radio color='#0e6fff' value="1" checked="{{cartype==1}}" />
+        </label>
+        <label>商用车
+          <radio color='#0e6fff' value="2" checked="{{cartype==2}}" />
+        </label>
+      </radio-group>
+    </view>
+    <view class='line'></view>
+    <input name='uhead' value="{{userhead}}" style='display:none;'></input>
+    <input name='cartype' value="{{cartype}}" style='display:none;'></input>
+    <view class='username'>
+      <text>姓名</text>
+      <input name='uname' value="{{initinfo.name}}" placeholder='请输入您的姓名' placeholder-class='tipholder' />
+    </view>
+    <view class='line'></view>
+    <view class='usertel'>
+      <text>手机</text>
+      <input name='utel' value="{{initinfo.phone}}" placeholder='请输入您的手机号码' placeholder-class='tipholder' />
+    </view>
+    <view class='line'></view>
+    <picker name='udate' mode="date" value="{{date}}" start="1995-01-01" end="{{timelimit}}" bindchange="dateChange">
+      <view class='betime'>
+        <text>从业开始时间</text>
+        <text class="{{date?'tipchange':'tipholder'}}">{{date?date:'选择从业开始时间'}}</text>
+        <view class='jiao'></view>
+      </view>
+    </picker>
+    <view class='line'></view>
+    <input name='udepot' value="{{udepot}}" style='display:none;'></input>
+    <view class='depot' bindtap='selectdepot'>
+      <text>选择所属维修厂</text>
+      <text class="{{udepotname?'tipchange':'tipholder'}}">{{udepotname?udepotname:'选择维修厂'}}</text>
+      <view class='jiao'></view>
+    </view>
+    <view class='line'></view>
+  </view>
+  <view class='skill'>
+    <text>技能介绍</text>
+    <textarea name='uskill' value="{{initinfo.skill}}" placeholder='请输入技能介绍' placeholder-class='tipholder'></textarea>
+  </view>
+  <button formType="submit" class='btn bg-blue'>确认</button>
+</form>
+<view class='reposition fixbody' hidden="{{hidereposition}}">
+  <view>
+    <view class='retitle'>定位失败</view>
+    <view>您拒绝了定位，请重新授权。若总失败，请检查手机设置</view>
+    <button open-type="openSetting" bindopensetting="bos">重新授权</button>
+  </view>
+</view>

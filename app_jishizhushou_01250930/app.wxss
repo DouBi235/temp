@@ -1,0 +1,74 @@
+/**app.wxss**/
+
+.fixbody {
+  position: fixed;
+  z-index: -7531;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.box {
+  padding: 0 30rpx;
+}
+
+.btn {
+  display: block;
+  border: none;
+  border-radius: 750rpx;
+  padding: 0;
+  margin: 0 auto;
+  width: 460rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 32rpx;
+}
+
+button::before {
+  border: none;
+}
+
+button::after {
+  border: none;
+}
+
+.btn.bg-blue {
+  background: linear-gradient(to right, #3de7ff, #0e6fff);
+}
+
+.jiao {
+  position: absolute;
+  right: 12rpx;
+  bottom: 22rpx;
+  width: 20rpx;
+  height: 20rpx;
+  border-top: 2rpx solid #ccc;
+  border-right: 2rpx solid #ccc;
+  transform: rotate(45deg);
+}
+
+.red-point {
+  background: #f82d29;
+  width: 14rpx;
+  height: 14rpx;
+  margin-top: 8rpx;
+  margin-left: 12rpx;
+  border-radius: 20rpx;
+}
+
+.menu-point {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 32rpx;
+  font-size: 50rpx;
+}
+
+.menu-point>view {
+  height: 4rpx;
+  line-height: 4rpx;
+}

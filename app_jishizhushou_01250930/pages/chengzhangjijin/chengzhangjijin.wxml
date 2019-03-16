@@ -1,0 +1,7 @@
+<view wx:for="{{bbylist}}" wx:key class='box-y'>
+  <view class='ziti-co'>{{item.type}}</view>
+  <view class='ziti-co1'>
+    <view class='ziti-co2'>成长基金：￥{{item.reward}}</view>
+    <view class='ziti-co3'>{{item.create_time}}</view>
+  </view>
+</view>

@@ -1,0 +1,33 @@
+page {
+  color: #666;
+  font-size: 28rpx;
+}
+
+.list {
+  padding: 250rpx 40rpx 30rpx;
+}
+
+.list>text {
+  margin-bottom: 30rpx;
+  display: block;
+}
+
+.picker-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  background: #fff;
+}
+
+.picker {
+  width: 690rpx;
+  margin: 0 auto 24rpx;
+  text-align: center;
+}
+
+.line {
+  margin-top: 16rpx;
+  height: 2rpx;
+  background: #ccc;
+}

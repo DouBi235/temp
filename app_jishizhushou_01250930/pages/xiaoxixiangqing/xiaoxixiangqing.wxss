@@ -1,0 +1,66 @@
+@import "../../wxParse/wxParse.wxss";
+page {
+  padding-top: 48rpx;
+  border-top: solid 2rpx #ccc;
+}
+.box {
+  font-size:24rpx;
+}
+view {
+  box-sizing: border-box;
+}
+.jx {
+  font-size:24rpx;
+  line-height:45rpx;
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+image {
+  display: block;
+}
+
+.time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #666;
+  font-size: 24rpx;
+  width: 690rpx;
+  margin: 30rpx 0;
+}
+.line{
+  width: 180rpx;
+  height: 2rpx;
+  background: #ccc;
+}
+.dawenzi {
+  text-align: center;
+  font-weight: bold;
+  width: 440rpx;
+  font-size: 36rpx;
+  color: #333;
+  display: -webkit-box;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.wenzi>image {
+  width: 690rpx;
+  height: 276rpx;
+}
+
+.wenzi>view {
+  margin: 30rpx 0;
+}
+
+.wenzi {
+  font-size: 30rpx;
+  color: #333;
+}

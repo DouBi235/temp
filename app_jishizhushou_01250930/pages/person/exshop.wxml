@@ -1,0 +1,26 @@
+<view class='box'>
+  <form bindsubmit="formSubmit">
+    <view class='v1'>
+      <view>认证技师</view>
+      <view class='line'></view>
+    </view>
+    <view class='v2' bindtap='selectdepot'>
+      <text class='title'>选择新店铺</text>
+      <view  wx:if="{{udepotname}}" class='tip'>{{udepotname}}</view>
+      <view class='jiao'></view>
+      <view class='line'></view>
+    </view>
+    <view class='v3'>
+      <textarea name='reason' placeholder='请输入换店原因' placeholder-style='color:#aaa;'></textarea>
+    </view>
+    <input value="{{udepot}}" name='sid' style='display:none;'></input>
+    <button class='btn bg-blue' formType="submit">确认</button>
+  </form>
+</view>
+<view class='reposition fixbody' hidden="{{hidereposition}}">
+  <view>
+    <view class='retitle'>定位失败</view>
+    <view>您拒绝了定位，请重新授权。若总失败，请检查手机设置</view>
+    <button open-type="openSetting" bindopensetting="bos">重新授权</button>
+  </view>
+</view>

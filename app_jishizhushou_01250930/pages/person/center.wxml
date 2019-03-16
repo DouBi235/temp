@@ -1,0 +1,41 @@
+<view class='fixbody'>
+  <view class='top'>
+    <view class='userimg' bindtap='toinfo'>
+      <view class='imgborder'>
+        <image class='image' src="{{headurl}}" mode='aspectFill'></image>
+        <image wx:if="{{isauth}}" mode='aspectFit' class='userstatus' src='../../img/hadrzh.png'></image>
+        <image wx:else mode='aspectFit' class='userstatus' src='../../img/unrzh.png'></image>
+      </view>
+    </view>
+  </view>
+  <view class='realbody'>
+    <view class='username'>
+      <view class='name1'>{{username}}</view>
+      <view class='name1'>{{phone}}</view>
+      <view class="name2{{name2?'':' no'}}">{{shopname?shopname:'( 暂未选择维修厂 )'}}</view>
+      <view class='line'></view>
+    </view>
+    <view class='list'>
+      <view class='list-row'>
+        <view class='list-grid' catchtap='three'>
+          <image src='../../img/ghdm.png' mode='aspectFit'></image>
+          <text>更换店面</text>
+        </view>
+        <view class='list-grid' catchtap='toinfo'>
+          <image src='../../img/yfwzh.png' mode='aspectFit'></image>
+          <text>个人信息</text>
+        </view>
+      </view>
+      <view class='list-row'>
+        <view class='list-grid' catchtap='five'>
+          <image src='../../img/xtxx.png' mode='aspectFit'></image>
+          <text>系统消息</text>
+        </view>
+        <view class='list-grid' catchtap='four'>
+          <image src='../../img/chzhjj.png' mode='aspectFit'></image>
+          <text>成长基金</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

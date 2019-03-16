@@ -1,0 +1,121 @@
+page {
+  background: #f4f4f4;
+}
+
+view {
+  box-sizing: border-box;
+}
+
+.box {
+  border-radius: 10rpx;
+  margin: 30rpx auto 0;
+  width: 690rpx;
+  padding: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background: #fff;
+  color: #666;
+  position: relative;
+}
+
+.title {
+  font-size: 30rpx;
+  color: #0e6fff;
+}
+
+.top {
+  font-size: 28rpx;
+  height: 310rpx;
+}
+
+.add {
+  margin-top: 0;
+  font-size: 24rpx;
+  position: relative;
+  border-top: dashed 2rpx #ccc;
+  padding: 20rpx 30rpx;
+  display: block;
+}
+
+text.r {
+  color: red;
+}
+
+.circle {
+  width: 28rpx;
+  height: 28rpx;
+  border-radius: 40rpx;
+  background: #f4f4f4;
+  position: absolute;
+  top: -14rpx;
+}
+
+.circle.l {
+  left: -14rpx;
+}
+
+.circle.r {
+  right: -14rpx;
+}
+
+.center {
+  font-size: 24rpx;
+  height: 130rpx;
+}
+
+.jiao {
+  right: 28rpx;
+  bottom: 52rpx;
+  border-top: 4rpx solid #ccc;
+  border-right: 4rpx solid #ccc;
+}
+
+.bottom {
+  height: 440rpx;
+}
+
+.yzmbox {
+  width: 550rpx;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.iptbox {
+  width: 60rpx;
+  margin-right: 30rpx;
+  border: solid #ccc;
+  border-width: 0 0 2rpx 0;
+  font-size: 30rpx;
+  text-align: center;
+}
+
+.btn.get {
+  font-size: 22rpx;
+  width: 160rpx;
+  height: 56rpx;
+  line-height: 56rpx;
+  color: #666;
+  border: solid 2rpx #0e6fff;
+}
+
+.btn.get.has {
+  border-color: #ccc;
+}
+
+.bg-blue {
+  margin-bottom: 48rpx;
+}
+
+.ipt {
+  width: 0;
+  height: 0;
+}
+
+.yzmtip {
+  font-size: 20rpx;
+  position: absolute;
+  top: 86rpx;
+  left: 30rpx;
+}

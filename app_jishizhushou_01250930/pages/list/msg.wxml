@@ -1,0 +1,9 @@
+<view wx:for="{{msglist}}" class='box' wx:key>
+  <navigator url="/pages/xiaoxixiangqing/xiaoxixiangqing?mid={{item.mid}}">
+    <view class='title'>
+      <text>{{item.title}}</text>
+      <view wx:if="{{item.status==0}}" class='red-point'></view>
+    </view>
+    <view class='time'>{{item.create_time}}</view>
+  </navigator> 
+</view>
