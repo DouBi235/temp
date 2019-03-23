@@ -1,0 +1,37 @@
+<view class='bindDevicePage'>
+  <view class='deviceImgBox'>
+    <image class='deviceImg' src='{{imgUrl}}/toBindDevice.png'></image>
+    <text class='deviceText'>请更换设备</text>
+  </view>
+  <view class='formBox'>
+    <view class='formItem inp'>
+      <text class='formLabel'>原设备号</text>
+      <view class='box'>
+        <input class='formInput' disabled='true' placeholder='原设备号' value='{{deviceCode}}' style='color: #888;'></input>
+      </view>
+    </view>
+    <view class='bysever' style='border-bottom:1rpx solid RGBA(200, 200, 210, 1); '>
+      <text class='formLabel'>新设备号</text>
+      <view class='box'>
+        <input class='formInput' bindinput="formInput2" type='number' maxlength='12' placeholder='请输入12位新设备号' value='{{num2==0?"":num2}}'></input>
+      </view> 
+      <image bindtap='code' class='scan' src='{{imgUrl}}/111.png'></image>
+      
+    </view>
+    <!-- <view class='bysever' style='height:auto;'> 
+      <view class='formItem inp'>
+        <text class='formLabel'>初始里程</text>
+        <view class='box'>
+          <input class='formInput' bindinput="formInput3" maxlength='10' placeholder='请输入初始里程' value='{{fristM}}' type='number'></input>
+        </view>
+        <text style='line-height: 68rpx;'>km</text>
+      </view> --> 
+      <view  style='margin-top:50rpx;color:red;' class='fc' >
+         务请据实填写初始里程，以免影响服务权益。
+      </view> 
+    </view>
+    <view class='formItem'>
+      <button class='formBtn' disabled='{{disabled}}' bindtap='changeBtn'>确认更换</button>
+    </view>
+  </view>
+<!-- </view> -->

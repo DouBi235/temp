@@ -1,0 +1,127 @@
+<view class='subscribePage'>
+  <view class='block item'>
+    <text class='label'>产品</text>
+    <view class='labelValue'>
+      <view class="tui-picker-detail">{{product.name}}</view>
+      <image class='rightArrow' src='{{imgUrl}}/rArrow.png'></image>
+    </view>
+  </view>
+  <view class='block'>
+    <view class='item'>
+      <text class='label'>规格</text>
+      <view class='labelValue'>{{product.size}}</view>
+    </view>
+    <view class='item borderTop'>
+      <text class='label'>数量</text>
+      <view class='labelValue'> {{product.number}} </view>
+    </view>
+  </view>
+  <view class='block'>
+    <view class='item' bindtap='navShop'>
+      <text class='label'>店铺</text>
+      <view class='labelValue'>
+        <image class='rightArrow' src='{{imgUrl}}/rArrow.png'></image>
+      </view>
+    </view>
+    <view class='shop borderTop' wx:if='{{shopInfo != ""}}'>
+      <image class='shopImg' src='{{shopInfo.photo[0]}}' mode='aspectFill'></image>
+      <view class='shopInfo'>
+        <text class='shopTitle text1Row'>{{shopInfo.company}}</text>
+        <view class='shopSubTitle text2Row'>{{shopInfo.about}}</view>
+        <view>
+          <view class='icon'>
+            <image src='{{imgUrl}}/banshou.png'></image>
+            {{shopInfo.service_num}}
+          </view>
+          <view class='icon'>
+            <image src='{{imgUrl}}/weizhi.png'></image>
+            {{shopInfo.juli}}
+          </view>
+          <view class='icon'>
+            <image src='{{imgUrl}}/good.png'></image>
+            {{shopInfo.careness}}
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='block item '>
+    <text class='label'>预约店铺</text>
+    <view class='labelValue'>
+      <picker class="picker" mode="date" value="{{selectData}}" start="{{dateStart}}" end="{{dateEnd}}" bindchange="bindDateChange">
+        <view class="picker">
+          <text>{{selectData}}</text>
+          <image class='rightArrow' src='{{imgUrl}}/rArrow.png'></image>
+        </view>
+      </picker>
+    </view>
+  </view>
+  <view class='buttonBlock'>
+    <view class='button'>
+      <button bindtap='submit' class='btn'>提交</button>
+    </view>
+  </view>
+</view>
+
+
+<!-- <view class="container">
+  <view class='product'>
+    <view class='fc'>
+      产品
+    </view>
+    <view class='right'>
+      <image src='{{imgUrl}}/arrow.png'></image>
+    </view>
+    <picker bindchange="changeProduct" value="{{productIndex}}" range="{{productList}}">
+      <view class="tui-picker-detail">{{productList[productIndex]}}</view>
+    </picker>
+  </view>
+  <view class='detail'>
+    <view class='specification'>
+      <text class='fc'>规格</text>
+      <text class='fl'>17/寸</text>
+    </view>
+    <view class='specification'>
+      <text class='fc'>数量</text>
+      <text class='fl'>1</text>
+    </view>
+  </view>
+  <view class='specification' style='margin-top:20rpx;'>
+    <text class='fc2'>店铺</text>
+    <image src='{{imgUrl}}/arrow.png'></image>
+  </view>
+  <view class='shop'>
+    <view class='shopDetail'>
+      <view class='shopPhoto'></view>
+      <view class='shopText'>
+        <view class='shopName'>指南针汽车南针汽车修南针汽车修南针汽车修南针汽车修南针汽车修修理厂</view>
+        <view class='shopJS'>指南针汽车维修有限公司秉承“诚信、专业”的经营理念信、专业”的经营理念,坚持用户至上,坚持用户至上、质量…</view>
+        <view class='icon'>
+          <image src='{{imgUrl}}/banshou.png'></image>
+          200次
+        </view>
+        <view class='icon'>
+          <image src='{{imgUrl}}/weizhi.png'></image>
+          2km
+        </view>
+        <view class='icon'>
+          <image src='{{imgUrl}}/good.png'></image>
+          500
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='time'>
+    <view class='fc3'>
+      预约时间
+    </view>
+    <view class='rg'>
+      <image src='{{imgUrl}}/arrow.png'></image>
+    </view>
+    <picker class="picker" mode="date" value="{{dateStart}}" start="2015-09-01" end="2020-09-01" bindchange="bindDateChange">
+      <view class="picker">
+        {{dateStart}}
+      </view>
+    </picker>
+  </view>
+</view> -->

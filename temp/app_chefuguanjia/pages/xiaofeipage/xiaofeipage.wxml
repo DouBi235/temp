@@ -1,0 +1,32 @@
+<!--pages/xiaofeipage/xiaofeipage.wxml-->
+<import src="../template/kong/kong.wxml" />
+
+<view class='xiaofeipage' wx:if="{{list.length == 0}}">
+  <template is="kong" data="{{imgUrl,text,height}}"></template>
+</view>
+<view class='xiaofeipage' wx:else>
+  <view class='liBox' wx:for="{{list}}">
+    <view class='itemper'>
+      <view class='itemtop dfrowsa'>
+        <image class='shopImg' src='{{item.shop_image[0]}}'></image>
+        <view class='intro dfcolsb'>
+          <text class='shopt'>{{item.oil_shop_name}}</text>
+          <text class='shopsub'>{{item.oil_name}}  \t{{item.litre}}升</text>
+          <text class='createtime'>{{item.pay_time}}</text>
+        </view>
+        <view class='xyuan'>
+          <text>{{item.actual_price}}</text>\t元</view>
+      </view>
+      <view class='itembot dfrowsa'>
+        <block>
+          <view class='tousubtn disbtn' wx:if="{{item.if_complaint == 1}}">已投诉</view>
+          <view class='tousubtn' bindtap='navtousu' data-id='{{item.id}}' data-sid="{{item.oil_shop_id}}" wx:else>投诉</view>
+        </block>
+        <block>
+          <view class='pingjiabtn disbtn' wx:if="{{item.if_evaluate == 1}}">已评价</view>
+          <view class='pingjiabtn' bindtap='navpj' data-id='{{item.id}}' data-sid="{{item.oil_shop_id}}" wx:else>评价</view>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>

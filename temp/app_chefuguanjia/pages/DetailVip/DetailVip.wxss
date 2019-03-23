@@ -1,0 +1,298 @@
+.banner {
+  width: 100%;
+  position: relative;
+}
+
+.bg {
+  width: 100%;
+  height: 680rpx;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+.fcc {
+  width: 220rpx;
+  height: 50rpx;
+  font-size: 25rpx;
+  color: white;
+  margin: -104rpx auto;
+  text-align: center;
+  position: absolute;
+}
+
+.Title {
+  width: 100%;
+  height: 80rpx;
+  padding-top: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+  color: RGBA(255, 225, 135, 1);
+  font-weight: 600;
+}
+
+.item {
+  width: 100%;
+  height: 270rpx;
+  background-size: 710rpx 260rpx;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  margin: 20rpx 0;
+  align-items: center;
+  padding: 0 20rpx;
+  justify-content: space-around;
+  position: relative;
+}
+
+.items {
+  width: 150rpx;
+  height: 200rpx;
+  margin-top: 30rpx;
+}
+
+.itemsImg image {
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 45rpx;
+  margin-left: 30rpx;
+}
+
+.itemsFc {
+  width: 100%;
+  height: 40rpx;
+  line-height: 40rpx;
+  color: white;
+  text-align: center;
+  font-size: 30rpx;
+}
+
+.itemsFc2 {
+  width: 100%;
+  height: 40rpx;
+  line-height: 40rpx;
+  color: RGBA(185, 224, 255, 1);
+  text-align: center;
+  font-size: 17rpx;
+}
+
+.price {
+  width: 95%;
+  height: 300rpx;
+  background: white;
+  border-radius: 15rpx;
+  bottom: -250rpx;
+  margin: auto;
+  box-shadow: 0px 2px 2px 2px RGBA(230, 230, 230, 1);
+}
+
+.priceText {
+  width: 100%;
+  height: 110rpx;
+  line-height: 110rpx;
+  text-align: center;
+  font-size: 35rpx;
+  position: relative;
+  color: RGBA(30, 35, 40, 1);
+}
+
+.isd {
+  color: RGBA(250, 100, 75, 1);
+  text-align: center;
+  font-size: 25rpx;
+  margin-top: 20rpx;
+}
+
+.priceText image {
+  width: 100rpx;
+  height: 100rpx;
+  position: absolute;
+  top: 0rpx;
+  right: 0rpx;
+}
+
+.line {
+  width: 200rpx;
+  height: 2rpx;
+  background: black;
+  margin: auto;
+}
+
+.num {
+  width: 100%;
+  height: 100rpx;
+  padding: 20rpx;
+  line-height: 60rpx;
+  font-size: 60rpx;
+  text-align: center;
+  font-weight: bold;
+  color: RGBA(255, 211, 82, 1);
+}
+
+.fc {
+  font-size: 25rpx;
+  color: RGBA(115, 115, 125, 1);
+  text-align: center;
+}
+
+.zhekouBox {
+  width: 95%;
+  height: 180rpx;
+  margin: 100rpx auto;
+  position: relative;
+}
+
+.zhekouBox image {
+  width: 100%;
+  height: 100%;
+}
+
+.txt {
+  width: 100%;
+  height: 80rpx;
+  position: absolute;
+  top: 0rpx;
+  margin-top: 40rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 32rpx;
+}
+
+.rc {
+  width: 100%;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 28rpx;
+  position: absolute;
+  bottom: 20rpx;
+  text-align: center;
+  color: RGBA(30, 160, 255, 1);
+}
+
+.tc {
+  position: absolute;
+  width: 150rpx;
+  height: 40rpx;
+  top: -15rpx;
+  font-size: 28rpx;
+  left: 0rpx;
+  right: 0rpx;
+  text-align: center;
+  margin: auto;
+  color: RGBA(30, 160, 255, 1);
+}
+
+.zc1 {
+  line-height: 70rpx;
+  padding: 10rpx 30rpx 10rpx 30rpx;
+}
+
+.zc2 {
+  line-height: 50rpx;
+  padding: 50rpx 50rpx;
+}
+
+.sanjiao {
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  left: 0rpx;
+  right: 0rpx;
+  margin: auto;
+}
+
+.ConfirmBuy {
+  width: 70%;
+  height: 90rpx;
+  background: linear-gradient(RGBA(255, 235, 138, 1), RGBA(255, 211, 82, 1));
+  border-radius: 45rpx;
+  margin: auto;
+}
+
+.ConfirmBuy {
+  line-height: 90rpx;
+  text-align: center;
+  color: RGBA(110, 95, 20, 1);
+  font-weight: 600;
+  margin-top: 30rpx;
+}
+
+/* 重写下半部分  不要格式化代码*/
+
+.vrnjk {
+}
+
+.vr3rt {
+  width: 710rpx;
+  margin: 100rpx 20rpx;
+  border: 2rpx solid #ddd;
+  font-size: 28rpx;
+  font-weight: 400;
+  color: rgba(115, 115, 125, 1);
+  line-height: 40rpx;
+  text-align: center;
+  position: relative;
+}
+
+.hio09 {
+  width: 184rpx;
+  height: 36rpx;
+  line-height: 36rpx;
+  background: #fff;
+  position: absolute;
+  top: -22rpx;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.tov32 {
+  display: block;
+  width: 550rpx;
+  margin: 10rpx auto 30rpx;
+  font-size: 28rpx;
+  font-weight: 400;
+  color: rgba(30, 35, 40, 1);
+  line-height: 48rpx;
+  text-align: center;
+}
+
+.inviteBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 130rpx;
+  margin-bottom: 30rpx;
+}
+
+.incode {
+  font-size: 28rpx;
+  font-weight: 400;
+  color: #fff;
+  line-height: 40rpx;
+}
+
+.inviteCodeInput {
+  background: #fff;
+  text-align: center;
+  width: 300rpx;
+  height: 70rpx;
+  border-radius: 10rpx;
+  color: #1e2328;
+  justify-content: center;
+}
+
+
+/* 信息弹窗 */
+.infoshow{position: fixed;top: 0;height: 100vh;width: 100vw;background: rgba(0, 0, 0, 0.3)}
+.infoWhite{width:500rpx;height:600rpx;background:rgba(255,255,255,1);border-radius:10rpx;position: absolute;top: 300rpx;left: 0;right: 0;margin:0 auto;z-index: 5000}
+.infomain{height: 490rpx;display: flex;flex-direction: column;justify-content: space-around;align-items: center;padding: 50rpx 0;box-sizing: border-box;}
+.infoImg{height: 174rpx;width: 174rpx;border-radius: 50%;}
+.infoname{font-size:36rpx;font-family:PingFangSC-Regular;font-weight:400;color:rgba(30,35,40,1);line-height:50rpx;}
+.infotip {font-size:28rpx;font-family:PingFangSC-Regular;font-weight:400;color:rgba(30,35,40,1);line-height:40rpx;}
+.infobtnbox{height: 108rpx;width: 100%;font-size:32rpx;font-family:PingFangSC-Regular;font-weight:400;color: #1E2328;display: flex;text-align: center;}
+.infoconfirm{width: 250rpx;height: 100%;line-height:108rpx;color: #1EA0FF;}
+.infocancel{width: 250rpx;height: 100%;line-height:108rpx;}
+.infoconfirm:active{background: #ccc}
+.infocancel:active{background: #ccc}

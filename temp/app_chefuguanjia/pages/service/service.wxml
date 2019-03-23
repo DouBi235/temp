@@ -1,0 +1,37 @@
+<view class="container">
+  <view class='service'>
+    <view wx:if="{{shops.length==0}}" class="no-shop"></view>
+    <view class='service_item' wx:for="{{shops}}" wx:key="">
+      <view bindtap='skip' data-sid="{{item.sid}}">
+        <view>
+          <image src='{{item.photo[0]}}' style='width:100%;height:100%'></image>
+        </view>
+        <view class='service_item-content'>
+          <view class='maintenance_shop'>{{item.company}}</view>
+          <view class='star'>
+            <image src='{{star_1}}' wx:for='{{item.xing}}' style='width: 32rpx; height: 32rpx; margin-right:10rpx;'></image>
+            <image src='{{star_2}}' wx:for='{{5 - item.xing}}' style='width: 32rpx; height: 32rpx; margin-right:10rpx;'></image>
+          </view>
+          <view class='frequency'>
+            <view>
+              <text>好评 </text>
+              <text class='color'>{{item.degree}}</text>
+            </view>
+          </view>
+          <view class='option'>
+            <block wx:for="{{item.lable}}" wx:key="">
+              <text style='padding:0rpx 10rpx;'>{{item}}</text>
+            </block>
+          </view>
+        </view>
+      </view>
+      <view>
+        <view class='coordinate' bindtap='mapBlock' data-index="{{index}}">
+          <image src="{{imgUrl}}/coordinate.png"></image>
+          <text>{{item.distance}}km</text>
+        </view>
+        <button data-sid="{{item.sid}}" data-phone="{{item.serphone}}" class='about_btn' catchtap='about'>预约</button>
+      </view>
+    </view>
+  </view>
+</view>

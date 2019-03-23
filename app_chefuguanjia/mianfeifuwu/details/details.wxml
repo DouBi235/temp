@@ -1,0 +1,126 @@
+<!--pages/details/details.wxml-->
+
+<swiper   
+  indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}"
+  interval="{{interval}}"
+  duration="{{duration}}"
+  indicator-dots="{{indicatordots}}"
+  indicator-color="rgba(200,230,255,1)"
+  indicator-active-color="rgba(30,160,255,1)"
+  id="swiper"
+>   <!--轮播 开始-->
+  <block wx:for="{{detailInfo.photo}}" wx:key="">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" width="355" height="150" />
+    </swiper-item>
+  </block>
+</swiper>   <!--轮播 结束-->
+
+<view class="factory {{isFixed}}">    <!--factory  开始-->
+  <view class="factoryName">
+    {{detailInfo.company}}
+  </view>  
+  <image src="../images/weizhi.png"></image>
+  <text>{{detailInfo.careness}}km</text>
+</view>   <!--factory  结束-->
+
+<!-- 优惠 start -->
+<view class="prefe" wx:for="{{detailInfo.action}}">
+  <image src="../images/huodong.png"></image>
+  <text>{{item.content}}赠{{item.gift}}</text>
+</view>
+<!-- 优惠 end -->
+
+<view class="specificPosition">   <!--specificPosition 开始-->
+  <image src="../images/weizhi3.png"></image>
+  <text>{{detailInfo.province}}{{detailInfo.city}}{{detailInfo.county}}{{detailInfo.address}}</text>
+  <text class="speRight">></text>
+</view>   <!--specificPosition 结束-->
+
+<view class="specificPosition" style="border-top:solid 2rpx rgba(236,237,241,1);">   <!--specificPosition 开始-->
+  <image src="../images/phone.png"></image>
+  <text>{{detailInfo.serphone}}</text>
+  <text class="speRight">></text>
+</view>   <!--specificPosition 结束-->
+
+<view class="factoryInfo">    <!--factoryInfo  开始-->
+  <view class="factoryInfoTitle">
+    <view class="factoryInfoTitleLine"></view>
+    <text>厂家介绍</text>
+    <view class="factoryInfoTitleLine" style="margin-right:64rpx;"></view>
+  </view>
+
+  <view class="factDesc">
+     {{detailInfo.about}}
+  </view>
+</view>   <!--factoryInfo  结束-->
+
+<view class="technician" style="margin-bottom:{{detailInfo.engineer.length==0?'20rpx':0}}">   <!--technician  开始-->
+维修厂技师  <text>({{detailInfo.count}}人)</text>
+<view class="technicianL"></view>
+</view>   <!--technician  结束-->
+
+<scroll-view
+    scroll-x
+    style="height: 300rpx;"
+    bindscrolltoupper="upper"
+    bindscrolltolower="lower"
+    bindscroll="scroll"
+    scroll-into-view="{{toView}}"
+    scroll-left="{{scrollTop}}"
+    wx:if="{{detailInfo.engineer.length}}"
+  >
+    <view class="scroll-view-item" wx:for="{{detailInfo.engineer}}">
+      <image src="{{item.wx_head }}"></image>
+      <view class="technicianName">{{item.name}}}</view>
+      <view class="tLine"></view>
+      <view class="tTime">时间/{{item.server}}</view>
+    </view>    
+  </scroll-view>
+
+  <view class="technician">   <!--technician  开始-->
+    车主评价
+  </view>   <!--technician  结束-->
+ 
+  <view class="evaluation">   <!--evaluation  开始-->
+    <view class="evaluationLeft">
+      <text>{{detailInfo.comment}}</text><text>分</text>
+      <view>总体点评</view>
+    </view>
+    <view class="evaluationRight">
+      <text>服务态度</text>
+      <image src="../images/star1@2x.png" wx:for="{{detailInfo.tn_star}}" wx:key=""></image>   
+      <image src="../images/star4@2x.png" wx:for="{{5-detailInfo.tn_star}}" wx:key=""></image> 
+    </view>
+
+    <view class="evaluationRight" style="margin-top:32rpx;">
+      <text>维修效率</text>
+      <image src="../images/star1@2x.png" wx:for="{{detailInfo.tn_star}}" wx:key=""></image>       
+      <image src="../images/star4@2x.png" wx:for="{{5-detailInfo.tn_star}}" wx:key=""></image> 
+    </view>
+  </view>   <!--evaluation  结束-->
+
+  <view class="evaluationList">
+    <view class="evaluationItem" wx:for="{{detailInfo.commentList}}" wx:key="">   <!--evaluationItem  开始-->
+      <view class="userInfo">
+        <image src="../images/technician.png"></image>
+        <view class="userName">
+          {{item.phone}}
+          <view class="star">
+            <image src="../images/star1@2x.png" wx:for="{{item.shop_star}}"></image>
+            <image src="../images/star4@2x.png" wx:for="{{5-item.shop_star}}"></image> 
+          </view>
+        </view>      
+      </view>
+      <view class="userEvaluation">
+        {{item.content}}
+      </view>
+      <view class="userEvaluationTime">
+        {{item.create_time}}
+      </view>
+    </view>   <!--evaluationItem  结束-->
+  </view>
+  <view class="appointmentWra">
+    <button bindtap="confirm">确认选择</button>
+  </view>

@@ -1,0 +1,20 @@
+/* pages/tixian/tixian.wxss */
+/* 不要格式化代码 */
+input{text-align: right;}
+.input-placeholder{font-size:32rpx;color:#C8C8D2;}
+.picker{width: 400rpx;text-align: right;}
+
+/*  */
+.tixianPage{min-height: 100vh;background: #F5F5F5;}
+.tform{padding: 0 30rpx;background: #fff;}
+  .formItem{width:690rpx;height:110rpx;border-bottom: 2rpx solid #E1E1E1;display: flex;justify-content: space-between;align-items: center;}
+    .formItem:last-child{border-bottom: none;}
+    .formItem>text{font-size:32rpx;color:#1E2328;}
+      .picker{display: flex;justify-content: space-between;align-items: center;}
+      .picker>text,input{display: block;width: 400rpx;font-size:32rpx;font-weight:400;line-height:110rpx;text-align: right;}
+      picker image{ width: 40rpx; height: 40rpx;}
+
+
+/* 按钮 */
+.tsubbtn{width:520rpx;height:94rpx;margin: 390rpx auto 0; background:rgba(30,160,255,1); font-size:32rpx; line-height:94rpx;color:#fff;text-align: center;}
+.tsubbtn:active{background: rgba(80,200,255,1);}

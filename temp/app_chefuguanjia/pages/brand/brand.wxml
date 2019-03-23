@@ -1,0 +1,175 @@
+<view class="container">
+  <!-- <view class="search">
+    <input placeholder="请输入汽车品牌" bindinput="search" />
+    <view bindtap="send" class="ft-l" style="height:60rpx;line-height:60rpx;padding-left:30rpx">确定</view>
+    <view class="search-img"></view>
+  </view> -->
+  <scroll-view scroll-y scroll-with-animation class="ft-l" scroll-into-view="{{toview}}">
+    <view id="A" class="view-item">
+      <view class="view-item-t">A</view>
+      <block wx:for="{{signA}}" wx:key="{{item.brand_id}}">
+        <view bindtap="skip" data-name="{{item.name}}" data-id="{{item.brand_id}}" class="view-item-i">{{item.name}}</view>
+      </block>
+    </view>
+    <view id="B" class="view-item">
+      <view class="view-item-t">B</view>
+      <block wx:for="{{signB}}" wx:key="{{item.brand_id}}">
+        <view bindtap="skip" data-name="{{item.name}}" data-id="{{item.brand_id}}" class="view-item-i">{{item.name}}</view>
+      </block>
+    </view>
+    <view id="C" class="view-item">
+      <view class="view-item-t">C</view>
+      <block wx:for="{{signC}}" wx:key="{{item.brand_id}}">
+        <view bindtap="skip" data-name="{{item.name}}" data-id="{{item.brand_id}}" class="view-item-i">{{item.name}}</view>
+      </block>
+    </view>
+    <view id="D" class="view-item">
+      <view class="view-item-t">D</view>
+      <block wx:for="{{signD}}" wx:key="{{item.brand_id}}">
+        <view bindtap="skip" data-name="{{item.name}}" data-id="{{item.brand_id}}" class="view-item-i">{{item.name}}</view>
+      </block>
+    </view>
+    <view id="E" class="view-item">
+      <view class="view-item-t">E</view>
+      <block wx:for="{{signE}}" wx:key="{{item.brand_id}}">
+        <view bindtap="skip" data-name="{{item.brand_id}}" data-id="{{item.brand_id}}" class="view-item-i">{{item.name}}</view>
+      </block>
+    </view>
+    <view id="F" class="view-item">
+      <view class="view-item-t">F</view>
+      <block wx:for="{{signF}}" wx:key="{{item.brand_id}}">
+        <view bindtap="skip" data-name="{{item.name}}" data-id="{{item.brand_id}}" class="view-item-i">{{item.name}}</view>
+      </block>
+    </view>
+    <view id="G" class="view-item">
+      <view class="view-item-t">G</view>
+      <block wx:for="{{signG}}" wx:key="{{item.brand_id}}">
+        <view bindtap="skip" data-name="{{item.name}}" data-id="{{item.brand_id}}" class="view-item-i">{{item.name}}</view>
+      </block>
+    </view>
+    <view id="H" class="view-item">
+      <view class="view-item-t">H</view>
+      <block wx:for="{{signH}}" wx:key="{{item.brand_id}}">
+        <view bindtap="skip" data-name="{{item.name}}" data-id="{{item.brand_id}}" class="view-item-i">{{item.name}}</view>
+      </block>
+    </view>
+    <view id="I" class="view-item">
+      <view class="view-item-t">I</view>
+      <block wx:for="{{signI}}" wx:key="{{item.brand_id}}">
+        <view bindtap="skip" data-name="{{item.name}}" data-id="{{item.brand_id}}" class="view-item-i">{{item.name}}</view>
+      </block>
+    </view>
+    <view id="J" class="view-item">
+      <view class="view-item-t">J</view>
+      <block wx:for="{{signJ}}" wx:key="{{item.brand_id}}">
+        <view bindtap="skip" data-name="{{item.name}}" data-id="{{item.brand_id}}" class="view-item-i">{{item.name}}</view>
+      </block>
+    </view>
+    <view id="K" class="view-item">
+      <view class="view-item-t">K</view>
+      <block wx:for="{{signK}}" wx:key="{{item.brand_id}}">
+        <view bindtap="skip" data-name="{{item.name}}" data-id="{{item.brand_id}}" class="view-item-i">{{item.name}}</view>
+      </block>
+    </view>
+    <view id="L" class="view-item">
+      <view class="view-item-t">L</view>
+      <block wx:for="{{signL}}" wx:key="{{item.brand_id}}">
+        <view bindtap="skip" data-name="{{item.name}}" data-id="{{item.brand_id}}" class="view-item-i">{{item.name}}</view>
+      </block>
+    </view>
+    <view id="M" class="view-item">
+      <view class="view-item-t">M</view>
+      <block wx:for="{{signM}}" wx:key="{{item.brand_id}}">
+        <view bindtap="skip" data-name="{{item.name}}" data-id="{{item.brand_id}}" class="view-item-i">{{item.name}}</view>
+      </block>
+    </view>
+    <view id="N" class="view-item">
+      <view class="view-item-t">N</view>
+      <block wx:for="{{signN}}" wx:key="{{item.brand_id}}">
+        <view bindtap="skip" data-name="{{item.name}}" data-id="{{item.brand_id}}" class="view-item-i">{{item.name}}</view>
+      </block>
+    </view>
+    <view id="O" class="view-item">
+      <view class="view-item-t">O</view>
+      <block wx:for="{{signO}}" wx:key="{{item.brand_id}}">
+        <view bindtap="skip" data-name="{{item.name}}" data-id="{{item.brand_id}}" class="view-item-i">{{item.name}}</view>
+      </block>
+    </view>
+    <view id="P" class="view-item">
+      <view class="view-item-t">P</view>
+      <block wx:for="{{signP}}" wx:key="{{item.brand_id}}">
+        <view bindtap="skip" data-name="{{item.name}}" data-id="{{item.brand_id}}" class="view-item-i">{{item.name}}</view>
+      </block>
+    </view>
+    <view id="Q" class="view-item">
+      <view class="view-item-t">Q</view>
+      <block wx:for="{{signQ}}" wx:key="{{item.brand_id}}">
+        <view bindtap="skip" data-name="{{item.name}}" data-id="{{item.brand_id}}" class="view-item-i">{{item.name}}</view>
+      </block>
+    </view>
+    <view id="R" class="view-item">
+      <view class="view-item-t">R</view>
+      <block wx:for="{{signR}}" wx:key="{{item.brand_id}}">
+        <view bindtap="skip" data-name="{{item.name}}" data-id="{{item.brand_id}}" class="view-item-i">{{item.name}}</view>
+      </block>
+    </view>
+    <view id="S" class="view-item">
+      <view class="view-item-t">S</view>
+      <block wx:for="{{signS}}" wx:key="{{item.brand_id}}">
+        <view bindtap="skip" data-name="{{item.name}}" data-id="{{item.brand_id}}" class="view-item-i">{{item.name}}</view>
+      </block>
+    </view>
+    <view id="T" class="view-item">
+      <view class="view-item-t">T</view>
+      <block wx:for="{{signT}}" wx:key="{{item.brand_id}}">
+        <view bindtap="skip" data-name="{{item.name}}" data-id="{{item.brand_id}}" class="view-item-i">{{item.name}}</view>
+      </block>
+    </view>
+    <view id="U" class="view-item">
+      <view class="view-item-t">U</view>
+      <block wx:for="{{signU}}" wx:key="{{item.brand_id}}">
+        <view bindtap="skip" data-name="{{item.name}}" data-id="{{item.brand_id}}" class="view-item-i">{{item.name}}</view>
+      </block>
+    </view>
+    <view id="V" class="view-item">
+      <view class="view-item-t">V</view>
+      <block wx:for="{{signV}}" wx:key="{{item.brand_id}}">
+        <view bindtap="skip" data-name="{{item.name}}" data-id="{{item.brand_id}}" class="view-item-i">{{item.name}}</view>
+      </block>
+    </view>
+    <view id="W" class="view-item">
+      <view class="view-item-t">W</view>
+      <block wx:for="{{signW}}" wx:key="{{item.brand_id}}">
+        <view bindtap="skip" data-name="{{item.name}}" data-id="{{item.brand_id}}" class="view-item-i">{{item.name}}</view>
+      </block>
+    </view>
+    <view id="X" class="view-item">
+      <view class="view-item-t">X</view>
+      <block wx:for="{{signX}}" wx:key="{{item.brand_id}}">
+        <view bindtap="skip" data-name="{{item.name}}" data-id="{{item.brand_id}}" class="view-item-i">{{item.name}}</view>
+      </block>
+    </view>
+    <view id="Y" class="view-item">
+      <view class="view-item-t">Y</view>
+      <block wx:for="{{signY}}" wx:key="{{item.brand_id}}">
+        <view bindtap="skip" data-name="{{item.name}}" data-id="{{item.brand_id}}" class="view-item-i">{{item.name}}</view>
+      </block>
+    </view>
+    <view id="Z" class="view-item">
+      <view class="view-item-t">Z</view>
+      <block wx:for="{{signZ}}" wx:key="{{item.brand_id}}">
+        <view bindtap="skip" data-name="{{item.name}}" data-id="{{item.brand_id}}" class="view-item-i">{{item.name}}</view>
+      </block>
+    </view>
+  </scroll-view>
+  <view class="sidebar ft-r">
+    <block wx:for="{{az}}" wx:key="{{az[index]}}">
+      <view class="sidebar-item {{toview==az[index]? 'color':''}}" bindtap="sideClick" data-id="{{az[index]}}">{{az[index]}}</view>
+    </block>
+  </view>
+  <!-- <view class="search-list" wx:if="{{types=='2'}}">
+    <block wx:for="{{searchList}}" wx:key="{{searchList[index]}}">
+      <view class="view-item-i" bindtap="skip" data-id="{{item.id}}" data-name="{{item.name}}">{{item.name}}</view>
+    </block>
+  </view> -->
+</view>

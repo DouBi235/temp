@@ -1,0 +1,47 @@
+<view class='bindDevicePage'>
+  <view class='deviceImgBox'>
+    <block wx:if="{{deviceCode==''}}">
+      <image class='deviceImg' src='{{imgUrl}}/toBindDevice.png'></image>
+      <text class='deviceText'>请绑定设备</text>
+    </block>
+    <block wx:if="{{deviceCode}}">
+      <image class='deviceImg' src='{{imgUrl}}/bindedDevice.png'></image>
+      <text class='deviceText'>已绑定</text>
+    </block>
+  </view>
+  <view class='formBox'>
+    <view class='formItem inp' style='margin-bottom:30rpx;'>
+      <text class='formLabel'>设备号</text>
+      <view class='box'>
+        <input class='formInput' disabled='{{deviceCode}}' bindinput="formInput" maxlength='12' placeholder='请输入12位设备号' value='{{num}}' type='number'></input>
+      </view>
+      <image bindtap='code' class='scan' src='{{imgUrl}}/111.png'></image>
+    </view>
+    <view class='formItem inp'>
+      <text class='formLabel'>{{company==null?"选择车辆管家":"车辆管家"}}</text>
+      <view class='box'>
+        <view wx:if="{{deviceCode==''}}" class='formtext {{shopInfo=="专属管家店铺"?"color":""}}' bindtap='skipRepairShop'>{{shopInfo=="专属管家店铺"?shopInfo:shopInfo.company}}</view>
+        <view wx:if="{{deviceCode}}" class='formtext' bindtap="mapBlock">{{company==null?"您没有选择管家店铺":company}}</view>
+      </view>
+      <image wx:if="{{deviceCode}}" bindtap="mapBlock" class='scan' src='{{imgUrl}}/map.png'></image>
+      <image wx:else class='scan' src='{{imgUrl}}/arrow.png'></image>
+    </view>
+    <view class='bysever'>
+      <view class='formItem inp'>
+        <text class='formLabel'>初始里程</text>
+        <view class='box'>
+          <input class='formInput' disabled='{{deviceCode}}' bindinput="formInput2" maxlength='10' placeholder='请输入初始里程' value='{{fristM}}' type='number'></input>
+        </view>
+        <text style='line-height: 68rpx; color:RGBA(115, 115, 125, 1)'>km</text>
+      </view> 
+      <view  style='margin-top:50rpx;color:red;' class='fc' >
+         务请据实填写初始里程，以免影响服务权益。
+      </view> 
+    </view>
+    <view class='formItem'>
+      <button class='formBtn' disabled='{{disabled}}' wx:if="{{deviceCode == ''}}" bindtap='bindCode'>绑定激活</button>
+      <button class='formBtn' bindtap="changeDevice" wx:if="{{deviceCode!=''}}">更换设备</button>
+      <button class='formBtn' style=' margin-top: 30rpx;' bindtap="changeDet" wx:if="{{deviceCode!=''}}">更换车辆管家</button>
+    </view>
+  </view>
+</view>

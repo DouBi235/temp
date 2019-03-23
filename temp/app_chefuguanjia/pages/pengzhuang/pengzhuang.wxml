@@ -1,0 +1,19 @@
+<!--pages/faultWarning/faultWarning.wxml-->
+<view class='faultWarningPage'>
+  <view class='listBox'>
+    <view class='listItem' wx:for='{{warnTip.Rows}}' wx:key>
+      <view class='tipTextBox'>
+        <text class='tipText'>{{item._alarmdescription}}</text>
+      </view>
+      <view class='tipRefer'>
+        <text class='referText'>{{item.refer}}</text>
+      </view>
+      <view class='tipTime'>
+        <text class='timeText'>{{item._indate}}</text>
+      </view>
+      <view class='ignoreBar'>
+        <view class='ignoreBtn' bindtap='ignoreBtn' data-id='{{item._flag}}'>忽略</view>
+      </view>
+    </view>
+  </view>  
+</view>

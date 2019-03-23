@@ -1,0 +1,52 @@
+<!--pages/chooseWxc/chooseWxc.wxml-->
+<!-- storeTypeWraper start -->
+<view class="storeTypeWraper">
+  <view class="storeItem" style="color:{{isSelect=='bby'?'#1E2328':normal}}" data-type='1' bindtap="handleSwitch">
+    邦保养加盟店
+    <view class="storeLine" wx:if="{{isSelect=='bby'}}"></view>
+  </view>
+  <view class="storeItem" style="color:{{isSelect=='fwd'?'#1E2328':normal}}" data-type='2' bindtap="handleSwitch">
+    车管家服务店
+    <view class="storeLine" wx:if="{{isSelect=='fwd'}}"></view>
+  </view>
+</view>
+<!-- storeTypeWraper end -->
+
+<!-- theGarage start -->
+<view class='theGarageWra' wx:for="{{wxcList}}" wx:key='' style="margin-bottom:20rpx;">
+  <view class="theGarage" data-sid="{{item.id}}" data-item="{{item}}" bindtap='handleWxcDetails'                hover-class='focusTheGarage'>
+    <image src="{{item.photo[0]}}"></image>
+    <view class="grgageInfo">
+      <view class="garageTitle">
+        {{item.company}}
+      </view>
+      <view class="garageDesc">
+        {{item.about}}
+      </view>
+      <view class='chooseWraper'>
+        <view class="chooseLine"></view>
+        <view class="icon">
+          <image src="../images/weixiu.png"></image>
+          <text>{{item.service_num}}次</text>
+        </view>
+        <view class="icon">
+          <image src="../images/weizhi.png"></image> 
+          <text>{{item.distance}}km</text>     
+        </view>
+        <view class="icon" style="margin-right:150rpx;">      
+          <image src="../images/guanzhu.png"></image>
+          <text>{{item.careness}}</text>
+        </view>
+        <view class="choose" data-id="{{item}}" catchtap="handleChoose">选择</view>
+      </view>           
+    </view>
+  </view>
+  <view class="prefe" wx:if="{{item.action.length}}"> 
+    <view class="chooseLine"></view> 
+    <view wx:for="{{item.action}}" wx:key=''>
+      <image src="../images/huodong.png"></image>
+      <text>{{item.content}}赠{{item.gift}}</text>
+    </view>  
+  </view> 
+</view>
+<!-- theGarage end -->

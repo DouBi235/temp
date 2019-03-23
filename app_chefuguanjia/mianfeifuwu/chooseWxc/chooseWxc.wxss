@@ -1,0 +1,133 @@
+/* pages/chooseWxc/chooseWxc.wxss */
+page {
+  background-color:#F5F5FA;
+  font-size:28rpx;
+  color:#1E2328;
+}
+page>view {
+  background-color:white;
+}
+/* storeTypeWraper 样式代码 */
+.storeTypeWraper {
+  height:88rpx;
+  display:flex;
+  justify-content: space-between;
+  margin-bottom:20rpx;
+}
+.storeTypeWraper>view {
+  width:50%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding:0 64rpx;
+  box-sizing:border-box;
+  color:#73737D;
+  position:relative;
+}
+
+.storeTypeWraper .storeLine {
+  position:absolute;
+  width:240rpx;
+  height:6rpx;
+  background:rgba(30,160,255,1);
+  right:0;left:0;
+  margin:0 auto;
+  bottom:0;
+}
+
+/* theGarage  样式代码 */
+.theGarage {
+  height:300rpx;
+  padding:30rpx 20rpx;
+  box-sizing:border-box;
+  display:flex;
+  flex-wrap:wrap;
+  align-content:flex-end;
+  position:relative;
+}
+.focusTheGarage {
+  background-color:#eee;
+}
+.theGarage>image {
+  width:160rpx;height:160rpx;
+  margin-right:20rpx;
+}
+.theGarage>.grgageInfo {
+  flex:1;
+}
+.theGarage>.grgageInfo .garageTitle {
+  font-size:32rpx;
+}
+.theGarage>.grgageInfo .garageDesc {
+  height:110rpx;
+  font-size:24rpx;
+  font-family:PingFangSC-Regular;
+  color:rgba(115,115,125,1);
+  line-height:40rpx;
+  margin:12rpx 0 28rpx 0;
+}
+
+.theGarage .chooseWraper {
+  width:100%;
+  height:80rpx;
+  position:absolute;
+  bottom:0;
+  left:0;
+  padding:0rpx 26rpx 0 24rpx;
+  box-sizing:border-box;
+  display:flex;
+  align-items:center;
+}
+
+.theGarage .chooseWraper>.chooseLine ,
+.prefe>.chooseLine{
+  width:730rpx;
+  height:1px;
+  background:rgba(230,230,235,1);
+  position:absolute;
+  top:0;right:0;
+}
+.theGarage .chooseWraper .icon {
+  float:left;
+  margin-right:76rpx;
+}
+.theGarage .chooseWraper .icon image {
+  width:32rpx;height:32rpx;
+  vertical-align:middle;
+  margin-right:8rpx;
+}
+.theGarage .chooseWraper .icon text {
+  font-size:20rpx;
+  font-family:PingFangSC-Regular;
+  color:rgba(115,115,125,1);
+  line-height:28rpx;
+}
+.theGarage .chooseWraper .choose {
+  width:160rpx;
+  height:62rpx;
+  background:rgba(30,160,255,1);
+  font-size:28rpx;
+  font-family:PingFangSC-Regular;
+  color:rgba(255,255,255,1);
+  line-height:62rpx;
+  text-align:center;
+}
+.prefe {
+  position:relative;
+  width:100%;
+  padding:20rpx 20rpx;
+  box-sizing:border-box;
+}
+.prefe image {
+  width:24rpx;height:24rpx;
+  vertical-align: middle;
+  margin-right:20rpx;
+}
+.prefe text {
+  height:28rpx;
+  font-size:20rpx;
+  font-family:PingFangSC-Regular;
+  color:rgba(150,155,165,1);
+  line-height:28rpx;
+  vertical-align: middle;
+}

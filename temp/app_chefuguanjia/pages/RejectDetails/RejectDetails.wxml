@@ -1,0 +1,8 @@
+<!--pages/RejectDetails/RejectDetails.wxml-->
+<view class='container'>
+   <view class='Reject_Reason'>{{RejectList.reason}}</view>
+   <view class='company'>
+      <view>{{RejectList.audit_person}}</view>
+      <view>{{RejectList.audit_time}}</view> 
+   </view>
+</view>

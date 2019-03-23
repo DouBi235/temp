@@ -1,0 +1,115 @@
+<view class="container">
+<movable-area class='shopImg '>
+<movable-view style='height:650rpx;width:120%;' direction="all">
+  <image src="{{shopInfo.photo[0]}}"></image>
+  </movable-view>
+  </movable-area>
+<!-- <movable-area class="shopImg"" > -->
+  <!-- <movable-view direction="all">
+      <image src="{{shopInfo.photo[0]}}"></image>
+  </movable-view> -->
+   <!-- </movable-area> -->
+  <!-- 修理厂信息 -->
+  <view class="info">
+    <text class="fz-32 bdb">{{shopInfo.company}}</text>
+    <view class="cft bdb">
+      <view class="info-box ft-l">
+        <image style="width:22rpx;height:26rpx;margin:0 30rpx 0 6rpx;" src="{{imgUrl}}/Mobile_phone.png"></image>
+        <text class="fz-30 cr-666">{{shopInfo.serphone}}</text>
+      </view>
+      <image bindtap="about" class="ft-r" style="width:40rpx;height:40rpx;margin-top:6rpx;" src="{{imgUrl}}/Telephone.png"></image>
+    </view>
+    <view class="cft">
+      <view class="info-box ft-l">
+        <image style="width:22rpx;height:26rpx;margin-right:26rpx;margin-left:2rpx;" src="{{imgUrl}}/coordinate.png"></image>
+        <text class="fz-30 cr-666">{{shopInfo.address}}</text>
+      </view>
+      <image bindtap="mapBlock" class="ft-r" style="width:40rpx;height:40rpx;margin-top:6rpx;" src="{{imgUrl}}/position.png"></image>
+    </view>
+  </view>
+  <!-- 维修师 -->
+  <view class="workman">
+    <view class="workman-title fz-32 cr-333">店铺介绍</view>
+    <view class="shop-info">{{shopInfo.about}}</view>
+  </view>
+  <view class="cm-title cft">
+    <view class="ft-l"></view>店铺技师
+    <text style="font-weight:500" class="fz-24 cr-999">({{workerNum}}人)</text>
+  </view>
+  <scroll-view scroll-x wx:if="{{workerArr.length!=0}}">
+    <block wx:for="{{workerArr}}" wx:key="{{workerArr[index]}}">
+      <view> 
+        <image class="worker-hd" src="{{imgUrl}}/no_head.png"></image>
+        <view class="fz-28 workder-hd-item cr-333">{{item.name}}</view>
+        <view class="fz-26 workder-hd-item cr-666">{{item.server}}</view>
+        <view class="fz-26 workder-hd-item cr-666">年从业</view>
+      </view>
+    </block>
+  </scroll-view>
+  <!-- <view class="cm-title cft">
+    <view class="ft-l"></view>店铺活动
+  </view>
+  <view class="lang-line"></view>
+  <view class="sport">
+    <image src="{{imgUrl}}/cbby-0003.png"></image>
+    <view class="cft fz-28" style="padding-top:10rpx">
+      <text class="ft-l cr-333">邦保养</text>
+      <text class="ft-r cr-39ABFF">¥30.00</text>
+    </view>
+    <view class="cft fz-22 cr-999">
+      <text class="ft-l">已售30</text>
+      <text style="text-decoration:line-through" class="ft-r">¥30.00</text>
+    </view>
+    <text>></text>
+  </view> -->
+  <view class="cm-title cft evaluate">
+    <view class="ft-l"></view>
+    <text>车主评价</text>
+    <view>{{evaluate}}</view>
+  </view>
+  <view class="lang-line"></view>
+  <view class="score cft">
+    <view class="ft-l fz-36 tx-cn">
+      <view class="cr-fb9620">{{score.score}}分</view>
+      <view class="cr-999 fz-32">总体点评</view>
+    </view>
+    <view class="ft-r fz-24">
+      <view>
+        <text class="cr-666">服务态度</text>
+        <image src="{{score.shop_star>0? crStar:star}}"></image>
+        <image src="{{score.shop_star>1? crStar:star}}"></image>
+        <image src="{{score.shop_star>2? crStar:star}}"></image>
+        <image src="{{score.shop_star>3? crStar:star}}"></image>
+        <image src="{{score.shop_star>4? crStar:star}}"></image>
+        <text class="cr-fb9620" style="margin-left:20rpx">{{score.shop_star}}分</text>
+      </view>
+      <view>
+        <text class="cr-666">维修效率</text>
+        <image src="{{score.tn_star>0? crStar:star}}"></image>
+        <image src="{{score.tn_star>1? crStar:star}}"></image>
+        <image src="{{score.tn_star>2? crStar:star}}"></image>
+        <image src="{{score.tn_star>3? crStar:star}}"></image>
+        <image src="{{score.tn_star>4? crStar:star}}"></image>
+        <text class="cr-fb9620" style="margin-left:20rpx">{{score.tn_star}}分</text>
+      </view>
+    </view>
+  </view>
+  <block wx:for="{{cmtArr}}" wx:key="{{cmtArr[index]}}">
+    <view class="lang-line"></view>
+    <view class="talk cft">
+      <image src="{{item.head_pic}}"></image>
+      <view class="fz-30 cr-333">{{item.phone}}</view>
+      <view>
+        <image src="{{item.shop_star>0? crStar:star}}"></image>
+        <image src="{{item.shop_star>1? crStar:star}}"></image>
+        <image src="{{item.shop_star>2? crStar:star}}"></image>
+        <image src="{{item.shop_star>3? crStar:star}}"></image>
+        <image src="{{item.shop_star>4? crStar:star}}"></image>
+      </view>
+      <view class="fz-24 cr-666">{{item.content}}</view>
+      <view style="height:30rpx;line-height:30rpx;" class="fz-22 cr-999 cft">
+        <text class="ft-r">{{item.create_time}}</text>
+      </view>
+    </view>
+  </block>
+</view>

@@ -135,8 +135,13 @@ Page({
       url: '../message/message',
     })
   },
-  skipMy: function() { //判断用户有没有车辆,如果有车辆信息,自动完善信息,没有手动完善信息 
+  myBooking() {
     wx.navigateTo({
+      url: '/mianfeifuwu/order/order',
+    })
+  },
+  skipMy: function() { //判断用户有没有车辆,如果有车辆信息,自动完善信息,没有手动完善信息 
+    wx.navigateTo({           
       url: '../Mypersonal/Mypersonal',
     })
   },

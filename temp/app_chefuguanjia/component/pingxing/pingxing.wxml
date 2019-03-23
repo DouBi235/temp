@@ -1,0 +1,9 @@
+<!--pages/pingxing.wxml-->
+<view class='dfrowsa'>
+  <block wx:for="{{liang}}" wx:key="index">
+    <image class='star' bindtap='qian' id='{{index}}' src='../../images/liangx.png'></image>
+  </block>
+  <block wx:for="{{5 - liang}}" wx:key="index">
+    <image class='star' bindtap='hou' id='{{index}}' src='../../images/anxin.png'></image>
+  </block>
+</view>

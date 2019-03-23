@@ -1,0 +1,318 @@
+page{
+  height: 100%;
+}
+.container{
+  height: 100%;
+  width: 100%;
+  background: RGBA(245, 245, 250, 1);
+}
+.title{
+  width: 100%;
+  height: 220rpx;
+  position: relative; 
+}
+.title image{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+ 
+}
+.company{
+  
+   left: 0;
+   right: 0;
+   margin: auto;
+  /* background: red; */
+  height: 100%;
+  padding: 30rpx;
+  position: absolute
+}
+.companyNmae{
+  text-align: center;
+  font-size: 40rpx;
+  font-weight: bold;
+  letter-spacing: 2rpx;
+  color: white;
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.date{
+  width: 100%;
+  color: white;
+  font-size: 30rpx;
+  text-align: center;
+  font-weight: 500;
+}
+.mfdetail{
+  width: 100%;
+  height: 220rpx;
+  position: relative;
+  background: RGBA(245, 245, 250, 1);
+}
+.money{
+  width: 90%;
+  height: 220rpx;
+  background: white;
+  position: absolute;
+  border-radius:10rpx; 
+  left: 0;
+  right: 0;
+  padding: 30rpx;
+  margin: auto;
+  top: -30rpx;
+  box-shadow: 0rpx 2rpx 5rpx 5rpx RGBA(0, 0, 0, 0.03);
+}
+.icon{
+  width: 60rpx;
+  height: 60rpx;
+  /* background: orange; */
+  margin: auto;
+}
+.icon image{
+  width: 100%;
+  height: 100%;
+}
+.left{
+  width: 50%;
+  height: 100%;
+  border-right:1rpx solid RGBA(200, 200, 210, 1); 
+  float: left;
+  /* background: red; */
+}
+.txt{
+  width: 100%;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 30rpx;
+  text-align: center;
+}
+.moneyNum{
+  width: 100%;
+  text-align: center;
+  color: RGBA(30, 160, 255, 1);
+  font-weight: bold;
+  font-size: 40rpx;
+}
+.right{
+   width: 50%;
+  height: 100%;
+  float:right;
+}
+.items{
+  width: 100%;
+  height: 150rpx;
+  background: white;
+  padding: 20rpx 30rpx;
+  border-bottom:1rpx solid  RGBA(230, 230, 235, 1);
+  border-bottom-style:dashed;
+
+}
+.box{
+  width: 200rpx;
+  height: 100%;
+  float: left;
+  /* background: black; */
+}
+.itemsDate{
+  height: 50%;
+  width: 100%;
+  color: RGBA(30, 35, 40, 1);
+  font-size: 30rpx;
+  font-weight: 500;
+  text-align: left;
+}
+.mileage{
+  height: 50%;
+  width: 100%;
+  color: RGBA(115, 115, 125, 1);
+  line-height: 50rpx;
+  font-size: 25rpx;
+  text-align: left;
+}
+.box-r{
+  width: 400rpx;
+  height: 100%;
+  line-height: 100rpx;
+  text-align: right;
+  /* background: red; */
+  float: right;
+  /* font-size: 25rpx; */
+  color: RGBA(115, 115, 125, 1);
+}
+.box-r text{
+  font-size: 50rpx;
+  font-weight: bold;
+  margin-right:10rpx; 
+  color: RGBA(30, 160, 255, 1);
+}
+.pop-up{
+  width: 400rpx;
+  height: 500rpx;
+  /* background: red; */
+  margin:100rpx auto;
+}
+.img{
+  width: 400rpx;
+  height: 400rpx;
+  /* background: orange; */
+  margin: auto;
+}
+.img image{
+  width: 100%;
+  height: 100%;
+}
+.pop-txt{
+  width: 100%;
+  color: RGBA(115, 115, 125, 1);
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+}
+.remind{
+  height: 50rpx;
+  width: 100%;
+  background: RGBA(245, 245, 250, 1);
+  color: red;
+  text-align: center;
+  font-size: 30rpx;
+  line-height: 30rpx;
+}
+
+.none{
+  width: 90%;
+  height: 500rpx;
+  background: white;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: -30rpx auto 0 auto;
+  border-radius: 10rpx;
+  padding: 50rpx;
+}
+.biaoqian{
+  width: 100rpx;
+  height: 100rpx;
+  margin: auto;
+}
+.biaoqian image{
+  width: 100%;
+  height: 100%;
+}
+.za{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: RGBA(115, 115, 125, 1);
+  text-align: center;
+  font-size: 30rpx;
+}
+.zb{
+  width: 100%;
+  height: 100rpx;
+  line-height:60rpx;
+  color:RGBA(30, 160, 255, 1);
+  text-align: center;
+  font-size:40rpx; 
+  font-weight: 600;
+  letter-spacing: 2rpx;
+}
+.btn{
+  background: RGBA(30, 160, 255, 1);
+  color: white;
+  margin-top:20rpx; 
+  height: 100rpx;
+  line-height: 100rpx;
+  width: 100%;
+  border-radius: 0;
+}
+.Car{
+  width: 100%;
+  height: 540rpx;
+  background: RGBA(245, 245, 250, 1);
+  padding: 20rpx;
+}
+
+.Audit{
+   text-align: center;
+   color: #73737D;
+   margin-top: 40rpx;
+   font-size: 28rpx;
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   margin-left: -180rpx;
+   margin-top: -180rpx;
+}
+.Audit text{
+  color: #FF5F5F;
+  text-decoration: underline;
+}
+.Audit>image{
+  width: 360rpx;
+  height: 340rpx;
+}
+.Audit button::after{
+  display: none
+}
+.Audit button{
+  background-color: #1EA0FF;
+  border-radius: 0;
+  color: #fff;
+ 
+  margin-top: 50rpx;
+}
+
+.Refund_state{
+  text-align: center;
+  font-size: 24rpx;
+  margin-bottom: 26rpx;
+}
+.maintain{
+  color: #FF5F5F
+}
+
+
+/* 调整后的列表 */
+.detail1 {
+    width: 100%;
+    height: 160rpx;
+    background: white;
+    border-bottom: 1rpx dashed RGBA(230, 230, 235, 1);
+    padding: 10rpx 20rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.km1 {
+    font-size: 36rpx;
+    font-family: Arial-BoldMT;
+    font-weight: 600;
+    color: #1e2328;
+    line-height: 42rpx;
+}
+
+.date1 {
+    font-size: 20rpx;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: rgba(115, 115, 125, 1);
+    line-height: 28rpx;
+}
+
+.status0 {
+    font-size: 28rpx;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: rgba(255, 95, 95, 1);
+    line-height: 40rpx;
+}
+
+
+
+
+
+
+
+.kongBox{height: 740rpx;display: flex;flex-direction: column;justify-content: center;align-items: center;padding-bottom: 50rpx;background: #fff;}
+.wufap{font-size:28rpx;width:300rpx;text-align: center;font-weight:400;color:rgba(115,115,125,1);line-height:40rpx;margin-top: 20rpx;}

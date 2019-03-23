@@ -1,0 +1,22 @@
+<!--pages/sharee/sharee.wxml-->
+<view class='shareePage'>
+    <image class='bgImg' mode='widthFix' src='{{imgUrl}}/shareBg.png'></image>
+    <view class='selectOptBox'>
+        <text class='optText'>选择要分享的项目</text>
+        <view class='selectOpt'>
+            <view class='optItem' bindtap='onShare' data-url='leaflet'>
+                <image src='{{imgUrl}}/shareOpt2.png'></image>
+                <text class='tui1'>推广UBI车服</text>
+                <text class='tui2'>推广成功获{{zhimoney}}元</text>
+                <text class='tui2'>推荐奖励</text>
+            </view>
+            <view class='columnLine'></view>
+            <view class='optItem' bindtap='onShare' data-url='leafletB'>
+                <image src='{{imgUrl}}/shareOpt1.png'></image>
+                <text class='tui1'>推广邦保养</text>
+                <text class='tui2'>推广成功获{{bangmoney}}</text>
+                <text class='tui2'>推荐奖励</text>
+            </view>
+        </view>
+    </view>
+</view>

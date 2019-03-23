@@ -1,0 +1,173 @@
+.container{
+  width: 100%;
+  padding:20rpx 30rpx 0 30rpx;
+}
+.txt{
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 32rpx;
+  color: RGBA(30, 35, 40, 1);
+
+}
+.total{
+  color: #1EA0FF !important;
+}
+.box{
+  width: 100%;
+  height: auto;
+  display: flex;
+  border: 1rpx solid RGBA(230, 230, 235, 1);
+ 
+}
+.box{
+  margin-top: 20rpx;
+}
+.box>view{
+  flex: 1;
+  color: #73737D;
+  font-size: 24rpx;
+  text-align: center;
+}
+.box>view>view{
+  border-bottom: 1rpx solid RGBA(230, 230, 235, 1);
+  line-height: 34rpx;
+  padding: 10rpx 0;
+}
+.box>view>view:last-child{
+  border:none
+}
+.box>view:first-child{
+  border-right: 1rpx solid RGBA(230, 230, 235, 1)
+}
+.box .title{
+  color: #1E2328 !important;
+  font-weight:400;
+
+}
+.left{
+  width: 50%;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-left: 1rpx solid RGBA(230, 230, 235, 1);
+  border-right: 1rpx solid RGBA(230, 230, 235, 1);
+  border-bottom:1rpx solid RGBA(230, 230, 235, 1);
+  float: left;
+  text-align: center;
+  font-size: 30rpx;
+  color: RGBA(115, 115, 125, 1);
+}
+.right{
+  width: 50%;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  border-right:1rpx solid RGBA(230, 230, 235, 1);
+  border-bottom:1rpx solid RGBA(230, 230, 235, 1);
+  float: left;
+  text-align: center;
+  color: RGBA(115, 115, 125, 1);
+}
+.title{
+  color: RGBA(30, 35, 40, 1);
+}
+.fenge{
+  width: 100%;
+  height: 50rpx;
+}
+.example{
+    width: 100%;
+  border:1rpx solid RGBA(240, 240, 240, 1); 
+  padding: 40rpx 36rpx;
+  position: relative;
+
+}
+.example .text{
+    font-size: 20rpx;
+    color: #73737D;
+    
+}
+.example .text>view{
+  height: 60rpx !important;
+  line-height: 60rpx;
+  text-align: center;
+}
+.fcz{
+  width: 150rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  color: RGBA(115, 115, 125, 1);
+  font-size: 25rpx;
+  position: absolute;
+  top: -15rpx;
+text-align: center;
+  background: white;
+  letter-spacing: 1rpx; 
+}
+/* upImg1{
+  width: 150rpx;
+  height: 200rpx;
+} */
+.imgBox{
+  width: 150rpx;
+  height: 200rpx;
+  float: left;
+  
+}
+.img{
+  width: 150rpx;
+  height: 150rpx;
+  color:RGBA(200, 200, 210, 1);
+  text-align: center;
+  line-height: 130rpx;
+  border: 1rpx dashed RGBA(150, 155, 165, 1);
+}
+.img text{
+  color:RGBA(200, 200, 210, 1);
+  
+  font-size: 100rpx;
+}
+.img image{
+  width: 100%;
+  height: 100%;
+}
+.imgTxt{
+  width: 100%;
+  margin-top:30rpx; 
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  color: RGBA(30, 35, 40, 1);
+  /* background: red; */
+  font-size: 30rpx;
+}
+.btn{
+  width: 60%;
+  height: 80rpx;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius:0rpx;
+  background: RGBA(30, 160, 255, 1); 
+  margin: 70rpx;
+}
+.Photo{
+  display: flex;
+  justify-content: space-between
+}
+.Photo>view{
+  width: 116rpx;
+  height: 116rpx;
+  
+}
+.Photo>view>image{
+  width: 100%;
+  height: 100%;
+}
+.Submission{
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center
+}

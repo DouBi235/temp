@@ -1,0 +1,174 @@
+<!--pages/projectDetail/projectDetail.wxml-->
+<wxs src='../order/filter.wxs' module='methods'></wxs> 
+<view class="swiper"> 
+  <image src="{{productInfo.pic}}"></image>
+</view>
+<view class="projectTitle">   <!-- projectTitle  开始-->
+  {{productInfo.name}}
+</view>   <!-- projectTitle  结束-->
+<!-- 立即预约 -->
+<view wx:if="{{productInfo.status==2}}">
+  <view class="cycle">    <!--cycle  开始-->
+    <view class="cycleLeft">
+      <view class="cycleLText">更</view>
+      <view class="cycleLine"></view>
+      <view class="cycleLText">换</view>
+      <view class="cycleLine"></view>
+      <view class="cycleLText">周</view>
+      <view class="cycleLine"></view>
+      <view class="cycleLText">期</view>
+    </view>
+    <view class="cycleCenter">:</view>
+    <view class="cycleRight">
+      <view class="cycleRNum">{{productInfo.KM[0]}}</view>
+      <view class="cycleRLine"></view>
+      <view class="cycleRNum">{{productInfo.KM[1]}}</view>
+      <view class="cycleRLine"></view>
+      <view class="cycleRNum">{{productInfo.KM[2]}}</view>
+      <view class="cycleRLine"></view>
+      <view class="cycleRNum">{{productInfo.KM[3]}}</view>
+      <view class="cycleRLine"></view>
+      <view class="cycleRNum">{{productInfo.KM[4]}}</view>
+      <view class="cycleRLine"></view>
+      <view class="cycleRNum">{{productInfo.KM[5]}}</view>
+      <view class="cycleRLine" style="margin-right:10rpx;"></view>
+      <view class="cycleRNum lastText">KM</view>
+    </view>  
+  </view>   <!--cycle  结束-->
+
+  <view class="click">    <!--click  开始-->
+    已到服务期，点击立即预约享受服务  
+  </view>   <!--click  结束-->
+</view>
+
+<!-- 未到服务期 -->
+<view class="noGre" wx:if="{{productInfo.status==3}}">
+  <view class="cycle">    <!--cycle  开始-->
+    <view class="cycleLeft">
+      <view class="cycleLText">更</view>
+      <view class="cycleLine"></view>
+      <view class="cycleLText">换</view>
+      <view class="cycleLine"></view>
+      <view class="cycleLText">周</view>
+      <view class="cycleLine"></view>
+      <view class="cycleLText">期</view>
+    </view>
+    <view class="cycleCenter">:</view>
+    <view class="cycleRight">
+      <view class="cycleRNum">{{productInfo.KM[0]}}</view>
+      <view class="cycleRLine"></view>
+      <view class="cycleRNum">{{productInfo.KM[1]}}</view>
+      <view class="cycleRLine"></view>
+      <view class="cycleRNum">{{productInfo.KM[2]}}</view>
+      <view class="cycleRLine"></view>
+      <view class="cycleRNum">{{productInfo.KM[3]}}</view>
+      <view class="cycleRLine"></view>
+      <view class="cycleRNum">{{productInfo.KM[4]}}</view>
+      <view class="cycleRLine"></view>
+      <view class="cycleRNum">{{productInfo.KM[5]}}</view>
+      <view class="cycleRLine" style="margin-right:10rpx;"></view>
+      <view class="cycleRNum lastText">KM</view>
+    </view>  
+  </view>   <!--cycle  结束-->
+
+  <view class="click">    <!--click  开始-->
+    到更换周期后，可享折扣价购买服务  
+  </view>   <!--click  结束-->
+</view>
+
+<!-- 未购买 -->
+<view class="noBuy" wx:if="{{productInfo.status==4}}">
+  <view class="cycle" style="background-color:rgba(95,115,130,1)">    <!--cycle  开始-->
+    <view class="cycleLeft">
+      <view class="cycleLText">更</view>
+      <view class="cycleLine"></view>
+      <view class="cycleLText">换</view>
+      <view class="cycleLine"></view>
+      <view class="cycleLText">周</view>
+      <view class="cycleLine"></view>
+      <view class="cycleLText">期</view>
+    </view>
+    <view class="cycleCenter" style="color:rgba(75,90,105,1);">:</view>
+    <view class="cycleRight">
+      <view class="cycleRNum">{{productInfo.KM[0]}}</view>
+      <view class="cycleRLine"></view>
+      <view class="cycleRNum">{{productInfo.KM[1]}}</view>
+      <view class="cycleRLine"></view>
+      <view class="cycleRNum">{{productInfo.KM[2]}}</view>
+      <view class="cycleRLine"></view>
+      <view class="cycleRNum">{{productInfo.KM[3]}}</view>
+      <view class="cycleRLine"></view>
+      <view class="cycleRNum">{{productInfo.KM[4]}}</view>
+      <view class="cycleRLine"></view>
+      <view class="cycleRNum">{{productInfo.KM[5]}}</view>
+      <view class="cycleRLine" style="margin-right:10rpx;"></view>
+      <view class="cycleRNum lastText">KM</view>
+    </view>  
+  </view>   <!--cycle  结束-->
+
+  <view class="click">    <!--click  开始-->
+    购买邦保盒子，享折扣价购买服务>
+  </view>   <!--click  结束-->
+</view>
+
+<!-- 已预约 -->
+<view class="make" wx:if="{{productInfo.status==1}}">
+  <view class="cycle">    <!--cycle  开始-->
+    <view class="cycleLeft">
+      <view class="cycleLText">预</view>
+      <view class="cycleLine"></view>
+      <view class="cycleLText">约</view>
+      <view class="cycleLine"></view>
+      <view class="cycleLText">时</view>
+      <view class="cycleLine"></view>
+      <view class="cycleLText">间</view>
+    </view>
+    <view class="cycleCenter">:</view>
+    <view class="cycleRight">
+      <view class="maTimeLine"></view>
+      <view class="maTimeItem bl">{{methods.filterDate(productInfo.reservation_time,0,4)}}</view>
+      <view class="maTimeLine"></view>
+      <view class="maTimeItem siH">年</view>
+      <view class="maTimeLine"></view>
+      <view class="maTimeItem bl">{{methods.filterDate(productInfo.reservation_time,5,7)}}</view>
+      <view class="maTimeLine"></view>
+      <view class="maTimeItem siH">月</view>
+      <view class="maTimeLine"></view>
+      <view class="maTimeItem bl">{{methods.filterDate(productInfo.reservation_time,8,10)}}</view>
+      <view class="maTimeLine"></view>
+      <view class="maTimeItem siH">日</view>
+      <view class="maTimeLine"></view>
+    </view>  
+  </view>   <!--cycle  结束-->
+
+  <view class="click">    <!--click  开始-->
+    您已预约服务，请按时间准时到店服务  
+  </view>   <!--click  结束-->
+</view>
+<view class="factory" wx:if="{{productInfo.status==1}}">    <!--factory  开始-->
+  <view class="factoryName">
+    {{productInfo.comapny}}
+  </view>  
+  <image src="../images/weizhi.png"></image>
+  <text>{{productInfo.distance}}km</text>
+  <view class='factoryLine'></view>
+</view>   <!--factory  结束-->
+
+<view class="specificPosition" wx:if="{{productInfo.status==1}}">   <!--specificPosition 开始-->
+  <image src="../images/weizhi3.png"></image>
+  <text>{{productInfo.address}}</text>
+  <text class="speRight">></text>
+</view>   <!--specificPosition 结束-->
+<view class="projectDesc">
+  <view class="projectDescLeft" style="color:{{isSelect=='params'?'rgba(115,115,125,1)':normal}}" bindtap='handleproductClick' data-id="pro">产品描述</view>
+  <view class="projectDescLine"></view>
+  <view class="projectDescRight" style="color:{{isSelect=='pro'?'rgba(115,115,125,1)':normal}};" bindtap='handleproductClick' data-id="params">规格参数</view>
+</view>
+
+<view class="desc">
+  {{isSelect=='pro'?productInfo.detail:productInfo.fixed_value + productInfo.standard}}
+</view>
+
+<view class="appointmentWra">
+  <button style="background-color:{{btnColor}}" bindtap="mapSubmit">{{btnText}}</button>
+</view>

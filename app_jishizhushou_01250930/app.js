@@ -21,7 +21,6 @@ App({
           console.log(updateManager)
           updateManager.onUpdateReady(function() {
             console.log("新版本下载成功点击更新")
-
             // 显示弹窗
             wx.showModal({
               content: '新版本下载成功点击更新',

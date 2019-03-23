@@ -1,0 +1,11 @@
+/* pages/faultWarning/faultWarning.wxss */
+.faultWarningPage{min-height: 100vh;background-color: #F5F5F5;width: 750rpx;}
+.listBox{padding-bottom: 200rpx;}
+  .listItem{background-color: #fff;padding: 35rpx 30rpx 15rpx;margin-bottom: 20rpx;}
+    .tipTextBox{width: 100%;}
+      .tipText{color: #1E2328;font-size: 28rpx;font-weight: 700;}
+      .referText{color: #1E2328;font-size: 24rpx;}
+    .tipTime{}
+      .timeText{color: #73737D; font-size: 24rpx;}
+    .ignoreBar{width: 100%;display: flex;justify-content: flex-end;align-items: center;}
+      .ignoreBtn{color: #73737D;font-size: 24rpx;padding: 5rpx 10rpx;cursor: pointer;}

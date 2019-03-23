@@ -1,0 +1,85 @@
+<!--pages/spread/spread.wxml-->
+<import src="../template/spreadList/spreadList.wxml" />
+<view>
+  <!-- <button bindtap="getRole">角色变换</button> -->
+  <!-- start header -->
+
+  <!-- 奖励模块 -->
+  <view class="price-model">
+    <!-- 资金模块加载中 -->
+    <button wx:if="{{ priceLoading }}" class="spread-loading" loading></button>
+    <view class="price-block">
+      <view class="price-item">
+        <view class="price-item_inner {{ role === 'idenCommon' ? 'br1' : '' }}">
+          <view class="price-desc pb">累计收入</view>
+          <view class="price-money">
+            <!-- {{ reward.driect_award }} -->
+            {{yueee.income}}
+          </view>
+        </view>
+        <view class="price-item_inner">
+          <view class="price-desc pb">可提现</view>
+          <view class="price-money {{ role === 'idenCommon' ? 'pb' : '' }}">
+            <!-- {{ reward.indirect_award }} -->
+            {{yueee.balance}}
+          </view>
+        </view>
+      </view>
+      <view class='tttx' bindtap='cashBtn' wx:if="{{yueee.balance!=0}}">
+        点击提现
+      </view>
+      <view class='tttx' style='opacity: 0.5' wx:else>
+        无提现金额
+      </view>
+    </view>
+  </view>
+ 
+  <view>
+    <view class="person-filter-wrap">
+      <view class="tab-header" id="tabfixed">
+        <view class="tab-item {{ currentTab === 0 ? 'tab-active' : '' }}" data-current="0" bindtap="swichNav">
+          车主
+        </view>
+        <view class="tab-item {{ currentTab === 1 ? 'tab-active' : '' }}" data-current="1" bindtap="swichNav">
+          维修厂
+        </view>
+        <view class="tab-item {{ currentTab === 2 ? 'tab-active' : '' }}" data-current="2" bindtap="swichNav">
+          运营商
+        </view>
+        <view class="tab-item {{ currentTab === 3 ? 'tab-active' : '' }}" data-current="3" bindtap="swichNav">
+          油站
+        </view>
+        <view class="tab-item {{ currentTab === 4 ? 'tab-active' : '' }}" data-current="4" bindtap="swichNav">
+          U惠多
+        </view>
+      </view>
+
+      <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height: {{ winHeight }}rpx">
+        <!-- 车主 -->
+        <swiper-item>
+          <template is="spreadlist" data="{{ ...chezhuConfig, isScroll }}"></template>
+        </swiper-item>
+
+        <!-- 维修厂 -->
+        <swiper-item>
+          <template is="spreadlist" data="{{ ...weixiuchangConfig, isScroll }}"></template>
+        </swiper-item>
+
+        <!-- 运营商 -->
+        <swiper-item>
+          <template is="spreadlist" data="{{ ...yunyingshangConfig, isScroll }}"></template>
+        </swiper-item>
+
+        <!-- 油站 -->
+        <swiper-item>
+          <template is="spreadlist" data="{{ ...youzhanConfig, isScroll, cash: false, cashLoading: cashLoading, cashMoney: okCashMoney }}"></template>
+        </swiper-item>
+
+        <!-- U惠多 -->
+        <swiper-item>
+          <template is="spreadlist" data="{{ ...uhuiduoConfig, isScroll, cash: false, cashLoading: cashLoading, cashMoney: okCashMoney }}"></template>
+        </swiper-item>
+      </swiper>
+    </view>
+  </view>
+</view>

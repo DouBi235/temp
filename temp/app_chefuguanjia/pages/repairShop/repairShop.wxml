@@ -1,0 +1,60 @@
+<view class='repairShopPage'>
+  <view class='listBox'>
+    <view class='listItem ' wx:for="{{shopList}}" wx:for-item='a' wx:key="property" bindtap='shopDetail' data-sid='{{a.sid}}'>
+      <view class='itemTop'>
+        <image class='shopImg' src='{{a.photo[0]}}'></image>
+        <view class='shopInfo'>
+          <text class='shopName'>{{a.company}}</text>
+          <text class='shopText '>{{a.about}}</text>
+           <view class='itemBottom'>
+        <view class='iconBox'>
+         
+          <view class='iconItem'>
+            <image class='iconImg' src='{{imgUrl}}/weizhi.png'></image>{{a.distance}}km
+          </view>
+          
+        </view>
+        <button class='selectBtn' catchtap='selectSkip' data-info='{{a}}'>选择</button>
+      </view>
+        </view>
+      </view>
+     
+    </view>
+  </view>
+</view>
+
+
+
+
+<!-- <view class='container'>
+  <view class='shop'>
+    <view class='shopDetail'>
+      <view class='shopPhoto'></view>
+      <view class='shopText' bindtap='shopDetail'>
+        <view class='shopName'>指南针汽车修理厂</view>
+        <view class='shopJS'>指南针汽车维修有限公司秉承“诚信、专业”的经营理念,坚持用户至上、质量…</view>
+      </view>
+      <view class='icon'>
+        <view style='float:left;margin-right:5rpx;'>
+          <image src='{{imgUrl}}/banshou.png'></image>
+        </view>
+        200次
+      </view>
+      <view class='icon'>
+        <view style='float:left; margin-right:5rpx;'>
+          <image src='{{imgUrl}}/weizhi.png'></image>
+        </view>
+        2km
+      </view>
+      <view class='icon'>
+        <view style='float:left;margin-right:5rpx;'>
+          <image src='{{imgUrl}}/good.png'></image>
+        </view>
+        500
+      </view>
+      <view class='icon bt'>
+        <button class='btn'>选择</button>
+      </view>
+    </view>
+  </view>
+</view> -->

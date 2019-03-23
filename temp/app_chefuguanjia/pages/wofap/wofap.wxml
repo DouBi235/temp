@@ -1,0 +1,27 @@
+<!--pages/wofap/wofap.wxml-->
+<view class='wofapPage'>
+  <view class='liBox' wx:for="{{fad}}" wx:key wx:if="{{fad.length != 0}}">
+    <view class='perli' style='background-image: url("{{imgUrl}}/fal.png");'>
+      <image class='rt' src='{{item.status == 1? imgUrl + "/faed.png": imgUrl + "/faing.png"}}'></image>
+      <view class='topi'>{{item.title}}</view>
+      <view class='bottomi'>
+        <view class='bar'>
+          <text class='lab'>购买名称：</text>
+          <text class='val'>{{item.name}}</text>
+        </view>
+        <view class='bar'>
+          <text class='lab'>发票金额：</text>
+          <text class='val'>{{item.price}}</text>
+        </view>
+        <view class='bar'>
+          <text class='lab'>开票日期：</text>
+          <text class='val'>{{item.create_time}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='kongBox' wx:if="{{fad.length == 0}}">
+    <image src='{{imgUrl}}/Thereisno.png' style='height: 280rpx;width: 280rpx;'></image>
+    <view class='wufap'>暂无发票记录</view>
+  </view>
+</view>

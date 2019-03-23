@@ -1,0 +1,135 @@
+<!--pages/tmaInfo/tmaInfo.wxml-->
+<view class="projectT">
+  <view class="projectTL">产品</view>
+  <view class="projectTR">></view>
+  <view class="projectTLine"></view>
+</view>
+<!-- projectPhT start -->
+<view class="projectPhT">    
+  <image src="{{tmpInfo.pic}}" class="proPhoto"></image>
+  <view class="proPhotoText">
+    {{tmpInfo.goods_name}}
+  </view>    
+</view>
+<!-- projectPhT end -->
+
+
+<!--规格数量 start  -->
+<!-- <view class="projectT Num carInfo">
+  <view class="projectTL">规格</view>
+  <view class="projectTR">17/寸</view>
+  <view class="projectTLine"></view>
+</view> -->
+
+<view class="projectT Num carInfo">
+  <view class="projectTL">数量</view>
+  <view class="projectTR">{{tmpInfo.fixed_value}}</view>
+  <view class="projectTLine"></view>
+</view>
+<!-- 规格数量  end -->
+
+<!-- store  start -->
+<view class="projectT" style="margin-top:20rpx;" bindtap="handleChooseStore">
+  <view class="projectTL">店铺</view>
+  <view class="projectTR">></view>
+  <view class="projectTLine"></view>
+</view>
+<!-- store  end -->
+
+<!-- storeInfo  start -->
+<view class="storeInfo" wx:if="{{chooseStore}}">
+  <image src="{{chooseStore.photo[0]}}"></image>
+  <view class="storeInfoText">
+    <view class="storeInfoTitle">{{chooseStore.company}}</view>
+    <view class="storeInfoDesc">
+      {{chooseStore.about}}
+    </view>
+    <view class="icons">
+      <view class="iconItem">
+        <image src="../images/weixiu.png"></image>
+        <text>{{chooseStore.service_num}}次</text>
+      </view>
+      <view class="iconItem">
+        <image src="../images/weizhi2.png"></image>
+        <text>{{chooseStore.distance}}km</text>
+      </view>
+      <view class="iconItem">
+        <image src="../images/guanzhu.png"></image>
+        <text>{{chooseStore.careness}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- storeInfo end -->
+
+
+<!-- tmpTime start -->
+<view class="projectT Num" style="margin-bottom:20rpx;">
+  <view class="projectTL">预约时间</view>
+  <view class="projectTR">
+    <picker
+      mode="date"
+      value="{{date}}"
+      start="2015-09-01"
+      bindchange="bindDateChange"
+    >
+      <view class="picker" style="float:left;margin-right:15rpx;font-size:32rpx;color:#FA644B;margin-top:10rpx;">
+        {{date}}
+      </view>
+      <view style="float:left;">></view>
+    </picker>
+    
+    <!-- <text class="tmpTime">请选择预约时间</text>>     -->
+  </view>
+  <view class="projectTLine"></view>
+</view>
+<!-- tmpTime end -->
+
+<!-- carInfo start -->
+<view class="projectT Num carInfo">
+  <view class="projectTL">车牌号</view>
+  <view class="projectTR">{{tmpInfo.plate}}</view>
+  <view class="projectTLine"></view>
+</view>
+<view class="projectT Num carInfo">
+  <view class="projectTL">品牌</view>
+  <view class="projectTR">{{tmpInfo.name}}</view>
+  <view class="projectTLine"></view>
+</view>
+<view class="projectT Num carInfo">
+  <view class="projectTL">车型</view>
+  <view class="projectTR">{{tmpInfo.type}}</view>
+  <view class="projectTLine"></view>
+</view>
+<view class="projectT Num carInfo">
+  <view class="projectTL">排量</view>
+  <view class="projectTR">{{tmpInfo.series}}L</view>
+</view>
+<!-- carInfo end -->
+
+<!-- carPhoto start -->
+<view class="carPhoto">
+  <view wx:if="{{!locCarPhoto}}">
+    <view class="photoWra" bindtap="handleChooseImage">
+      +
+    </view>
+    <view class="helpText"><view>车辆照片</view><view>含牌照</view></view>
+  </view>
+   <image src="{{locCarPhoto}}"></image>
+</view>
+<!-- carPhoto end -->
+
+<!-- tmpTime start -->
+<view class="projectT Num carInfo" style="margin-bottom:20rpx;">
+  <view class="projectTL">VIN 码</view>
+  <view class="projectTR" style="float:right;"><input type="text" placeholder="请输入车辆VIN码" style="width:250rpx;" value="{{tmpInfo.vin}}" disabled='{{tmpInfo.vin}}' bindinput='getVinCode'></input></view>
+  <view class="projectTLine"></view>
+</view>
+<!-- tmpTime end -->
+
+
+<!-- submit start -->
+<view class="submin" bindtap="submitFrom" hover-class='focusSubmin'>
+  提交
+</view>
+<!-- submit end -->

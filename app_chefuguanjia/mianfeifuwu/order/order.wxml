@@ -1,0 +1,84 @@
+<!--pages/order/order.wxml-->
+<!-- yyOrCom  start -->
+<wxs src='./filter.wxs' module='methods'></wxs>
+<view class="yyOrCom marginB">
+  <view class="left" style="border-bottom:{{isSelect=='left'?'solid 4rpx #1EA0FF':normal}};color:{{isSelect=='left'?'#1EA0FF':normal}}" data-type="left" bindtap="handlewcOrW">已预约 <view class="line"></view></view> 
+  <view class="right" style="border-bottom:{{isSelect=='right'?'solid 4rpx #1EA0FF':normal}};color:{{isSelect=='right'?'#1EA0FF':normal}}" data-type="right" bindtap="handlewcOrW">已完成</view>
+</view>
+<!-- yyOrCom end -->
+
+<!-- orderItem start -->
+<view wx:if="{{isSelect == 'left'}}" style="background-color:#F5F5FA;">
+  <view class="orderItem" wx:for="{{orderList}}" wx:key='' data-id="{{item.id}}" bindtap='handleOrderDetail' hover-class='focusOrderItem'>
+
+    <view class="orderItemTime">
+      <view class="num">订单编号：{{item.odd_num}}</view>
+      <view class="orderTime" wx:if='{{item.order_status!=2}}'>预约时间：{{methods.filterDate(item.reservation_time,0,10)}}</view>
+    </view>
+
+    <view class="orderInfoWraper">
+      <image src="{{item.goods_pic}}"></image>
+      <view class="orderTitle">
+        {{item.goods_name}} <view></view> </view>
+      <view class="orderParams">
+      规格：{{item.number}}/{{item.stand}} 
+      <view>提供单位：{{item.sm_name}}</view>   
+      </view>
+    </view>
+    <view class="noConfirm" wx:if="{{item.order_status==0}}">等待维修厂确认中</view>  <!-- 等待中 -->
+
+    <view class="ifConfirmWra" wx:if="{{item.order_status==1}}">  
+      <view class="yesConfirm">
+        <view>订单已确认，请按预约时间前往维修厂</view>
+      </view>
+    </view> 
+
+    <view class='wxcfq' wx:if="{{item.order_status==4}}">
+      <view class="modifyW" data-id="{{item.id}}" catchtap="handleModifywxc">
+        修改预约单
+      </view>       
+    </view>
+
+    <view class="yuTime" wx:if="{{item.order_status==1}}"> 
+      <view class="yuText">预约时间</view>
+      <view class="yuLine"></view>
+      <view class="yuText yg">{{methods.filterDate(item.reservation_time,0,4)}}</view>
+      <view class="yuLine"></view>
+      <view class="yuText">年</view>
+      <view class="yuLine"></view>
+      <view class="yuText yg">{{methods.filterDate(item.reservation_time,5,7)}}</view>
+      <view class="yuLine"></view>
+      <view class="yuText">月</view>
+      <view class="yuLine"></view>
+      <view class="yuText yg">{{methods.filterDate(item.reservation_time,8,10)}}</view>
+      <view class="yuLine"></view>
+      <view class="yuText">日</view>
+      <view class="yuLine"></view>
+    </view>
+  </view>
+</view>
+
+<!-- 已完成 -->
+<view wx:if="{{isSelect == 'right'}}" style="background-color:#F5F5FA;">
+  <view class="orderItem" wx:for="{{orderList}}" wx:key='' data-id="{{item.id}}" bindtap='handleOrderDetail' hover-class='focusOrderItem'>
+
+    <view class="orderItemTime">
+      <view class="num">订单编号：{{item.odd_num}}</view>
+      <view class="orderTime">预约时间：{{methods.filterDate(item.reservation_time,0,10)}}</view>
+    </view>
+
+    <view class="orderInfoWraper">
+      <image src="{{item.goods_pic}}"></image>
+      <view class="orderTitle">
+        {{item.goods_name}}
+      </view>
+      <view class="orderParams">
+      规格：{{item.number}}/{{item.stand}} 
+      <view>提供单位：{{item.sm_name}}</view>   
+      </view>
+    </view>
+  </view>
+</view>
+<!-- orderItem end -->
+
+

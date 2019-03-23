@@ -1,0 +1,350 @@
+/* pages/projectDetail/projectDetail.wxss */
+page {
+  background-color: #F5F5FA;
+  padding-bottom:120rpx;
+}
+.navigati {
+  display:block;
+  width:100%;
+  height:176rpx;
+  background-color: #1EA0FF;
+  text-align: center;
+  line-height: 265rpx;
+  font-weight:400;
+  font-size:36rpx;
+  color:white;
+}
+.swiper {
+  height:750rpx;
+}
+.swiper image {
+  width:100%;
+  height:100%;
+}
+
+/**projectTitle  样式代码**/
+.projectTitle {
+  display:block;
+  height:100rpx;
+  background-color:white;
+  padding:20rpx 110rpx 0 24rpx;
+  box-sizing:border-box;
+  font-size:32rpx;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  color:rgba(30,35,40,1);
+  line-height:66rpx;
+}
+
+
+/**cycle  样式代码**/
+.cycle {
+  display:block;
+  height:120rpx;
+  background:rgba(255,205,120,1);
+  padding:28rpx 19rpx 24rpx;
+  box-sizing:border-box;
+}
+.cycle .cycleLeft {
+  width:200rpx;
+  height:66rpx;
+  background:rgba(255,255,255,1);
+  border-radius:6rpx;
+  border:1rpx solid rgba(215,165,40,1);
+  padding:0 12rpx;
+  box-sizing:border-box;
+  float:left;
+}
+.cycle .cycleLeft>view,
+.cycle .cycleRight>view {
+  float:left;
+}
+.cycle .cycleLeft>view.cycleLText {
+  width:28rpx;
+  height:40rpx;
+  font-size:28rpx;
+  font-family:PingFangSC-Semibold;
+  font-weight:bold;
+  color:rgba(115,115,125,1);
+  line-height:30rpx;
+  margin-top:19rpx;
+}
+.cycle .cycleLeft>view.cycleLine {
+  width:2rpx;
+  height:20rpx;
+  background:rgba(230,185,110,1);
+  margin:24rpx 9rpx 0
+}
+.cycle .cycleCenter {
+  float:left;
+  margin:5rpx 8rpx 0;
+  color:white;
+}
+/**cycleRight  样式代码**/
+.cycle .cycleRight {
+  padding:0 0 0 24rpx;
+  box-sizing: border-box;
+}
+.cycle .cycleRight {
+  width:484rpx;height:66rpx;
+  background:rgba(255,255,255,1);
+  border-radius:6rpx;
+  border:1rpx solid rgba(215,165,40,1);
+  float:left;
+}
+
+/**cycleRight 样式代码**/
+.cycle .cycleRight>view.cycleRNum {
+  width:22rpx;
+  height:48rpx;
+  font-size:40rpx;
+  font-family:Helvetica-Bold;
+  font-weight:bold;
+  color:rgba(250,100,75,1);
+  line-height:44rpx;
+   margin-top:10rpx;
+}
+.cycle .cycleRight>view.cycleRLine {
+  width:2rpx;
+  height:20rpx;
+  background:rgba(230,185,110,1);
+  margin:24rpx 22rpx 0;
+ 
+}
+.cycle .cycleRight>view.lastText {
+  width:46rpx;
+  height:40rpx;
+  font-size:28rpx;
+  font-family:PingFangSC-Semibold;
+  font-weight:600;
+  color:rgba(115,115,125,1);
+  line-height:40rpx;
+  margin-top:15rpx;
+}
+
+/**click  样式代码**/
+.click {
+  display:block;
+  height:80rpx;
+  background:rgba(255,205,120,1);
+  border-top:solid 1rpx rgba(244,192,104,1);
+  font-size:24rpx;
+  font-family:PingFangSC-Semibold;
+  font-weight:600;
+  color:rgba(255,255,255,1);
+  line-height:80rpx;
+  text-align:center;
+  margin-bottom:20rpx;
+}
+
+/**factory 样式代码**/
+.factory {
+  width:750rpx;
+  height:100rpx;
+  background:rgba(255,255,255,1);
+  position:relative;
+}
+.factory  .factoryName {
+  display:block;
+  width:548rpx;
+  float:left;
+  height:60rpx;
+  line-height:60rpx;
+  font-size:32rpx;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  color:rgba(30,35,40,1);
+  margin:20rpx 30rpx 0 40rpx;
+  border-right:solid 2rpx rgba(236,237,241,1);
+}
+.factory>image {
+  width:38rpx;height:38rpx;
+  margin:32rpx 6rpx;
+  float:left;
+}
+.factory>text {
+  font-size:24rpx;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  color:rgba(115,115,125,1);
+  line-height:34rpx;
+  float:left;
+  margin-top:34rpx;
+}
+.factory .factoryLine {
+  width:730rpx;
+  height:1rpx;
+  position:absolute;
+  background-color:rgba(230,230,235,1);  
+  bottom:1rpx;right:0;
+}
+
+/**specificPosition  样式代码**/
+.specificPosition {
+  height:100rpx;
+  background:rgba(255,255,255,1);
+  padding:0 24rpx 0 30rpx;
+  box-sizing:border-box;
+  margin-bottom:20rpx;
+}
+.specificPosition>image {
+  width:46rpx;height:46rpx;
+  margin:27rpx 14rpx 0 0;
+  float:left;
+}
+.specificPosition>text {
+  display: block;
+  float:left;
+  height:40rpx;
+  font-size:28rpx;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  color:rgba(115,115,125,1);
+  line-height:40rpx;
+  margin-top:30rpx;
+}
+
+.specificPosition>text.speRight {
+  float:right;
+  font-size:40rpx;
+  font-family: simhei;
+}
+/**projectDesc  样式代码**/
+.projectDesc {
+  display:block;
+  height:88rpx;
+  border-bottom:solid 1rpx rgba(230,230,235,1);
+  background-color:white;
+}
+.projectDesc .projectDescLeft,
+.projectDesc .projectDescRight {
+  display:block;
+  width:374rpx;
+  float:left;
+  font-size:28rpx;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  color:rgba(250,100,75,1);
+  line-height:88rpx;
+  text-align:center;
+}
+.projectDesc .projectDescLine {
+  width:2rpx;
+  height:40rpx;
+  background:rgba(230,230,235,1);
+  float:left;
+  margin-top:24rpx;
+}
+
+/**desc  样式代码**/
+.desc {
+  display:block;
+  height:314rpx;
+  padding:30rpx 30rpx 0;
+  font-size:24rpx;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  color:rgba(115,115,125,1);
+  line-height:48rpx;
+  letter-spacing:2rpx;
+  box-sizing:border-box;
+  background-color:white;
+}
+
+/**appointmentWra  样式代码**/
+.appointmentWra {
+  display:block;
+  width:100%;
+  height:120rpx;
+  background-color:white;
+  border-top:solid 2rpx #dedede; 
+  position:fixed;
+  bottom:0;  
+}
+.appointmentWra>button {
+  width:520rpx;
+  height:94rpx;
+  background:rgba(30,160,255,1);
+  border-radius:0;
+  margin:13rpx auto;
+  font-size:32rpx;
+  font-family:PingFangSC-Semibold;
+  font-weight:600;
+  color:rgba(255,255,255,1);
+  line-height:94rpx;
+}
+
+
+
+/**修改未购买颜色**/
+.noBuy .cycle,
+.noBuy .click {
+  background-color:rgba(95,115,130,1);
+}
+.noBuy .click {
+  border-top:solid 1rpx rgba(95,100,130,1)
+}
+.noBuy .cycle .cycleLeft,
+.noBuy .cycle .cycleRight{
+  background-color:rgba(75,90,105,1);
+  color:rgba(115,135,150,1);
+  border:none; 
+}
+.noBuy .cycle .cycleRight .cycleRNum {
+  color:rgba(250,100,75,1);
+  text-decoration: line-through;
+}
+.noBuy .cycle .cycleRight .lastText {
+  color:rgba(115,135,150,1);
+}
+
+.noBuy .cycle .cycleLeft .cycleLine {
+  background-color:rgba(115,135,150,1);
+}
+
+/**noGre 未到服务期**/
+.noGre .cycle,
+.noGre .click {
+  background-color:rgba(30,160,255,1);
+}
+.noGre .click {
+  border-top:solid 1rpx rgba(23,143,231,1);
+}
+.noGre .cycle .cycleLeft,
+.noGre .cycle .cycleRight{
+  border:none; 
+}
+.noGre .cycle .cycleLeft .cycleLine,
+.noGre .cycle .cycleRight .cycleRLine {
+  background-color:rgba(115,115,125,1);
+}
+.noGre .cycle .cycleRight .cycleRNum {
+  color:rgba(30,160,255,1);
+}
+.noGre .cycle .cycleRight .lastText {
+  color:rgba(115,135,150,1);
+}
+
+
+/**moke 样式代码**/
+
+.cycleRight>view {
+  float:left;
+}
+.cycleRight .maTimeItem {
+  height:40rpx;
+  font-size:32rpx;
+  font-weight:bold;
+  color:rgba(250,100,75,1);
+  line-height:36rpx;
+  letter-spacing:4rpx;
+  margin-top:13rpx;
+}
+.cycleRight .maTimeLine {
+  width:1px;
+  height:20rpx;
+  background:rgba(210,215,225,1);
+  margin:22rpx 10rpx;
+}
+
+

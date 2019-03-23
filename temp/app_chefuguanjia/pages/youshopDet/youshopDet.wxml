@@ -1,0 +1,106 @@
+<!--pages/youshopDet/youshopDet.wxml-->
+<import src="../template/pingjia/pingjia.wxml" />
+<import src="../template/kong/kong.wxml" />
+<view class='youshopDet'>
+  <!-- 油站图片 -->
+  <swiper class="swiper" indicator-dots="true" indicator-color="#C8E6FF" autoplay="true" interval="5000" duration="1000">
+    <block wx:for="{{det.shop_image}}" wx:for-index="index" wx:key>
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" mode="aspectFill" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <!-- 油站联系方式及位置 -->
+  <view class='plbox'>
+    <view class='infotop dfrowsb'>
+      <view class='infobox dfcolsb' style='  align-items: flex-start;'>
+        <text class='shopname'>{{det.oil_shop_name}}</text>
+        <view class='shopxiao'>销量：{{det.business_count}}</view>
+        <text class='shoptime'>营业时间：{{det.start_time}}至{{det.end_time}}</text>
+      </view>
+      <view class='bimgBox dfrowsa'>
+        <image src='../../images/bohao.png' bindtap='bohao' data-tel='{{det.shop_phone}}'></image>
+      </view>
+    </view>
+    <view class='infobot dfrowsb'>
+      <view class='posi'>
+        <text class='shopdizhi'>{{det.address}}</text>
+        <text class='shopjixu'>{{det.distance}}km</text>
+      </view>
+      <view class='simgBox dfrowsa'>
+        <image src='../../images/daodet.png'  bindtap='mapTo' data-lat='{{det.lat}}' data-lng='{{det.lng}}' data-company='{{det.oil_shop_name}}' data-address='{{det.address}}'></image>
+      </view>
+    </view>
+  </view>
+  <!-- 油价及赠品 -->
+  <view class='plbox' style='position: relative;'>
+    <image src='../../images/huiyuanp.png' style='position: absolute;top:-10px;left:30px;height: 50rpx;width: 288rpx;' wx:if="{{iscanyu == 0}}"></image>
+    <block wx:for="{{det.oils}}" wx:key wx:for-item='o'>
+      <view class='youjiabar dfrowsb'>
+        <view class='te36'>{{o.oil_name}}</view>
+        <view class='dfcolsb butongjia' id='{{iscanyu == 1? "keyong":""}}'>
+          <text class='te20'>会员价</text>
+          <text class='te24'>￥{{o.member_price}}</text>
+        </view>
+        <view class='dfcolsb butongjia' id='{{iscanyu == 0? "keyong":""}}'>
+          <text class='te20'>折扣价</text>
+          <text class='te24'>￥{{o.discount_price}}</text>
+        </view>
+        <view class='dfcolsb butongjia'>
+          <text class='te20'>油站价</text>
+          <text class='te24'>￥{{o.station_price}}</text>
+        </view>
+        <view class='bt13' bindtap='navmaiyou' data-oil='{{o}}' data-sid='{{item.id}}'>加油</view>
+      </view>
+    </block>
+    <block wx:for="{{det.list}}" wx:key wx:for-item='zli'>
+      <view class='zengbar' style='display: flex; align-items: center;'>
+        <image class='fanef' src='../../images/fan32.png' style='height: 32rpx;width: 32rpx;margin-right: 20rpx;'></image>
+        <text>加满{{zli.money}}元赠{{zli.content}}</text>
+        <image class='fanwe'></image>
+      </view>
+    </block>
+  </view>
+  <!-- 评价 -->
+  <view class='pingbox'>
+    <view class='pingjia1'>车主评价</view>
+    <block wx:if="{{list.length !== 0}}">
+      <view class='fenshu dfrowsb' style='padding:10rpx 0;font-size:24rpx;font-weight:400;color:rgba(150,155,165,1);line-height:34rpx;'>
+        <view class='dfcolsa' style='width:260rpx;height: 160rpx;padding:0 20rpx 20rpx;'>
+          <view class="" style='color: #FA644B;font-size:28rpx;line-height:40rpx;'>
+            <text style='font-size:80rpx;font-weight:700;line-height:100rpx;'>{{det.whole}}  </text>分</view>
+          <text>总体点评</text>
+        </view>
+        <view class='dfcolsa' style='height: 160rpx;width: calc(750rpx - 260rpx);border-left: 1rpx solid #ddd;padding:16rpx 80rpx 16rpx 0;'>
+          <view class='dfrowsa'>
+            <text>油品质量</text>
+            <view class='dfrowsa' style='width:240rpx;margin-left: 20rpx;'>
+              <block wx:for="{{det.server_count}}" wx:key="index">
+                <image class='star' src='../../images/liangx.png'></image>
+              </block>
+              <block wx:for="{{5 - det.server_count}}" wx:key="index">
+                <image class='star' src='../../images/anxin.png'></image>
+              </block>
+            </view>
+          </view>
+          <view class='dfrowsa'>
+            <text>整体环境</text>
+            <view class='dfrowsa' style='width:240rpx;margin-left: 20rpx;'>
+              <block wx:for="{{det.work_count}}" wx:key="index">
+                <image class='star' src='../../images/liangx.png'></image>
+              </block>
+              <block wx:for="{{5 - det.work_count}}" wx:key="index">
+                <image class='star' src='../../images/anxin.png'></image>
+              </block>
+            </view>
+          </view>
+
+        </view>
+      </view>
+      <template is="pingjia" data="{{list}}"></template>
+    </block>
+    <block wx:if="{{list.length == 0}}">
+      <template is="kong" data="{{imgUrl,text,height}}"></template>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,178 @@
+/* pages/register/register.wxss */
+ .placeholder{
+   color: #1E2328
+ }
+page{
+  width: 100%;
+  height: 100%;
+   background-color: #F5F5F5;
+}
+.container{
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+/** 头部区域 **/
+.header{
+  width: 100%;
+  height: 590rpx;
+  position: relative;
+}
+.header image{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+.header .content{
+  position: relative;
+  text-align: center;
+  padding-top: 10rpx;
+  color: white;
+  font-size: 28rpx;
+}
+.border{
+   margin: 16rpx auto;
+   width: 176rpx;
+   height: 2rpx;
+   background:rgba(144,206,255,1);
+   
+}
+.title{
+   font-size: 44rpx;
+   color: #FFE187;
+   line-height:30px;
+}
+.introduce{
+  margin: 0 140rpx;
+  line-height: 44rpx;
+}
+.Tips{
+  margin-top: 40rpx;
+}
+.input{
+  margin-top: 30rpx;
+  justify-content: center;
+  display: flex;
+
+}
+.TipsUser{
+   margin-top: -30rpx;
+   font-size: 32rpx;
+}
+.input input{
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 100px;
+  margin-left: 20rpx;
+  color:#1E2328 ;
+  text-align: center;
+  justify-content: center;
+  background-color: white;
+ 
+}
+.ipt{
+  width: 0;  
+  height: 0; 
+}
+/** 中间内容区 **/
+.main{
+  position: relative;
+  margin: -150rpx 20rpx 170rpx 20rpx;
+  background-color: white;
+  border-radius:10rpx;
+  
+}
+/** 收货地址 **/
+.address{
+  text-align: center;
+  width: 176rpx;
+  margin: 0 auto 60rpx auto;
+  padding: 40rpx 0 16rpx 0;
+  border-bottom: 2rpx solid #1E2328;
+  font-size: 36rpx;
+  color: #1E2328;
+}
+.Receiving_goods .item>view{
+ display: flex;
+ font-size: 28rpx;
+ color: #1E2328;
+ margin: 0 30rpx;
+ border-top: 2rpx solid #E1E1E1;
+
+ height: 90rpx;
+ align-items: center;
+}
+.Receiving_goods .item>view>view:first-child{
+   width: 23%;
+   border-right: 2rpx solid #E1E1E1
+}
+.Receiving_goods .item>view>view input{
+  padding-left: 34rpx;
+}
+.province_picker{
+  width: calc(100% - 23%);
+  height: 100%;
+}
+.province_picker picker{
+  height: 100%;
+}
+.province_picker  .flex{
+  display: flex;
+  height: 90rpx;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex>view:first-child{
+  padding-left: 30rpx;
+}
+.province image{
+   width: 30rpx;
+   height: 30rpx;
+  
+}
+
+/** 尾部 **/
+.footer{
+  width: 100%;
+  background: white;
+  position: fixed;
+  bottom: 0;
+  height: 110rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 -4rpx 6rpx #E1E1E1;
+  z-index: 55
+}
+.footer>view:first-child{
+
+  padding-left: 72rpx;
+}
+.footer>view:first-child>text{
+  font-size: 20rpx;
+  color: #73737D
+}
+.pay{
+  background-color: #1EA0FF;
+  height: 100%;
+  line-height: 110rpx;
+  padding: 0 88rpx;
+  color: white;
+  font-size: 32rpx;
+}
+
+
+.shadowLayer{height: 100vh;width: 100vw; background-color: rgba(50, 50, 50, 0.3);position: fixed;top: 0;z-index: 2000;display: flex;justify-content: center;align-items: center;padding-bottom: 30rpx;}
+  .layerBox{height: 912rpx;width: 640rpx;display: flex;flex-direction: column;align-items: center;justify-content: center;position: relative;}
+    .layerImg{height: 832rpx;width: 640rpx;}
+    .appName{position: absolute;top: 126rpx;color: #fff;font-size: 40rpx;font-weight: 500;}
+    .loginView{position: absolute;top: 320rpx; height: 250rpx;width: 100%;background-color: #fff; display: flex;justify-content: space-around;align-items: center;padding: 0 50rpx;}
+      .lv1{display: flex;flex-direction: column;justify-content: space-around;width: 180rpx;align-items: center;height: 196rpx;}
+        .lvImg{height: 120rpx;width: 120rpx;}
+        .lvt1{color: #1E2328;font-size: 24rpx;line-height: 34rpx;}
+        .lvt2{color: #73737D;font-size: 20rpx;line-height: 28rpx;}
+    .loginBtn{position: absolute;bottom: 204rpx;border: none;outline: none;height: 94rpx;width: 520rpx;background-color: #1EA0FF;color: #fff;font-size: 32rpx;font-weight: 500;display: flex;justify-content: center;align-items: center;border-radius: 0;}
+    button::after{ border: none; }
+    .forkBtn{height: 80rpx;width: 80rpx;background-color: #fff;border-radius: 50%;margin-top: 0rpx;display: flex;justify-content: center;align-items: center;}
+      .forkImg{height: 36rpx;width: 36rpx;}

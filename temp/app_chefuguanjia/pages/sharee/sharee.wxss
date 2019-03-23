@@ -1,0 +1,12 @@
+/* pages/sharee/sharee.wxss */
+.shareePage{background-color: #543CE2;min-height: 100vh;}
+.bgImg{position: fixed;width: 730rpx;margin: 50rpx 0 0 10rpx;}
+.selectOptBox{position: fixed;bottom: 20rpx;left: 25rpx;}
+.selectOpt{width:700rpx;height:380rpx;background:rgba(84,60,226,1);border:12rpx solid rgba(85, 143, 250, 1);border-radius:20rpx;
+box-sizing: border-box;display: flex;justify-content: space-around;align-items: center;}
+.optItem {display: flex;flex-direction: column;align-items: center;justify-content: space-around;width: 45%;}
+.optItem image{height: 210rpx;width: 234rpx;}
+.tui1{font-size:30rpx;font-family:PingFangSC-Semibold;font-weight:600;color:rgba(247,227,173,1);line-height:40rpx;display: block;}
+.tui2{font-size:20rpx;font-family:PingFangSC-Regular;font-weight:400;color:rgba(255,255,255,1);line-height:30rpx;display: block}
+.columnLine{width:4rpx;height:280rpx;background:#558FFA;}
+.optText{font-size:30rpx;font-family:PingFangSC-Semibold;font-weight:600;color:#fff;line-height:50rpx;width: 100%;text-align: center;display: block;letter-spacing: 14rpx;}

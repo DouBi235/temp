@@ -1,0 +1,51 @@
+<!--pages/uqianbao/uqianbao.wxml-->
+<view class='yuePage'>
+  <view class='qvalue'>
+    <view class='shengyu'>
+      <view class='valfj'>￥
+        <text class='qianshu'>{{balance}}</text>
+      </view>
+      <view class='shengyue'>余额</view>
+    </view>
+  </view>
+  <view class='chongzhi'>
+    <view class='chonglabel'>充值</view>
+    <view class='chongvalue'>
+      <view class='c500 dfcolsa' data-money='500' bindtap='{{dianj?"pay":""}}'>
+        <text class='yuan'><text class='val500'>500</text>\t元</text>
+        <!-- <text style='font-size:20rpx;line-height:28rpx;'>(送50元)</text> -->
+      </view>
+      <view class='c500 dfcolsa' data-money='1000' bindtap='{{dianj?"pay":""}}'>
+        <text class='yuan'><text class='val500'>1000</text>\t元</text>
+        <!-- <text style='font-size:20rpx;line-height:28rpx;'>(送50元)</text> -->
+      </view>
+      <view class='c500 dfcolsa' data-money='2000' bindtap='{{dianj?"pay":""}}'>
+        <text class='yuan'><text class='val500'>2000</text>\t元</text>
+        <!-- <text style='font-size:20rpx;line-height:28rpx;'>(送50元)</text> -->
+      </view>
+    </view>
+  </view>
+  <view class='optlist'>
+    <view class='oitem' bindtap='navxiaofei'>
+      <image class='itemimg' src='../../images/xiao50.png'></image>
+      <view class='itembar dfrowsb'>
+        <text>消费记录</text>
+        <image class="itemimg" src='{{imgUrl}}/arrow.png'></image>
+      </view>
+    </view>
+    <view class='oitem' bindtap='navchongzhi'>
+      <image class='itemimg' src='../../images/chong50.png'></image>
+      <view class='itembar dfrowsb'>
+        <text>充值记录</text>
+        <image class="itemimg" src='{{imgUrl}}/arrow.png'></image>
+      </view>
+    </view>
+    <view class='oitem' bindtap='navmima'>
+      <image class='itemimg ' src='../../images/mima50.png'></image>
+      <view class='itembar dfrowsb'>
+        <text>支付密码</text>
+        <image class="itemimg" src='{{imgUrl}}/arrow.png'></image>
+      </view>
+    </view>
+  </view>
+</view>

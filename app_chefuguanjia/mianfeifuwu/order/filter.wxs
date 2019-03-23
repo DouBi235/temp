@@ -1,0 +1,8 @@
+var filterDate = function (date,start,end) {
+  console.log(start + '.' +  end)  
+  console.log(arguments.start)
+  return date.slice(start,end)
+}
+module.exports= {
+  filterDate:filterDate
+}

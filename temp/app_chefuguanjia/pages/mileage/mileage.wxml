@@ -1,0 +1,58 @@
+<view class='container'>
+    <view class='title'>
+        <image src='{{imgUrl}}/mybgimg.png'></image>
+        <view class='titleText'>
+            <view class='st'>
+                行驶总数(KM)
+            </view>
+            <view class='titleNum'>
+                {{pageData.mileage}}
+            </view>
+        </view>
+        <view class='titleText'>
+            <view class='st'>
+                奖励总额(元)
+            </view>
+            <view class='titleNum'>
+                {{pageData.price}}
+            </view>
+        </view>
+    </view>
+    <view class='content'>
+        <view class='today'>
+            <view class='todayTxt'>
+                今日行驶里程(KM)
+            </view>
+            <view class='todayicon'>
+                <image src='{{imgUrl}}/ss.png'></image>
+            </view>
+            <view class='todayNum'>{{pageData.km}}</view>
+            <view class='todayTxt2'>
+                {{pageData.km>1?"超过1km，未获得奖励":"未超过1km,获得奖励"}}
+            </view>
+        </view>
+    </view>
+    <view class='partition'>
+        <view class='line'>
+        </view>
+        往日行驶里程
+        <view class='line2'>
+        </view>
+    </view> 
+    <!-- 调整后的列表 -->
+    <view class='detail1' wx:for="{{pageData.list}}" wx:key>
+        <view class='dLeft'>
+            <view class='km1' style='color:{{item.refund_status == 3 ? "#888":item.km>1?"#FF5F5F":""}}'>{{item.km}}km</view>
+            <view class='date1'>
+                {{item.create_time}}
+            </view>
+        </view>
+        <view class='dRight'>
+            <view class='money' wx:if="{{item.refund_status == 1}}">
+                <text>{{item.refund_price}}</text>元
+            </view>
+            <view class='status0' wx:elif="{{item.refund_status == 0}}">未达到奖励要求</view>
+            <view class='status0' wx:elif="{{item.refund_status == 3}}" style='color: #888; '>系统核算中</view>
+        </view>
+    </view>
+</view>

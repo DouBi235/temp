@@ -1,0 +1,77 @@
+<!--pages/orderDetail/orderDetail.wxml-->
+<wxs src='../order/filter.wxs' module='methods'></wxs> 
+<view class="addComment">
+  <view class="addCommentL">    
+    <view wx:if="{{orderInfo.order_status==0}}">
+      等待维修厂确认
+    </view>
+    <view wx:if="{{orderInfo.order_status==1}}">
+      订单已生成
+      <view>请按预约时间前往预约厂</view>
+    </view>
+    <view wx:if="{{orderInfo.order_status==4}}">
+      维修厂已放弃此预约单
+      <view>请重新选择店铺</view>
+    </view>
+    <view wx:if="{{orderInfo.order_status==5}}">服务已完成</view>
+  </view>
+  <image src="../images/banjiaweixiu.png"></image>
+</view> 
+
+<view class="productWra">
+  <view class="product">
+    <image src="{{orderInfo.goods_pic}}"></image>
+    <view class="productText">
+    <view class="productTextTitle">
+      {{orderInfo.company}}
+    </view> 
+    <view class="productDe">
+      <view> 规格：{{orderInfo.number}}/{{orderInfo.stand}}</view>
+      <view>提供单位：{{orderInfo.sm_name}}</view>
+    </view>     
+    </view>
+  </view>
+
+  <view class="maTime">
+    <view class="maTimeItem siH">预约时间</view>
+    <view class="maTimeLine"></view>
+    <view class="maTimeItem bl">{{methods.filterDate(orderInfo.reservation_time,0,4)}}</view>
+    <view class="maTimeLine"></view>
+    <view class="maTimeItem siH">年</view>
+    <view class="maTimeLine"></view>
+    <view class="maTimeItem bl">{{methods.filterDate(orderInfo.reservation_time,5,7)}}</view>
+    <view class="maTimeLine"></view>
+    <view class="maTimeItem siH">月</view>
+    <view class="maTimeLine"></view>
+    <view class="maTimeItem bl">{{methods.filterDate(orderInfo.reservation_time,8,10)}}</view>
+    <view class="maTimeLine"></view>
+    <view class="maTimeItem siH">日</view>
+    <view class="maTimeLine"></view>
+  </view>
+
+  <view class="cost" wx:if="{{orderInfo.order_status==1}}">
+    订单已确认，请按预约时间前往维修厂
+  </view>
+</view>
+
+<view class="orderInfo"> 
+  <view class="orderInfoT">订单信息</view>
+  <view class="orderInfoLabels">
+    <view> 订单编号：</view>
+    <view> 创建时间：</view>
+    <view> 维修厂：</view>
+    <view wx:if="{{orderInfo.order_status!=0}}"> 维修厂确认时间：</view>
+ </view>
+ <view class="orderInfoLabels" style="width:360rpx;margin-left:20rpx;">
+    <view>{{orderInfo.odd_num}}</view>
+    <view>{{orderInfo.create_time}}</view>
+    <view>{{orderInfo.company}}</view>
+    <view wx:if="{{false}}" wx:if="{{orderInfo.order_status!=0}}">{{orderInfo.handle_time}}</view>
+ </view>
+</view> 
+
+<view class="modifydpWra" wx:if="{{orderInfo.order_status==4}}">
+  <view class="modifydp" data-id="{{orderInfo.id}}" bindtap="handleModifywxc">
+    修改预约单
+  </view>
+</view>

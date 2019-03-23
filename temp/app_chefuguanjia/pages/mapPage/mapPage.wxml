@@ -1,0 +1,50 @@
+<!--pages/mapPage/mapPage.wxml-->
+<view class='mapPage' wx:if="{{protect == 1}}">
+  <view class='pickerBox'>
+    <picker mode="date" value="{{dateStart}}" start="2015-09-01" end="{{nowDate}}" bindchange="bindstartChange">
+      <view class="picker">
+        <text>{{dateStart}}</text>
+        <image src='{{imgUrl}}/bottomArrow.png'></image>
+      </view>
+    </picker>
+  </view>
+  <!-- 118 -->
+  <map id="myMap" show-location="true" style="height: calc(100vh - 38rpx);width: 100vw;display: flex; justify-content: center;" latitude="{{latitude}}" longitude="{{longitude}}" markers="{{markers}}" polyline="{{polyline}}" bindtap="hideBubble" bindmarkertap="showBubble"
+    bindregionchange="regionChange" show-compass="true">
+    <cover-view style='height:{{height*2-36}}rpx;padding-top:{{padding}}rpx' catchtap='bottomBox' wx:if="{{show}}" class='bottomBox' scroll-y="{{true}}">
+      <cover-view class='unfold' catchtap='fold'>
+        <cover-view wx:if="{{height==280}}" class='unfoldtext'>收起</cover-view>
+        <cover-view class='unfoldtext' style='height:50rpx;transform:rotate({{rotate}}deg);'>
+          <cover-image src='{{imgUrl}}/bottomArrow.png'></cover-image>
+        </cover-view>
+        <cover-view wx:if="{{height==80}}" class='unfoldtext'>展开</cover-view>
+      </cover-view>
+      <cover-view class='content' wx:if="{{height==280}}" style='height:{{height}}rpx'>
+        <cover-view class='items' wx:if="{{height==280}}" wx:for="{{markers}}">
+          <cover-image src='{{item.status==0?"{{imgUrl}}/playLittle.png":"{{imgUrl}}/endLittle.png"}}'>
+          </cover-image>
+          <cover-view class='text'>{{item.callout.content}}</cover-view>
+          <cover-view class='operation {{item.status==0?"font-color":""}}'>
+            {{item.status==0?"启动":"熄火"}}
+          </cover-view>
+          <cover-view class='border'></cover-view>
+        </cover-view>
+      </cover-view>
+      <!-- <button class='lookMap' bindtap='hideBottom'>查看地图</button> -->
+    </cover-view>
+    <!-- <cover-view class='btn' wx:if="{{lookDetail}}"> -->
+    <!-- <button class='lookDetail' wx:if="{{lookDetail}}" bindtap='lookDetail'>查看详情</button> -->
+    <!-- </cover-view> -->
+  </map>
+</view>
+<view class='protectPage' wx:if="{{protect != 1}}" style='background-image: url("{{imgUrl}}/protectbg.png");'>
+  <view class='textBox'>
+  <text class='bh1'>开启车保镖</text>
+  <text class='bh1' style='margin-top: 8rpx;'>记录您的行驶轨迹</text>
+  <view style='margin-top: 40rpx;display:flex; align-items: center;'><image src='../../images/aa.png'></image><text class='bh2'>车辆信息</text></view>
+  <view class='emptyleft'  style='margin-top: 8rpx;'><text class='bh3'>获取您的车辆启动信息</text></view>
+  <view style='margin-top: 40rpx;display:flex; align-items: center;'><image src='../../images/ss.png'></image><text class='bh2'>地理位置</text></view>
+  <view style='margin-top: 8rpx;' class='emptyleft'><text class='bh3'>获取位置信息 当您使用与位置有关的服务时，我们可能会记录您车辆所在的位置信息，以便为您提供相关服务。 除法律法规、法律程序的要求或强制性的政府要求或司法裁定等原因外，我们不会将您的个人信息转让给除本公司及其关联公司外的任何公司、组织和个人。</text></view>
+  </view>
+  <view class='actBtn' data-pro="1" bindtap='is_protect'>现在开启</view>
+</view>

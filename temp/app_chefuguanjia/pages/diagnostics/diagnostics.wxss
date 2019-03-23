@@ -1,0 +1,20 @@
+/* pages/diagnostics/diagnostics.wxss */
+.diagnosticsPage{background-color: #F5F5F5;min-height: 100vh;width: 750rpx;}
+.listBox{padding-bottom: 200rpx;}
+  .listItem{background-color: #fff;padding-left: 30rpx;margin-bottom: 20rpx;}
+    .itemHeader{height: 88rpx;padding-right: 30rpx;display: flex; justify-content: space-between;align-items: center; }
+      .itemTitle{color: #1E2328;font-size: 28rpx;}
+      .switchBtn{height: 36rpx;width: 176rpx;background-color: #EBEBEB;display: flex;flex-wrap: wrap ; justify-content: space-between;align-items: center;}
+        .optionBtn{display: inline-block;color: #B3B3B3;width: 50%;font-size: 20rpx;text-align: center;height: 100%;line-height: 36rpx;}
+          .greenBtn{background-color: #00F870;color: #0A5528;}
+          .abnormal{background-color: rgba(255, 216, 0, 1);color: #fff;}
+    .itemBody{border-top: 1px solid #E6E6EB; border-bottom: 1px solid #E6E6EB;padding: 20rpx 20rpx 30rpx 0; min-height: 102rpx;} 
+    .reference{color: #969BA5;font-size: 24rpx;display: block;}
+    .warningText{color: #ff5f5f;font-size: 24rpx;}
+    .itemFooter{height: 90rpx;display: flex;align-items: center;justify-content: space-between;padding-right:30rpx;}
+      .textBox{color: #1E2328;}
+        .valueLabel{font-size: 24rpx;}
+        .labelValue{font-size: 32rpx;font-weight: 700;margin-left: 20rpx;}
+      .ignoreBtn{font-size:24rpx;font-family:PingFangSC-Regular;font-weight:400;color:rgba(150,155,165,1);line-height:34rpx;width:60rpx;height:34rpx;text-align: center;}
+      .ignoreBtn:active{background-color: #B3B3B3;}
+  .diagnosisBtn{height: 120rpx;width: 100vw;background-color: #1EA0FF;color: #fff;font-size: 32rpx;display: flex;justify-content: center;align-items: center;position: fixed;bottom: 0;}

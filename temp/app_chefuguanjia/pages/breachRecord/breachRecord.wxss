@@ -1,0 +1,20 @@
+/* pages/breachRecord/breachRecord.wxss */
+.breachRecordPage{}
+    .plateNum{width:750rpx;height:100rpx;background:rgba(255,255,255,1);font-size:32rpx;border-bottom: 1rpx solid #C8C8D2; font-family:PingFangSC-Regular;font-weight:400;text-align: center;color:rgba(30,35,40,1);line-height:100rpx;}
+    .totalBrowse{width:750rpx;height:176rpx;background:rgba(255,255,255,1);display: flex;justify-content: space-around;align-items: center;}
+    .tItem{display: flex;flex-direction: column;align-items: center;height: 100rpx;justify-content: space-between;}
+        .tLabel{font-size:24rpx;font-family:PingFangSC-Regular;font-weight:400;color:rgba(30,35,40,1);line-height:34rpx;}
+        .tValue{font-size:40rpx;font-family:Arial-BoldMT;font-weight:normal;color:rgba(250,100,75,1);line-height:46rpx;}
+    .columnLine{width:2rpx;height:96rpx;background:rgba(200,200,210,1);}
+    .bgLine{height: 20rpx; width: 750rpx;background-color: #F5F5FA;}
+.itemBox{padding: 40rpx;}
+    .perItem{padding-left: 40rpx;border-left: 1rpx solid #1EA0FF;padding-bottom: 20rpx;position: relative;} 
+    /* .perItem:last-child{border-left: 0;} */
+    .dot{width:20rpx;height:20rpx;background:#fff;border:1px solid rgba(30,160,255,1);border-radius: 50%;position: absolute;left: -10rpx;top: 0;}
+    .iTitle{font-size:32rpx; font-weight:600;color:rgba(30,35,40,1);line-height:44rpx;}
+    .iSubTitle{font-size:28rpx; font-weight:400;color:rgba(115,115,125,1);line-height:50rpx;display: block;}
+    .iresult{font-size:28rpx; font-weight:400;color:rgba(250,100,75,1);line-height:40rpx;}
+        .iresult text:first-child{margin-right: 40rpx;}
+    .iTime{font-size:24rpx;font-family:PingFangSC-Regular;font-weight:400;color:rgba(115,115,125,1);line-height:34rpx;}
+.bottomBtn{width:750rpx;height:120rpx;background:rgba(30,160,255,1);position: fixed;bottom: 0;text-align: center;line-height: 120rpx;font-size:32rpx;font-family:PingFangSC-Regular;font-weight:400;color:rgba(255,255,255,1); }
+.bottomBtn:active{background: rgba(60,180,255,1)}

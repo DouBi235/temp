@@ -1,0 +1,224 @@
+page {
+  background-color: #f4f4f4;
+}
+
+.container>image {
+  width: 100%;
+  height: 300rpx;
+  background-color: pink;
+}
+.shopImg{
+  width: 100%;
+  height: 450rpx;
+  overflow: hidden;
+}
+.shopImg image{
+  width: 100%;
+  height: 700rpx;
+}
+.info {
+  width: 100%;
+  padding: 0 30rpx;
+  background-color: #fff;
+  overflow: hidden;
+  margin-top: 20rpx;
+}
+
+.info>text {
+  display: block;
+  height: 90rpx;
+  line-height: 90rpx;
+}
+
+.info>view {
+  height: 90rpx;
+  line-height: 90rpx;
+  padding: 20rpx 0;
+}
+
+.info>view image {
+  margin-right: 20rpx;
+}
+
+.bdb {
+  border-bottom: 1px solid #ccc;
+}
+
+.info-box {
+  width: 590rpx;
+  height: 100%;
+  line-height: 50rpx;
+  border-right: 1px solid #ccc;
+}
+
+.workman {
+  padding: 0 30rpx;
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+
+.workman-title {
+  width: 400rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  margin: 0 auto;
+  border-bottom: 1px solid #eee;
+}
+
+.workman-i, .comment-i {
+  width: 100%;
+  border-top: #f6f6f6;
+  border-radius: 10rpx;
+}
+
+.comment-title {
+  margin: 30rpx 0;
+  padding: 0 30rpx;
+  border-radius: 10rpx;
+}
+
+.shop-info {
+  
+  padding: 10rpx 0;
+  font-size: 26rpx;
+  color: #666;
+  text-align: center
+}
+
+scroll-view {
+  width: 100%;
+  height: 280rpx;
+  margin-top: 30rpx;
+  padding-left: 30rpx;
+  display: flex;
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+
+scroll-view view {
+  width: 190rpx;
+  height: 100%;
+  display: inline-block;
+  margin-right: 10rpx;
+  border-radius: 10rpx;
+  background-color: #fff;
+  text-align: center;
+}
+
+.worker-hd {
+  display: block;
+  width: 120rpx;
+  height: 120rpx;
+  margin: 20rpx auto;
+  background-color: #eee;
+  border-radius: 110rpx;
+}
+
+.workder-hd-item {
+  display: block;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+
+.lang-line {
+  width: 690rpx;
+  height: 1px;
+  background-color: #ccc;
+  margin: 0 auto;
+}
+
+.sport {
+  padding: 0 90rpx;
+  height: 100rpx;
+  background-color: #fff;
+  position: relative;
+}
+
+.sport>image {
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  left: 30rpx;
+  top: 34rpx;
+}
+
+.sport>view {
+  height: 50rpx;
+}
+
+.sport>text {
+  position: absolute;
+  top: 0;
+  right: 30rpx;
+  display: block;
+  height: 100rpx;
+  line-height: 100rpx;
+  color: #ccc;
+}
+
+.score {
+  padding: 44rpx 30rpx;
+  height: 180rpx;
+  background-color: #fff;
+}
+
+.score .ft-l {
+  width: 200rpx;
+  height: 100%;
+  border-right: 1px solid #ccc;
+}
+
+.score .ft-r {
+  width: 490rpx;
+  height: 100%;
+  padding-left: 40rpx;
+}
+
+.score .ft-r image {
+  width: 24rpx;
+  height: 24rpx;
+  margin-left: 4rpx;
+}
+
+.score .ft-l>view, .score .ft-r>view {
+  height: 46rpx;
+  line-height: 46rpx;
+}
+
+.talk {
+  padding: 30rpx 30rpx 30rpx 140rpx;
+  background-color: #fff;
+  position: relative;
+}
+
+.talk>image {
+  width: 66rpx;
+  height: 66rpx;
+  border-radius: 66rpx;
+  background-color: pink;
+  position: absolute;
+  top: 30rpx;
+  left: 30rpx;
+}
+
+.talk>view image {
+  width: 24rpx;
+  height: 24rpx;
+  margin-right: 4rpx;
+}
+.evaluate{
+  display: flex;
+ 
+}
+.evaluate>view:last-child{
+  background: none;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  color: red;
+  font-size: 26rpx
+}
+

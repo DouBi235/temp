@@ -70,7 +70,15 @@
     "pages/youshopDet/youshopDet",
     "pages/template/pingjia/pingjia",
     "pages/template/kong/kong",
-    "pages/maiyou/maiyou"
+    "pages/maiyou/maiyou",
+    "mianfeifuwu/index/index", 
+    "mianfeifuwu/chooseWxc/chooseWxc",
+    "mianfeifuwu/details/details",
+    "mianfeifuwu/modifyOrder/modifyOrder",
+    "mianfeifuwu/order/order",
+    "mianfeifuwu/orderDetail/orderDetail",
+    "mianfeifuwu/projectDetail/projectDetail",
+    "mianfeifuwu/tmaInfo/tmaInfo"
   ],
   "permission": {
     "scope.userLocation": {

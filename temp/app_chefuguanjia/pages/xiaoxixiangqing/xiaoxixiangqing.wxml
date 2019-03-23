@@ -1,0 +1,2 @@
+<!--pages/xiaoxixiangqing/xiaoxixiangqing.wxml-->
+<text style='width: 100%;text-align: center;'>{{}}</text>

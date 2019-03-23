@@ -1,0 +1,125 @@
+/**index.wxss**/
+/**navigati 样式代码**/
+page {
+  background-color:#F5F5F5;
+}
+.navigati {
+  display:block;
+  width:100%;
+  height:176rpx;
+  background-color: #1EA0FF;
+  text-align: center;
+  line-height: 265rpx;
+  font-weight:400;
+  font-size:36rpx;
+  color:white;
+}
+/**loading 样式代码**/
+.expiration {
+  display:block;
+  width:100%;
+  height:88rpx;
+  font-size:28rpx;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  color:rgba(115,115,125,1);
+  line-height:88rpx;
+  text-align:center;
+}
+.expirationitem {
+  display:block;
+  width:100%;
+  height:240rpx;
+  background-color:white;
+  box-sizing:border-box;
+  position:relative;
+  margin-bottom:20rpx;
+}
+.focusExpirationitem {
+  background-color:#efefef;  
+}
+.expirationitem .imgWraper {
+  width:200rpx;
+  height:200rpx;
+  float:left;
+  margin:20rpx 0 20rpx 22rpx;
+}
+.expirationitem .imgWraper image {
+  width:100%;
+  height:100%;
+}
+.expirationitem .line {
+  display:block;
+  width:1rpx;
+  height:120rpx;
+  background:#E6E6EB;
+  float:left;
+  margin:60rpx 30rpx 0 20rpx;
+}
+.expirationitem .textWraper {
+  display:block;
+  height:auto;
+  margin-top:28rpx;
+  float:left;
+}
+.expirationitem .textWraper .exTitle {
+  font-size:32rpx;
+  font-family:PingFangSC-Semibold;
+  font-weight:600;
+  color:rgba(30,35,40,1);
+}
+.expirationitem .textWraper>view:nth-of-type(2) {
+  font-size:24rpx;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  color:rgba(115,115,125,1);
+  margin:12rpx 0 28rpx;
+}
+.expirationitem .textWraper .expBtn {
+  width:136rpx;
+  height:40rpx;
+  background:rgba(255,255,255,1);
+  border:1px solid rgba(250,100,75,1);
+  text-align:center;
+  font-size:20rpx;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  color:rgba(250,100,75,1);
+  line-height:40rpx;
+}
+.expirationitem .Reservable {
+  position:absolute;
+  width:80rpx;height:80rpx;
+  right:0;
+  top:0;
+}
+ 
+.expirationitem .lastText {
+  font-size:20rpx;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  color:rgba(9,187,7,1);
+  margin-bottom:8rpx;
+}
+
+.timeImage {
+  width:32rpx;height:32rpx;
+  float:left;
+}
+
+.timeLine {
+  width:2rpx;
+  height:20rpx;  
+  float:left;
+  background:rgba(210,215,225,1);
+  margin:6rpx 16rpx;
+}
+.num {
+  width:20rpx;height:40rpx;
+  float:left;
+  font-size:36rpx;
+  font-family:Arial-BoldMT;
+  font-weight:600;
+  color:rgba(150,155,165,1);
+  line-height:35rpx;
+}

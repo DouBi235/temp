@@ -1,0 +1,41 @@
+<view class="container">
+  <view class='txt'>车牌号:{{totalData.CarownerData.plate}}</view>
+  <view class='txt'>车主姓名:{{totalData.CarownerData.name}}</view>
+  <view class='txt'>品牌:{{totalData.CarownerData.car_name}}</view>
+  <view class='txt'>车型:{{totalData.CarownerData.type}}</view>
+  <view class='txt'>排量:{{totalData.CarownerData.series}}</view>
+  <view class='txt'>VIN码:{{totalData.vin}}</view>
+  <view class='txt'>保险公司:{{totalData.company}}</view>
+  <view class='txt'>保单号:{{totalData.policy_num}}</view>
+  <view class='txt' >保单总额:<text class='total'>{{totalData.total+'元'}}</text></view>
+  <view class='txt'>投保时间:{{totalData.start_time}}</view>
+  <view class='txt'>截止时间:{{totalData.end_time}}</view>
+  <view class='txt'>险种：</view>
+  <view class='box'>
+      <view>
+          <view>险种</view>
+          <view wx:for="{{totalData.name_price}}" wx:key="index">{{item.type}}</view>
+      </view>
+      <view>
+           <view>金额(元)</view>
+           <view wx:for="{{totalData.name_price}}" wx:key="index">{{item.value}}</view>
+      </view>
+  </view>
+  <view class='fenge'></view>
+  <view class='example'>
+    <view class='fcz'>保单及车牌</view>
+    <view class='Photo'>
+        <view wx:for="{{totalData.img}}" wx:key="index">
+           <image src='{{item}}'></image>
+        </view>
+    </view>
+    <view class='Photo text' > 
+        <view>车牌照</view>
+        <view>行驶证</view>
+        <view>保单首页</view>
+        <!-- <view>商业险</view>
+        <view>强制险</view> -->
+    </view>
+  </view>
+ <view class='Submission'><button class='btn' bindtap='Submission'>确认提交</button></view>
+</view>

@@ -1,0 +1,87 @@
+<!--pages/tailWarn/tailWarn.wxml-->
+<view class="wrap">
+  <view class="wrap">
+    <!-- 背景图片 -->
+    <image class="bg-img" src="{{imgUrl}}/bg/bg.png"></image>
+    <!-- 尾气状态 -->
+    <view class="tail-title {{ errno ? 'text-errno' : '' }}">
+      尾气排放正常
+    </view>
+    <view class='titleBar'>
+      <picker class='timePicker' mode="date" value="{{date1}}" start="{{beforeData}}" end="{{date2}}" bindchange="bindDateChange">
+        <view class='pickergroup'>
+          <view class="timeText">{{date1}}</view>
+          <image class='bottomArrowImg' src='{{imgUrl}}/bottomArrow.png'></image>
+        </view>
+      </picker>
+      <text style='color:#73737D;font-size:24rpx;color: #fff;'>至</text>
+      <picker class='timePicker' mode="date" value="{{date2}}" start="{{date1}}" end="{{nowData}}" bindchange="bindDateChangeTwo">
+        <view class='pickergroup'>
+          <view class="timeText">{{date2}}</view>
+          <image class='bottomArrowImg' src='{{imgUrl}}/bottomArrow.png'></image>
+        </view>
+      </picker>
+    </view>
+    <!-- 尾气项目 -->
+    <view class="tail-content {{ errno ? 'bg-errno' : '' }}">
+      <view class="tail-item">
+        <view class="tail-icon">
+          <image class="icon" src="{{imgUrl}}/bg/icon-O2.png"></image>
+          <view class="icon-desc" decode="true">{{ detail.air || 0 }}³</view>
+        </view>
+        <view class="tail-icon">
+          <image class="icon" src="{{imgUrl}}/bg/icon-CO2.png"></image>
+          <view class="icon-desc">{{ detail.co2 || 0 }}g</view>
+        </view>
+      </view>
+      <view class="tail-item">
+        <view class="tail-icon">
+          <image class="icon" src="{{imgUrl}}/bg/icon-HC.png"></image>
+          <view class="icon-desc">{{ detail.hc || 0 }}g</view>
+        </view>
+        <view class="tail-icon">
+          <image class="icon" src="{{imgUrl}}/bg/icon-CO.png"></image>
+          <view class="icon-desc">{{ detail.co || 0 }}g</view>
+        </view>
+      </view>
+      <view class="tail-item">
+        <view class="tail-icon">
+          <image class="icon" src="{{imgUrl}}/bg/icon-NO.png"></image>
+          <view class="icon-desc">{{ detail.nox || 0 }}g</view>
+        </view>
+        <view class="tail-icon">
+          <image class="icon" src="{{imgUrl}}/bg/icon-weiqi.png"></image>
+          <view class="icon-desc" decode="true">{{ detail.letout || 0 }}³</view>
+        </view>
+      </view>
+      <view class="tail-item">
+        <view class="tail-icon">
+          <image class="icon" src="{{imgUrl}}/bg/icon-PM.png"></image>
+          <!-- <view class="icon-desc" decode="true">{{ detail.ug || 0 }}μg</view> -->
+        </view>
+        <view class="tail-icon">
+          <image class="icon" src="{{imgUrl}}/bg/icon-MAP.png"></image>
+          <!-- <view class="icon-desc" >{{ detail.pm || 0 }}g</view> -->
+        </view>
+      </view>
+    </view>
+    <!-- 尾气排放异常,异常提示 -->
+    <view class="tail-tree_errno" wx:if="{{ errno }}">
+      <view class="tip">
+        尾气排放不合格，将处以200元并3分的行政处罚。 请迅速就近处理
+      </view>
+      <view class="btn">
+        <text>忽略</text>
+      </view>
+    </view>
+    <!-- 尾气排放正常,显示树木资源 -->
+    <view class="tail-tree" wx:else>
+      <view>您已消耗
+        <text class="tree-num">{{ detail.tree || 0 }}</text>林业资源</view>
+      <view class="tree-icon">
+        <image class="tree-icon_img" src="{{imgUrl}}/bg/icon-tree.png"></image>
+        <text>X {{ detail.tree || 0 }}</text>
+      </view>
+    </view>
+  </view>
+</view>

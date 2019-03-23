@@ -1,0 +1,45 @@
+<!--pages/collisionWarn/collisionWarn.wxml-->
+<view class="wrap">
+  <!-- <view class="pageLoading" wx:if="{{ pageLoading }}">
+    <button class="page-loading" loading>加载中...</button>
+  </view> -->
+  <view class="wrap">
+    <!-- 背景图片 -->
+    <image class="bg-img" style="height: {{ winHeight }}rpx; margin-top: -350rpx" src="{{imgUrl}}/bg/bg-img.png"></image>
+    <!-- 标题 -->
+    <view class="collision-title">
+      <view class="inner">
+        <image src="{{imgUrl}}/bg/bg-text.png"></image>
+      </view>
+    </view>
+    <!-- 暂无碰撞信息 -->
+    <view class="collision-warn" wx:if="{{ nodata }}">
+      <view class="nodata">暂无碰撞信息</view>
+    </view>
+    <view class="collision-warn" wx:if="{{ !nodata }}">
+      <view class="collision-content">
+        <view class="car">
+          注册车辆： {{ plate }}
+        </view>
+        <view class="date">{{ details.warning_time || '加载中...' }}</view>
+        <view class="content">{{ details.content || '加载中...' }}</view>
+      </view>
+      <view class="collision-page_wrap">
+        <button wx:if="{{ isNextLoading }}" class="btn page-loading" loading></button>
+        <view class="collision-page {{ isNextLoading ? 'opacity' : '' }}">
+          <view class="prevPage page {{ isPrev ? '' : 'hasnews' }}" hover-class="bgactive" hover-stay-time="100" data-target="prev" bindtap="changeInformation">
+            上一条 {{ prevDesc === 1 ? '' : '('+ (prevDesc - 1) +')' }}
+          </view>
+          <view class="nextPage page {{ isNext ? '' : 'hasnews' }}" hover-class="bgactive" hover-stay-time="100" data-target="next" bindtap="changeInformation">
+            下一条 {{ allDesc - prevDesc === 0 ? '' : '(' + (allDesc - prevDesc) + ')' }}
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 忽略按钮 -->
+    <view class="ignore-btn">
+      <button hover-class="ignore-click" hover-stay-time="100" bindtap="ignoreBtn">忽略全部</button>
+    </view>
+  </view>
+</view>

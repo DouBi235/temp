@@ -1,0 +1,12 @@
+<!--pages/offgasWarning/offgasWarning.wxml-->
+<view class='offgasWarningPage {{offgas?"normalPage":"abnormalPage"}}'>
+  <image class='bgImg abnormalImg' src='{{imgUrl}}/gasAbnormal.png' mode='aspectFill'></image>
+  <image class='bgImg normalImg' src='{{imgUrl}}/gasNormal.png' mode='aspectFill'></image>
+  <view class='contentBox'>
+    <view class='offgasTitle'>{{offgas?"尾气排放正常":"尾气排放异常"}}</view>
+    <text class='offgasContent'>{{offgas?"绿色出行":"尾气排放超标，请迅速处理"}}</text>
+  </view>
+  <view class='ignore'>忽略</view>
+</view>
+
+

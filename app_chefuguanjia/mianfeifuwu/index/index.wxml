@@ -1,0 +1,60 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="expiration" wx:if="{{oldData.length}}" bindtap="handleMoa"> <!--expiration  开始-->
+    已到服务期
+  </view> <!----expiration 结束-->   
+
+  <view class="expirationitem" wx:for="{{oldData}}" wx:key="{{index}}" wx:if="{{oldData.length}}" data-id="{{item.id}}" bindtap="handleItemClick" hover-class='focusExpirationitem'> <!--expirationitem 开始-->
+    <view class="imgWraper">
+      <image src="{{item.pic}}"></image>
+    </view>
+    <view class="line"></view>
+    <view class="textWraper" wx:if="{{item.status==2}}">
+      <view class="exTitle">{{item.name}}</view>
+      <view>更换周期：{{item.need_km}}km</view>
+      <view class="expBtn">已到服务期</view>
+    </view>
+    <view class="textWraper" wx:if="{{item.status==1}}">
+      <view class="exTitle">{{item.name}}</view>
+      <view  style="margin-bottom:16rpx;">更换周期：{{item.need_km}}km</view>
+      <view class="lastText">您已预约{{item.time}}进行服务</view>
+      <view class="lastText">{{item.company}}</view>
+    </view>
+    <image src="../images/keyuyue.png" class="Reservable" wx:if="{{item.status==2}}"></image>
+    <image src="../images/yiyuyue.png" class="Reservable" wx:if="{{item.status==1}}"></image>
+  </view> <!--expirationitem 结束-->
+
+  <view class="expiration" wx:if="{{newData.length}}"> <!--expiration  开始-->
+      未到服务期
+  </view> <!----expiration 结束-->   
+
+  <view class="expirationitem" wx:for="{{newData}}" wx:key="{{index}}" data-id="{{item.id}}" bindtap="handleItemClick" hover-class='focusExpirationitem'> <!--expirationitem 开始-->
+    <view class="imgWraper">
+      <image src="{{item.pic}}"></image>
+    </view>
+    <view class="line"></view>
+    <view class="textWraper">
+      <view class="exTitle">{{item.name}}</view>
+      <view  style="margin-bottom:34rpx;">更换周期：{{item.need_km}}km</view>
+      <view class="time">
+        <image src="../images/daojishi.png" class="timeImage"></image>
+        <view class="timeLine"></view>
+        <view class="num">{{item.km[0]}}</view>
+        <view class="timeLine"></view>
+        <view class="num">{{item.km[1]}}</view>
+        <view class="timeLine"></view>
+        <view class="num">{{item.km[2]}}</view>
+        <view class="timeLine"></view>
+        <view class="num">{{item.km[3]}}</view>
+        <view class="timeLine"></view>
+        <view class="num">{{item.km[4]}}</view>
+        <view class="timeLine"></view>
+        <view class="num">{{item.km[5]}}</view>
+        <view class="timeLine"></view>
+        <view class="num" style="font-size:28rpx;">KM</view>
+      </view>
+    </view>
+  </view> <!--expirationitem 结束-->
+
+  
+</view>

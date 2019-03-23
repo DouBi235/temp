@@ -52,7 +52,7 @@
       <image src='{{imgUrl}}/uqianbao.png'></image>
       <text>U惠多钱包</text>
     </view>
-    <view class='nopt' style='visibility: hidden'>
+    <view class='nopt' style='' bindtap="myBooking">
       <image src='{{imgUrl}}/wyuy.png'></image>
       <text>我的预约</text>
     </view>

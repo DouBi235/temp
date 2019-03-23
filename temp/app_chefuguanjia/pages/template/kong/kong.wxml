@@ -1,0 +1,7 @@
+<!--pages/template/kong/kong.wxml-->
+<template name="kong">
+  <view class='kongbox' style='height:{{height}};display: flex;flex-direction: column;justify-content: center;align-items: center;'>
+    <image src='{{imgUrl}}/Thereisno.png' style='height: 280rpx;width: 280rpx;'></image>
+    <view class='wufap' style='font-size:28rpx;width: 300rpx;text-align: center;font-weight:400;color:rgba(115,115,125,1);line-height:40rpx;margin-top: 20rpx;'>{{text}}</view>
+  </view>
+</template>

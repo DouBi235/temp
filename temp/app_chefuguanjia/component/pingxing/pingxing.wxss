@@ -1,0 +1,7 @@
+/* pages/pingxing.wxss */
+.star {
+  margin: 0 5rpx;
+  height: 30rpx;
+  width: 33rpx;
+  display: inline-block;
+}

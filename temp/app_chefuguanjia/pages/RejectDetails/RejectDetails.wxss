@@ -1,0 +1,19 @@
+/* pages/RejectDetails/RejectDetails.wxss */
+.container{
+  padding: 40rpx 30rpx 0 30rpx;
+   color: #1E2328;
+    font-weight:400;
+}
+/* 驳回理由 */
+.Reject_Reason{
+  font-size: 32rpx;
+  line-height:46px;
+}
+.company{
+  text-align: right;
+  font-size: 28rpx;
+  
+}
+.company>view{
+  line-height: 40rpx;
+}

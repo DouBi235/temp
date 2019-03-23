@@ -1,0 +1,36 @@
+<!--pages/breachRecord/breachRecord.wxml-->
+<view class='breachRecordPage'>
+    <view>
+        <view class='plateNum'>{{plate1}}·{{plate2}}</view>
+        <view class='totalBrowse'>
+            <view class='tItem'>
+                <view class='tLabel'>违章</view>
+                <view class='tValue'>{{pageData.amount}}</view>
+            </view>
+            <view class='columnLine'></view>
+            <view class='tItem'>
+                <view class='tLabel'>罚款</view>
+                <view class='tValue'>{{pageData.totalFine}}</view>
+            </view>
+            <view class='columnLine'></view>
+            <view class='tItem'>
+                <view class='tLabel'>扣分</view>
+                <view class='tValue'>{{pageData.totalPoints}}</view>
+            </view>
+        </view>
+        <view class='bgLine'></view>
+    </view>
+    <view class='itemBox'>
+        <view class='perItem' wx:for="{{pageData.violations}}" wx:key> 
+            <view class='dot'></view>
+            <text class='iTitle'>{{item.address}}</text>
+            <text class='iSubTitle'>{{item.reason}}</text>
+            <view class='iresult'>
+                <text>罚款：{{item.fine}}</text>
+                <text>扣分：{{item.point}}</text>
+            </view>
+            <text class='iTime'>{{item.time}}</text>
+        </view>
+    </view>
+    <view class='bottomBtn' bindtap='navSearch'>修改查询车辆</view>
+</view>

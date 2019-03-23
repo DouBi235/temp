@@ -198,6 +198,7 @@ Page({
     }
   },
   mylogin: function(e, first) {
+    var _this = this
     console.log('有没有' + first)
     wx.login({
       success: res => {
@@ -293,7 +294,7 @@ Page({
                   fenhongShow: true
                 })
                 wx.setStorageSync("fenhongintro", td)
-              }
+              }               
               if (res.data.data.isRank !== 0) {
                 wx.showModal({
                   title: '提示',
@@ -308,10 +309,17 @@ Page({
                       wx.navigateTo({
                         url: '../okBuyVip/okBuyVip?mid=' + res.data.data.isRank,
                       })
+                    }else {
+                      if (res.data.data.order.code == 1) {
+                        _this.handleMianfeifuwu(res.data.data.order.msg)
+                      }
                     }
                   },
                 })
-              }
+              }   
+              if (res.data.data.isRank==0) {
+                _this.handleMianfeifuwu(res.data.data.order.msg)
+              }                        
             }
           },
           complete: function(res) {
@@ -319,6 +327,24 @@ Page({
           }
         })
       }
+    })
+  },
+  handleMianfeifuwu(msg) {
+    wx.showModal({
+      title: '提示',
+      content: msg,
+      showCancel: true,
+      cancelText: '取消',
+      cancelColor: '#888',
+      confirmText: '好的',
+      confirmColor: '#09bb07',
+      success: function (res) {
+        if (res.confirm) {
+          wx.navigateTo({
+            url: "/mianfeifuwu/order/order",
+          })
+        }
+      },
     })
   },
   hint: function() {
@@ -663,6 +689,11 @@ Page({
   //     url: '../groupBuy/groupBuy',
   //   })
   // },
+  freeServer() {
+    wx.navigateTo({
+      url: '/mianfeifuwu/index/index',
+    })
+  },
   skippeng: function() {
     // wx.navigateTo({
     //   url: '../pengzhuang/pengzhuang',

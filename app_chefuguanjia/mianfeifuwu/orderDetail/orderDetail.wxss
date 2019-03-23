@@ -1,0 +1,184 @@
+/* pages/orderDetail/orderDetail.wxss */
+page {
+  background-color:#F5F5FA;
+  padding-bottom:170rpx;
+}
+/**addComment 样式代码**/
+.addComment {
+  height:200rpx;
+  background:rgba(30,160,255,1);
+}
+
+.addComment  .addCommentL {
+  float:left;
+  height:40rpx;
+  font-size:32rpx;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+  line-height:40rpx;
+  margin:80rpx 0 0 80rpx;
+}
+.addComment>image {
+  float:right;
+  width:160rpx;height:160rpx;
+  margin:20rpx 100rpx 0 0;
+}
+
+/**product  样式代码**/
+.productWra {
+  background-color:white;
+  padding:20rpx 30rpx;
+  box-sizing:border-box;
+}
+.productWra .product {
+  height:160rpx;
+}
+.productWra .product image {
+  width:160rpx;height:160rpx;
+  float:left;
+  margin-right:20rpx;
+}
+.productWra .product .productTextTitle {
+  height:80rpx;
+  font-size:28rpx;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  color:rgba(30,35,40,1);
+  line-height:40rpx;
+}
+.productWra .product  .productDe {
+  font-size:24rpx;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  color:rgba(115,115,125,1);
+  line-height:40rpx;
+}
+.productWra .maTime {
+  height:40rpx;
+  margin-top:48rpx;
+}
+.productWra .maTime>view {
+  float:left;
+}
+.productWra .maTime>view.maTimeItem {
+  height:inherit;
+
+}
+.productWra .maTime>view.maTimeLine {
+  width:1px;
+  height:20rpx;
+  background:rgba(210,215,225,1);
+  margin:10rpx 10rpx;
+}
+.siH {
+font-size:28rpx;
+font-family:PingFangSC-Regular;
+font-weight:400;
+color:rgba(30,35,40,1);
+line-height:40rpx;
+}
+.bl {
+  font-size:28rpx;
+  font-family:Arial-Black;
+  font-weight:900;
+  color:rgba(30,160,255,1);
+  line-height:38rpx;
+}
+
+.productWra .cost {
+  height:40rpx;
+  text-align:right;
+  margin-top:15rpx;
+  font-size:20rpx;
+  font-family:PingFangSC-Regular;
+  color:rgba(115,115,125,1);
+  line-height:40rpx;
+}
+.productWra .cost text {
+  vertical-align: middle;
+}
+.productWra .cost text:nth-of-type(2) {
+  font-size:40rpx;
+  font-family:Arial-BoldMT;
+  font-weight:600;
+  color:rgba(30,160,255,1);
+  margin:0 4rpx 0 10rpx;
+}
+/**orderInfo  样式代码**/
+.orderInfo {
+  /* height:440rpx; */
+  overflow:hidden;
+  background:rgba(255,255,255,1);
+  margin:20rpx 0;
+  padding:20rpx 30rpx;
+}
+.orderInfoT {
+  height:40rpx;
+  font-size:24rpx;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  color:rgba(30,35,40,1);
+  line-height:40rpx;
+  margin-bottom:22rpx;
+}
+
+.orderInfo .orderInfoLabels {
+  float:left;
+  width:192rpx;
+  font-size:24rpx;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  color:rgba(115,115,125,1);
+  line-height:58rpx;
+}
+
+/**buttons  样式代码**/
+.buttons {
+  width:100%;
+  height:120rpx;
+  background:rgba(255,255,255,1);
+  box-shadow:0px 2rpx 0px 0px rgba(236,237,241,1);
+  position:fixed;
+  bottom:0;
+  padding:14rpx 76rpx 0 74rpx;
+  box-sizing:border-box;
+}
+.buttons .button {
+  width:280rpx;
+  height:94rpx;
+  background:rgba(255,255,255,1);
+  border:1rpx solid rgba(200,200,210,1);
+  border-radius:0;
+  float:left;
+  font-size:32rpx;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  color:rgba(30,35,40,1);
+  text-align:center;
+  line-height:94rpx;
+}
+.buttons .button:last-of-type {
+  float:right;
+  background:rgba(30,160,255,1);
+  color:white;
+}
+
+/*修改预约单*/
+.modifydpWra {
+  width:100%;height:120rpx;
+  position:fixed;
+  background-color:white;
+  bottom:0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modifydpWra .modifydp {
+  width:520rpx;height:94rpx;
+  background-color:#1EA0FF;
+  text-align:center;
+  line-height:94rpx;
+  color:white;
+  font-size:32rpx;
+}

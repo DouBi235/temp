@@ -1,0 +1,157 @@
+/**index.wxss**/
+.indexPage{background-color: #F5F5F5;min-height: 100vh;}
+  .status0{background-size: 750rpx 132rpx;width:750rpx;height:240rpx;color: #fff;font-size:48rpx; 
+font-weight:600;line-height:66rpx;letter-spacing:2rpx;background-position:bottom; background-repeat:no-repeat;background-color: #1EA0FF;}
+  .ion745{height: 200rpx;width: 170rpx;}
+  .ion745 image{height: 112rpx;width: 112rpx;}
+  .ion745 .fwv548{font-size:24rpx;font-weight:400;line-height:34rpx;}
+  .ion745 .dwv156{font-size:44rpx;font-weight:600;line-height:52rpx;}
+  .status0 view{text-align: center;padding-top: 10rpx;}
+  .deviceStatus{height: 332rpx;background-color: #1EA0FF;border-bottom-left-radius: 16rpx;border-bottom-right-radius: 16rpx;display: flex;flex-direction: column;align-items: center;position: relative;}
+    .bgCarImg{height: 132rpx;width: 100%;}
+    .bgDeviceImg{height: 196rpx;width: 720rpx;}
+    .deviceStatusTextBox{position: absolute;top:184rpx;width: 320rpx;height: 120rpx;display: flex;align-items: center;flex-direction: column;}
+      .statusBox{height: 60rpx;width: 320rpx;display: flex;justify-content: center;align-items: center;}
+        .statusText{font-size: 28rpx;}
+      .deviceNum{color: rgba(255, 216, 0, 1);font-size: 24rpx;display: block;margin-top: 10rpx;}
+    .itemBox{height: 260rpx;margin-bottom: 20rpx;background-color: #fff;display: flex;} 
+      .itemImgBox{width: 33.3vw;display: flex;justify-content: center;align-items: center;padding-top: 10rpx;position: relative;}
+        .redTip{position: absolute;top: 38rpx;right: 42rpx;background-color: #FA644B;height: 32rpx;width: 32rpx;border-radius: 50%;font-size: 20rpx;color: #fff;display: flex;justify-content: center;align-items: center;}
+        .imgBox{display: flex;flex-direction: column;align-items: center;}
+          .itemImg{height: 160rpx;width: 160rpx;}
+          .itemText{color: #1E2328;font-size: 24rpx;}
+    .number{position: absolute;height: 132rpx;width: 750rpx;display: flex;align-items: center;justify-content: space-between;padding: 0 100rpx;}
+      .ubi,.dian{height: 80rpx;width: 150rpx;display: flex;flex-direction: column;justify-content: space-between;align-items: center;}
+        .val1{font-size:40rpx;font-weight:normal;color:#fff;line-height:48rpx;}
+        .label1{font-size:20rpx;font-weight:400;color:#fff;line-height:32rpx;}
+
+.unbind .statusText{color: #969BA5;} 
+.running .statusText{color: #13FF41;} 
+.unrun .statusText{color: #FA644B; } 
+.sleep .statusText{color: #ff9b00; } 
+
+
+.shadowLayer{height: 100vh;width: 100vw; background-color: rgba(50, 50, 50, 0.3);position: fixed;top: 0;z-index: 2000;display: flex;justify-content: center;align-items: center;padding-bottom: 30rpx;}
+  .layerBox{height: 912rpx;width: 640rpx;display: flex;flex-direction: column;align-items: center;justify-content: center;position: relative;}
+    .layerImg{height: 832rpx;width: 640rpx;}
+    .appName{position: absolute;top: 126rpx;color: #fff;font-size: 40rpx;font-weight: 500;}
+    .loginView{position: absolute;top: 320rpx; height: 250rpx;width: 100%;background-color: #fff; display: flex;justify-content: space-around;align-items: center;padding: 0 50rpx;}
+      .lv1{display: flex;flex-direction: column;justify-content: space-around;width: 180rpx;align-items: center;height: 196rpx;}
+        .lvImg{height: 120rpx;width: 120rpx;}
+        .lvt1{color: #1E2328;font-size: 24rpx;line-height: 34rpx;}
+        .lvt2{color: #73737D;font-size: 20rpx;line-height: 28rpx;}
+    .loginBtn{position: absolute;bottom: 204rpx;border: none;outline: none;height: 94rpx;width: 520rpx;background-color: #1EA0FF;color: #fff;font-size: 32rpx;font-weight: 500;display: flex;justify-content: center;align-items: center;border-radius: 0;}
+    button::after{ border: none; }
+    .forkBtn{height: 80rpx;width: 80rpx;background-color: #fff;border-radius: 50%;margin-top: 0rpx;display: flex;justify-content: center;align-items: center;}
+      .forkImg{height: 36rpx;width: 36rpx;}
+  
+
+
+
+/* 弹窗样式 */
+.userinfo{display:flex;flex-direction:column;align-items:center}
+.userinfo-avatar{width:128rpx;height:128rpx;margin:20rpx;border-radius:50%}
+.userinfo-nickname{color:#aaa}
+.usermotto{margin-top:200px}
+.mask{position:fixed;width:100%;height:100%;background-color:rgba(50,50,50,0.3);left:0;top:0;}
+.introduce{width:670rpx;position:fixed;background-color:#fff;top:50%;left:50%;margin-left:-335rpx;margin-top:-485rpx;border-radius:20rpx}
+.herder-title{text-align:center;padding:34rpx 0;color:rgba(30,35,40,1);font-size:36rpx;font-weight:600;font-family:PingFangSC-Semibold}
+.content{margin:0 28rpx;border-top:2rpx solid rgba(0,80,135,1);padding:22rpx 0  0 0}
+.content>view{display:flex;align-items:center;margin-bottom:20rpx}
+.content>view>image{width:144rpx;height:144rpx;margin-right:26rpx}
+.describe{border-bottom:2rpx solid rgba(230,230,235,1);flex:1}
+.content .title{font-size:24rpx;color:rgba(150,155,165,1)}
+.theme{font-size:28rpx;color:rgba(30,35,40,1);font-family:PingFangSC-Semibold;margin-bottom:30rpx}
+.theme>view{line-height:40rpx}
+.footer-title{border-top:2rpx solid #DCDCDC;text-align:center;padding:36rpx 0;color:#1EA0FF;font-size:36rpx;margin-top:8rpx;font-weight:400}
+
+
+/*缴纳通UBI车服服务费弹窗遮罩层*/
+.Mask{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0rpx;
+  background: rgba(30,35,40,0.5);
+  display: flex;
+  align-items: center;
+  justify-content:center;
+} 
+.Image{
+  width: 640rpx;
+  height: 580rpx;
+  position: relative;
+}
+.Image .box{
+  width: 100rpx;
+  height: 100rpx;
+  position: absolute;
+  right: 0rpx;
+  top:0rpx;
+}
+.Image image{
+  width: 100%;
+  height: 100%;
+}
+
+
+/* isZds 弹窗 */ 
+.isZdsWhite{height: 760rpx;width: 640rpx;background-color: #fff; border-radius: 10rpx;position: relative;display: flex; flex-direction: column;padding-bottom: 60rpx; box-sizing: border-box;}
+.isZdsHead{width: 100%;height:100rpx;font-size:32rpx;font-family:PingFangSC-Semibold;font-weight:600;color:rgba(30,35,40,1);text-align: center;border-bottom:1px solid rgba(200,200,210,1);line-height: 100rpx;}
+.isZdsItemBox{font-size:36rpx;font-family:ArialMT;color:rgba(30,35,40,1);line-height:46rpx;padding: 0 40rpx; box-sizing: border-box;height: 400rpx;overflow-y: scroll;}
+.isZdsItem{min-height: 100rpx;border-bottom:1px solid rgba(230,230,235,1);font-size:28rpx;font-family:PingFangSC-Regular;font-weight:400;color:rgba(255, 216, 0, 1);line-height:36rpx; display: flex;align-items: center;justify-content: center;padding: 20rpx;box-sizing: border-box;}
+.isZdsTip{color: #1E2328;width: 100%;text-align: center;font-size: 28rpx;margin: 36rpx auto;line-height: 36rpx;font-weight:400;}
+.isZdsBtn{height: 88rpx;width: 496rpx;background:rgba(30,160,255,1);color: #fff;font-size:32rpx;font-family:PingFangSC-Regular;font-weight:400; line-height:88rpx;text-align: center;margin: 0 auto;}
+.isZdsBtn:active{background-color: rgba(80,240,335,1)}
+
+
+/* 信息弹窗 */
+.infoshow,.lvseLayer{position: fixed;top: 0;height: 100vh;width: 100vw;background: rgba(0, 0, 0, 0.3)}
+.infoWhite{width:500rpx;height:600rpx;background:rgba(255,255,255,1);border-radius:10rpx;position: absolute;top: 300rpx;left: 0;right: 0;margin:0 auto;z-index: 5000}
+.infomain{height: 600rpx;display: flex;flex-direction: column;justify-content:space-between;align-items: center;box-sizing: border-box;padding-bottom: 60rpx;}
+.infoImg{height: 174rpx;width: 174rpx;border-radius: 50%;}
+.infoname{font-size:36rpx;font-family:PingFangSC-Regular;font-weight:400;color:rgba(30,35,40,1);line-height:50rpx;}
+.infotip {width:400rpx;height:120rpx;font-size:40rpx;font-family:PingFangSC-Semibold;font-weight:600;
+color:rgba(30,160,255,1);line-height:120rpx;text-align: center;border-bottom: 1rpx solid #E6E6EB;} 
+.infoconfirm{width:360rpx;height:80rpx;background:rgba(30,160,255,1);border-radius:44px;font-size:36rpx;font-family:PingFangSC-Semibold;font-weight:600;color:rgba(255,255,255,1);line-height:80rpx;letter-spacing:2rpx;text-align: center;}
+.infoconfirm:active{background: rgba(80,220,255,1)} 
+
+
+
+/* 绿色出行弹窗 */
+.lvseLayer{display: flex;justify-content: center;align-items: center; }
+.lvseImgBg{width: 620rpx;height: 760rpx;position: relative;}
+.lvseClose{height: 70rpx; width: 70rpx;position: absolute;top: 0;right: 0;}
+.lvsedate{font-size:28rpx;font-weight:600;color:rgba(21,169,0,1);line-height:40rpx;letter-spacing:1rpx;  position: absolute;top: 360rpx;right: 0;left: 0;margin: 0 auto; width: 200rpx;text-align: center;}
+.lvseBtn{ width:328rpx;height:80rpx;font-size:32rpx;font-weight:600;color:#fff;line-height:80rpx;text-align: center;letter-spacing:2rpx;background:linear-gradient(180deg,rgba(64,206,255,1) 0%,rgba(30,160,255,1) 100%);border-radius:44rpx;position: absolute;bottom: 40rpx;right: 0;left: 0;margin: 0 auto;}
+
+/* v99tanchuang */
+.v99img{width: 550rpx;height: 700rpx;position: relative;}
+.headImg,.nameaaa,.first,.second,.wozhidao{position: absolute;left: 0;right: 0;margin-left: auto;margin-right: auto;}
+.headImg{height: 180rpx;width: 180rpx;border:8rpx solid #fff;border-radius: 50%;margin-top: -80rpx;}
+.nameaaa,.first,.second,.wozhidao{text-align: center;}
+.nameaaa{font-size:36rpx; width: 300rpx;font-weight:500;color:#fff;line-height:50rpx;top: 222rpx;}
+.first{font-size:36rpx; width: 330rpx;font-weight:400;color:#FFE26C;line-height:66rpx;top: 344rpx;}
+.second{font-size:24rpx; width: 550rpx;font-weight:400;color:#816022;line-height:40rpx;top: 512rpx;}
+.wozhidao{font-size:36rpx;width:360rpx;height:80rpx;background:linear-gradient(180deg,rgba(255,114,114,1) 0%,rgba(255,62,62,1) 100%);border-radius:44rpx;font-weight:600;color:#fff;line-height:80rpx;top: 572rpx;}
+
+/* 分红介绍弹窗 */
+.fenhongImg{ width: 620rpx;height: 760rpx;position: relative;}
+.fenClose{height: 70rpx; width: 70rpx;position: absolute;top: 0;right: 0;}
+.fenhongDet{width: 150rpx;text-align: center;font-size:32rpx;color:#fff;line-height:60rpx;position: absolute;bottom: 40rpx;right: 0;left: 0;margin: 0 auto;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

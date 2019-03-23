@@ -1,0 +1,41 @@
+<!--pages/searchw/searchw.wxml-->
+<!-- <view class='searchwPage'>
+    <view class='tipInfo'>所填信息为当地交管局查询所需，您的信息将严格保密</view>
+    <form class='form'>
+        <view class='formItem'>
+            <view class='label'>车牌号码</view>
+            <picker bindchange="bindPickerChange1" value="{{index}}" range="{{proList}}">
+                <view class="picker">
+                    <view>{{proList[proId]}}</view>
+                    <image class='' src='{{imgUrl}}/bottoma.png' style='height: 32rpx;width: 32rpx;'></image>
+                </view>
+            </picker>
+            <picker bindchange="bindPickerChange2" value="{{index}}" range="{{a_zList}}">
+                <view class="picker">
+                    <view>{{a_zList[a_zId]}}</view>
+                    <image class='' src='{{imgUrl}}/bottoma.png' style='height: 32rpx;width: 32rpx;'></image>
+                </view>
+            </picker>
+            <input class='inputf' style='width: 250rpx;' placeholder='请输入车牌号码' bindinput='plateInput' value='{{plateValue}}'></input>
+        </view> 
+        <view class='formItem' wx:if="{{PlateInfo.vinLength!=0}}">
+            <view class='label'>车身架号</view>
+            <view class='inputBox'>
+                <input class='inputf' placeholder='{{PlateInfo.engineNoLength==-1?"请输入车身架号":PlateInfo.engineNoLength==6?"请输入车身架号后6位":""}}' bindinput='vinInput'></input>
+                <image src='{{imgUrl}}/help.png' bindtap='viewImg' style='height: 32rpx;width: 32rpx;margin-left: 14rpx;'></image>
+            </view>
+        </view>
+        <view class='formItem' wx:if="{{PlateInfo.engineNoLength!=0}}">
+            <view class='label'>发动机号</view>
+            <view class='inputBox'>
+                <input class='inputf' placeholder='{{PlateInfo.engineNoLength==-1?"请输入发动机号码":PlateInfo.engineNoLength==6?"请输入发动机号后6位":""}}' bindinput='engineInput'></input>
+                <image src='{{imgUrl}}/help.png' bindtap='viewImg' style='height: 32rpx;width: 32rpx;margin-left: 14rpx;'></image>
+            </view>
+        </view>
+    </form>
+    <view class='searchBtn' bindtap='submitSearch'>违章查询</view>
+</view>
+
+<view class='layerBox' hidden='{{helpImg===""}}' bindtap='hideImg'>
+    <image src='{{helpImg}}'></image>
+</view> -->

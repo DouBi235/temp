@@ -1,0 +1,51 @@
+/* pages/registerState/registerState.wxss */
+/** 头部 **/
+.header{
+  width: 100%;
+  height: 480rpx;
+  background-color: #1EA0FF;
+  padding-top: 80rpx;
+  text-align: center;
+  color: white;
+  font-size: 32rpx;
+}
+.inco_container{
+  position: relative;
+  margin-bottom: 30rpx;
+}
+.inco_wxIcon{
+ margin: 0 auto;
+ text-align: center;
+ width: 85rpx;
+ height: 85rpx;
+ position: relative;
+ background-color: white;
+ border-radius: 50%;
+ overflow: hidden;
+}
+.inco_wxIcon>view{
+   width: 100%;
+   height: 100%;
+   
+}
+.inco_wxIcon image{
+  width: 100%;
+  height: 100%;
+}
+.state{
+  color: #2DFF46;
+  line-height:60rpx;
+  font-family:PingFangSC-Semibold;
+  font-size: 44rpx;
+  margin-bottom: 30rpx;
+}
+.main{
+  margin: 96rpx 90rpx 0 90rpx;
+}
+.main>view{
+  background-color: #1EA0FF;
+  text-align: center;
+  padding: 20rpx 0;
+  font-size: 32rpx;
+  color: white
+}

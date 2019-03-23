@@ -1,0 +1,4 @@
+<!--pages/tousu/tousu.wxml-->
+<view class='knefg'>投诉问题</view>
+<textarea class='fjiow' placeholder='请输入投诉问题' auto-height="true" maxlength="-1" placeholder-class='tp' bindinput='wheninput'></textarea>
+<view class='wzdke' bindtap='submit'>提交</view>

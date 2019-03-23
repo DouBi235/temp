@@ -1,0 +1,57 @@
+/* pages/privilegeDet/privilegeDet.wxss */
+@import "../../wxParse/wxParse.wxss";
+.privilegeDetPage{ background-color: #f5f5f5; padding-bottom: 120rpx;}
+  .top{}
+    .imgSwiper{height: 750rpx;width: 750rpx;}
+      .slide-image{width: 100%;height: 100%;}
+    .proImg{height: 750rpx;width: 750rpx;}
+    .titleBox{padding: 20rpx;position: relative;background-color: #fff;} 
+      .titleImg{height: 36rpx;width: 62rpx;position: absolute;top: 24rpx;}
+      .titleText{display: inline-block;color: #1E2328;font-size: 32rpx;line-height: 44rpx;font-weight: 400;text-indent: 80rpx;}
+    .timeBox{background-color: #FFCD78;}
+      .zhouqiBox{height: 120rpx;padding: 28rpx 24rpx;display: flex;justify-content: space-between}
+        .zhouqiLabel{width: 284rpx;border: 1rpx solid #D7A528;border-radius: 10rpx;height: 100%;background-color: #fff;display: flex;align-items: center;justify-content: space-around;padding: 0 10rpx;}
+          .ttext{font-size: 32rpx;color: #73737D;line-height: 44rpx;font-weight: 700rpx;}
+          .tline{ color: #E6B96E;font-size: 20rpx;line-height: 20rpx;font-weight: 700rpx;}
+          .tvalue{font-size: 40rpx;color: #FA644B;line-height: 48rpx;}
+        .dot{color: #fff;}
+        .zhouqiValue{width: 400rpx;height: 100%;border: 1rpx solid #D7A528;border-radius: 10rpx;background-color: #fff;display: flex;align-items: center;justify-content: space-around;padding: 0 10rpx;}
+      .daojishiBox{height: 120rpx;padding: 28rpx 24rpx;display: flex;justify-content: space-between}
+        .daojishiLabel{width: 156rpx; border: 1rpx solid #D7A528;border-radius: 10rpx;height: 100%;background-color: #fff;display: flex;align-items: center;justify-content: space-around;padding: 0 10rpx;}
+        .daojishiValue{width: 522rpx;height: 100%;border: 1rpx solid #D7A528;border-radius: 10rpx;background-color: #fff;display: flex;align-items: center;justify-content: space-around;padding: 0 10rpx;}
+      .tipBox{height: 80rpx;display: flex;justify-content: center;align-items: center; color: #fff;font-size: 24rpx;line-height: 34rpx;border-top: 1rpx solid #D7A528;} 
+  .shop{height: 200rpx;background-color: #fff;padding-left: 20rpx;margin-top: 20rpx; }
+    .name{height: 100rpx;display: flex;justify-content: space-between;align-items: center;padding: 0 20rpx 0 10rpx;}
+      .nameText{color: #1E2328;font-size: 32rpx;line-height: 44rpx;font-weight: 400;overflow:hidden; text-overflow:ellipsis;display:-webkit-box; -webkit-box-orient:vertical;-webkit-line-clamp:1;width: 548rpx;border-right: 1rpx solid #ECEDF1;height: 60rpx;}
+      .juli{color: #73737D;font-size: 24rpx;line-height: 34rpx;width: 160rpx;display: flex;justify-content: center;align-items: center;}
+        .positionGrey{height: 32rpx;width: 32rpx;margin-right: 4rpx;}
+    .addr{height: 100rpx;display: flex;align-items: center;justify-content: space-between; border-top: 1rpx solid #E6E6EB;padding: 0 20rpx 0 10rpx;}
+      .positionImg{height: 46rpx;width: 46rpx;}
+      .addrText{color: #73737D;font-size: 28rpx;line-height: 40rpx;overflow:hidden; text-overflow:ellipsis;display:-webkit-box; -webkit-box-orient:vertical;-webkit-line-clamp:1;width: 580rpx;}
+      .addrArrow{height: 32rpx;width: 32rpx;}
+  .bottom{margin-top: 20rpx;background-color: #fff;}
+    .optionSwitch{height: 88rpx;border-bottom: 1rpx solid #E6E6EB;display: flex;align-items: center;}
+      .switchOpt{width: 50%;height: 40rpx;text-align: center;font-size: 28rpx;line-height: 40rpx;}
+      .optionSwitch :first-child{border-right: 1rpx solid #E6E6EB;}
+      .activeOpt{color: #FA644B;}
+    .optionContent{font-size: 28rpx;color:#73737D;padding: 30rpx 30rpx 100rpx;}
+  .buttonBlock{height: 120rpx;width: 100%;display: flex;justify-content: center;align-items: center; position: fixed;bottom: 0;background-color: #fff;border-top: 1rpx solid #ECEDF1;} 
+    .selectBtn{width: 520rpx;height: 94rpx;}
+
+button::after,.button-hover{border-radius: 0;border: 0;outline: none;}
+button[disabled][type="default"],wx-button[disabled]:not([type]) {background: #C8C8D2;color: #fff;}
+button{color: #fff;background-color: #1ea0ff;border-radius: 0;outline: none;display: flex;align-items: center;justify-content: center;}
+
+
+
+
+.blackTimeBox{background-color: #5F7382;} 
+    .blackTimeBox .zhouqiLabel{border: 1rpx solid #4B5A69; background-color: #4B5A69; }
+      .blackTimeBox .ttext{color: #738796;text-decoration:line-through}
+      .blackTimeBox .tline{ color: #738796;}
+      .blackTimeBox .tvalue{color: #738796;text-decoration:line-through}
+    .blackTimeBox .dot{color: #4B5A69;} 
+    .blackTimeBox .zhouqiValue{ border: 1rpx solid #4B5A69; background-color: #4B5A69; } 
+    .blackTimeBox .daojishiLabel{  border: 1rpx solid #4B5A69; background-color: #4B5A69; }
+    .blackTimeBox .daojishiValue{ border: 1rpx solid #4B5A69; background-color: #4B5A69; }
+  .blackTimeBox .tipBox{ color: #fff; border-top: 1rpx solid #4B5A69;} 

@@ -1,0 +1,13 @@
+<!--pages/mimapage/mimapage.wxml-->
+<view class='mimapage'>
+  <view style='background:#fff;padding-left: 30rpx;'>
+    <view class='onefn dfrowsb' bindtap='wangji'>
+      <text>修改支付密码</text>
+      <image class='' src='{{imgUrl}}/arrow.png'></image>
+    </view>
+    <view class='onefn dfrowsb' bindtap='wangji'>
+      <text>忘记支付密码</text>
+      <image class='' src='{{imgUrl}}/arrow.png'></image>
+    </view>
+  </view>
+</view>

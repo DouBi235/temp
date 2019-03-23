@@ -1,0 +1,175 @@
+/* pages/tmaInfo/tmaInfo.wxss */
+page {
+  background-color:#F5F5FA;
+  font-size:32rpx;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  color:rgba(30,35,40,1);
+  overflow-x: hidden;
+  padding-bottom:122rpx;
+  }
+  page>view {
+    background-color:white;
+  }
+  /**projectT  样式代码**/
+  .projectT {
+    height:88rpx;
+    padding:0 30rpx;
+    box-sizing: border-box;
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    font-weight:500;
+    position:relative;
+  }
+  .projectTLine {
+    width:730rpx;
+    position:absolute;
+    height:2rpx;
+    background:rgba(236,237,241,1);
+    bottom:0;
+    right:0;
+  }
+  .projectTR {
+    font-family:SimHei;
+    color:#969BA5;
+    font-size:40rpx;
+  }
+
+  /**projectPhT  样式代码**/
+  .projectPhT {
+    height:200rpx;
+    padding:30rpx 20rpx;
+    box-sizing:border-box;
+    margin-bottom:20rpx;
+  }
+  .projectPhT .proPhoto {
+    width:128rpx;height:128rpx;
+    float:left;
+    margin-right:20rpx;
+  }
+  .proPhotoText {
+    font-size:28rpx;
+    font-family:PingFangSC-Regular;
+    color:rgba(30,35,40,1);
+    line-height:44rpx;
+  }
+
+
+  /**Num 样式代码 **/
+  .Num {
+    height:110rpx;
+  }
+
+  /* storeInfo  样式代码 */
+  .storeInfo {
+    height:260rpx;
+    padding:30rpx 20rpx;
+    box-sizing:border-box;
+    margin-bottom:20rpx;
+  }
+  .storeInfo>image {
+    width:200rpx;height:200rpx;
+    margin-right:30rpx;
+    float:left;
+  }
+  .storeInfoTitle {
+    font-size:32rpx;
+    color:rgba(30,35,40,1);
+    line-height:44rpx;
+  }
+
+  .storeInfoDesc {
+    height:90rpx;
+    font-size:24rpx;
+    color:rgba(115,115,125,1);
+    line-height:40rpx;
+    margin:12rpx 0 22rpx 0;
+  }
+
+  .iconItem {
+    float:left;
+    margin-right:70rpx;    
+  }
+  .iconItem>image {
+    width:32rpx;height:32rpx;
+    vertical-align: middle;
+  }
+  .iconItem>text {
+    font-size:20rpx;
+    color:rgba(115,115,125,1);
+    margin-left:8rpx;
+  }
+
+
+  /* tmpTime  样式代码 */
+  .tmpTime {
+    color:#FA644B;
+    margin-right:20rpx;
+    font-size:32rpx;
+  }
+
+  /* carInfo  样式代码 */
+  .carInfo>.projectTR{
+    color:#1E2328;
+    font-size:32rpx;
+  }
+
+
+  /* carPhoto  样式代码 */
+  .carPhoto {
+    height:240rpx;
+    margin:22rpx 0 20rpx 0;
+    padding:30rpx 0 0 30rpx;
+    box-sizing:border-box;
+  }
+
+  .photoWra {
+    width:116rpx;height:116rpx;
+    border:dashed 2rpx rgba(150,155,165,1);
+    display:flex;
+    justify-content: center;
+    line-height:110rpx;
+    font-size:100rpx;
+    font-weight:800rpx;
+    color:#C8C8D2;      
+  }
+
+  .carPhoto>image {
+    width:116rpx;height:116rpx;
+  }
+  .helpText {
+    width:116rpx;
+    text-align:center;
+  }
+  .helpText>view:first-of-type {
+    font-size:20rpx;
+    font-family:PingFangSC-Regular;
+    font-weight:400;
+    color:rgba(30,35,40,1);
+    line-height:28rpx;
+    margin:15rpx 0 2rpx 0;
+  }
+  .helpText>view:last-of-type  {
+    font-size:20rpx;
+    font-family:PingFangSC-Regular;
+    font-weight:400;
+    color:rgba(115,115,125,1);
+    line-height:28rpx;
+  }
+
+
+  /* submin  样式代码 */
+  .submin {
+    width:520rpx;height:94rpx;
+    background-color:#1EA0FF;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin:30rpx auto 0;
+    color:white;
+    font-weight:600;
+  }
+  .focusSubmin {
+    background-color:#1EA0FF;
+  }

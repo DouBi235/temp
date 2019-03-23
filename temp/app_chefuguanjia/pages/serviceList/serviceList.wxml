@@ -1,0 +1,15 @@
+<view class="List" wx:for="{{arr}}">
+  <view style='border-bottom:1rpx solid rgba(230, 230, 235, 1);height:100%;'>
+    <view class='headerImg'>
+      <image src='{{item.head_pic}}'></image>
+    </view>
+    <view class='topText'>
+      <text style='color:rgba(30, 160, 255, 1);'>{{item.name}}</text>
+      <text>-{{item.card_price}}元\t参与了《UBI车服》</text>
+    </view>
+    <view class='btoText'>
+      <text style='float:left'>{{item.province}}\t\t{{item.city}}</text>
+      <text style='float:right'>{{item.cate_name}}</text>
+    </view>
+  </view>
+</view>

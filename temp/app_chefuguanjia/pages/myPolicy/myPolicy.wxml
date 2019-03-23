@@ -1,0 +1,65 @@
+<view class="container" style='height:260rpx;padding:0;'>
+  <view class='title'>
+    <image src="{{imgUrl}}/mybgimg.png"></image>
+    <view class='company'>
+      <view class='companyNmae'>
+         {{PolicyList.company}}
+      </view>
+      <view class='date'>
+        <text>{{PolicyList.start_time}}</text>
+        ~
+        <text>{{PolicyList.end_time}}</text>
+      </view>
+      <view class='status1' wx:if="{{PolicyList.status==0}}">审核中</view>
+      <view class='status' wx:if="{{PolicyList.status==1}}">在保期</view>
+      <view class='status2' wx:if="{{PolicyList.status==2}}">已过期</view>
+      <view class='status3' wx:if="{{PolicyList.status==3}}">审核未通过</view>
+    </view>
+  </view>
+</view>
+<view class='Guarantee_period' wx:if="{{PolicyList.status==1||PolicyList.status==2}}" >
+  <view class='txt'>保险公司:{{PolicyList.company}}</view>
+  <view class='txt'>保单号:{{PolicyList.policy_num}}</view>
+  <view class='txt'>保单总额:<text style='color:#1EA0FF;'>{{PolicyList.total}}元</text></view>
+  <view class='txt'>投保时间:{{PolicyList.start_time}}</view>
+  <view class='txt'>截止时间:{{PolicyList.end_time}}</view>
+  <view class='txt'>险种：</view>
+  <view class='box'>
+    <view> 
+      <view class='Title'>险种</view>
+      <view  wx:for="{{PolicyList.name_price}}" wx:key="index">{{item.type}}</view>
+    </view>
+    <view>
+      <view class='Title'>金额</view>
+      <view  wx:for="{{PolicyList.name_price}}" wx:key="index">{{item.value}}</view>
+    </view>
+  </view>
+
+  <view class='example'>
+    <view class='fcz'>保单图片信息</view>
+    <view class='upImg1' wx:for="{{imgList}}" wx:key="index">
+      <view class='imgBox'>
+        <view class='img' bindtap='Originalmap' data-list="{{imgList}}" data-src="{{item.src}}">
+          <image src='{{item.src}}' ></image>
+        </view>
+        <view class='text'>{{item.name}}</view>
+      </view>
+    </view>
+  </view>
+  <button class='btn' bindtap='replacePolicy' disabled='{{PolicyList.status==1}}'>更换保单</button>
+</view>
+<view class='Toexamine_state' wx:if="{{PolicyList.status==0}}">
+  <image mode='widthFix' src='{{imgUrl}}/shenhe.png'></image>
+  <view>您的保单信息正在审核中</view>
+</view>
+<view class='Toexamine_state' wx:if="{{PolicyList.status==3}}">
+  <view>
+    <image mode='widthFix' src='{{imgUrl}}/notPass.png'></image>
+    <view>您的保单审核未通过，
+      <text class='details' bindtap='SeeDetails'>查看详情</text>
+    </view>
+    <view class='not_adopt'>
+      <button bindtap='Submission'>重新提交审核</button>
+    </view>
+  </view>
+</view>

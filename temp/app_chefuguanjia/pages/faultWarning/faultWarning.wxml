@@ -1,0 +1,37 @@
+<!--pages/faultWarning/faultWarning.wxml-->
+<view class='faultWarningPage'>
+  <view class='therenot' wx:if="{{warnTip.length==0}}">
+    <image src='{{imgUrl}}/Thereisno.png'></image>
+    <view class='text'>当前无故障预警</view>
+  </view>
+  <view class='faultImg' wx:if="{{warnTip.length!=0}}">
+    <image wx:if="{{status==1}}" src='{{imgUrl}}/engine.png'></image>
+    <image wx:if="{{status==2}}" src='{{imgUrl}}/circuit.png'></image>
+    <image wx:if="{{status==3}}" src='{{imgUrl}}/variety.png'></image>
+    <view class='callBox'>
+      <view class='call' bindtap='makePhone'>
+        <image src='{{imgUrl}}/phone.png'></image>
+      </view>
+      <view class='calltext'>一键咨询</view>
+    </view>
+  </view>
+  <view class='listBox'>
+    <view class='listItem' wx:for='{{warnTip}}' wx:key>
+      <view class='tipTextBox'>
+        <text class='tipText'>{{item.content}}</text>
+      </view>
+      <view class='tipRefer'>
+        <text class='referText'>{{item.refer}}</text>
+      </view>
+      <view class='tipTime'>
+        <text class='timeText'>{{item.warning_time}}</text>
+      </view>
+      <view class='ignoreBar'>
+        <!-- <view class='ignoreBtn' bindtap='ignoreBtn' data-id='{{item.id}}'>忽略</view> -->
+      </view>
+    </view>
+  </view>
+</view>
+<view class='bto' bindtap='ignoreBtn' wx:if="{{warnTip.length!=0}}">
+  忽略
+</view>

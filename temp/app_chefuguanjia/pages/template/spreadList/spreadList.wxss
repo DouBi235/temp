@@ -1,0 +1,34 @@
+.scoll-h { height: 100%; }
+.mb20 {margin-bottom: 20rpx; }
+.ptb30 { padding: 30rpx 0; }
+.spread-item { padding-left: 30rpx; background: #fff; margin-top: 20rpx;}
+.spread-item_inner { height: 140rpx; display: flex; align-items: center; border-bottom: 1rpx solid #E6E6EB; padding-right: 30rpx;justify-content: space-between;}
+/* .spread-item:last-child .spread-item_inner { border-bottom: 0; } */
+.spread-item .img { width: 100rpx; height: 100rpx; border-radius: 50%; overflow: hidden; margin-right: 20rpx; }
+/* 培养奖励最后一个添加padding */
+/* .lastchild:last-child { padding-bottom: 50rpx; } */
+.spread-item .img image { width: 100%; height: 100%; }
+.spread-item .info { flex-grow: 1; line-height: 2; }
+.spread-item .title { color: #1E2328; font-size: 32rpx; }
+.spread-item .desc { color: #969BA5; font-size: 24rpx; }
+.spread-item .money { color: #1EA0FF; font-size: 48rpx; }
+.spread-item .unit { color: #969BA5; font-size: 24rpx; margin-left: 10rpx; }
+.spread-loading { padding: 30rpx 0 10rpx; font-size: 24rpx; border: none; color: #969BA5; text-align: center; background: transparent; }
+.spread-loading::after{ border: none; }
+.noData { margin-top: 100rpx; text-align: center; font-size: 24rpx; color: #969BA5 }
+.noData image.max { width: 280rpx; height: 280rpx; }
+.noData image.min { width: 200rpx; height: 200rpx; }
+.clickHover { opacity: .7 }
+/** 培养奖励 提现 */
+.cash-wrap { height: 120rpx; display: flex; justify-content: space-between; padding: 22rpx 30rpx; }
+.cash-content { flex-grow: 1; }
+.cash-title { color: #969BA5; font-size: 20rpx; }
+.cash-money { font-weight: bold; color: #1EA0FF; font-size: 40rpx; }
+.cash-money .unit { color: #969BA5; font-size: 24rpx; }
+.cash-btn { width: 260rpx; height: 72rpx; background: #1EA0FF; color: #fff; line-height: 72rpx; font-size: 32rpx; border-radius: 0;}
+.status { display: flex; flex-direction: column; text-align: right; }
+.status .status_text { font-size: 24rpx; }
+.status .status_text.isCash { color: #969BA5; }
+.status .status_text.noCash { color: #FF5F5F }
+.callbtn{width:220rpx;height:64rpx;background:#fff;border-radius:10rpx;border:1px solid rgba(230,230,235,1);font-size:28rpx;
+font-weight:400;color:rgba(30,160,255,1);line-height:64rpx;text-align: center;}

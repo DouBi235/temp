@@ -1,0 +1,25 @@
+<!--pages/diagnostics/diagnostics.wxml--> 
+<view class='diagnosticsPage'>
+  <view class='listBox'> 
+    <view class='listItem' wx:for='{{diagItem}}' wx:key>
+      <view class='itemHeader'>
+        <text class='itemTitle' style='font-weight: 700'>{{item.Name}}</text>
+        <view class='switchBtn'>
+          <view class='optionBtn {{item.ExceptionCount==0? "greenBtn":""}}'>正常</view>
+          <view class='optionBtn {{item.ExceptionCount==1? "abnormal":""}}'>异常</view>
+        </view>
+      </view>
+      <view class='itemBody'>
+        <text class='reference'>参考值: {{item.Exception}}</text>
+        <text class='warningText' wx:if="{{item.refer}}">{{item.refer}}</text>
+      </view>
+      <view class='itemFooter'>
+        <view class='textBox'>
+          <text class='valueLabel'>当前值</text><text class='labelValue'>{{item.Value}}</text>
+        </view>
+        <view class='ignoreBtn' bindtap='ignoreEvent' data-id='{{item.id}}' wx:if="{{item.ExceptionCount==1}}">忽略</view>
+      </view>
+    </view>
+  </view>
+  <view class='diagnosisBtn' bindtap='diagnosisBtn' wx:if='{{btnShow}}'>诊断</view>
+</view>

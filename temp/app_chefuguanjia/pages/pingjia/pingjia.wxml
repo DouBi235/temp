@@ -1,0 +1,21 @@
+<!--pages/pingjia/pingjia.wxml-->
+<view class='buriu'>
+  <view class='knefg'>评分</view>
+  <view class='rebii'>
+    <view class='starBox dfcolsa' style='align-items: flex-start;'>
+      <view class='pingxing dfrowsa'>
+        <text class='xinglabel'>油品质量</text>
+        <pingxing liang='0' binduppdata="updataData"  style="height: 50rpx;"/>
+      </view>
+      <view class='pingxing dfrowsa'>
+        <text class='xinglabel'>整体环境</text>
+        <pingxing liang='0' binduppdata="updataData1"  style="height: 50rpx;"/>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='oivri'>
+  <view class='knefg'>服务描述</view>
+  <textarea class='fjiow' placeholder='输入服务描述' maxlength="-1" placeholder-class='tp' bindinput='wheninput' value='{{content}}'></textarea>
+  <view class='wzdke' bindtap='submit'>提交</view>
+</view>

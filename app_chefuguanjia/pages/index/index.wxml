@@ -121,12 +121,12 @@
     </view>
 
     <view class='itemBox'>
-      <!-- <view class='itemImgBox '>
-        <view class='imgBox' bindtap='skippt'>
+      <view class='itemImgBox '>
+        <view class='imgBox' bindtap='freeServer'>
           <image class='itemImg' src='{{imgUrl}}/mianf.png'></image>
           <text class='itemText'>免费服务</text>
         </view>
-      </view> -->
+      </view>
       <!-- <view class='itemImgBox'>
         <view class='imgBox' bindtap='skippt'>
           <image class='itemImg' src='{{imgUrl}}/chexian.png'></image>

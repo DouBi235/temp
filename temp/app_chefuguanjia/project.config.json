@@ -1,0 +1,281 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"nodeModules": false,
+		"uglifyFileName": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.2.5",
+	"appid": "wx795d1f9e2284a75e",
+	"projectname": "UBI%E8%BD%A6%E6%9C%8D%E7%AE%A1%E5%AE%B6ing",
+	"isGameTourist": false,
+	"scripts": {
+		"beforeCompile": "",
+		"beforePreview": "",
+		"beforeUpload": ""
+	},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 39,
+			"list": [
+				{
+					"id": -1,
+					"name": "mapPage",
+					"pathName": "pages/mapPage/mapPage",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "mianfeijiuyuan",
+					"pathName": "pages/mianfeijiuyuan/mianfeijiuyuan",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "okBuyVip",
+					"pathName": "pages/okBuyVip/okBuyVip",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "registerinput",
+					"pathName": "pages/registerinput/register",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "fapiao",
+					"pathName": "pages/fapiao/fapiao",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "tixian",
+					"pathName": "pages/tixian/tixian",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "wofap",
+					"pathName": "pages/wofap/wofap",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "spread",
+					"pathName": "pages/spread/spread",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "DetailVip",
+					"pathName": "pages/DetailVip/DetailVip",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "message_rdt",
+					"pathName": "pages/message_rdt/message_rdt",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "test",
+					"pathName": "pages/test/test",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "okBuyVip",
+					"pathName": "pages/okBuyVip/okBuyVip",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "tailWarn",
+					"pathName": "pages/tailWarn/tailWarn",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "uqianbao",
+					"pathName": "pages/uqianbao/uqianbao",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "xiaofeipage",
+					"pathName": "pages/xiaofeipage/xiaofeipage",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "chongzhipage",
+					"pathName": "pages/chongzhipage/chongzhipage",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "youzhanList",
+					"pathName": "pages/youzhanList/youzhanList",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "tousu",
+					"pathName": "pages/tousu/tousu",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "pingjia",
+					"pathName": "pages/pingjia/pingjia",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "breachRecord",
+					"pathName": "pages/breachRecord/breachRecord",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "index",
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "index",
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "mimapage",
+					"pathName": "pages/mimapage/mimapage",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "wangji",
+					"pathName": "pages/wangji/wangji",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "youshopDet",
+					"pathName": "pages/youshopDet/youshopDet",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "油站详情",
+					"pathName": "pages/youshopDet/youshopDet",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "首页",
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "填写地址",
+					"pathName": "pages/okBuyVip/okBuyVip",
+					"query": "mid=1112"
+				},
+				{
+					"id": -1,
+					"name": "pages/privilegeDet/privilegeDet",
+					"pathName": "pages/privilegeDet/privilegeDet",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "油站详情",
+					"pathName": "pages/youshopDet/youshopDet",
+					"query": "sid = 1"
+				},
+				{
+					"id": -1,
+					"name": "油站详情",
+					"pathName": "pages/youshopDet/youshopDet",
+					"query": "sid=1"
+				},
+				{
+					"id": -1,
+					"name": "pingjia",
+					"pathName": "pages/template/pingjia/pingjia",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "maiyou",
+					"pathName": "pages/maiyou/maiyou",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "service",
+					"pathName": "pages/service/service",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "service",
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "index",
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "0",
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "0",
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "Apage",
+					"pathName": "pages/Apage/Apage"
+				}
+			]
+		}
+	}
+}
